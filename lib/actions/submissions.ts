@@ -57,7 +57,7 @@ export async function submitSubmissionAction(_prev: ActionState, formData: FormD
   const ip = h.get("x-forwarded-for")?.split(",")[0]?.trim() || h.get("x-real-ip") || "unknown";
   const limit = await rateLimit(`submit:${ip}`, 5, 60 * 60 * 1000);
   if (!limit.allowed) {
-    return { status: "error", message: "You have submitted several messages recently. Please try again later, or contact the office by telephone." };
+    return { status: "error", message: "You have submitted several messages recently. Please try again later, or visit the municipal office in person." };
   }
 
   const ipHash = hashIp(ip);
@@ -86,7 +86,7 @@ export async function submitSubmissionAction(_prev: ActionState, formData: FormD
     logError("submission.persist", error);
     return {
       status: "error",
-      message: `Your submission could not be recorded. Please try again, or contact the office on ${site.contact.postal}.`,
+      message: `Your submission could not be recorded. Please try again, or write to the office at ${site.contact.postal}.`,
     };
   }
 

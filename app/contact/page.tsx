@@ -114,10 +114,10 @@ export default function ContactPage() {
                 </div>
                 <p className="mt-4 text-[12px] leading-[1.8] text-ink-soft">
                   A map is not embedded on this demonstration site, and exact coordinates are not published. For
-                  directions, call the office on{" "}
-                  <a href={`mailto:example@example.com`} className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2">
+                  directions, write to{" "}
+                  <span className="font-semibold text-green-800">
                     {site.contact.postal}
-                  </a>{" "}
+                  </span>{" "}
                   or use the county&rsquo;s official location information.
                 </p>
                 <a

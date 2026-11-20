@@ -112,7 +112,8 @@ export default function ResourcesPage() {
           <div className="flex gap-3.5 border border-paper-line p-5">
             <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
             <p className="text-[12px] leading-[1.8] text-ink-soft">
-              If a document you need is not listed, or a file fails to open, please contact the municipal office on
+              If you encounter a problem with a document or need help finding something, or if a file fails to open, please write to
+            the municipal office at {site.contact.postal} or visit in person.
               the municipal office or write to P.O. Box 220-30700, Iten. Documents published by other County departments and
               national agencies are available on the{" "}
               <a href={site.countyWebsite} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-700">
