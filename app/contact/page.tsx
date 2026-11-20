@@ -73,13 +73,7 @@ export default function ContactPage() {
                   <c.icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <p className="mt-4 text-[9.5px] font-semibold uppercase tracking-[0.15em] text-ink-muted">{c.label}</p>
-                {c.href ? (
-                  <a href={c.href} className="mt-1 break-words font-display text-[13.5px] font-bold leading-snug text-green-900 hover:text-gold-700">
-                    {c.value}
-                  </a>
-                ) : (
-                  <p className="mt-1 break-words font-display text-[13.5px] font-bold leading-snug text-green-900">{c.value}</p>
-                )}
+                <p className="mt-1 break-words font-display text-[13.5px] font-bold leading-snug text-green-900">{c.value}</p>
                 <p className="mt-1.5 text-[11.5px] leading-relaxed text-ink-muted">{c.detail}</p>
               </div>
             ))}
