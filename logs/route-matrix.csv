@@ -1,0 +1,42 @@
+route,status,title,canonical,description_length,h1_count,robots
+/,200,"Iten-Tambach Municipality | County Government of Elgeyo Marakwet",http://localhost:3000,144,1,index, follow
+/about,200,"About the Municipality | Iten-Tambach Municipality",http://localhost:3000/about,138,1,index, follow
+/governance,200,"Municipal Governance and Leadership | Iten-Tambach Municipality",http://localhost:3000/governance,167,1,index, follow
+/services,200,"Municipal Services | Iten-Tambach Municipality",http://localhost:3000/services,186,1,index, follow
+/projects,200,"Projects and Municipal Development | Iten-Tambach Municipality",http://localhost:3000/projects,185,1,index, follow
+/public-participation,200,"Public Participation and Community Engagement | Iten-Tambach Municipality",http://localhost:3000/public-participation,154,1,index, follow
+/investment,200,"Investment and Economic Development | Iten-Tambach Municipality",http://localhost:3000/investment,154,1,index, follow
+/resources,200,"Municipal Document Centre | Iten-Tambach Municipality",http://localhost:3000/resources,186,1,index, follow
+/news,200,"News, Updates and Announcements | Iten-Tambach Municipality",http://localhost:3000/news,140,1,index, follow
+/feedback,200,"Citizen Feedback and Complaints | Iten-Tambach Municipality",http://localhost:3000/feedback,204,1,index, follow
+/contact,200,"Contact Iten-Tambach Municipality | Iten-Tambach Municipality",http://localhost:3000/contact,152,1,index, follow
+/privacy,200,"Privacy Policy (Draft) | Iten-Tambach Municipality",http://localhost:3000/privacy,166,1,index, follow
+/accessibility,200,"Accessibility | Iten-Tambach Municipality",http://localhost:3000/accessibility,140,1,index, follow
+/terms,200,"Terms of Use (Draft) | Iten-Tambach Municipality",http://localhost:3000/terms,139,1,index, follow
+/sitemap-page,200,"Sitemap | Iten-Tambach Municipality",http://localhost:3000/sitemap-page,81,1,index, follow
+/services/urban-planning,200,"Urban Planning and Development | Iten-Tambach Municipality",http://localhost:3000/services/urban-planning,130,1,index, follow
+/services/solid-waste-management,200,"Solid Waste Management | Iten-Tambach Municipality",http://localhost:3000/services/solid-waste-management,127,1,index, follow
+/services/environmental-management,200,"Environmental Management | Iten-Tambach Municipality",http://localhost:3000/services/environmental-management,99,1,index, follow
+/services/public-spaces,200,"Public Spaces | Iten-Tambach Municipality",http://localhost:3000/services/public-spaces,107,1,index, follow
+/services/urban-infrastructure,200,"Urban Infrastructure Coordination | Iten-Tambach Municipality",http://localhost:3000/services/urban-infrastructure,107,1,index, follow
+/services/trade-and-business,200,"Trade and Business Environment | Iten-Tambach Municipality",http://localhost:3000/services/trade-and-business,88,1,index, follow
+/services/community-engagement,200,"Community Engagement | Iten-Tambach Municipality",http://localhost:3000/services/community-engagement,103,1,index, follow
+/services/development-information,200,"Development Information | Iten-Tambach Municipality",http://localhost:3000/services/development-information,78,1,index, follow
+/projects/urban-cleanliness-programme,200,"Municipal Cleanliness and Waste Collection Programme | Iten-Tambach Municipality",http://localhost:3000/projects/urban-cleanliness-programme,141,1,noindex, follow
+/projects/urban-road-and-drainage-works,200,"Urban Road and Drainage Improvement Works | Iten-Tambach Municipality",http://localhost:3000/projects/urban-road-and-drainage-works,125,1,noindex, follow
+/projects/modern-market-trading-environment,200,"Modern Market and Trading Environment Improvements | Iten-Tambach Municipality",http://localhost:3000/projects/modern-market-trading-environment,134,1,noindex, follow
+/projects/public-space-upgrading,200,"Public Space and Green Area Upgrading | Iten-Tambach Municipality",http://localhost:3000/projects/public-space-upgrading,139,1,noindex, follow
+/projects/street-lighting-and-safety,200,"Street Lighting and Public Safety Improvements | Iten-Tambach Municipality",http://localhost:3000/projects/street-lighting-and-safety,122,1,noindex, follow
+/projects/climate-resilience-actions,200,"Urban Climate Resilience Actions | Iten-Tambach Municipality",http://localhost:3000/projects/climate-resilience-actions,121,1,noindex, follow
+/projects/youth-and-women-enterprise-support,200,"Youth and Women Enterprise Support Initiative | Iten-Tambach Municipality",http://localhost:3000/projects/youth-and-women-enterprise-support,142,1,noindex, follow
+/projects/storm-water-drainage-study,200,"Storm Water Drainage Assessment | Iten-Tambach Municipality",http://localhost:3000/projects/storm-water-drainage-study,92,1,noindex, follow
+/projects/community-green-spaces,200,"Community Green Space and Tree Planting | Iten-Tambach Municipality",http://localhost:3000/projects/community-green-spaces,113,1,noindex, follow
+/projects/citizen-service-desk,200,"Municipal Citizen Service Desk | Iten-Tambach Municipality",http://localhost:3000/projects/citizen-service-desk,94,1,noindex, follow
+/news/sample-municipal-cleanliness-drive,200,"Municipality outlines sample programme for cleaner public spaces | Iten-Tambach Municipality",http://localhost:3000/news/sample-municipal-cleanliness-drive,165,1,noindex, follow
+/news/sample-public-notice-citizen-fora,200,"Public notice: sample citizen forum calendar published for review | Iten-Tambach Municipality",http://localhost:3000/news/sample-public-notice-citizen-fora,131,1,noindex, follow
+/news/sample-development-update-drainage,200,"Sample development update: drainage and footpath works explained | Iten-Tambach Municipality",http://localhost:3000/news/sample-development-update-drainage,149,1,noindex, follow
+/news/sample-community-tree-planting,200,"Sample community activity: residents join green space upkeep | Iten-Tambach Municipality",http://localhost:3000/news/sample-community-tree-planting,99,1,noindex, follow
+/news/sample-investment-briefing,200,"Sample briefing: investment information and enquiry channels | Iten-Tambach Municipality",http://localhost:3000/news/sample-investment-briefing,158,1,noindex, follow
+/news/sample-event-waste-awareness,200,"Sample event: household waste awareness session | Iten-Tambach Municipality",http://localhost:3000/news/sample-event-waste-awareness,90,1,noindex, follow
+/news/sample-public-notice-documents,200,"Public notice: sample document release announcement | Iten-Tambach Municipality",http://localhost:3000/news/sample-public-notice-documents,90,1,noindex, follow
+/news/sample-development-update-spatial-plan,200,"Sample explainer: how the spatial plan guides urban growth | Iten-Tambach Municipality",http://localhost:3000/news/sample-development-update-spatial-plan,112,1,noindex, follow

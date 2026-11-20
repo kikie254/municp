@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "iten-tambach-dev",
+    "dev": "iten-tambach-dev",
+    "production": "iten-tambach-prod"
+  }
+}

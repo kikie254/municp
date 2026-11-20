@@ -1,0 +1,17 @@
+export const sitePages = [
+  { title: "Home", href: "/", description: "Official municipal homepage and latest updates" },
+  { title: "About the Municipality", href: "/about", description: "Mandate, vision, mission and core values" },
+  { title: "Municipal Governance", href: "/governance", description: "Board, Manager and accountability framework" },
+  { title: "Municipal Services", href: "/services", description: "Urban management and service information" },
+  { title: "Projects and Development", href: "/projects", description: "Ongoing, completed and planned initiatives" },
+  { title: "Public Participation", href: "/public-participation", description: "Forums, notices and engagement reports" },
+  { title: "Investment Opportunities", href: "/investment", description: "Economic development and enquiries" },
+  { title: "Documents and Resources", href: "/resources", description: "Charter, plans, policies and reports" },
+  { title: "News and Announcements", href: "/news", description: "Municipal news, updates and public notices" },
+  { title: "Complaints and Feedback", href: "/feedback", description: "Feedback channels and grievance redress" },
+  { title: "Contact Us", href: "/contact", description: "Office location, telephone and email" },
+  { title: "Privacy Policy", href: "/privacy", description: "How information is handled on this website" },
+  { title: "Accessibility", href: "/accessibility", description: "Accessibility commitment and features" },
+  { title: "Terms of Use", href: "/terms", description: "Conditions for using this website" },
+  { title: "Sitemap", href: "/sitemap-page", description: "Complete list of website pages" },
+];

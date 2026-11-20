@@ -1,0 +1,300 @@
+// Prisma schema — Iten-Tambach Municipality platform.
+// Development and the reference deployment target SQLite (zero external infrastructure).
+// For a production PostgreSQL deployment, see prisma/schema.postgresql.prisma and
+// DATABASE_SCHEMA.md §Provider switch. The data model is identical.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+/// Administrative account. Passwords are stored as scrypt hashes (never plaintext).
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  name         String
+  passwordHash String
+  /// SUPER_ADMIN | CONTENT_ADMIN | PROJECT_ADMIN | REVIEWER
+  role         String    @default("CONTENT_ADMIN")
+  isActive     Boolean   @default(true)
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  sessions       Session[]
+  passwordResets PasswordReset[]
+  auditLogs      AuditLog[]
+  news           NewsArticle[]      @relation("NewsAuthor")
+  reviewedNews   NewsArticle[]      @relation("NewsReviewer")
+  projects       ProjectRecord[]    @relation("ProjectAuthor")
+  reviewedProjects ProjectRecord[]  @relation("ProjectReviewer")
+  notices        PublicNotice[]     @relation("NoticeAuthor")
+  documents      DocumentRecord[]   @relation("DocumentUploader")
+  assignments    Submission[]       @relation("SubmissionAssignee")
+  notes          SubmissionNote[]
+}
+
+/// Server-side session. Only the SHA-256 hash of the cookie token is persisted.
+model Session {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  userAgent String?
+  ipHash    String?
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model PasswordReset {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+/// Editorial workflow: DRAFT | IN_REVIEW | APPROVED | PUBLISHED | ARCHIVED
+model NewsArticle {
+  id             String    @id @default(cuid())
+  slug           String    @unique
+  title          String
+  category       String
+  summary        String
+  /// Body stored as plain text; blank lines separate paragraphs.
+  body           String
+  imagePath      String?
+  imageAlt       String?
+  seoTitle       String?
+  seoDescription String?
+  status         String    @default("DRAFT")
+  publishedAt    DateTime?
+  scheduledFor   DateTime?
+  archivedAt     DateTime?
+  authorId       String
+  author         User      @relation("NewsAuthor", fields: [authorId], references: [id])
+  reviewerId     String?
+  reviewer       User?     @relation("NewsReviewer", fields: [reviewerId], references: [id])
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([status, publishedAt])
+  @@index([category])
+}
+
+model ProjectRecord {
+  id                String    @id @default(cuid())
+  slug              String    @unique
+  title             String
+  category          String
+  /// Ongoing | Completed | Planned
+  projectStatus     String    @default("Planned")
+  location          String
+  summary           String
+  description       String
+  /// One objective per line.
+  objectives        String
+  /// Only verified figures supplied by the Municipality. Empty string means "not published".
+  budget            String?
+  startDate         String?
+  completionDate    String?
+  implementingAgency String?
+  imagePath         String?
+  imageAlt          String?
+  status            String    @default("DRAFT")
+  publishedAt       DateTime?
+  archivedAt        DateTime?
+  authorId          String
+  author            User      @relation("ProjectAuthor", fields: [authorId], references: [id])
+  reviewerId        String?
+  reviewer          User?     @relation("ProjectReviewer", fields: [reviewerId], references: [id])
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  @@index([status, publishedAt])
+}
+
+model PublicNotice {
+  id            String    @id @default(cuid())
+  slug          String    @unique
+  title         String
+  category      String    @default("Public Notice")
+  body          String
+  documentId    String?
+  publishedAt   DateTime?
+  expiresAt     DateTime?
+  status        String    @default("DRAFT")
+  archivedAt    DateTime?
+  authorId      String
+  author        User      @relation("NoticeAuthor", fields: [authorId], references: [id])
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([status, publishedAt, expiresAt])
+}
+
+model DocumentRecord {
+  id            String    @id @default(cuid())
+  title         String
+  category      String
+  description   String
+  documentDate  DateTime?
+  fileName      String
+  /// Relative storage key inside the private upload root. Never a public URL.
+  storageKey    String
+  mimeType      String
+  sizeBytes     Int
+  checksum      String?
+  status        String    @default("DRAFT")
+  publishedAt   DateTime?
+  archivedAt    DateTime?
+  uploadedById  String
+  uploadedBy    User      @relation("DocumentUploader", fields: [uploadedById], references: [id])
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([status, publishedAt])
+  @@index([category])
+}
+
+/// Citizen submissions: enquiry, feedback, complaint, suggestion, participation response.
+model Submission {
+  id            String    @id @default(cuid())
+  reference     String    @unique
+  /// ENQUIRY | FEEDBACK | COMPLAINT | SUGGESTION | PARTICIPATION
+  type          String
+  name          String
+  email         String
+  phone         String?
+  subject       String
+  message       String
+  /// Ward or area, optional.
+  location      String?
+  consent       Boolean   @default(false)
+  /// RECEIVED | UNDER_REVIEW | ASSIGNED | IN_PROGRESS | RESOLVED | CLOSED
+  status        String    @default("RECEIVED")
+  assignedToId  String?
+  assignedTo    User?     @relation("SubmissionAssignee", fields: [assignedToId], references: [id])
+  /// SHA-256 of the submitting IP with a server secret — never the raw address.
+  ipHash        String?
+  userAgent     String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  resolvedAt    DateTime?
+
+  notes SubmissionNote[]
+
+  @@index([status, createdAt])
+  @@index([type])
+}
+
+model SubmissionNote {
+  id           String     @id @default(cuid())
+  submissionId String
+  submission   Submission @relation(fields: [submissionId], references: [id], onDelete: Cascade)
+  authorId     String
+  author       User       @relation(fields: [authorId], references: [id])
+  body         String
+  /// true when the note is an internal-only case note; never shown to the citizen.
+  internal     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+
+  @@index([submissionId])
+}
+
+model ParticipationOpportunity {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  title        String
+  description  String
+  /// Consultation | Meeting | Notice | Survey
+  kind         String   @default("Consultation")
+  location     String?
+  instructions String?
+  opensAt      DateTime?
+  closesAt     DateTime?
+  status       String   @default("DRAFT")
+  publishedAt  DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  responses ParticipationResponse[]
+
+  @@index([status, closesAt])
+}
+
+model ParticipationResponse {
+  id            String                  @id @default(cuid())
+  reference     String                  @unique
+  opportunityId String
+  opportunity   ParticipationOpportunity @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+  name          String
+  email         String
+  phone         String?
+  organisation  String?
+  ward          String?
+  response      String
+  consent       Boolean                 @default(false)
+  createdAt     DateTime                @default(now())
+
+  @@index([opportunityId])
+}
+
+/// Append-only administrative audit trail.
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  actor      User?    @relation(fields: [actorId], references: [id])
+  actorEmail String
+  action     String
+  entityType String
+  entityId   String?
+  summary    String
+  ipHash     String?
+  createdAt  DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([entityType, entityId])
+}
+
+/// Fixed-window rate limiter counters (per hashed key).
+model RateLimit {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  count       Int      @default(0)
+  windowStart DateTime
+}
+
+/// Outbound notification queue. A row is only marked SENT when the provider accepted it.
+model EmailOutbox {
+  id           String    @id @default(cuid())
+  toAddress    String
+  subject      String
+  body         String
+  /// NOT_CONFIGURED | QUEUED | SENT | FAILED
+  status       String    @default("QUEUED")
+  provider     String?
+  error        String?
+  attempts     Int       @default(0)
+  createdAt    DateTime  @default(now())
+  sentAt       DateTime?
+
+  @@index([status, createdAt])
+}
+
+model Setting {
+  key       String   @id
+  value     String
+  updatedAt DateTime @updatedAt
+}

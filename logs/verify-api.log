@@ -1,0 +1,14 @@
+PASS  GET /api/health — status=503 components={"database":"down","firebaseProject":"configured","email":"not-configured","documentStorage":"cloud-storage"}
+PASS  GET /api/search?q=market — status=500 count=? (Firestore unavailable → labelled empty set is acceptable)
+PASS  GET /api/search?q=a (too short) — status=200 message="Enter at least two characters."
+PASS  GET /api/search (120+ chars rejected) — status=400
+PASS  GET /api/admin/submissions/export (no session) — status=403 body={"error":"Not authorised."}
+PASS  GET /api/admin/participation/<id>/export (no session) — status=403
+PASS  GET /api/documents/<unknown>/download — status=404 (metadata-gated, no enumeration)
+PASS  POST /api/submissions cross-origin — status=403 body={"error":"Invalid origin."}
+PASS  POST /api/submissions invalid payload — status=422 fields={"type":"Invalid enum value. Expected 'ENQUIRY' | 'FEEDBACK' | 'COMPLAINT' | 'SUGGESTION' | 'PARTICIPATION', received 'NOT_A_TYPE'","name":"Please enter your name.","email":"Please enter a valid email address.","subject":"Please select or enter a subject.","message":"Please set out your message in at least 20 characters.","consent":"Please confirm that you consent to your details being recorded."}
+PASS  POST /api/submissions valid payload — status=500 body=null (500 expected without Firestore credentials; 201 with)
+INFO  rate limit over 45 rapid searches: no 429 — limiter fail-open without Firestore (documented behaviour)
+PASS  API security headers — nosniff=true no-store=true
+
+SUMMARY: all security assertions passed

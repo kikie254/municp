@@ -1,0 +1,11 @@
+// PostgreSQL variant of the production schema. Copy over prisma/schema.prisma to switch
+// provider, then run `npx prisma migrate deploy`. The data model is identical; only the
+// datasource provider differs. See DATABASE_SCHEMA.md §Provider switch.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}

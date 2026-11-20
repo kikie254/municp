@@ -1,0 +1,99 @@
+ROUTE INVENTORY: 15 static + 8 services + 10 projects + 8 news = 41 content pages
+
+=== ALL ROUTES (41) ===
+HTTP 200: 41/41
+  every route returned 200
+
+=== METADATA PER ROUTE ===
+route | title | canonical | descLen | h1count | robots
+/ | Iten-Tambach Municipality | County Government of Elgeyo Marakwet | http://localhost:3000 | 144 | 1 | index, follow
+/about | About the Municipality | Iten-Tambach Municipality | http://localhost:3000/about | 138 | 1 | index, follow
+/governance | Municipal Governance and Leadership | Iten-Tambach Municipality | http://localhost:3000/governance | 167 | 1 | index, follow
+/services | Municipal Services | Iten-Tambach Municipality | http://localhost:3000/services | 186 | 1 | index, follow
+/projects | Projects and Municipal Development | Iten-Tambach Municipality | http://localhost:3000/projects | 185 | 1 | index, follow
+/public-participation | Public Participation and Community Engagement | Iten-Tambach Municipality | http://localhost:3000/public-participation | 154 | 1 | index, follow
+/investment | Investment and Economic Development | Iten-Tambach Municipality | http://localhost:3000/investment | 154 | 1 | index, follow
+/resources | Municipal Document Centre | Iten-Tambach Municipality | http://localhost:3000/resources | 186 | 1 | index, follow
+/news | News, Updates and Announcements | Iten-Tambach Municipality | http://localhost:3000/news | 140 | 1 | index, follow
+/feedback | Citizen Feedback and Complaints | Iten-Tambach Municipality | http://localhost:3000/feedback | 204 | 1 | index, follow
+/contact | Contact Iten-Tambach Municipality | Iten-Tambach Municipality | http://localhost:3000/contact | 152 | 1 | index, follow
+/privacy | Privacy Policy (Draft) | Iten-Tambach Municipality | http://localhost:3000/privacy | 166 | 1 | index, follow
+/accessibility | Accessibility | Iten-Tambach Municipality | http://localhost:3000/accessibility | 140 | 1 | index, follow
+/terms | Terms of Use (Draft) | Iten-Tambach Municipality | http://localhost:3000/terms | 139 | 1 | index, follow
+/sitemap-page | Sitemap | Iten-Tambach Municipality | http://localhost:3000/sitemap-page | 81 | 1 | index, follow
+/services/urban-planning | Urban Planning and Development | Iten-Tambach Municipality | http://localhost:3000/services/urban-planning | 130 | 1 | index, follow
+/services/solid-waste-management | Solid Waste Management | Iten-Tambach Municipality | http://localhost:3000/services/solid-waste-management | 127 | 1 | index, follow
+/services/environmental-management | Environmental Management | Iten-Tambach Municipality | http://localhost:3000/services/environmental-management | 99 | 1 | index, follow
+/services/public-spaces | Public Spaces | Iten-Tambach Municipality | http://localhost:3000/services/public-spaces | 107 | 1 | index, follow
+/services/urban-infrastructure | Urban Infrastructure Coordination | Iten-Tambach Municipality | http://localhost:3000/services/urban-infrastructure | 107 | 1 | index, follow
+/services/trade-and-business | Trade and Business Environment | Iten-Tambach Municipality | http://localhost:3000/services/trade-and-business | 88 | 1 | index, follow
+/services/community-engagement | Community Engagement | Iten-Tambach Municipality | http://localhost:3000/services/community-engagement | 103 | 1 | index, follow
+/services/development-information | Development Information | Iten-Tambach Municipality | http://localhost:3000/services/development-information | 78 | 1 | index, follow
+/projects/urban-cleanliness-programme | Municipal Cleanliness and Waste Collection Programme | Iten-Tambach Municipality | http://localhost:3000/projects/urban-cleanliness-programme | 141 | 1 | noindex, follow
+/projects/urban-road-and-drainage-works | Urban Road and Drainage Improvement Works | Iten-Tambach Municipality | http://localhost:3000/projects/urban-road-and-drainage-works | 125 | 1 | noindex, follow
+/projects/modern-market-trading-environment | Modern Market and Trading Environment Improvements | Iten-Tambach Municipality | http://localhost:3000/projects/modern-market-trading-environment | 134 | 1 | noindex, follow
+/projects/public-space-upgrading | Public Space and Green Area Upgrading | Iten-Tambach Municipality | http://localhost:3000/projects/public-space-upgrading | 139 | 1 | noindex, follow
+/projects/street-lighting-and-safety | Street Lighting and Public Safety Improvements | Iten-Tambach Municipality | http://localhost:3000/projects/street-lighting-and-safety | 122 | 1 | noindex, follow
+/projects/climate-resilience-actions | Urban Climate Resilience Actions | Iten-Tambach Municipality | http://localhost:3000/projects/climate-resilience-actions | 121 | 1 | noindex, follow
+/projects/youth-and-women-enterprise-support | Youth and Women Enterprise Support Initiative | Iten-Tambach Municipality | http://localhost:3000/projects/youth-and-women-enterprise-support | 142 | 1 | noindex, follow
+/projects/storm-water-drainage-study | Storm Water Drainage Assessment | Iten-Tambach Municipality | http://localhost:3000/projects/storm-water-drainage-study | 92 | 1 | noindex, follow
+/projects/community-green-spaces | Community Green Space and Tree Planting | Iten-Tambach Municipality | http://localhost:3000/projects/community-green-spaces | 113 | 1 | noindex, follow
+/projects/citizen-service-desk | Municipal Citizen Service Desk | Iten-Tambach Municipality | http://localhost:3000/projects/citizen-service-desk | 94 | 1 | noindex, follow
+/news/sample-municipal-cleanliness-drive | Municipality outlines sample programme for cleaner public spaces | Iten-Tambach Municipality | http://localhost:3000/news/sample-municipal-cleanliness-drive | 165 | 1 | noindex, follow
+/news/sample-public-notice-citizen-fora | Public notice: sample citizen forum calendar published for review | Iten-Tambach Municipality | http://localhost:3000/news/sample-public-notice-citizen-fora | 131 | 1 | noindex, follow
+/news/sample-development-update-drainage | Sample development update: drainage and footpath works explained | Iten-Tambach Municipality | http://localhost:3000/news/sample-development-update-drainage | 149 | 1 | noindex, follow
+/news/sample-community-tree-planting | Sample community activity: residents join green space upkeep | Iten-Tambach Municipality | http://localhost:3000/news/sample-community-tree-planting | 99 | 1 | noindex, follow
+/news/sample-investment-briefing | Sample briefing: investment information and enquiry channels | Iten-Tambach Municipality | http://localhost:3000/news/sample-investment-briefing | 158 | 1 | noindex, follow
+/news/sample-event-waste-awareness | Sample event: household waste awareness session | Iten-Tambach Municipality | http://localhost:3000/news/sample-event-waste-awareness | 90 | 1 | noindex, follow
+/news/sample-public-notice-documents | Public notice: sample document release announcement | Iten-Tambach Municipality | http://localhost:3000/news/sample-public-notice-documents | 90 | 1 | noindex, follow
+/news/sample-development-update-spatial-plan | Sample explainer: how the spatial plan guides urban growth | Iten-Tambach Municipality | http://localhost:3000/news/sample-development-update-spatial-plan | 112 | 1 | noindex, follow
+
+canonical missing: none
+canonical not using configured origin: none
+h1 count != 1: none
+meta description < 70 chars: none
+
+=== ADMINISTRATION PREVIEW ===
+/admin-preview -> HTTP 404 (expected 404 when NEXT_PUBLIC_ADMIN_PREVIEW is not "enabled")
+admin dashboard markup present in body: no
+
+=== PUBLIC ASSETS SERVED (34) ===
+  all 34 assets returned 200
+
+=== 404 HANDLING ===
+unknown route status: 404
+renders custom not-found (has h1): true
+not-found title: Page not found | Iten-Tambach Municipality
+
+=== SITEMAP / ROBOTS ===
+sitemap status: 200, url count: 23
+sitemap sample: http://localhost:3000/ , http://localhost:3000/about
+routes absent from sitemap (excluding admin-preview by design): /projects/urban-cleanliness-programme, /projects/urban-road-and-drainage-works, /projects/modern-market-trading-environment, /projects/public-space-upgrading, /projects/street-lighting-and-safety, /projects/climate-resilience-actions, /projects/youth-and-women-enterprise-support, /projects/storm-water-drainage-study, /projects/community-green-spaces, /projects/citizen-service-desk, /news/sample-municipal-cleanliness-drive, /news/sample-public-notice-citizen-fora, /news/sample-development-update-drainage, /news/sample-community-tree-planting, /news/sample-investment-briefing, /news/sample-event-waste-awareness, /news/sample-public-notice-documents, /news/sample-development-update-spatial-plan
+sitemap entries not on configured origin: 0
+robots status: 200
+User-Agent: *
+Allow: /
+Disallow: /admin-preview
+Disallow: /__admin-preview-withdrawn
+
+Host: http://localhost:3000
+Sitemap: http://localhost:3000/sitemap.xml
+
+=== SECURITY HEADERS ===
+  x-content-type-options: nosniff
+  x-frame-options: SAMEORIGIN
+  referrer-policy: strict-origin-when-cross-origin
+  permissions-policy: camera=(), microphone=(), geolocation=(), payment=()
+  x-powered-by: (absent)
+  x-robots-tag on /admin-preview: noindex, nofollow, noarchive
+
+=== INTERNAL LINK CRAWL ===
+unique internal href targets discovered in rendered HTML: 69
+every internal href returned < 400
+
+=== DEV/PREVIEW URL LEAKAGE IN SERVED HTML ===
+  "localhost:3000": /, /about, /governance, /services, /projects, /public-participation, /investment, /resources, /news, /feedback, /contact, /privacy, /accessibility, /terms, /sitemap-page, /services/urban-planning, /services/solid-waste-management, /services/environmental-management, /services/public-spaces, /services/urban-infrastructure, /services/trade-and-business, /services/community-engagement, /services/development-information, /projects/urban-cleanliness-programme, /projects/urban-road-and-drainage-works, /projects/modern-market-trading-environment, /projects/public-space-upgrading, /projects/street-lighting-and-safety, /projects/climate-resilience-actions, /projects/youth-and-women-enterprise-support, /projects/storm-water-drainage-study, /projects/community-green-spaces, /projects/citizen-service-desk, /news/sample-municipal-cleanliness-drive, /news/sample-public-notice-citizen-fora, /news/sample-development-update-drainage, /news/sample-community-tree-planting, /news/sample-investment-briefing, /news/sample-event-waste-awareness, /news/sample-public-notice-documents, /news/sample-development-update-spatial-plan
+  "vercel.app": none
+  "127.0.0.1": none
+  "your-deployed-domain": none
+  NEXT_PUBLIC_SITE_URL in canonical: http://localhost:3000

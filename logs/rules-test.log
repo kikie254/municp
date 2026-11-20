@@ -1,0 +1,64 @@
+
+> iten-tambach-municipality@2.0.0 test:rules
+> npx firebase-tools emulators:exec --only firestore,storage --project demo-itm "vitest run --config vitest.rules.config.ts"
+
+i  emulators: Starting emulators: firestore, storage
+i  emulators: Detected demo project ID "demo-itm", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator was started in standard edition.
+✔  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: vitest run --config vitest.rules.config.ts
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /home/user/project/extracted
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — public content > denies any client write to news
+[2026-11-13T23:52:32.939Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19c1 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'update' @ L19
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of submissions
+[2026-11-13T23:52:33.007Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19c3 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L52, false for 'update' @ L19, false for 'update' @ L52
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of submissionNotes
+[2026-11-13T23:52:33.061Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19c5 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L53, false for 'update' @ L19, false for 'update' @ L53
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of adminUsers
+[2026-11-13T23:52:33.113Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19c7 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L55, false for 'update' @ L19, false for 'update' @ L55
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of auditLogs
+[2026-11-13T23:52:33.154Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19c9 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L56, false for 'update' @ L19, false for 'update' @ L56
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of settings
+[2026-11-13T23:52:33.190Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19cb error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L57, false for 'update' @ L19, false for 'update' @ L57
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of rateLimits
+[2026-11-13T23:52:33.231Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19cd error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L58, false for 'update' @ L19, false for 'update' @ L58
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of emailOutbox
+[2026-11-13T23:52:33.287Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19cf error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L59, false for 'update' @ L19, false for 'update' @ L59
+
+stderr | tests/rules/firestore.rules.test.ts > firestore.rules — confidential collections > denies unauthenticated read and write of participationResponses
+[2026-11-13T23:52:33.346Z]  @firebase/firestore: Firestore (11.10.0): GrpcConnection RPC 'Write' stream 0x106e19d1 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L19, false for 'create' @ L54, false for 'update' @ L19, false for 'update' @ L54
+
+ ✓ tests/rules/firestore.rules.test.ts (13 tests) 2287ms
+   ✓ firestore.rules — public content > allows reading published news 720ms
+
+ Test Files  1 passed (1)
+      Tests  13 passed (13)
+   Start at  23:52:30
+   Duration  2.74s (transform 34ms, setup 0ms, collect 139ms, tests 2.29s, environment 0ms, prepare 142ms)
+
+✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+i  storage: Stopping Storage Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

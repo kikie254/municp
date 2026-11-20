@@ -1,0 +1,25 @@
+rules_version = '2';
+
+// Iten–Tambach Municipality — Firestore security rules.
+//
+// POSTURE: total client deny (FB-02 fix). The public website reads Firestore ONLY through
+// server-rendered pages and route handlers using the Firebase Admin SDK, which bypasses these
+// rules entirely. No browser — authenticated or not — has any direct Firestore access, so
+// embargoed (scheduled) content, internal fields and billing exposure from direct queries are
+// structurally impossible. If a client-side read is ever genuinely required, it must be modelled
+// through a dedicated projected collection with App Check enabled — never by re-opening these.
+//
+// IMPORTANT: these rules are one layer only. Every server-side function performs its own
+// authorisation checks (lib/auth/session.ts, lib/auth/rbac.ts); restrictive rules never compensate
+// for an incorrectly written server action.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Deny every client operation on every collection. The Admin SDK (server-side only) is the
+    // single access path and is unaffected by these rules.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

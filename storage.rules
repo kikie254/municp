@@ -1,0 +1,26 @@
+rules_version = '2';
+
+// Iten–Tambach Municipality — Cloud Storage security rules.
+//
+// POSTURE: default-deny. Nothing is readable or writable by any client. All uploads and downloads
+// go through server-side code using the Firebase Admin SDK (which bypasses these rules) after the
+// caller's session and permission have been verified. Private documents therefore never become
+// publicly readable merely because their object path is known — no signed permanent URL exists.
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+
+    // Even published content images are delivered through the application, so no client rule is
+    // opened for /public/… either. If the Municipality later opts into direct CDN delivery of
+    // public images, add a narrowly scoped read rule here for public/news/** and
+    // public/projects/** only — never for private/**.
+
+    match /private/{privatePaths=**} {
+      allow read, write: if false; // absolutely no client access, ever
+    }
+  }
+}
