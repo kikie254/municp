@@ -121,7 +121,7 @@ export default function ContactPage() {
                 <p className="mt-4 text-[12px] leading-[1.8] text-ink-soft">
                   A map is not embedded on this demonstration site, and exact coordinates are not published. For
                   directions, call the office on{" "}
-                  <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2">
+                  <a href={`mailto:example@example.com`} className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2">
                     {site.contact.postal}
                   </a>{" "}
                   or use the county&rsquo;s official location information.
@@ -178,3 +178,4 @@ export default function ContactPage() {
     </>
   );
 }
+

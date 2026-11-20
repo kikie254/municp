@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ArrowLeft, CheckCircle2, Phone, Mail } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Phone, Mail, Mailbox } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
@@ -81,9 +81,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   <Link href="/feedback" className="btn btn-primary !py-2.5 !text-[11.5px]">
                     Open feedback page <ArrowRight aria-hidden="true" />
                   </Link>
-                  <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="btn btn-outline !py-2.5 !text-[11.5px]">
-                    <Phone aria-hidden="true" /> {site.contact.phoneDisplay}
-                  </a>
                 </div>
               </div>
             </Reveal>
@@ -94,12 +91,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <div className="border-t-[3px] border-gold-400 bg-green-950 p-5 text-white">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-400">Municipal office</p>
                 <p className="mt-2.5 text-[12.5px] leading-relaxed text-white/75">{site.contact.physical}</p>
-                <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="mt-3 flex items-center gap-2 text-[12.5px] font-semibold text-white hover:text-gold-300">
-                  <Phone className="h-3.5 w-3.5" aria-hidden="true" /> {site.contact.phoneDisplay}
-                </a>
-                <a href={`mailto:${site.contact.email}`} className="mt-1.5 flex items-center gap-2 break-all text-[12.5px] text-white/75 hover:text-gold-300">
-                  <Mail className="h-3.5 w-3.5 shrink-0" aria-hidden="true" /> {site.contact.email}
-                </a>
+                <p className="mt-3 flex items-start gap-2 text-[12.5px] text-white/90">
+                  <Mailbox className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" /> {site.contact.postal}
+                </p>
               </div>
 
               <div className="border border-paper-line bg-white p-5">

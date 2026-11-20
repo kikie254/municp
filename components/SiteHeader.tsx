@@ -59,8 +59,8 @@ export function SiteHeader() {
             <span>{site.republic}</span>
           </p>
           <div className="hidden items-center gap-5 text-[11px] font-medium text-white/70 md:flex">
-            <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300">
-              <Phone className="h-3 w-3" aria-hidden="true" /> {site.contact.phoneDisplay}
+            <a href={`mailto:example@example.com`} className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300">
+              <Phone className="h-3 w-3" aria-hidden="true" /> {site.contact.postal}
             </a>
             <Link href="/news" className="transition-colors hover:text-gold-300">
               Public Notices
@@ -325,10 +325,10 @@ export function SiteHeader() {
               <MessageSquare aria-hidden="true" /> Share Your Feedback
             </Link>
             <a
-              href={`tel:${site.contact.phone.replace(/\s/g, "")}`}
+              href={`mailto:example@example.com`}
               className="flex items-center justify-center gap-2 text-[12px] font-semibold text-green-800"
             >
-              <Phone className="h-3.5 w-3.5" aria-hidden="true" /> {site.contact.phoneDisplay}
+              <Phone className="h-3.5 w-3.5" aria-hidden="true" /> {site.contact.postal}
             </a>
           </div>
         </div>
@@ -338,3 +338,4 @@ export function SiteHeader() {
     </>
   );
 }
+

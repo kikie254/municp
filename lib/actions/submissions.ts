@@ -86,7 +86,7 @@ export async function submitSubmissionAction(_prev: ActionState, formData: FormD
     logError("submission.persist", error);
     return {
       status: "error",
-      message: `Your submission could not be recorded. Please try again, or contact the office on ${site.contact.phoneDisplay}.`,
+      message: `Your submission could not be recorded. Please try again, or contact the office on ${site.contact.postal}.`,
     };
   }
 
@@ -216,3 +216,4 @@ export async function submitParticipationResponseAction(_prev: ActionState, form
     message: `Your response has been recorded under reference ${reference}.`,
   };
 }
+

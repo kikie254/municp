@@ -116,7 +116,7 @@ export default function PrivacyPage() {
           ))}
 
           <p className="mt-6 text-[12px] leading-relaxed text-ink-muted">
-            Privacy enquiries: {site.contact.phoneDisplay} · {site.contact.email} · {site.contact.office},{" "}
+            Privacy enquiries: {site.contact.postal} · {site.contact.postal} · {site.contact.office},{" "}
             {site.contact.physical}. These contact details are pending written confirmation — see the{" "}
             <Link href="/contact" className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2">
               contact page
@@ -128,3 +128,4 @@ export default function PrivacyPage() {
     </>
   );
 }
+

@@ -59,7 +59,7 @@ const terms = [
   {
     title: "Limitation and contact",
     approved: false,
-    body: `This draft is provided as-is while the site is being prepared. Questions about it may be directed to ${site.contact.office}, ${site.contact.physical}; telephone ${site.contact.phoneDisplay}; email ${site.contact.email}. Those contact details are pending written confirmation by the Municipality.`,
+    body: `This draft is provided as-is while the site is being prepared. Questions about it may be directed to ${site.contact.office}, ${site.contact.physical}; telephone ${site.contact.postal}; email ${site.contact.postal}. Those contact details are pending written confirmation by the Municipality.`,
   },
 ];
 
@@ -95,3 +95,4 @@ export default function TermsPage() {
     </>
   );
 }
+
