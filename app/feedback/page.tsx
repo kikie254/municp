@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, MapPin, ShieldCheck, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Mailbox, ShieldCheck, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
@@ -69,12 +69,9 @@ export default function FeedbackPage() {
 
             <div className="mt-8 border-t-[3px] border-green-800 bg-green-950 p-5 text-white">
               <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-400">Direct contact</p>
-              <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="mt-3 flex items-center gap-2.5 text-[13.5px] font-semibold hover:text-gold-300">
-                <Phone className="h-4 w-4 text-gold-400" aria-hidden="true" /> {site.contact.phoneDisplay}
-              </a>
-              <a href={`mailto:${site.contact.email}`} className="mt-2 flex items-center gap-2.5 break-all text-[12.5px] text-white/80 hover:text-gold-300">
-                <Mail className="h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.contact.email}
-              </a>
+              <p className="mt-3 flex items-start gap-2.5 text-[12px] leading-relaxed text-white/90">
+                <Mailbox className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.contact.postal}
+              </p>
               <p className="mt-3 flex items-start gap-2.5 text-[12px] leading-relaxed text-white/70">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.contact.physical}
               </p>

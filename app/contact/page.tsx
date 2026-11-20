@@ -45,20 +45,6 @@ const cards = [
     detail: site.contact.physical,
   },
   {
-    icon: Phone,
-    label: "Telephone",
-    value: site.contact.phoneDisplay,
-    detail: "Click to call the municipal office",
-    href: `tel:${site.contact.phone.replace(/\s/g, "")}`,
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: site.contact.email,
-    detail: "Click to open your email application",
-    href: `mailto:${site.contact.email}`,
-  },
-  {
     icon: Mailbox,
     label: "Postal address",
     value: site.contact.postal,
@@ -136,7 +122,7 @@ export default function ContactPage() {
                   A map is not embedded on this demonstration site, and exact coordinates are not published. For
                   directions, call the office on{" "}
                   <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2">
-                    {site.contact.phoneDisplay}
+                    {site.contact.postal}
                   </a>{" "}
                   or use the county&rsquo;s official location information.
                 </p>

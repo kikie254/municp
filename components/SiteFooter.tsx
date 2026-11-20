@@ -93,18 +93,6 @@ export function SiteFooter() {
               </span>
             </li>
             <li className="flex gap-2.5">
-              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-green-300" aria-hidden="true" />
-              <a href={`tel:${site.contact.phone.replace(/\s/g, "")}`} className="transition-colors hover:text-white">
-                {site.contact.phoneDisplay}
-              </a>
-            </li>
-            <li className="flex gap-2.5">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-green-300" aria-hidden="true" />
-              <a href={`mailto:${site.contact.email}`} className="break-all transition-colors hover:text-white">
-                {site.contact.email}
-              </a>
-            </li>
-            <li className="flex gap-2.5">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-green-300" aria-hidden="true" />
               <span>{site.contact.postal}</span>
             </li>

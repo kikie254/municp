@@ -103,9 +103,8 @@ export default function AccessibilityPage() {
           </div>
 
           <p className="mt-6 text-[12px] leading-relaxed text-ink-muted">
-            If you encounter a barrier on this website, please report it so that it can be corrected:{" "}
-            {site.contact.phoneDisplay} · {site.contact.email}. These contact details are pending written confirmation
-            by the Municipality.
+            If you encounter a barrier on this website, please report it by writing to the municipal office at{" "}
+            {site.contact.postal}, or visit the office in person at {site.contact.physical}.
           </p>
         </div>
       </section>
