@@ -125,7 +125,7 @@ export default function HomePage() {
 
             <div className="mt-6 max-w-xl space-y-3.5 border-l-2 border-gold-400/70 pl-4 sm:pl-5">
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
-                  Iten-Tambach is the sole municipality in Elgeyo Marakwet County and the home of the County headquarters. Its municipal charter was granted in December 2018 under the Urban Areas and Cities Act, 2011.
+                  Iten-Tambach is a municipality within Elgeyo Marakwet County. The County-hosted charter document currently available for reference is labelled a model draft; the adopted charter and its grant details require confirmation by the Municipality.
               </p>
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
                 The Municipality's chartered responsibilities cover urban planning, roads and drainage, waste management, public spaces, street lighting, markets and other services that shape everyday life.
@@ -370,7 +370,7 @@ export default function HomePage() {
 
           <div className="mt-10 grid gap-3 border-t border-white/12 pt-8 sm:grid-cols-3">
             {[
-              { icon: CalendarDays, label: "Citizen fora", note: "Notices and quarterly reports in the document library" },
+              { icon: CalendarDays, label: "Citizen fora", note: "Published notices and participation reports" },
               { icon: FileText, label: "Public notices", note: "Announcements issued through official channels" },
               { icon: MessageSquare, label: "Feedback channels", note: "Written submissions and grievance redress" },
             ].map((item) => (
