@@ -8,9 +8,14 @@
 
 export type EnvSeverity = "required" | "recommended";
 
-/** Public intake requires both a formal publication approval flag and an explicit intake switch. */
+/** Formal publication approval is an explicit institutional release gate. */
+export function municipalPublicationApproved(): boolean {
+  return process.env.MUNICIPAL_PUBLICATION_APPROVED === "true";
+}
+
+/** Public intake requires both formal publication approval and an explicit intake switch. */
 export function publicIntakeEnabled(): boolean {
-  return process.env.MUNICIPAL_PUBLICATION_APPROVED === "true" && process.env.PUBLIC_SUBMISSIONS_ENABLED === "true";
+  return municipalPublicationApproved() && process.env.PUBLIC_SUBMISSIONS_ENABLED === "true";
 }
 
 export type EnvFinding = {
