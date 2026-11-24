@@ -19,7 +19,7 @@ const terms = [
   {
     title: "Status of this website",
     body:
-      "This website is under preparation for Iten-Tambach Municipality. It is not yet an approved official publication of the Municipality or of the County Government of Elgeyo Marakwet. It does not accept, register or process official submissions, and it creates no obligation on the part of the Municipality.",
+      "This website is being prepared for Iten-Tambach Municipality and is not yet an approved official publication of the Municipality or the County Government of Elgeyo Marakwet. Certain enquiry and feedback forms can record submissions in the website's municipal system and issue a reference number. A submission through this website does not replace any statutory application, permit process or formal procedure prescribed by law.",
   },
   {
     title: "This is a draft notice",
@@ -29,7 +29,7 @@ const terms = [
   {
     title: "Demonstration and template content",
     body:
-      "Some records on this website are sample content written to demonstrate a layout: project records, news articles and forum listings. Every such record is labelled. They are not official government records, they state no confirmed municipal figure, budget, contractor, appointment or date, and they must not be relied upon or cited as municipal policy or delivery. Demonstration records are excluded from the homepage promotional sections, from site search and from the XML sitemap, and carry a noindex directive on their own routes.",
+      "Some project records, news articles and forum listings are retained as labelled templates. They are not official government records and must not be relied upon as evidence of municipal activity, expenditure, appointments, dates or delivery. Only notices and records issued through the Municipality's authorised publication process should be treated as official communications.",
   },
   {
     title: "Verified and unverified information",
