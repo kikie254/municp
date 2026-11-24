@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
-import { Info } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 import { DocumentLibrary } from "@/components/DocumentLibrary";
-import { documents } from "@/lib/data/documents";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Municipal Document Centre",
@@ -17,9 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function ResourcesPage() {
-  const contentChecked = documents.filter((d) => d.verification === "content-confirmed").length;
-  const fileOnly = documents.filter((d) => d.verification === "file-only").length;
-
   return (
     <>
       <PageHero
@@ -33,20 +27,11 @@ export default function ResourcesPage() {
 
       <section className="bg-white py-12 md:py-16">
         <div className="shell">
-          <div className="grid gap-px overflow-hidden border border-paper-line bg-paper-line sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { label: "Documents indexed", value: String(documents.length) },
-              { label: "Content-checked files", value: String(contentChecked) },
-              { label: "File checks only", value: String(fileOnly) },
-            ].map((s) => (
-              <div key={s.label} className="bg-white px-5 py-4">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.14em] text-ink-muted">{s.label}</p>
-                <p className="mt-1 font-display text-[15px] font-bold text-green-900">{s.value}</p>
-              </div>
-            ))}
+          <div className="shell">
+            <p className="text-[13px] leading-relaxed text-ink-soft">
+              Browse municipal plans, policies, financial reports and public participation records.
+            </p>
           </div>
-
-       </div>
       </section>
 
       <section className="bg-paper-warm py-12 md:py-16">
@@ -73,23 +58,6 @@ export default function ResourcesPage() {
             <Suspense fallback={<p className="text-[12.5px] text-ink-muted">Loading the library…</p>}>
               <DocumentLibrary />
             </Suspense>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-12">
-        <div className="shell">
-          <div className="flex gap-3.5 border border-paper-line p-5">
-            <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
-            <p className="text-[12px] leading-[1.8] text-ink-soft">
-              If you encounter a problem with a document or need help finding something, please contact the
-              municipal office at {site.contact.postal} or visit in person. Additional public information from County
-              departments and national agencies is available on the{" "}
-              <a href={site.countyWebsite} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-700">
-                County Government of Elgeyo Marakwet website
-              </a>
-              .
-            </p>
           </div>
         </div>
       </section>
