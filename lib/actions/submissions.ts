@@ -12,6 +12,7 @@ import * as submissionService from "@/lib/services/submission.service";
 import * as participationService from "@/lib/services/participation.service";
 import { logError } from "@/lib/firebase/errors";
 import { site } from "@/lib/site";
+import { publicIntakeEnabled } from "@/lib/config/env";
 import type { ActionState } from "./types";
 
 const TYPE_LABEL: Record<string, string> = {
@@ -30,7 +31,7 @@ const TYPE_LABEL: Record<string, string> = {
  * including when the notification email could not be sent because no provider is configured.
  */
 export async function submitSubmissionAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
-  if (process.env.PUBLIC_SUBMISSIONS_ENABLED !== "true") return { status: "error", message: "Public submissions are disabled on this demonstration website." };
+  if (!publicIntakeEnabled()) return { status: "error", message: "Public submissions are disabled on this demonstration website." };
   if (!(await sameOrigin())) return { status: "error", message: "Request rejected: invalid origin." };
 
   const raw = {
