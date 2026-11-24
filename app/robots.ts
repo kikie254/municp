@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       { userAgent: "*", allow: "/", disallow: ["/admin-preview", "/__admin-preview-withdrawn"] },
     ],
-    sitemap: `${site.url}/sitemap.xml`,
+    ...(process.env.MUNICIPAL_PUBLICATION_APPROVED === "true" ? { sitemap: `${site.url}/sitemap.xml` } : {}),
     host: site.url,
   };
 }
