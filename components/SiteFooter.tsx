@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import { MapPin, Clock, ExternalLink } from "lucide-react";
+import { Landmark, ExternalLink } from "lucide-react";
 import { legalLinks, quickLinks, resourceLinks, site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -12,13 +11,7 @@ export function SiteFooter() {
       <div className="shell grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-4">
           <div className="flex items-center gap-3.5">
-            <Image
-              src="/brand/elgeyo-marakwet-crest.png"
-              alt="Official crest of the County Government of Elgeyo Marakwet"
-              width={64}
-              height={64}
-              className="h-14 w-14 object-contain"
-            />
+            <Landmark className="h-10 w-10 text-gold-400" aria-hidden="true" />
             <div>
               <p className="font-display text-[13.5px] font-extrabold uppercase leading-tight tracking-[0.06em] text-white">
                 Iten-Tambach
@@ -76,20 +69,9 @@ export function SiteFooter() {
 
         <div className="lg:col-span-3">
           <h2 className="text-[11px] font-bold uppercase tracking-[0.18em] text-gold-400">Contact</h2>
-          <ul className="mt-4 space-y-3.5 text-[13px] text-white/70">
-            <li className="flex gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-green-300" aria-hidden="true" />
-              <span>
-                <span className="block font-semibold text-white/90">{site.contact.office}</span>
-                {site.contact.physical}
-              </span>
-            </li>
-            <li className="flex gap-2.5">
-              <Clock className="mt-0.5 h-4 w-4 shrink-0 text-green-300" aria-hidden="true" />
-              <span>{site.contact.postal}</span>
-            </li>
-          </ul>
-        </div>
+          <p className="mt-4 text-[12px] leading-relaxed text-white/65">Public contact details are awaiting municipal confirmation.</p>
+          <Link href="/contact" className="mt-3 inline-flex text-[11px] font-semibold text-gold-300 hover:text-gold-200">Contact information</Link>
+      </div>
       </div>
 
       <div className="border-t border-white/10">
