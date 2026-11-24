@@ -18,6 +18,11 @@ export function publicIntakeEnabled(): boolean {
   return municipalPublicationApproved() && process.env.PUBLIC_SUBMISSIONS_ENABLED === "true";
 }
 
+/** Static and uploaded photographs remain hidden until publication rights are confirmed. */
+export function publicImageAssetsApproved(): boolean {
+  return process.env.MUNICIPAL_IMAGE_ASSETS_APPROVED === "true";
+}
+
 export type EnvFinding = {
   /** The variable name only. Values are never read into the report. */
   name: string;
