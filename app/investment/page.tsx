@@ -86,10 +86,8 @@ export default function InvestmentPage() {
                 What this website does not state
               </h2>
               <p className="mt-1.5 text-[12.5px] leading-[1.8] text-ink-soft">
-                This page does not publish investment incentives, tax exemptions, land availability, plot allocations,
-                licensing timelines or guaranteed returns. No such commitment has been verified for publication.
-                Any incentive or allocation would in any event require the approvals prescribed by law and would be
-                communicated through official channels.
+                For information about land availability, incentives, plot allocations and licensing, contact the
+                responsible County or national office and follow the applicable approval process.
               </p>
             </div>
           </div>
