@@ -6,6 +6,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { ParticipationResponseForm } from "@/components/forms/ParticipationResponseForm";
 import { getParticipationBySlug } from "@/lib/queries";
 import { formatDate } from "@/components/content/PublishedBlocks";
+import { publicIntakeEnabled } from "@/lib/config/env";
 
 export const dynamic = "force-dynamic";
 
@@ -76,7 +77,7 @@ export default async function ParticipationDetailPage({ params }: { params: Prom
                 </div>
               ) : (
                 <div className="mt-4">
-                  <ParticipationResponseForm slug={item.slug} title={item.title} enabled={process.env.PUBLIC_SUBMISSIONS_ENABLED === "true"} />
+                  <ParticipationResponseForm slug={item.slug} title={item.title} enabled={publicIntakeEnabled()} />
                 </div>
               )}
             </div>
