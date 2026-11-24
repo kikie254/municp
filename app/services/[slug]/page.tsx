@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, ArrowLeft, CheckCircle2, Phone, Mail, Mailbox } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
@@ -67,9 +67,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 </h3>
                 <ul className="mt-3 space-y-2.5">
                   {[
-                    "Use the complaints and feedback page to prepare a written description of the matter.",
-                    "Visit the municipal office in person at the address above, or write to P.O. Box 220-30700, Iten. Office operating hours have not been confirmed for publication.",
-                    "Write to the municipal office at P.O. Box 220-30700, Iten, with the location and nature of the concern.",
+                    "Review the relevant public notice or service document to identify the institution responsible for the matter.",
+                    "Confirm whether the responsibility sits with the Municipality, County Government or a national agency before making a formal application.",
+                    "Use only contact details and application channels published by the responsible institution. This demonstration website does not provide a verified municipal contact address.",
                   ].map((step) => (
                     <li key={step} className="flex items-start gap-2.5 text-[12.5px] leading-relaxed text-ink-soft">
                       <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-500" aria-hidden="true" />
@@ -89,11 +89,9 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <aside className="lg:col-span-4">
             <div className="space-y-4">
               <div className="border-t-[3px] border-gold-400 bg-green-950 p-5 text-white">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-400">Municipal office</p>
-                <p className="mt-2.5 text-[12.5px] leading-relaxed text-white/75">{site.contact.physical}</p>
-                <p className="mt-3 flex items-start gap-2 text-[12.5px] text-white/90">
-                  <Mailbox className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" /> {site.contact.postal}
-                </p>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-400">Contact information</p>
+                <p className="mt-2.5 text-[12.5px] leading-relaxed text-white/75">Municipal address, postal details, telephone, email and office hours are withheld until confirmed in writing.</p>
+                <a href={site.countyWebsite} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-gold-300 hover:text-gold-200">County Government website <ExternalLink className="h-3 w-3" aria-hidden="true" /></a>
               </div>
 
               <div className="border border-paper-line bg-white p-5">
