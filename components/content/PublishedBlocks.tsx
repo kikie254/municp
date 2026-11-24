@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CalendarDays, MapPin, ArrowRight, FileText, Download, Megaphone, Wallet } from "lucide-react";
+import { publicImageAssetsApproved } from "@/lib/config/env";
 
 /**
  * Presentation components for records that come from the database.
@@ -26,7 +27,7 @@ export function PublishedNewsCard({ item, featured = false }: { item: NewsRecord
   return (
     <article className={`group card overflow-hidden ${featured ? "grid md:grid-cols-2" : ""}`}>
       <div className={`relative bg-green-950 ${featured ? "min-h-[220px] md:min-h-full" : "aspect-[16/10]"}`}>
-        {item.imagePath ? (
+        {item.imagePath && publicImageAssetsApproved() ? (
           <Image src={item.imagePath} alt={item.imageAlt ?? ""} fill sizes={featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 640px) 100vw, 33vw"} className="object-cover" />
         ) : (
           <div className="flex h-full min-h-[160px] items-center justify-center pattern-grid">
@@ -59,7 +60,7 @@ export function PublishedProjectCard({ project }: { project: ProjectRecordView }
   return (
     <article className="card flex flex-col overflow-hidden">
       <div className="relative aspect-[16/10] bg-green-950">
-        {project.imagePath ? (
+        {project.imagePath && publicImageAssetsApproved() ? (
           <Image src={project.imagePath} alt={project.imageAlt ?? ""} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
         ) : (
           <div className="flex h-full items-center justify-center pattern-grid">
