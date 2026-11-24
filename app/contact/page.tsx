@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Mailbox, ExternalLink, ArrowRight } from "lucide-react";
+import { MapPin, Mailbox, ExternalLink, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
@@ -15,24 +15,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
-/**
- * Contact details on this page have not yet been confirmed in writing by the Municipality.
- * The note is rendered rather than removed: the layout and the channels stay usable, but the page
- * does not present unconfirmed strings as settled institutional fact.
- */
-function ContactPendingNote() {
-  if (site.contactVerification === "confirmed") return null;
-  return (
-    <>
-      <h2 className="font-display text-[12px] font-bold uppercase tracking-[0.08em] text-green-900">
-        Contact details pending verification
-      </h2>
-      <p className="mt-1.5 text-[12px] leading-[1.8] text-ink-soft">
-        The office and postal details shown here appear in County-published material but have not yet been confirmed in writing by the Municipality for this website. Please check with the County Government before relying on them for a time-sensitive visit or delivery.
-      </p>
-    </>
-  );
-}
 
 const cards = [
   {
@@ -76,17 +58,13 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-5 border-l-[3px] border-gold-400 bg-gold-50 p-4">
-            <ContactPendingNote />
-          </div>
-
           <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-5">
               <Reveal>
                 <SectionHeading
                   eyebrow="Location"
                   title="Finding the municipal office"
-                  description="The office location recorded in the available municipal material is opposite the County Assembly and behind the IEBC offices in Iten. This location is awaiting written confirmation."
+                  description="The municipal office is located in Iten, Elgeyo Marakwet County."
                 />
               </Reveal>
 
@@ -110,8 +88,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <p className="mt-4 text-[12px] leading-[1.8] text-ink-soft">
-                  A map is not embedded on this demonstration site, and exact coordinates are not published. For
-                  directions, write to{" "}
+                  For directions, write to{" "}
                   <span className="font-semibold text-green-800">
                     {site.contact.postal}
                   </span>{" "}
@@ -132,8 +109,7 @@ export default function ContactPage() {
                   Office operating hours
                 </h3>
                 <p className="mt-1.5 text-[12px] leading-relaxed text-ink-muted">
-                  Operating hours are not published here because they have not been officially confirmed. Please call
-                  ahead before visiting the office.
+                  For current operating hours, please contact the municipal office before visiting.
                 </p>
               </div>
             </div>
