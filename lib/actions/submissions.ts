@@ -58,6 +58,7 @@ export async function submitSubmissionAction(_prev: ActionState, formData: FormD
   const h = await headers();
   const ip = h.get("x-forwarded-for")?.split(",")[0]?.trim() || h.get("x-real-ip") || "unknown";
   const limit = await rateLimit(`submit:${ip}`, 5, 60 * 60 * 1000);
+  if (limit.unavailable) return { status: "error", message: "Submission service is temporarily unavailable. Please try again later." };
   if (!limit.allowed) {
     return { status: "error", message: "You have submitted several messages recently. Please try again later, or visit the municipal office in person." };
   }
@@ -177,6 +178,7 @@ export async function submitParticipationResponseAction(_prev: ActionState, form
   const h = await headers();
   const ip = h.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   const limit = await rateLimit(`participate:${ip}`, 5, 60 * 60 * 1000);
+  if (limit.unavailable) return { status: "error", message: "Consultation service is temporarily unavailable. Please try again later." };
   if (!limit.allowed) return { status: "error", message: "Too many submissions from this connection. Please try again later." };
 
   const reference = publicReference("PARTICIPATION");
