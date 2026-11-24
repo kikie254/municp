@@ -47,15 +47,8 @@ export default function GovernancePage() {
                   <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">
                     Verified names, photographs and biographies of the Board Chairperson, Board members and Municipal
                     Manager have not been supplied for publication. This page therefore describes institutional roles
-                    and the composition of the Board as set out in the charter document published by the County. It
-                    does not name or depict any official. Please contact the municipal office for current membership.
-                  </p>
-                  <p className="mt-2 text-[11.5px] leading-relaxed text-ink-muted">
-                    Note on the source: the charter file served by the County is headed &ldquo;Model Municipal Charter
-                    prepared under the World Bank Kenya Urban Support Programme&rdquo;. The composition described here
-                    (nine members, five-year term, five members competitively appointed) is quoted from that document.
-                    The Municipality should confirm that the version on the record is the charter as adopted for
-                    Iten-Tambach before this page is relied upon as a statement of the adopted instrument.
+                    and responsibilities without naming or depicting individual officials. Please contact the municipal
+                    office for current membership.
                   </p>
                   <Link
                     href="/contact"
@@ -79,7 +72,7 @@ export default function GovernancePage() {
                   Municipal Board
                 </h2>
                 <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
-                  The Municipal Board is the governing body provided for under the Municipal Charter. The charter document listed by the County describes a nine-member Board serving on a part-time basis for a five-year term, with five members appointed competitively by the County Executive Committee and approved by the County Assembly. The Municipality should confirm that the model charter on the County repository is the version adopted for Iten-Tambach.
+                  The Municipal Board provides strategic direction, governance and oversight for the Municipality. It supports accountable decision-making and ensures that municipal affairs are managed in the public interest.
                 </p>
                 <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
                   Further members are nominated by umbrella bodies representing professional associations, the private
