@@ -17,7 +17,7 @@ const pillars = [
   {
     icon: Store,
     title: "Trade and Commerce",
-    text: "Trade and local enterprise are part of the Municipality's economic life. The Municipal Charter provides for municipal markets and abattoirs and for the regulation of outdoor advertising.",
+    text: "Trade and local enterprise are part of the Municipality's economic life. The County-hosted model charter lists markets and abattoirs among possible municipal functions. Local adoption and delegation of these functions must be confirmed before they are presented as municipal services.",
   },
   {
     icon: Truck,
@@ -41,7 +41,7 @@ export default function InvestmentPage() {
     <>
       <PageHero
         title="Investment and Economic Development"
-        intro="Iten-Tambach's economy draws on agriculture, trade, public administration and its international reputation for high-altitude athletics. The Municipality's published planning and investment documents provide useful context for businesses and development partners considering the area."
+        intro="Iten-Tambach's economy draws on agriculture, trade, public administration and its international reputation for high-altitude athletics. County-hosted planning documents may provide context for businesses and development partners. Their adoption status and investment applicability must be confirmed with the responsible institution."
         image="/images/highlands.jpg"
         imageAlt="Highland farmland and settlement in Elgeyo Marakwet County"
         eyebrow="Economic Development"
