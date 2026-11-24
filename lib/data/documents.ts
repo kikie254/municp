@@ -71,7 +71,7 @@ export const documents: MunicipalDocument[] = [
     lastUpdated: "30 September 2019",
     fileSize: "831 KB",
     summary:
-      "The instrument incorporating Iten-Tambach Municipality and setting out its objects, functions, the establishment and composition of the Municipal Board, and the framework for accountable municipal administration.",
+      "A County-hosted model-draft charter document concerning the proposed incorporation, objects, functions and governance arrangements of Iten-Tambach Municipality. Its adopted status has not been established.",
     fileUrl: "https://elgeyomarakwet.go.ke/?mdocs-file=2273",
     verification: "content-confirmed",
     note:
