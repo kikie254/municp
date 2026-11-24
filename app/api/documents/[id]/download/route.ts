@@ -58,6 +58,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if (isPublished) {
     const ipHash = hashIp(request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || undefined);
     const limit = await rateLimit(`download:${id}:${ipHash ?? "unknown"}`, 30, 60 * 1000);
+    if (limit.unavailable) return NextResponse.json({ error: "Document service is temporarily unavailable." }, { status: 503, headers: { "Retry-After": String(limit.retryAfterSeconds), "Cache-Control": "no-store" } });
     if (!limit.allowed) {
       return NextResponse.json(
         { error: "Too many downloads from this connection. Please try again later." },
