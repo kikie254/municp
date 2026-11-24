@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Clock, ExternalLink, ShieldCheck } from "lucide-react";
+import { MapPin, Clock, ExternalLink } from "lucide-react";
 import { legalLinks, quickLinks, resourceLinks, site } from "@/lib/site";
-import { ContactPending } from "./ContactPending";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -33,13 +32,6 @@ export function SiteFooter() {
           </div>
           <p className="mt-5 max-w-sm text-[13.5px] leading-relaxed text-white/65">
             A town of choice for sports, tourism and investment.
-          </p>
-          <p className="mt-4 flex items-start gap-2 border-l-2 border-gold-400/60 pl-3 text-[12px] leading-relaxed text-white/50">
-            <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-400" aria-hidden="true" />
-            <span>
-              Website prepared for Iten-Tambach Municipality, County Government of Elgeyo Marakwet,
-              Republic of Kenya. Pending municipal approval before launch.
-            </span>
           </p>
           <Link
             href={site.countyWebsite}
@@ -97,9 +89,6 @@ export function SiteFooter() {
               <span>{site.contact.postal}</span>
             </li>
           </ul>
-          <div className="mt-4">
-            <ContactPending />
-          </div>
         </div>
       </div>
 
