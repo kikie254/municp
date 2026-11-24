@@ -177,6 +177,33 @@ export default function DevelopmentPlanPage() {
         </div>
       </section>
 
+      <section className="bg-white py-12 md:py-16">
+        <div className="shell">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Selected planned outputs</p>
+            <h2 className="mt-2 font-display text-2xl font-extrabold text-green-900 md:text-3xl">What the plan proposes to deliver</h2>
+            <p className="mt-3 text-sm leading-6 text-ink-muted">Examples below are drawn from the programme target tables. They are planned outputs, not confirmation that the works have been funded, procured or completed.</p>
+          </div>
+          <div className="mt-7 grid gap-4 md:grid-cols-3">
+            <article className="border border-paper-line bg-paper-warm p-5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-gold-700">Liquid waste management</p>
+              <p className="mt-2 font-display text-2xl font-extrabold text-green-900">50 km</p>
+              <p className="mt-2 text-xs leading-5 text-ink-muted">Sewer line construction target in Year 5. The plan also lists two treatment plants across the programme period.</p>
+            </article>
+            <article className="border border-paper-line bg-paper-warm p-5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-gold-700">Urban transport</p>
+              <p className="mt-2 font-display text-2xl font-extrabold text-green-900">20 km</p>
+              <p className="mt-2 text-xs leading-5 text-ink-muted">Roads upgraded to bitumen standards target in Year 5, alongside machinery purchase and routine municipal road maintenance.</p>
+            </article>
+            <article className="border border-paper-line bg-paper-warm p-5">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-gold-700">Sports development</p>
+              <p className="mt-2 font-display text-2xl font-extrabold text-green-900">9 fields</p>
+              <p className="mt-2 text-xs leading-5 text-ink-muted">The plan proposes upgrading nine standard sports fields and developing the Iten municipal sports grounds and Kamariny athletics facilities.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-green-950 py-12 text-white md:py-16">
         <div className="shell">
           <div className="max-w-2xl">
