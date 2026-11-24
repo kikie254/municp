@@ -17,7 +17,7 @@ import type { EmailOutboxRecord } from "../firebase/types";
  */
 
 export type MailResult = { status: "SENT" | "QUEUED" | "FAILED" | "NOT_CONFIGURED"; detail?: string; outboxId: string };
-export type MailInput = { to: string; subject: string; body: string; replyTo?: string };
+export type MailInput = { to: string | null; subject: string; body: string; replyTo?: string };
 
 export function mailerConfigured(): boolean {
   return Boolean(process.env.EMAIL_API_KEY && process.env.EMAIL_FROM && process.env.EMAIL_PROVIDER);
@@ -39,6 +39,9 @@ async function enqueue(input: MailInput): Promise<string> {
 }
 
 export async function sendMail(input: MailInput): Promise<MailResult> {
+  if (!input.to) {
+    return { status: "NOT_CONFIGURED", outboxId: "", detail: "No approved recipient is configured." };
+  }
   const outboxId = await enqueue(input);
 
   if (!mailerConfigured()) {
