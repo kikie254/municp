@@ -18,6 +18,9 @@ export const dynamic = "force-dynamic";
  * than writing to Firestore directly. It returns only the reference — never the record.
  */
 export async function POST(request: Request) {
+  if (process.env.PUBLIC_SUBMISSIONS_ENABLED !== "true") {
+    return NextResponse.json({ error: "Public submissions are disabled on this demonstration website." }, { status: 503, headers: { "Cache-Control": "no-store" } });
+  }
   if (!(await sameOrigin())) {
     return NextResponse.json({ error: "Invalid origin." }, { status: 403 });
   }
