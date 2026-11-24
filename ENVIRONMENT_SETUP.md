@@ -1,64 +1,88 @@
-# ENVIRONMENT SETUP
+# Environment Setup — Iten–Tambach Municipality Demonstration Website
 
-## 1. Requirements
+This repository's active backend uses Firebase. The older SQLite/Prisma instructions in previous revisions are obsolete; `prisma/` is retained only as legacy/migration material.
 
-| Component | Version | Notes |
+## Requirements
+
+| Component | Version / requirement |
+|---|---|
+| Node.js | 20.9 or newer |
+| npm | 10.x recommended |
+| Framework | Next.js 15.5.29 |
+| Database | Cloud Firestore |
+| Authentication | Firebase Authentication |
+| File storage | Firebase Cloud Storage |
+| Local testing | Firebase Emulator Suite, Java runtime for emulators |
+
+## Local install
+
+```bash
+npm ci
+npm run dev
+```
+
+Create `.env.local` locally. Do not commit it. Use a dedicated Firebase development or emulator project, never production credentials.
+
+## Environment variables
+
+| Variable | Required | Purpose |
 |---|---|---|
-| Node.js | ≥ 20.9.0 (tested on 22.23.4) | `package.json` `engines` |
-| npm | 10.x (lockfile v3) | `package-lock.json` is committed and is the source of truth |
-| Database | SQLite 3 (dev) or PostgreSQL 14+ (production) | Prisma 6.19.0 |
-| Disk | writable directory for `UPLOAD_DIR` and the SQLite file | Must be outside `/public` |
+| `NEXT_PUBLIC_SITE_URL` | Production | Canonical HTTPS site origin |
+| `NEXT_PUBLIC_FIREBASE_PROJECT_ID` | Yes | Firebase project identifier |
+| `FIREBASE_ADMIN_PROJECT_ID` | Yes | Firebase Admin SDK target; must match the intended project |
+| `FIREBASE_ADMIN_CLIENT_EMAIL` + `FIREBASE_ADMIN_PRIVATE_KEY` | One credential method required | Service-account credentials; alternatively use ADC |
+| `GOOGLE_APPLICATION_CREDENTIALS` | Alternative | Path to a service-account JSON held outside the repository |
+| `FIREBASE_WEB_API_KEY` | Yes | Server-side Identity Toolkit sign-in/reset flow |
+| `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET` | For file workflows | Cloud Storage bucket identifier |
+| `PRIVACY_HASH_SECRET` | Production | At least 32 characters; salt for pseudonymised network identifiers |
+| `MFA_ENFORCEMENT` | Institutional decision | `report`, `enforce` or `off`; enforcement requires enrolled privileged accounts |
+| `EMAIL_PROVIDER`, `EMAIL_API_KEY`, `EMAIL_FROM` | Optional | Outbound email integration |
+| `MUNICIPAL_NOTIFICATIONS_EMAIL` | Optional, but required for internal email alerts | Verified institutional recipient; there is no placeholder fallback |
+| `PUBLIC_SUBMISSIONS_ENABLED` | **Defaults to disabled** | Must be explicitly set to `true` only after written municipal approval of the public channel and its privacy/operational controls |
+| `BACKUP_GCS_BUCKET` | Recommended | Separate protected bucket for scheduled Firestore exports |
 
-## 2. Local install
-
-```bash
-npm ci                     # uses the committed lockfile; runs prisma generate on postinstall
-cp .env.example .env       # then edit DATABASE_URL and the seed values
-npm run db:migrate         # applies prisma/migrations/20260101000000_init
-ADMIN_EMAIL=you@example.go.ke ADMIN_PASSWORD='YourStrongPassword1!' npm run db:seed
-npm run dev                # http://localhost:3000
-```
-
-Sign in at `/admin/login`. Create further accounts in **User management**; do not add them to the seed.
-
-## 3. Variables
-
-| Variable | Required | Default | Purpose |
-|---|---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Production | `http://localhost:3000` | Canonical origin for metadata, canonical tags, Open Graph, sitemap, robots. No trailing slash. Inlined at build time. |
-| `DATABASE_URL` | Yes | `file:./var/data/app.db` | Prisma connection string. Use a pooled Postgres URL in production. |
-| `PRIVACY_HASH_SECRET` | Production | development fallback | Salt for IP hashes and rate-limit keys. Generate 32 random bytes as hex. |
-| `SESSION_TTL_HOURS` | No | `8` | Administrative session lifetime. |
-| `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `ADMIN_NAME` | Seed only | — | First super administrator. Never commit these. |
-| `EMAIL_PROVIDER`, `EMAIL_API_KEY`, `EMAIL_FROM` | No | — | Outbound mail. Without them messages are recorded as `NOT_CONFIGURED`. |
-| `MUNICIPAL_NOTIFICATIONS_EMAIL` | No | `[email removed]` | Internal recipient for citizen submissions. |
-| `UPLOAD_DIR` | No | `./var/uploads` | Private document storage. |
-| `MAX_UPLOAD_BYTES` | No | `10485760` | Upload ceiling. |
-| `NEXT_PUBLIC_ADMIN_PREVIEW` | No | unset | Phase 1 static review route. Any value other than `enabled` keeps it at 404. |
-
-## 4. Safe start behaviour
-
-The application starts with only `DATABASE_URL` set. What each missing value does:
-
-* **No `NEXT_PUBLIC_SITE_URL`** — canonical URLs fall back to `http://localhost:3000`. This is correct for local work and must be fixed before launch, because canonical tags would otherwise point at localhost.
-* **No `PRIVACY_HASH_SECRET`** — hashes use a fixed development salt. Personal data is still not stored in clear, but the salt is public, so `/admin/settings` shows the check as failing.
-* **No email credentials** — submissions are stored and given a reference; the citizen is told that no acknowledgement email could be sent; `/admin/settings` lists `NOT_CONFIGURED`; the outbox can be re-queued later.
-* **No `UPLOAD_DIR`** — defaults to `./var/uploads`, created on first upload.
-* **Database unreachable** — public pages render their empty states, `/api/health` returns 503, `/admin/login` explains that sign-in is unavailable. Nothing is silently accepted.
-
-## 5. Verifying a fresh install
+Run the environment check without exposing values:
 
 ```bash
-npm run typecheck     # tsc --noEmit
-npm run lint          # eslint .
-npm run test          # vitest run  (unit suite)
-npm run build         # next build
-npm run verify:routes # optional: needs a running server on BASE (default :3123)
+npm run env:check
+npm run env:check:strict
 ```
 
-## 6. Administrator lifecycle
+The checker prints variable names and presence only. It must never print secret values.
 
-1. First super administrator: `npm run db:seed` with the three `ADMIN_*` variables.
-2. Further administrators: `/admin/users` → *Add an administrator*. Role and initial password are set there.
-3. Password reset: `/admin/reset-password` → email with a 60-minute single-use link. If no email provider is configured the action says so and instructs the user to ask a super administrator, rather than pretending a mail was sent.
-4. Disabling an account deletes its sessions immediately; the last active super administrator cannot be disabled and nobody can disable themselves.
+## Safe public-intake policy
+
+Public forms and `POST /api/submissions` are disabled unless `PUBLIC_SUBMISSIONS_ENABLED=true`. The UI hides the input fields when disabled; the server actions and API route independently reject direct requests. Keep the flag unset on the demonstration deployment.
+
+Before enabling it, the Municipality must approve the website as an official channel, publish an approved privacy notice, designate the data controller/contact, confirm processor arrangements and data residency, set retention/deletion periods, provision authorised staff, test escalation and response procedures, and supply a verified `MUNICIPAL_NOTIFICATIONS_EMAIL`.
+
+Use only a disposable emulator or test Firebase project when testing the enabled path. The API verification script includes a valid submission probe that may create a database record.
+
+## Administrator provisioning
+
+No default administrator account exists. Provision an administrator only in an authorised Firebase project:
+
+```bash
+ADMIN_EMAIL='verified-admin@example.org' \
+ADMIN_PASSWORD='use-a-unique-long-passphrase' \
+ADMIN_NAME='Approved Administrator' \
+npm run admin:provision
+```
+
+The values above are examples for local shell syntax only; do not use them as actual credentials. Enrol MFA for privileged users and test sign-in/session revocation against the intended Firebase project.
+
+## Testing
+
+```bash
+npm run typecheck
+npm run lint
+npm run test
+npm run test:rules
+npm run build
+```
+
+For route/API smoke tests, start the built server and run `npm run verify:routes` and `npm run verify:api` from another terminal. Do not run write-capable verification probes against production data.
+
+## Backup and recovery
+
+The presence of backup scripts is not proof that scheduled exports, retention locks or recovery tests exist. Follow [BACKUP_AND_RECOVERY.md](BACKUP_AND_RECOVERY.md), configure a separate institutional backup bucket and perform a documented restore test before go-live.
