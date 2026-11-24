@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
+import { publicImageAssetsApproved } from "@/lib/config/env";
 
 export type Crumb = { label: string; href?: string };
 
@@ -21,16 +22,19 @@ export function PageHero({
   crumbs: Crumb[];
   align?: "left" | "center";
 }) {
+  const showImage = publicImageAssetsApproved();
   return (
     <section className="relative isolate overflow-hidden bg-green-950">
-      <Image
-        src={image}
-        alt={imageAlt}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center opacity-70"
-      />
+      {showImage && (
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-70"
+        />
+      )}
       <div className="absolute inset-0 banner-overlay" />
       <div className="absolute inset-0 pattern-grid opacity-60" aria-hidden="true" />
 
