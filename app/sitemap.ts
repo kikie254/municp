@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/", priority: 1, freq: "weekly" as const },
     { path: "/about", priority: 0.9, freq: "monthly" as const },
     { path: "/governance", priority: 0.8, freq: "monthly" as const },
+    { path: "/development-plan", priority: 0.9, freq: "monthly" as const },
     { path: "/services", priority: 0.9, freq: "monthly" as const },
     { path: "/projects", priority: 0.9, freq: "weekly" as const },
     { path: "/public-participation", priority: 0.85, freq: "weekly" as const },
