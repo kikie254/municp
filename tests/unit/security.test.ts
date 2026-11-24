@@ -34,7 +34,7 @@ describe("upload inspection", () => {
   });
 
   it("rejects a spreadsheet formula placed after the first 2 KB of a CSV", () => {
-    const csv = Buffer.from("safe,row\\n".repeat(400) + '=HYPERLINK("https://malicious.invalid","open")');
+    const csv = Buffer.from("safe,row\n".repeat(400) + '=HYPERLINK("https://malicious.invalid","open")');
     expect(inspectUpload("late-formula.csv", csv).ok).toBe(false);
   });
 
