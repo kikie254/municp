@@ -7,6 +7,7 @@ import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
 import { formatDate } from "@/components/content/PublishedBlocks";
 import { getProjectBySlug } from "@/lib/queries";
+import { publicImageAssetsApproved } from "@/lib/config/env";
 
 export function generateStaticParams() {
   return [];
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: record.title,
       description: record.summary,
       type: "article",
-      ...(record.imagePath ? { images: [record.imagePath] } : {}),
+      ...(record.imagePath && publicImageAssetsApproved() ? { images: [record.imagePath] } : {}),
     },
     robots: { index: true, follow: true },
   };
@@ -57,7 +58,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <article className="bg-white py-12 md:py-16">
         <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-8">
-            {record.imagePath && (
+            {record.imagePath && publicImageAssetsApproved() && (
               <div className="relative mb-7 aspect-[16/9] overflow-hidden bg-green-950">
                 <Image src={record.imagePath} alt={record.imageAlt ?? ""} fill priority sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover" />
               </div>
