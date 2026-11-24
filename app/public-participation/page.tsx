@@ -48,7 +48,7 @@ export default function PublicParticipationPage() {
               <SectionHeading
                 eyebrow="Forum Calendar"
                 title="Forums and engagement sessions"
-                description="Citizen forums are the municipality's principal channel for face-to-face engagement on plans, budgets and service priorities. Confirmed dates are issued through official public notices."
+                description="Citizen Fora are provided for under the Urban Areas and Cities Act. Any current meeting dates, venues and participation arrangements must be taken from a specific notice issued by an authorised office."
               />
             </Reveal>
             <div className="mt-7 border-y border-paper-line py-6">
