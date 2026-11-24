@@ -59,7 +59,7 @@ export function SiteHeader() {
             <span>{site.republic}</span>
           </p>
           <div className="hidden items-center gap-5 text-[11px] font-medium text-white/70 md:flex">
-            <a href="/contact" className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300">
+            <Link href="/contact" className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300">
               <Phone className="h-3 w-3" aria-hidden="true" /> {site.contact.postal}
             </Link>
             <Link href="/news" className="transition-colors hover:text-gold-300">
