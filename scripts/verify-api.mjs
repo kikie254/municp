@@ -16,6 +16,7 @@ import fs from "node:fs";
 fs.mkdirSync("logs", { recursive: true });
 const BASE = process.env.BASE || "http://127.0.0.1:3123";
 const ORIGIN = process.env.SITE_ORIGIN || BASE; // origin must match the served host for the CSRF check
+const publicSubmissionsEnabled = process.env.PUBLIC_SUBMISSIONS_ENABLED === "true";
 const out = [];
 const log = (s) => { out.push(s); console.log(s); };
 let failures = 0;
@@ -72,36 +73,48 @@ const check = (name, pass, detail) => {
   check("GET /api/documents/<unknown>/download", res.status === 404, `status=${res.status} (metadata-gated, no enumeration)`);
 }
 
-// ── 5. Submission intake: validation, CSRF origin check ──────────────────────
-{
-  const res = await fetch(`${BASE}/api/submissions`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Origin: "http://evil.example" },
-    body: JSON.stringify({ type: "ENQUIRY", name: "Test", email: "t@example.com", subject: "s", message: "m" }),
-  });
-  const body = await res.json().catch(() => null);
-  check("POST /api/submissions cross-origin", res.status === 403, `status=${res.status} body=${JSON.stringify(body)}`);
-}
-{
+// ── 5. Submission intake: disabled by default; validation/CSRF tested when explicitly enabled
+if (!publicSubmissionsEnabled) {
   const res = await fetch(`${BASE}/api/submissions`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Origin: ORIGIN },
-    body: JSON.stringify({ type: "NOT_A_TYPE", name: "", email: "nope", subject: "", message: "" }),
+    body: JSON.stringify({ type: "ENQUIRY", name: "Test", email: "test@example.invalid", subject: "s", message: "m" }),
   });
-  const body = await res.json().catch(() => null);
-  check("POST /api/submissions invalid payload", res.status === 422 && body?.fields, `status=${res.status} fields=${JSON.stringify(body?.fields ?? null)}`);
-}
-{
-  const res = await fetch(`${BASE}/api/submissions`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Origin: ORIGIN },
-    body: JSON.stringify({ type: "ENQUIRY", name: "Verify Bot", email: "verify@example.com", subject: "route check", message: "Automated API verification probe.", consent: true }),
-  });
-  // With no Firebase project configured the Firestore write fails → 500. With credentials it is 201.
-  const body = await res.json().catch(() => null);
-  const ok = res.status === 201 || res.status === 500;
-  check("POST /api/submissions valid payload", ok,
-    `status=${res.status} body=${JSON.stringify(body)} (500 expected without Firestore credentials; 201 with)`);
+  check("POST /api/submissions disabled by default", res.status === 503, `status=${res.status}`);
+} else {
+  // ── 5. Submission intake: validation, CSRF origin check ──────────────────────
+  {
+    const res = await fetch(`${BASE}/api/submissions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Origin: "http://evil.example" },
+      body: JSON.stringify({ type: "ENQUIRY", name: "Test", email: "t@example.com", subject: "s", message: "m" }),
+    });
+    const body = await res.json().catch(() => null);
+    check("POST /api/submissions cross-origin", res.status === 403, `status=${res.status} body=${JSON.stringify(body)}`);
+  }
+  {
+    const res = await fetch(`${BASE}/api/submissions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Origin: ORIGIN },
+      body: JSON.stringify({ type: "NOT_A_TYPE", name: "", email: "nope", subject: "", message: "" }),
+    });
+    const body = await res.json().catch(() => null);
+    check("POST /api/submissions invalid payload", res.status === 422 && body?.fields, `status=${res.status} fields=${JSON.stringify(body?.fields ?? null)}`);
+  }
+  {
+    const res = await fetch(`${BASE}/api/submissions`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Origin: ORIGIN },
+      body: JSON.stringify({ type: "ENQUIRY", name: "Verify Bot", email: "verify@example.com", subject: "route check", message: "Automated API verification probe.", consent: true }),
+    });
+    // With no Firebase project configured the Firestore write fails → 500. With credentials it is 201.
+    const body = await res.json().catch(() => null);
+    const ok = res.status === 201 || res.status === 500;
+    check("POST /api/submissions valid payload", ok,
+      `status=${res.status} body=${JSON.stringify(body)} (500 expected without Firestore credentials; 201 with)`);
+  }
+  
+  
 }
 
 // ── 6. Rate limiting on search (40/min per IP) ───────────────────────────────
