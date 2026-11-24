@@ -103,8 +103,8 @@ export function EnquiryForm() {
                 Preview only — your enquiry has not been sent
               </p>
               <p className="mt-1 text-[11.5px] leading-relaxed text-ink-soft">
-                Nothing was transmitted, stored or registered. For a formal enquiry, email the municipal office (P.O. Box 220-30700, Iten)
-                or write to P.O. Box 220-30700, Iten.
+                Nothing was transmitted, stored or registered. For a formal enquiry, email the municipal office (Contact details are awaiting written municipal confirmation.)
+                or write to Contact details are awaiting written municipal confirmation..
               </p>
               <dl className="mt-4 grid gap-x-6 gap-y-2 text-[12px] sm:grid-cols-2">
                 {[
