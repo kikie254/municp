@@ -23,9 +23,9 @@ const mandatePoints = [
     icon: Scale,
   },
   {
-    title: "Iten-Tambach Municipal Charter",
+    title: "Municipal charter status",
     body:
-      "The Iten Tambach Municipal Charter is the instrument incorporating the municipality. It sets out the objects of the municipality, its functions, and the establishment, composition and powers of the Municipal Board.",
+      "The County-hosted PDF currently listed for Iten-Tambach is labelled “Model Municipal Charter prepared under the World Bank Kenya Urban Support Programme” and contains blank grant-date and signature fields. It is a research lead, not proof of the adopted charter. The Municipality must provide or confirm the operative signed instrument before this website describes its provisions as adopted local law.",
     icon: Landmark,
   },
   {
@@ -47,7 +47,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Iten-Tambach Municipality"
-        intro="Iten-Tambach Municipality serves the urban community of Iten and Tambach within Elgeyo Marakwet County. Established under the Urban Areas and Cities Act, 2011, it operates within the legal framework and the County Government's system of devolved administration."
+        intro="County Government publications identify Iten-Tambach as a municipality within Elgeyo Marakwet County. Its operative charter, delegated functions and current institutional arrangements must be confirmed against adopted records and applicable law."
         image="/images/iten-town-aerial.jpg"
         imageAlt="Elevated view of towns and green highlands around Iten in Elgeyo Marakwet County"
         eyebrow="Our Institution"
