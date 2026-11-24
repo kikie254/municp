@@ -11,6 +11,7 @@ import { publishedNews, publishedProjects } from "@/lib/content";
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (process.env.MUNICIPAL_PUBLICATION_APPROVED !== "true") return [];
   const base = site.url;
   const now = new Date();
 
