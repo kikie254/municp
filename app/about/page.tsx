@@ -47,7 +47,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Iten-Tambach Municipality"
-        intro="Iten-Tambach Municipality operates within the County Government of Elgeyo Marakwet and contributes to the planning, management and development of the municipality in accordance with applicable laws and its approved institutional framework."
+        intro="Iten-Tambach Municipality is the sole municipality in Elgeyo Marakwet County and is home to the County headquarters. It was established under the Urban Areas and Cities Act, 2011, and granted its Municipal Charter in December 2018. The Municipality's work is guided by that legal framework and its relationship with the County Government of Elgeyo Marakwet."
         image="/images/iten-town-aerial.jpg"
         imageAlt="Elevated view of towns and green highlands around Iten in Elgeyo Marakwet County"
         eyebrow="Our Institution"
@@ -65,17 +65,13 @@ export default function AboutPage() {
               </h2>
               <div className="mt-5 space-y-4">
                 <p className="text-[14.5px] leading-[1.85] text-ink-soft">
-                  Iten-Tambach Municipality operates within the County Government of Elgeyo Marakwet and contributes
-                  to the planning, management and development of the municipality in accordance with applicable laws
-                  and its approved institutional framework.
+                  Iten-Tambach Municipality is the sole municipality in Elgeyo Marakwet County and hosts the County headquarters. Its municipal status was formalised in December 2018 under the Urban Areas and Cities Act, 2011, through the grant of a Municipal Charter.
                 </p>
                 <p className="text-[14.5px] leading-[1.85] text-ink-soft">
-                  Our role is to support sustainable urban development, promote effective municipal governance,
-                  strengthen public participation and contribute to an improved urban environment.
+                  The Municipal Charter sets out responsibilities that include urban planning, roads and drainage, solid waste management, public spaces, street lighting, markets, public transport facilities and community participation. These functions are carried out within the wider framework of the County Government and other public agencies.
                 </p>
                 <p className="text-[14.5px] leading-[1.85] text-ink-soft">
-                  We believe that successful urban development requires collaboration between government
-                  institutions, communities, businesses and development partners.
+                  The Municipality's statutory objects place particular emphasis on accountable administration, efficient services, resident participation and the economic, social and environmental well-being of the community.
                 </p>
               </div>
               <div className="mt-7 flex flex-wrap gap-3">
@@ -105,8 +101,7 @@ export default function AboutPage() {
                   Institutional identity
                 </p>
                 <p className="mt-2 text-[12.5px] leading-relaxed text-white/75">
-                  Iten-Tambach Municipality is one of the urban units within the County Government of Elgeyo Marakwet,
-                  styled the &ldquo;County of Champions&rdquo;.
+                  Iten-Tambach Municipality is the sole municipality in Elgeyo Marakwet County and serves as the County headquarters.
                 </p>
               </div>
             </div>
@@ -127,11 +122,10 @@ export default function AboutPage() {
                   Our Vision
                 </h2>
                 <p className="mt-3 text-[14px] leading-[1.85] text-ink-soft">
-                  &ldquo;To be a well-planned, inclusive, clean and vibrant municipality that provides opportunities
-                  and improves the quality of life for all.&rdquo;
+                  &ldquo;A town of choice for sports, tourism and investment.&rdquo;
                 </p>
                 <p className="mt-4 border-l-2 border-gold-400 pl-3 text-[11.5px] leading-relaxed text-ink-muted">
-                  Proposed institutional statement, subject to official approval.
+                  As stated in the Municipality's FY 2023/2024 Annual Report.
                 </p>
               </div>
             </Reveal>
@@ -145,11 +139,10 @@ export default function AboutPage() {
                   Our Mission
                 </h2>
                 <p className="mt-3 text-[14px] leading-[1.85] text-ink-soft">
-                  &ldquo;To promote sustainable urban development through effective planning, accountable governance,
-                  environmental stewardship and inclusive community participation.&rdquo;
+                  &ldquo;To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.&rdquo;
                 </p>
                 <p className="mt-4 border-l-2 border-gold-400 pl-3 text-[11.5px] leading-relaxed text-ink-muted">
-                  Proposed institutional statement, subject to official approval.
+                  As stated in the Municipality's FY 2023/2024 Annual Report.
                 </p>
               </div>
             </Reveal>
@@ -164,7 +157,7 @@ export default function AboutPage() {
             <SectionHeading
               eyebrow="Core Values"
               title="The principles that guide municipal service"
-              description="These values describe the standard of conduct expected in municipal decision-making and service delivery."
+              description="The available source documents do not provide a separate approved list of corporate core values. The principles below are drawn from the seven statutory objects in the Municipal Charter; they should not be mistaken for a formally adopted values statement."
             />
           </Reveal>
 
