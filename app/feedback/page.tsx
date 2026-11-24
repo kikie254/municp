@@ -28,9 +28,9 @@ const categories = [
 ];
 
 const grievanceSteps = [
-  { title: "Raise the matter", text: "Describe what happened, where it took place and when. You can submit the details through the online form on this page. The published Grievance Redress Mechanism documents explain the municipal process." },
-  { title: "Receive a reference", text: "When the online form records a submission successfully, it displays a reference number. Keep the number and quote it when following up." },
-  { title: "Follow up", text: "Quote the reference when following up. If the matter concerns another county department or a national agency, the municipality can indicate the correct office." },
+  { title: "Raise the matter", text: "Record what happened, where and when for your own reference. This demonstration website is not an authorised complaints channel; consult the relevant published grievance documents and official notices." },
+  { title: "Receive a reference", text: "The demonstration website does not issue an official complaint reference. Do not rely on a test reference as proof that a municipal office received or registered a complaint." },
+  { title: "Follow up", text: "Use contact details published by the institution legally responsible for the matter. Verified municipal contact details have not yet been supplied for this website." },
 ];
 
 export default function FeedbackPage() {
@@ -79,7 +79,7 @@ export default function FeedbackPage() {
             <div className="mt-5 flex gap-3 border border-paper-line bg-paper-warm p-4">
               <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-green-700" aria-hidden="true" />
               <p className="text-[11.5px] leading-relaxed text-ink-soft">
-                The Municipality's published grievance redress documents, including its process flow chart, are listed in the Document Centre.
+                The County Government document repository lists grievance redress materials. Their current status and applicability should be confirmed with the responsible institution.
               </p>
             </div>
             <Link href="/resources?category=Grievance+Redress+Documents" className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-green-700 hover:text-gold-700">
