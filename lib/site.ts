@@ -23,7 +23,7 @@ export const site = {
   url: resolveSiteUrl(),
   description:
     "Demonstration website prepared for institutional review. Not an approved official publication of Iten-Tambach Municipality or the County Government of Elgeyo Marakwet.",
-  contactVerification: "pending" as const,
+  contactVerification: "pending" as "pending" | "confirmed",
   countyWebsite: "https://elgeyomarakwet.go.ke/",
   documentSource: "https://elgeyomarakwet.go.ke/iten-municipality-documents/",
 } as const;
