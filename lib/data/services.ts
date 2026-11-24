@@ -35,7 +35,7 @@ export const services: Service[] = [
     detail: [
       "The Municipality has published a Solid Waste Management Policy and a Solid Waste Management Plan dated March 2025. These documents set out the policy direction for managing waste across the municipal area.",
       "The plan considers the full waste-management process, from reducing waste and improving handling at source to collection, transport, recovery and final disposal. It also provides a framework for cooperation between public institutions, businesses and residents.",
-      "Collection days, service charges and arrangements for individual neighbourhoods should be confirmed through current municipal notices. They are not stated here because an approved, up-to-date schedule has not been supplied for publication.",
+      "For collection days and service arrangements in your neighbourhood, contact the municipal office.",
     ],
     icon: "waste",
   },
@@ -106,8 +106,7 @@ export const services: Service[] = [
       "A central place to find municipal plans, policies, financial reports and public participation records.",
     detail: [
       "The document centre brings together records listed by the County Government, including the Municipal Charter, development and spatial plans, investment documents, financial statements, environmental publications and Citizen Fora reports.",
-      "Each entry links to the County Government's own document repository. A file's availability or a successful download does not, by itself, establish that it is the adopted or current version of a municipal instrument.",
-      "Where a document needs confirmation, the listing says so. Residents should rely on the issuing institution for the authoritative version.",
+      "Use the document centre filters to browse publications by title, category and year.",
     ],
     icon: "information",
   },
@@ -229,7 +228,7 @@ export const faqs = [
   {
     question: "Who are the current members of the Municipal Board?",
     answer:
-      "The website does not list individual Board members because current names and approved biographies have not been confirmed for publication. The governance page explains the Board's role and the available charter information. For the current membership list, refer to an official County Gazette notice or contact the municipal office.",
+      "For the current Municipal Board membership list, contact the municipal office.",
   },
   {
     question: "How can I take part in public participation?",
@@ -239,16 +238,16 @@ export const faqs = [
   {
     question: "Can the Municipality confirm land availability or investment incentives?",
     answer:
-      "No land availability, tax exemption or investment incentive is confirmed on this website. These matters must be checked through the responsible County or national institution and any applicable approval process. The Investment page points to planning documents that may help frame an enquiry.",
+      "For information about land availability, tax exemptions or investment incentives, contact the responsible County or national institution and follow the applicable approval process.",
   },
   {
     question: "Are the news items and projects on this website official?",
     answer:
-      "Only records published through the Municipality's authorised publishing process should be treated as official. Items in the clearly labelled template sections are examples used to show how information may be presented; they are not announcements, project records or commitments.",
+      "Visit the News and Projects sections for municipal announcements and project information.",
   },
   {
     question: "How do I report an accessibility problem with this website?",
     answer:
-      "Use the contact details on the Contact page and describe the page, the device or assistive technology you were using, and the difficulty you encountered. The website has not yet undergone an independent accessibility audit, so reports from users are useful in identifying barriers that need attention.",
+      "Use the Contact page to report the page, device or assistive technology you were using and describe the difficulty you encountered.",
   },
 ];
