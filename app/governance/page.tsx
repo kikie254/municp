@@ -11,7 +11,7 @@ import { CtaBand } from "@/components/CtaBand";
 export const metadata: Metadata = {
   title: "Municipal Governance and Leadership",
   description:
-    "The governance framework of Iten-Tambach Municipality: the Municipal Board, Chairperson, Municipal Manager and administration under the Iten Tambach Municipal Charter.",
+    "The governance framework of Iten-Tambach Municipality under the Urban Areas and Cities Act, 2011 (as amended). The operative local charter and current appointments require verification.",
   alternates: { canonical: "/governance" },
 };
 
@@ -42,7 +42,7 @@ export default function GovernancePage() {
               <SectionHeading
                 eyebrow="Governance Framework"
                 title="Structures that carry public accountability"
-                description="The municipality's governance arrangements follow the framework set out in the Urban Areas and Cities Act, 2011, as amended, and in the Iten Tambach Municipal Charter."
+                description="The national framework is set out in the Urban Areas and Cities Act, 2011, as amended. The Municipality's operative charter and local governance arrangements must be confirmed from adopted instruments."
               />
             </Reveal>
 
@@ -78,7 +78,7 @@ export default function GovernancePage() {
                     Board Chairperson
                   </h2>
                   <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
-                    The Chairperson leads the Board's meetings and carries out the responsibilities assigned by the Charter and applicable law. The Vice-Chairperson supports the Chairperson in accordance with the same framework.
+                    The Chairperson presides over Board meetings in accordance with applicable law and the operative charter, once verified. The Vice-Chairperson's responsibilities must likewise be confirmed against the adopted instrument.
                   </p>
                 </article>
               </Reveal>
