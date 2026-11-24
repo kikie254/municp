@@ -31,6 +31,7 @@ export async function GET(request: Request) {
 
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   const limit = await rateLimit(`search:${ip}`, 40, 60 * 1000);
+  if (limit.unavailable) return NextResponse.json({ query: q, results: [], error: "Search is temporarily unavailable." }, { status: 503, headers: { "Retry-After": String(limit.retryAfterSeconds), "Cache-Control": "no-store" } });
   if (!limit.allowed) {
     return NextResponse.json({ query: q, results: [], message: "Too many searches. Please wait a moment." }, { status: 429 });
   }
