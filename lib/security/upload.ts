@@ -40,12 +40,12 @@ export function inspectUpload(fileName: string, buffer: Buffer): UploadCheck {
   }
   if (ext === ".csv") {
     // CSV has no signature. Reject binary content and any embedded markup that could be served back.
-    const text = buffer.subarray(0, 2048).toString("utf8");
+    const text = buffer.toString("utf8").replace(/^\uFEFF/, "");
     if (text.includes("\u0000")) return { ok: false, error: "The CSV file appears to contain binary data." };
     if (/<\s*script/i.test(text)) return { ok: false, error: "The CSV file contains embedded script content." };
     // ST-02 fix: a cell beginning with = + - @ (or TAB/CR) is spreadsheet formula injection — the
     // published file would be opened in Excel by citizens.
-    if (/(^|[\n,])\s*[=+@\t\r-]/.test(text)) {
+    if (/(^|[\r\n,])\s*["']?\s*[=+@-]/m.test(text)) {
       return { ok: false, error: "The CSV file contains spreadsheet formula content. Remove formulas before uploading." };
     }
     return { ok: true, mimeType: "text/csv", extension: ext, checksum: createHash("sha256").update(buffer).digest("hex") };
