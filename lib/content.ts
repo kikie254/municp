@@ -36,7 +36,7 @@ export const hasPublishedProjects = publishedProjects.length > 0;
 export const emptyStateCopy = {
   generic: {
     title: "Official information is being updated",
-    body: "Verified municipal information will be published here once it has been confirmed by the Municipality. Please check back, or contact the municipal office for current information.",
+    body: "Browse municipal information, services and public resources. Contact the municipal office for further assistance.",
   },
   projects: {
     title: "Municipal projects and development",
