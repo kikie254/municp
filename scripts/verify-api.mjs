@@ -16,7 +16,7 @@ import fs from "node:fs";
 fs.mkdirSync("logs", { recursive: true });
 const BASE = process.env.BASE || "http://127.0.0.1:3123";
 const ORIGIN = process.env.SITE_ORIGIN || BASE; // origin must match the served host for the CSRF check
-const publicSubmissionsEnabled = process.env.PUBLIC_SUBMISSIONS_ENABLED === "true";
+const publicSubmissionsEnabled = process.env.MUNICIPAL_PUBLICATION_APPROVED === "true" && process.env.PUBLIC_SUBMISSIONS_ENABLED === "true";
 const out = [];
 const log = (s) => { out.push(s); console.log(s); };
 let failures = 0;
