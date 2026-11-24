@@ -27,11 +27,10 @@ export default function ResourcesPage() {
 
       <section className="bg-white py-12 md:py-16">
         <div className="shell">
-          <div className="shell">
-            <p className="text-[13px] leading-relaxed text-ink-soft">
-              Browse municipal plans, policies, financial reports and public participation records.
-            </p>
-          </div>
+          <p className="text-[13px] leading-relaxed text-ink-soft">
+            Browse municipal plans, policies, financial reports and public participation records.
+          </p>
+        </div>
       </section>
 
       <section className="bg-paper-warm py-12 md:py-16">
