@@ -65,18 +65,18 @@ export default function AboutPage() {
               </h2>
               <div className="mt-5 space-y-4">
                 <p className="text-[14.5px] leading-[1.85] text-ink-soft">
-                  The Municipality's status was formalised in December 2018 through the grant of its Municipal Charter, which provides the institutional basis for its administration and oversight.
+                  County Government publications identify Iten-Tambach as a municipality within Elgeyo Marakwet County. The charter PDF currently listed for reference is a model draft with blank grant-date and signature fields; the operative signed charter and its grant date have not been confirmed for this website.
                 </p>
                 <p className="text-[14.5px] leading-[1.85] text-ink-soft">
-                  Its responsibilities include urban planning, roads and drainage, solid waste management, public spaces, street lighting, markets, public transport facilities and community participation. These functions are carried out within the wider framework of the County Government and other public agencies.
+                  The Urban Areas and Cities Act provides the national framework for municipal governance and functions. The specific responsibilities delegated to this Municipality must be confirmed against its operative charter and current County Government instruments.
                 </p>
                 <p className="text-[14.5px] leading-[1.85] text-ink-soft">
-                  The Municipality's statutory objects place particular emphasis on accountable administration, efficient services, resident participation and the economic, social and environmental well-being of the community.
+                  The statutory framework addresses accountable administration, service delivery and resident participation. This website does not claim that every function listed in the model charter has been formally delegated or adopted locally.
                 </p>
               </div>
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link href="/resources?category=Municipal+Charter" className="btn btn-primary !py-3 !text-[12.5px]">
-                  Read the Municipal Charter <ArrowRight aria-hidden="true" />
+                  Municipal governance documents <ArrowRight aria-hidden="true" />
                 </Link>
                 <Link href="/governance" className="btn btn-outline !py-3 !text-[12.5px]">
                   Municipal Governance
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   Institutional identity
                 </p>
                 <p className="mt-2 text-[12.5px] leading-relaxed text-white/75">
-                  The Municipal Charter was granted in December 2018.
+                  Operative charter and grant date: pending confirmation.
                 </p>
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Our Mandate"
-              title="Grounded in law and the Municipal Charter"
+              title="Grounded in the statutory framework"
               description="The municipality's authority and responsibilities derive from the legal and institutional framework that establishes and governs urban areas in Kenya."
             />
           </Reveal>
