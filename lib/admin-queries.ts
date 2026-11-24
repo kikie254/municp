@@ -3,6 +3,7 @@
 // render "nothing matches this filter" during an outage and the dashboard showed zeros as if
 // they were live counts. Admin pages now surface the error through the route error boundary.
 async function strictRead<T>(fn: () => Promise<T>, ..._rest: unknown[]): Promise<T> {
+  void _rest;
   // The fallback argument of the old safeRead signature is accepted and ignored: admin reads are
   // strict now and callers keep their shape.
   return fn();
