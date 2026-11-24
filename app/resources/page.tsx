@@ -9,7 +9,7 @@ import { DocumentLibrary } from "@/components/DocumentLibrary";
 export const metadata: Metadata = {
   title: "Municipal Document Centre",
   description:
-    "Access official municipal publications, plans, policies and reports for Iten-Tambach Municipality, linked to the County Government of Elgeyo Marakwet's official document repository.",
+    "Access municipal publications, plans, policies and reports for Iten-Tambach Municipality.",
   alternates: { canonical: "/resources" },
 };
 
