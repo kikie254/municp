@@ -38,7 +38,7 @@ export function ContactForm() {
       <div className="mt-4">
         <DemoNotice>
           This contact form is a demonstration. Your enquiry is validated and previewed on your device and is not
-          transmitted to, stored by or registered with the municipality. For official enquiries, please visit the municipal office in person or write to P.O. Box 220-30700, Iten.
+          transmitted to, stored by or registered with the municipality. For official enquiries, please visit the municipal office in person or write to Contact details are awaiting written municipal confirmation..
         </DemoNotice>
       </div>
 
@@ -91,7 +91,7 @@ export function ContactForm() {
                 Preview only — your enquiry has not been sent
               </p>
               <p className="mt-1 text-[11.5px] leading-relaxed text-ink-soft">
-                Nothing was transmitted, stored or registered. For official enquiries, please visit the municipal office or write to P.O. Box 220-30700, Iten.
+                Nothing was transmitted, stored or registered. For official enquiries, please visit the municipal office or write to Contact details are awaiting written municipal confirmation..
               </p>
               <dl className="mt-4 grid gap-x-6 gap-y-2 text-[12px] sm:grid-cols-2">
                 {[["Name", form.values.name], ["Email", form.values.email], ["Telephone", form.values.phone || "—"], ["Subject", form.values.subject]].map(([k, v]) => (
