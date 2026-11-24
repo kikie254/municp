@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
-import { ProjectCard } from "@/components/ProjectCard";
 import { PublishedProjectCard, formatDate } from "@/components/content/PublishedBlocks";
 import { getProjectBySlug, getPublishedProjects } from "@/lib/queries";
 
