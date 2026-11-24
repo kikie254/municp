@@ -20,6 +20,7 @@ import {
   emptyStateCopy, hasPublishedNews, hasPublishedProjects, publishedNews, publishedProjects,
 } from "@/lib/content";
 import { site } from "@/lib/site";
+import { publicImageAssetsApproved } from "@/lib/config/env";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -95,14 +96,16 @@ export default function HomePage() {
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden bg-green-950">
-        <Image
-          src="/images/iten-hero.jpg"
-          alt="The welcome arch marking the entrance to Iten town, County of Champions, Elgeyo Marakwet"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
+        {publicImageAssetsApproved() && (
+          <Image
+            src="/images/iten-hero.jpg"
+            alt="The welcome arch marking the entrance to Iten town, County of Champions, Elgeyo Marakwet"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        )}
         <div className="absolute inset-0 hero-overlay" />
         <div className="absolute inset-0 pattern-grid opacity-50" aria-hidden="true" />
 
