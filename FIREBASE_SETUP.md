@@ -64,10 +64,10 @@ modules (`lib/firebase/config.ts`) and must never be prefixed `NEXT_PUBLIC_` or 
 ## 6. Provision the first administrator
 
 ```bash
-ADMIN_EMAIL=admin@municipality.go.ke \
-ADMIN_PASSWORD='Use-A-Long-Passphrase-2026!' \
-ADMIN_NAME='Municipal Administrator' \
-npm run admin:provision
+read -r -p 'Approved administrator email: ' ADMIN_EMAIL
+read -r -s -p 'Unique administrator password: ' ADMIN_PASSWORD; echo
+read -r -p 'Administrator display name: ' ADMIN_NAME
+ADMIN_EMAIL="$ADMIN_EMAIL" ADMIN_PASSWORD="$ADMIN_PASSWORD" ADMIN_NAME="$ADMIN_NAME" npm run admin:provision
 ```
 
 The account is created in Firebase Authentication (password never stored in Firestore), the profile
