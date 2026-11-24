@@ -93,9 +93,11 @@ export async function sendMail(input: MailInput): Promise<MailResult> {
   }
 }
 
-/** Recipient for internal notifications. Falls back to the institutional address in lib/site.ts. */
-export function municipalRecipient(): string {
-  return process.env.MUNICIPAL_NOTIFICATIONS_EMAIL || "municipal.office@example.com";
+/** Internal notification recipient. Missing or invalid configuration fails closed. */
+export function municipalRecipient(): string | null {
+  const address = process.env.MUNICIPAL_NOTIFICATIONS_EMAIL?.trim();
+  if (!address || !/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(address)) return null;
+  return address;
 }
 
 export async function listOutbox(limit = 20): Promise<(EmailOutboxRecord & { id: string })[]> {
