@@ -38,6 +38,7 @@ export async function POST(request: Request) {
 
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   const limit = await rateLimit(`api-submit:${ip}`, 5, 60 * 60 * 1000);
+  if (limit.unavailable) return NextResponse.json({ error: "Submission service is temporarily unavailable." }, { status: 503, headers: { "Retry-After": String(limit.retryAfterSeconds), "Cache-Control": "no-store" } });
   if (!limit.allowed) {
     return NextResponse.json({ error: "Rate limit exceeded." }, { status: 429, headers: { "Retry-After": String(limit.retryAfterSeconds) } });
   }
