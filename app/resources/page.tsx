@@ -18,7 +18,7 @@ export default function ResourcesPage() {
     <>
       <PageHero
         title="Municipal Document Centre"
-        intro="Access official municipal publications, plans, policies, reports and public information through our document centre. We are committed to making relevant public information accessible to residents and stakeholders."
+        intro="Browse documents listed in the County Government of Elgeyo Marakwet’s Iten Municipality repository. A working link does not by itself establish that a document is adopted, current or legally authoritative; confirm the status of each instrument with the responsible institution."
         image="/images/kerio-forest-road.jpg"
         imageAlt="Road through forested highland landscape in Elgeyo Marakwet County"
         eyebrow="Public Information"
@@ -28,7 +28,7 @@ export default function ResourcesPage() {
       <section className="bg-white py-12 md:py-16">
         <div className="shell">
           <p className="text-[13px] leading-relaxed text-ink-soft">
-            Browse municipal plans, policies, financial reports and public participation records.
+            Browse records listed by the County Government. Verify adoption status, publication authority and current applicability before relying on a document.
           </p>
         </div>
       </section>
