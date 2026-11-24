@@ -1,3 +1,5 @@
+> **Historical document notice:** This report describes an earlier repository revision and is superseded by `GOVERNMENT_GRADE_AUDIT_REPORT.md`. Do not rely on historical contact details, governance assertions, route counts or test claims without re-verification.
+
 # ITEN–TAMBACH MUNICIPALITY WEBSITE
 # PROJECT COMPLETION SUMMARY
 
@@ -362,8 +364,8 @@ match /{allPaths=**} {
 ### Before Launch (Blocking)
 
 **1. Contact Information Confirmation** ⚠️ HIGH PRIORITY
-- [ ] Phone: 0726 780 634 — Confirm in writing
-- [ ] Email: iten.municipality@gmail.com — Confirm in writing
+- [ ] Phone: [unverified legacy contact detail removed — do not republish] — Confirm in writing
+- [ ] Email: [unverified legacy contact detail removed — do not republish] — Confirm in writing
 - [ ] Physical address — Confirm in writing
 - [ ] Postal address — Confirm in writing
 
