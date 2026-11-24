@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
-import { ExternalLink, ShieldCheck, Info } from "lucide-react";
+import { Info } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
@@ -38,7 +38,6 @@ export default function ResourcesPage() {
               { label: "Documents indexed", value: String(documents.length) },
               { label: "Content-checked files", value: String(contentChecked) },
               { label: "File checks only", value: String(fileOnly) },
-              { label: "Source", value: "County repository" },
             ].map((s) => (
               <div key={s.label} className="bg-white px-5 py-4">
                 <p className="text-[9.5px] font-semibold uppercase tracking-[0.14em] text-ink-muted">{s.label}</p>
@@ -47,36 +46,7 @@ export default function ResourcesPage() {
             ))}
           </div>
 
-          <div className="mt-6 flex gap-3.5 border-l-[3px] border-green-700 bg-paper-warm p-5">
-            <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-green-700" aria-hidden="true" />
-            <div>
-              <h2 className="font-display text-[13px] font-bold uppercase tracking-[0.07em] text-green-900">
-                About these document links
-              </h2>
-              <p className="mt-1.5 text-[12.5px] leading-[1.8] text-ink-soft">
-                Titles, publication dates and file sizes on this page are taken from the County Government of Elgeyo
-                Marakwet&rsquo;s published Iten Municipality documents listing. Files are <strong>not mirrored</strong> on this
-                website; each link opens or downloads the file from the County&rsquo;s own repository. Where a file could not
-                be confirmed as available, the record links to the official documents page instead of an unverified
-                file, so that no broken or fabricated download is presented.
-              </p>
-              <p className="mt-2 text-[12.5px] leading-[1.8] text-ink-soft">
-                Every link in this library was requested and every file opened during preparation. A working link
-                proves the file resolves — it does not prove that the document is the instrument adopted by the
-                Municipality, and the labels above reflect exactly that distinction. No document has been re-created,
-                re-typed or substituted.
-              </p>
-              <a
-                href={site.documentSource}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-[11.5px] font-bold uppercase tracking-[0.09em] text-green-700 hover:text-gold-700"
-              >
-                Official documents page <ExternalLink className="h-3 w-3" aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-        </div>
+       </div>
       </section>
 
       <section className="bg-paper-warm py-12 md:py-16">
