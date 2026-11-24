@@ -116,8 +116,7 @@ export function PublicSubmissionForm({
                   aria-describedby={state.errors?.consent ? "consent-error" : undefined} disabled={pending}
                 />
                 <span>
-                  I consent to Iten-Tambach Municipality recording my name, contact details and message for the purpose of
-                  handling this submission.
+                  I understand this is a demonstration environment. I will not enter real personal or sensitive information, and I understand test data may be stored only when an authorised test deployment enables submissions.
                 </span>
               </label>
               <FieldError id="consent" message={state.errors?.consent} />
