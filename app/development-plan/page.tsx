@@ -5,7 +5,7 @@ import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "Integrated Development Plan | Iten-Tambach Municipality",
-  description: "A public-facing overview of the Iten-Tambach Municipality Integrated Development Plan 2025–2029.",
+  description: "A public-facing overview of the Iten Municipality Integrated Development Plan.",
 };
 
 const sectorAllocations = [
@@ -48,7 +48,7 @@ export default function DevelopmentPlanPage() {
       <PageHero
         eyebrow="Planning and accountability"
         title="Integrated Development Plan"
-        intro="The Municipality’s 2025–2029 development framework: priorities, proposed programmes, resource requirements and the monitoring approach described in the published plan."
+        intro="The Municipality’s five-year development framework, with programme priorities, project targets, resource requirements and implementation arrangements as stated in the uploaded plan."
         image="/images/iten-town-aerial.jpg"
         imageAlt="Aerial view of Iten town and surrounding highlands"
         crumbs={[{ label: "Integrated Development Plan" }]}
@@ -58,9 +58,9 @@ export default function DevelopmentPlanPage() {
         <div className="shell">
           <div className="grid gap-4 md:grid-cols-3">
             <div className="border border-paper-line bg-paper-warm p-5">
-              <p className="eyebrow">Planning period</p>
-              <p className="mt-2 font-display text-2xl font-extrabold text-green-900">2025–2029</p>
-              <p className="mt-1 text-xs text-ink-muted">As identified in the published IDeP document.</p>
+              <p className="eyebrow">Planning horizon</p>
+              <p className="mt-2 font-display text-2xl font-extrabold text-green-900">Five years</p>
+              <p className="mt-1 text-xs text-ink-muted">The uploaded plan labels annual programme targets Year 1 through Year 5; it does not state a 2025–2029 period.</p>
             </div>
             <div className="border border-paper-line bg-paper-warm p-5">
               <p className="eyebrow">Total resource requirement</p>
