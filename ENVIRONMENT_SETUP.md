@@ -64,10 +64,10 @@ Use only a disposable emulator or test Firebase project when testing the enabled
 No default administrator account exists. Provision an administrator only in an authorised Firebase project:
 
 ```bash
-ADMIN_EMAIL='verified-admin@example.org' \
-ADMIN_PASSWORD='use-a-unique-long-passphrase' \
-ADMIN_NAME='Approved Administrator' \
-npm run admin:provision
+read -r -p 'Approved administrator email: ' ADMIN_EMAIL
+read -r -s -p 'Unique administrator password: ' ADMIN_PASSWORD; echo
+read -r -p 'Administrator display name: ' ADMIN_NAME
+ADMIN_EMAIL="$ADMIN_EMAIL" ADMIN_PASSWORD="$ADMIN_PASSWORD" ADMIN_NAME="$ADMIN_NAME" npm run admin:provision
 ```
 
 The values above are examples for local shell syntax only; do not use them as actual credentials. Enrol MFA for privileged users and test sign-in/session revocation against the intended Firebase project.
