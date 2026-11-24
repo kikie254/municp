@@ -38,6 +38,7 @@ Create `.env.local` locally. Do not commit it. Use a dedicated Firebase developm
 | `MFA_ENFORCEMENT` | Institutional decision | `report`, `enforce` or `off`; enforcement requires enrolled privileged accounts |
 | `EMAIL_PROVIDER`, `EMAIL_API_KEY`, `EMAIL_FROM` | Optional | Outbound email integration |
 | `MUNICIPAL_NOTIFICATIONS_EMAIL` | Optional, but required for internal email alerts | Verified institutional recipient; there is no placeholder fallback |
+| `MUNICIPAL_IMAGE_ASSETS_APPROVED` | **Defaults to false** | Static and CMS-uploaded photographs are not rendered until written web-use licences and publication rights are recorded. |
 | `MUNICIPAL_PUBLICATION_APPROVED` | **Defaults to false** | Explicit institutional approval gate. When false, the site displays the demonstration notice, is noindex and has no sitemap. |
 | `PUBLIC_SUBMISSIONS_ENABLED` | **Defaults to disabled** | Public intake is enabled only when both this and `MUNICIPAL_PUBLICATION_APPROVED` are `true` after written approval of the public channel and its privacy/operational controls |
 | `BACKUP_GCS_BUCKET` | Recommended | Separate protected bucket for scheduled Firestore exports |
