@@ -10,8 +10,8 @@ function resolveSiteUrl(): string {
   // Open Graph or sitemap output.
   const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
   const raw = explicit || (vercel ? `https://${vercel}` : "http://localhost:3000");
-  const withProtocol = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
-  return withProtocol.replace(/\/+$/, "");
+  const withProtocol = /^https?:\\/\\//i.test(raw) ? raw : `https://${raw}`;
+  return withProtocol.replace(/\\/+$/, "");
 }
 
 export const site = {
@@ -19,10 +19,10 @@ export const site = {
   shortName: "Iten-Tambach",
   county: "County Government of Elgeyo Marakwet",
   republic: "Republic of Kenya",
-  tagline: "Building a better, cleaner, inclusive and vibrant municipality.",
+  tagline: "A town of choice for sports, tourism and investment.",
   url: resolveSiteUrl(),
   description:
-    "Iten-Tambach Municipality, County Government of Elgeyo Marakwet. Municipal services, public participation, official documents and announcements.",
+    "Information about Iten-Tambach Municipality, its statutory role, municipal services, public participation and development resources.",
   /**
    * CONTACT DETAILS — REMOVED PENDING WRITTEN CONFIRMATION.
    * Contact information has been removed until the Municipality provides verified contact details
@@ -51,15 +51,15 @@ export const navigation: NavItem[] = [
     label: "About Us",
     href: "/about",
     children: [
-      { label: "About the Municipality", href: "/about", description: "Mandate, vision, mission and core values" },
-      { label: "Municipal Governance", href: "/governance", description: "The Board, Manager and administration" },
+      { label: "About the Municipality", href: "/about", description: "History, statutory objects, vision and mission" },
+      { label: "Municipal Governance", href: "/governance", description: "The Municipal Board and administration" },
     ],
   },
   {
     label: "Governance",
     href: "/governance",
     children: [
-      { label: "Governance Overview", href: "/governance", description: "Institutional structure and accountability" },
+      { label: "Governance Overview", href: "/governance", description: "Institutional roles and public accountability" },
       { label: "Documents and Resources", href: "/resources", description: "Charter, plans, policies and reports" },
     ],
   },
@@ -67,8 +67,8 @@ export const navigation: NavItem[] = [
     label: "Services",
     href: "/services",
     children: [
-      { label: "All Municipal Services", href: "/services", description: "Urban management and service information" },
-      { label: "Complaints and Feedback", href: "/feedback", description: "Raise a concern or share a suggestion" },
+      { label: "All Municipal Services", href: "/services", description: "Service areas and municipal responsibilities" },
+      { label: "Complaints and Feedback", href: "/feedback", description: "Submit a concern or suggestion" },
     ],
   },
   { label: "Projects", href: "/projects" },
@@ -76,8 +76,8 @@ export const navigation: NavItem[] = [
     label: "Public Participation",
     href: "/public-participation",
     children: [
-      { label: "Participation Overview", href: "/public-participation", description: "Forums, notices and reports" },
-      { label: "Citizen Feedback", href: "/feedback", description: "Channels for concerns and suggestions" },
+      { label: "Participation Overview", href: "/public-participation", description: "Citizen fora, notices and reports" },
+      { label: "Citizen Feedback", href: "/feedback", description: "Submit concerns and suggestions" },
     ],
   },
   { label: "Investment", href: "/investment" },
