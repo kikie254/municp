@@ -56,10 +56,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_KE",
     url: site.url,
-    siteName: site.name,
+    siteName: publicationApproved ? site.name : "Iten-Tambach Municipality demonstration website",
     title: publicationApproved ? site.name : "Iten-Tambach Municipality — Demonstration Website",
     description: publicationDescription,
-    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Iten-Tambach Municipality, County Government of Elgeyo Marakwet" }],
+    images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Iten-Tambach Municipality demonstration website" }],
   },
   twitter: {
     card: "summary_large_image",
