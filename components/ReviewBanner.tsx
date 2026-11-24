@@ -2,12 +2,10 @@ import Link from "next/link";
 import { Info } from "lucide-react";
 
 /**
- * Pre-launch review notice.
+ * Demonstration status notice.
  *
- * The site is being prepared for the Municipality: institutional details, photography rights and
- * project/news records are still pending municipal approval. Saying so in one line is more honest
- * than letting a visitor assume every page is an adopted official statement, and it costs no
- * layout change beyond a single strip above the masthead.
+ * This strip remains visible until the institutional publication approval flag is explicitly set.
+ * It prevents visitors from treating provisional copy or demonstration forms as adopted municipal information.
  */
 export function ReviewBanner() {
   return (
