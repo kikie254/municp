@@ -36,7 +36,7 @@ file; none carries embedded authorship metadata usable as evidence.
 | 12 | `trading.jpg` | 750×375 | 1 — trade and enterprise | Unknown | **Unknown** | Medium — **displayed above native resolution** | Replace with a licensed higher-resolution original |
 | 13 | `farmland.jpg` | 552×240 | 0 — unreferenced (retained) | Unknown | **Unknown** | Low — not linked from any page, but still publicly reachable in `public/` | Delete from `public/` or move to an `unpublished/` folder outside the web root |
 
-**Total photographs: 13 files (26 with `.webp` derivatives). Documented licences: 0.**
+**Historical total: 13 photographs (26 `.webp` derivatives). Documented licences: 0. These files have been removed from the active public assets; do not restore them without written rights evidence.**
 
 ### 1.1 Photographs that could imply an official relationship
 
@@ -125,7 +125,7 @@ one at the County documents index page.
 
 **Launch blockers (must be resolved):**
 
-1. All 13 photographs in `public/images/` — rights unestablished.
+1. The 13 former photographs — removed from `public/images/`; rights unestablished. Replace only with licensed originals.
 2. County crest — removed from active presentation pending written County permission; the source asset is not included in the public build.
 3. `public_engagement.jpg` and `community-forum.jpg` — identifiable people, implied municipal event
    (subsumed by item 1, called out separately because consent is a distinct question).
