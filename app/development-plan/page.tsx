@@ -60,7 +60,7 @@ export default function DevelopmentPlanPage() {
             <div className="border border-paper-line bg-paper-warm p-5">
               <p className="eyebrow">Planning horizon</p>
               <p className="mt-2 font-display text-2xl font-extrabold text-green-900">Five years</p>
-              <p className="mt-1 text-xs text-ink-muted">The uploaded plan labels annual programme targets Year 1 through Year 5; it does not state a the published plan period.</p>
+              <p className="mt-1 text-xs text-ink-muted">The plan sets programme targets across Year 1 to Year 5; its calendar start and end dates are not specified in the resource summary.</p>
             </div>
             <div className="border border-paper-line bg-paper-warm p-5">
               <p className="eyebrow">Total resource requirement</p>
