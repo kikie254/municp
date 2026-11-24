@@ -1,7 +1,9 @@
+> **Historical document notice:** This report describes an earlier repository revision and is superseded by `GOVERNMENT_GRADE_AUDIT_REPORT.md`. Do not rely on historical contact details, governance assertions, route counts or test claims without re-verification.
+
 # Contact Details Removal Log
 
 **Date:** 20 January 2026  
-**Action:** Complete removal of phone number 0726 780 634 and email iten.municipality@gmail.com  
+**Action:** Complete removal of phone number [unverified legacy contact detail removed — do not republish] and email [unverified legacy contact detail removed — do not republish]  
 **Reason:** Per user request, all unverified contact details removed from codebase
 
 ---
@@ -9,14 +11,14 @@
 ## Summary of Changes
 
 ### Phone Number Removed
-- **Old value:** +254 726 780 634 / 0726 780 634
+- **Old value:** [unverified legacy contact detail removed — do not republish] / [unverified legacy contact detail removed — do not republish]
 - **Replaced with:** References to "the municipal office" or removed entirely
 - **Placeholder for examples:** 0712 345 678
 
 ### Email Address Removed
-- **Old value:** iten.municipality@gmail.com
-- **Replaced with:** P.O. Box 220-30700, Iten or "[email removed]"
-- **Placeholder for examples:** municipal.office@example.com
+- **Old value:** [unverified legacy contact detail removed — do not republish]
+- **Replaced with:** [unverified legacy contact detail removed — do not republish] or "[email removed]"
+- **Placeholder for examples:** [unverified legacy contact detail removed — do not republish]
 
 ---
 
@@ -47,7 +49,7 @@
 
 ### Form Components
 6. **components/forms/ContactForm.tsx**
-   - Changed phone placeholder from "0726 780 634" to "0712 345 678"
+   - Changed phone placeholder from "[unverified legacy contact detail removed — do not republish]" to "0712 345 678"
    - Changed error message example number
    - Removed phone/email from demo notices
    - Replaced with postal address
@@ -70,13 +72,13 @@
 
 ### Environment Files
 11. **.env.example**
-    - Changed MUNICIPAL_NOTIFICATIONS_EMAIL to municipal.office@example.com
+    - Changed MUNICIPAL_NOTIFICATIONS_EMAIL to [unverified legacy contact detail removed — do not republish]
 
 12. **.env.production**
-    - Changed MUNICIPAL_NOTIFICATIONS_EMAIL to municipal.office@example.com
+    - Changed MUNICIPAL_NOTIFICATIONS_EMAIL to [unverified legacy contact detail removed — do not republish]
 
 13. **.env.vercel.example**
-    - Changed MUNICIPAL_NOTIFICATIONS_EMAIL to municipal.office@example.com
+    - Changed MUNICIPAL_NOTIFICATIONS_EMAIL to [unverified legacy contact detail removed — do not republish]
 
 ### Documentation Files
 14. **BUILD-VERIFICATION.md**
@@ -110,12 +112,12 @@
 ### Still Present (Verified)
 - **Office name:** Iten Municipality Office
 - **Physical address:** Opposite County Assembly, behind IEBC offices, Iten, Kenya
-- **Postal address:** P.O. Box 220-30700, Iten, Kenya
+- **Postal address:** [unverified legacy contact detail removed — do not republish]
 - **County website:** https://elgeyomarakwet.go.ke/
 
 ### Removed (Unverified)
-- ✗ Phone: +254 726 780 634 / 0726 780 634
-- ✗ Email: iten.municipality@gmail.com
+- ✗ Phone: [unverified legacy contact detail removed — do not republish] / [unverified legacy contact detail removed — do not republish]
+- ✗ Email: [unverified legacy contact detail removed — do not republish]
 
 ---
 
