@@ -98,7 +98,7 @@ export function FeedbackForm() {
             <h3 className="font-display text-[15px] font-bold uppercase tracking-[0.06em] text-white">Preview only — your feedback has not been sent</h3>
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-white/65">
-            The entry below passed validation and is displayed locally in your browser. It has <strong className="text-white">not</strong> been transmitted to, stored by or registered with Iten-Tambach Municipality, and no reference number has been issued. To raise this matter officially, visit the municipal office in person or write to <span className="text-gold-300 font-semibold">P.O. Box 220-30700, Iten</span>.
+            The entry below passed validation and is displayed locally in your browser. It has <strong className="text-white">not</strong> been transmitted to, stored by or registered with Iten-Tambach Municipality, and no reference number has been issued. To raise this matter officially, visit the municipal office in person or write to <span className="text-gold-300 font-semibold">Contact details are awaiting written municipal confirmation.</span>.
           </p>
           <dl className="mt-5 grid gap-x-8 gap-y-3 text-[12.5px] sm:grid-cols-2">
             {([["Name", form.values.name],["Email", form.values.email],["Telephone", form.values.phone || "Not provided"],["Location", form.values.location],["Category", form.values.category],["Subject", form.values.subject],["Attachment", fileName || "None selected"]] as [string,string][]).map(([k, v]) => (
