@@ -20,12 +20,20 @@ export default function GovernancePage() {
     <>
       <PageHero
         title="Municipal Governance and Leadership"
-        intro="The Municipality is governed within the framework of the Urban Areas and Cities Act, 2011, and the Iten Tambach Municipal Charter. The Municipal Board provides governance and oversight, while the Municipal Manager is responsible for day-to-day administration. Both operate within the wider County Government framework."
+        intro="The Urban Areas and Cities Act, 2011 (as amended), provides the national framework for municipal governance. The Municipal Board provides governance and oversight, while the Municipal Manager is responsible for day-to-day administration within the County Government framework. The Municipality’s operative charter and current appointments require institutional confirmation."
         image="/images/community-forum.jpg"
         imageAlt="Community members and officials gathered for a governance meeting"
         eyebrow="Institutional Structure"
         crumbs={[{ label: "Governance" }]}
       />
+
+      <section className="border-y border-gold-300 bg-gold-50 py-4">
+        <div className="shell max-w-4xl">
+          <p className="text-[12px] leading-relaxed text-green-950">
+            <strong>Verification note:</strong> The County-hosted charter PDF currently listed for Iten-Tambach is labelled “Model Municipal Charter prepared under the World Bank Kenya Urban Support Programme” and contains blank grant-date and signature fields. This website does not treat that draft as proof of the adopted charter or current Board composition. The Municipality must confirm the operative charter and appointment records before this page is relied on as an authoritative institutional statement.
+          </p>
+        </div>
+      </section>
 
       <section className="bg-white py-14 md:py-20">
         <div className="shell">
@@ -115,19 +123,19 @@ export default function GovernancePage() {
                 icon: Scale,
                 title: "Governance and Accountability",
                 body:
-                  "Decision-making follows the Charter and applicable law. Published minutes highlights, financial statements and participation reports support public scrutiny.",
+                  "Decision-making must follow applicable law and the operative municipal instruments. Public minutes, financial statements and participation reports support scrutiny where they have been formally issued.",
               },
               {
                 icon: ShieldCheck,
                 title: "Grievance Redress",
                 body:
-                  "The municipality maintains a grievance redress mechanism. The published structure and updated grievance log are available in the document centre.",
+                  "The County Government document repository includes grievance redress materials. The current municipal complaint-handling arrangements and responsible offices require institutional confirmation.",
               },
               {
                 icon: FileText,
                 title: "Public Participation",
                 body:
-                  "Citizen fora are convened and reported on quarterly. Calendars and reports are published as official municipal documents.",
+                  "The Urban Areas and Cities Act provides for Citizen Fora. Residents should rely on current notices and reports issued through authorised County or municipal channels for dates and arrangements.",
               },
               {
                 icon: Users,
