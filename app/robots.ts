@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
+import { municipalPublicationApproved } from "@/lib/config/env";
 
 /**
  * The administration demonstration is disallowed for every crawler, whether or not it is enabled
