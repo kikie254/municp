@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Iten-Tambach Municipality",
   description:
-    "Contact Iten Municipality Office: opposite County Assembly, behind IEBC offices, Iten, Kenya. Postal address: P.O. Box 220-30700, Iten.",
+    "Contact information for Iten-Tambach Municipality, including the municipal office and postal address. Telephone and email details are published only when confirmed.",
   alternates: { canonical: "/contact" },
 };
 
@@ -28,10 +28,7 @@ function ContactPendingNote() {
         Contact details pending verification
       </h2>
       <p className="mt-1.5 text-[12px] leading-[1.8] text-ink-soft">
-        The office location, telephone number, email address and postal address below are carried over from the
-        previous version of this site. They have not been confirmed in writing by the Municipality for publication.
-        Please treat them as indicative until they are confirmed, and see the approval checklist for the items the
-        Municipality needs to sign off.
+        The office and postal details shown here appear in County-published material but have not yet been confirmed in writing by the Municipality for this website. Please check with the County Government before relying on them for a time-sensitive visit or delivery.
       </p>
     </>
   );
@@ -57,7 +54,7 @@ export default function ContactPage() {
     <>
       <PageHero
         title="Contact Iten-Tambach Municipality"
-        intro="We welcome enquiries, suggestions and constructive engagement from residents, businesses, visitors and development partners. Contact our municipal office for information and assistance."
+        intro="Residents, businesses and other stakeholders may use this page to send an enquiry to the Municipality. Please provide enough detail for the relevant office to understand your question."
         image="/images/town-centre.jpg"
         imageAlt="Iten town centre in Elgeyo Marakwet County"
         eyebrow="Get in Touch"
@@ -89,7 +86,7 @@ export default function ContactPage() {
                 <SectionHeading
                   eyebrow="Location"
                   title="Finding the municipal office"
-                  description="The office is situated in Iten town, opposite the County Assembly and behind the IEBC offices."
+                  description="The office location recorded in the available municipal material is opposite the County Assembly and behind the IEBC offices in Iten. This location is awaiting written confirmation."
                 />
               </Reveal>
 
@@ -145,7 +142,7 @@ export default function ContactPage() {
               <PublicSubmissionForm
                 type="ENQUIRY"
                 heading="Send an enquiry"
-                intro="Use this form for a general question about municipal services, offices or procedures. Your message is recorded with a reference number and routed to the relevant office."
+                intro="Use this form for a general question about municipal services, documents or procedures. A successful submission is recorded in the municipal system and receives a reference number."
                 subjects={[
                   "General enquiry",
                   "Municipal services",
