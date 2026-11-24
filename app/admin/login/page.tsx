@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { Landmark } from "lucide-react";
 import { LoginForm } from "@/components/admin/LoginForm";
 import { getSessionUser } from "@/lib/auth/session";
 import { databaseReachable } from "@/lib/db";
@@ -19,7 +19,7 @@ export default async function AdminLoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-green-950 px-5 py-12">
       <div className="w-full max-w-[420px]">
         <div className="flex items-center gap-3.5">
-          <Image src="/brand/elgeyo-marakwet-crest.png" alt="" width={48} height={48} className="h-12 w-12 object-contain" />
+          <Landmark className="h-10 w-10 text-gold-400" aria-hidden="true" />
           <div>
             <p className="font-display text-[13px] font-extrabold uppercase tracking-[0.07em] text-white">Iten-Tambach Municipality</p>
             <p className="mt-0.5 text-[9.5px] uppercase tracking-[0.14em] text-white/50">{site.county}</p>
