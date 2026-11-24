@@ -213,12 +213,12 @@ export const faqs = [
   {
     question: "How do I raise a concern about waste collection or cleanliness?",
     answer:
-      "Use the feedback form on this website to submit the details of your concern. A successful submission is recorded in the municipal system and receives a reference number. Keep that reference for any follow-up. If the form is unavailable, contact the municipal office using the details on the Contact page.",
+      "This website is currently a frontend information and presentation experience. Its feedback form is not connected to a live municipal case-management system, so a submission here is not an official complaint and will not receive a municipal reference number. Use the Municipality’s verified official channels for matters requiring action.",
   },
   {
     question: "Will a submission through this website reach the Municipality?",
     answer:
-      "The feedback and enquiry forms submit information to the municipal system. When a submission is recorded successfully, the form displays a reference number. An acknowledgement email may not be sent if an email provider has not been configured for the website, so keep the reference shown on screen.",
+      "Not yet. The website frontend is being presented for municipal review; the forms are not connected to an official municipal case-management or email system. Do not rely on this demonstration to lodge a complaint or submit sensitive personal information.",
   },
   {
     question: "Where can I find the Municipal Charter and development plans?",
