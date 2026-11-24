@@ -75,14 +75,8 @@ export default function GovernancePage() {
                   The Municipal Board provides strategic direction, governance and oversight for the Municipality. It supports accountable decision-making and ensures that municipal affairs are managed in the public interest.
                 </p>
                 <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
-                  Further members are nominated by umbrella bodies representing professional associations, the private
-                  sector, the informal sector, registered neighbourhood associations and an association of the
-                  municipality, and appointed by the County Executive Committee with the approval of the County
-                  Assembly.
-                </p>
-                <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
-                  In making appointments, gender equity and the representation of persons with disabilities, youth and
-                  marginalised groups are to be ensured.
+                  The Board works with municipal administration and community stakeholders to promote responsive
+                  services, responsible planning and accountability to residents.
                 </p>
               </article>
             </Reveal>
