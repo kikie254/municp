@@ -36,7 +36,7 @@ const quickAccess = [
   {
     title: "Integrated Development Plan",
     description:
-      "Explore the Municipality’s 2025–2029 development priorities, sector resource estimates and implementation framework.",
+      "Explore the Municipality’s development priorities, sector resource estimates and implementation framework.",
     href: "/development-plan",
     icon: "planning",
   },
@@ -296,7 +296,7 @@ export default function HomePage() {
           </div>
           <div className="mt-9 flex flex-col gap-4 border-t border-white/15 pt-7 sm:flex-row sm:items-center sm:justify-between">
             <div className="max-w-2xl">
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gold-400">Integrated Development Plan 2025–2029</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-gold-400">Integrated Development Plan</p>
               <p className="mt-2 text-[13px] leading-relaxed text-white/70">Review the published development priorities, resource requirements by sector and the plan’s monitoring and reporting framework.</p>
             </div>
             <Link href="/development-plan" className="btn btn-gold shrink-0">
