@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Use (Draft)",
@@ -19,7 +18,7 @@ const terms = [
   {
     title: "Status of this website",
     body:
-      "This website is being prepared for Iten-Tambach Municipality and is not yet an approved official publication of the Municipality or the County Government of Elgeyo Marakwet. Certain enquiry and feedback forms can record submissions in the website's municipal system and issue a reference number. A submission through this website does not replace any statutory application, permit process or formal procedure prescribed by law.",
+      "This website is being prepared for Iten-Tambach Municipality and is not yet an approved official publication of the Municipality or the County Government of Elgeyo Marakwet. Some demonstration forms may store test data in a configured application database and generate a reference number. They are not authorised municipal submission channels; do not submit real personal or sensitive information. A demonstration reference is not an official application, complaint or consultation reference.",
   },
   {
     title: "This is a draft notice",
@@ -59,7 +58,7 @@ const terms = [
   {
     title: "Limitation and contact",
     approved: false,
-    body: `This draft is provided as-is while the site is being prepared. Questions about it may be directed to ${site.contact.office}, ${site.contact.physical}, or write to ${site.contact.postal}. Those contact details are pending written confirmation by the Municipality.`,
+    body: `This draft is provided as-is while the site is being prepared. Verified municipal contact details have not been supplied for publication. Do not infer an official contact channel from this demonstration website.`,
   },
 ];
 
