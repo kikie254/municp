@@ -67,8 +67,7 @@ export function ParticipationResponseForm({ slug, title, enabled = false }: { sl
                 className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-paper-line text-green-700 focus:ring-2 focus:ring-green-600/30"
                 aria-describedby={state.errors?.consent ? "p-consent-error" : undefined} disabled={pending} />
               <span>
-                I consent to this response being recorded and considered as part of the consultation. I understand it
-                will not be published in a form that identifies me without my agreement.
+                I understand this is a demonstration environment. I will not enter real personal or sensitive information, and I understand test data may be stored only when an authorised test deployment enables submissions.
               </span>
             </label>
             <FieldError id="p-consent" message={state.errors?.consent} />
