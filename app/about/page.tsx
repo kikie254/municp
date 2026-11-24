@@ -215,7 +215,7 @@ export default function AboutPage() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/resources?category=Municipal+Charter" className="btn btn-outline !py-3 !text-[12px]">
-              Municipal Charter <ArrowRight aria-hidden="true" />
+              Municipal governance documents <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/resources?category=Integrated+Development+Plans" className="btn btn-outline !py-3 !text-[12px]">
               Integrated Development Plan
