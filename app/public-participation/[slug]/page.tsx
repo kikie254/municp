@@ -77,7 +77,7 @@ export default async function ParticipationDetailPage({ params }: { params: Prom
                 </div>
               ) : (
                 <div className="mt-4">
-                  <ParticipationResponseForm slug={item.slug} title={item.title} />
+                  <ParticipationResponseForm slug={item.slug} title={item.title} enabled={process.env.PUBLIC_SUBMISSIONS_ENABLED === "true"} />
                 </div>
               )}
             </div>
