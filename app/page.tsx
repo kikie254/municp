@@ -131,7 +131,7 @@ export default function HomePage() {
                 The Municipality's chartered responsibilities cover urban planning, roads and drainage, waste management, public spaces, street lighting, markets and other services that shape everyday life.
               </p>
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
-                Its vision is clear: “A town of choice for sports, tourism and investment.” The mission is to improve service delivery, widen equitable access and support a liveable environment for all residents.
+                The Municipality’s vision is “A town of choice for sports, tourism and investment.” Its mission is “To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.”
               </p>
             </div>
 
