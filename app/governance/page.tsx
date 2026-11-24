@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Users, UserCog, Building2, Scale, ShieldCheck, FileText, ArrowRight, Info, Landmark,
+  Users, UserCog, Building2, Scale, ShieldCheck, FileText, ArrowRight, Landmark,
 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -37,28 +37,7 @@ export default function GovernancePage() {
                 description="The municipality's governance arrangements follow the framework set out in the Urban Areas and Cities Act, 2011, as amended, and in the Iten Tambach Municipal Charter."
               />
             </Reveal>
-            <Reveal delay={80} className="lg:col-span-8">
-              <div className="flex gap-3.5 border border-gold-400/50 bg-gold-50 p-5">
-                <Info className="mt-0.5 h-5 w-5 shrink-0 text-gold-700" aria-hidden="true" />
-                <div>
-                  <p className="text-[12.5px] font-semibold uppercase tracking-[0.08em] text-green-900">
-                    Officials not listed on this website
-                  </p>
-                  <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">
-                    Verified names, photographs and biographies of the Board Chairperson, Board members and Municipal
-                    Manager have not been supplied for publication. This page therefore describes institutional roles
-                    and responsibilities without naming or depicting individual officials. Please contact the municipal
-                    office for current membership.
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-green-700 hover:text-gold-700"
-                  >
-                    Contact the Municipality <ArrowRight className="h-3 w-3" aria-hidden="true" />
-                  </Link>
-                </div>
-              </div>
-            </Reveal>
+
           </div>
 
           {/* Board composition */}
