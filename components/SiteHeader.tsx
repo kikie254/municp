@@ -1,11 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
-  Menu, X, Search, ChevronDown, MessageSquare, Phone, ArrowUpRight,
+  Menu, X, Search, ChevronDown, MessageSquare, ArrowUpRight, Landmark,
 } from "lucide-react";
 import { adminPreviewEnabled, navigation, site } from "@/lib/site";
 import { SearchDialog } from "./SearchDialog";
@@ -59,9 +58,7 @@ export function SiteHeader() {
             <span>{site.republic}</span>
           </p>
           <div className="hidden items-center gap-5 text-[11px] font-medium text-white/70 md:flex">
-            <a href={`mailto:example@example.com`} className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300">
-              <Phone className="h-3 w-3" aria-hidden="true" /> {site.contact.postal}
-            </a>
+            <Link href="/contact" className="transition-colors hover:text-gold-300">Contact information</Link>
             <Link href="/news" className="transition-colors hover:text-gold-300">
               Public Notices
             </Link>
@@ -77,14 +74,7 @@ export function SiteHeader() {
         <div className="shell flex items-center justify-between gap-3 py-3.5 md:py-4">
           <Link href="/" className="group flex min-w-0 items-center gap-3 md:gap-4" aria-label={`${site.name} home`}>
             <span className="relative block h-11 w-11 shrink-0 md:h-[58px] md:w-[58px]">
-              <Image
-                src="/brand/elgeyo-marakwet-crest.png"
-                alt="Official crest of the County Government of Elgeyo Marakwet"
-                fill
-                priority
-                sizes="58px"
-                className="object-contain"
-              />
+              <Landmark className="h-7 w-7 text-green-800" aria-hidden="true" />
             </span>
             <span className="min-w-0 border-l border-paper-line pl-3 md:pl-4">
               <span className="block truncate font-display text-[15px] font-extrabold uppercase leading-tight tracking-[0.055em] text-green-900 sm:text-[17px] md:text-[20px]">
@@ -226,13 +216,7 @@ export function SiteHeader() {
         >
           <div className="flex items-center justify-between border-b border-paper-line bg-green-900 px-5 py-4">
             <div className="flex items-center gap-3">
-              <Image
-                src="/brand/elgeyo-marakwet-crest.png"
-                alt=""
-                width={36}
-                height={36}
-                className="h-9 w-9 object-contain"
-              />
+              <Landmark className="h-7 w-7 text-green-800" aria-hidden="true" />
               <div>
                 <p className="font-display text-[12.5px] font-bold uppercase leading-tight tracking-[0.08em] text-white">
                   Iten-Tambach
@@ -324,12 +308,7 @@ export function SiteHeader() {
             <Link href="/feedback" className="btn btn-gold w-full !py-3 !text-[12.5px]">
               <MessageSquare aria-hidden="true" /> Share Your Feedback
             </Link>
-            <a
-              href={`mailto:example@example.com`}
-              className="flex items-center justify-center gap-2 text-[12px] font-semibold text-green-800"
-            >
-              <Phone className="h-3.5 w-3.5" aria-hidden="true" /> {site.contact.postal}
-            </a>
+            <Link href="/contact" className="flex items-center justify-center gap-2 text-[12px] font-semibold text-green-800">Contact information</Link>
           </div>
         </div>
       </div>
