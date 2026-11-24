@@ -7,6 +7,7 @@ import { sameOrigin } from "@/lib/security/csrf";
 import { recordAudit } from "@/lib/auth/audit";
 import * as submissionService from "@/lib/services/submission.service";
 import { logError } from "@/lib/firebase/errors";
+import { publicIntakeEnabled } from "@/lib/config/env";
 
 export const dynamic = "force-dynamic";
 
@@ -18,7 +19,7 @@ export const dynamic = "force-dynamic";
  * than writing to Firestore directly. It returns only the reference — never the record.
  */
 export async function POST(request: Request) {
-  if (process.env.PUBLIC_SUBMISSIONS_ENABLED !== "true") {
+  if (!publicIntakeEnabled()) {
     return NextResponse.json({ error: "Public submissions are disabled on this demonstration website." }, { status: 503, headers: { "Cache-Control": "no-store" } });
   }
   if (!(await sameOrigin())) {
