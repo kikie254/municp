@@ -33,6 +33,11 @@ describe("upload inspection", () => {
     expect(inspectUpload("data.csv", Buffer.from("<script>alert(1)</script>")).ok).toBe(false);
   });
 
+  it("rejects a spreadsheet formula placed after the first 2 KB of a CSV", () => {
+    const csv = Buffer.from("safe,row\\n".repeat(400) + '=HYPERLINK("https://malicious.invalid","open")');
+    expect(inspectUpload("late-formula.csv", csv).ok).toBe(false);
+  });
+
   it("strips path traversal from file names", () => {
     const cleaned = sanitiseFileName("../../etc/passwd");
     expect(cleaned).not.toContain("..");
