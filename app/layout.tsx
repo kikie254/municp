@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { BackToTop } from "@/components/BackToTop";
 import { ReviewBanner } from "@/components/ReviewBanner";
 import { site } from "@/lib/site";
+import { municipalPublicationApproved } from "@/lib/config/env";
 
 const inter = localFont({
   src: [
@@ -30,14 +31,19 @@ const manrope = localFont({
   fallback: ["Georgia", "serif"],
 });
 
+const publicationApproved = municipalPublicationApproved();
+const publicationDescription = publicationApproved
+  ? "Official municipal information published following institutional authorisation."
+  : site.description;
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Iten-Tambach Municipality — Demonstration Website",
-    template: "%s | Iten-Tambach Municipality (Demonstration)",
+    default: publicationApproved ? "Iten-Tambach Municipality" : "Iten-Tambach Municipality — Demonstration Website",
+    template: publicationApproved ? "%s | Iten-Tambach Municipality" : "%s | Iten-Tambach Municipality (Demonstration)",
   },
-  description: "Demonstration website prepared for institutional review. Not an approved official publication of Iten-Tambach Municipality or the County Government of Elgeyo Marakwet.",
-  applicationName: "Iten-Tambach Municipality demonstration website",
+  description: publicationDescription,
+  applicationName: publicationApproved ? site.name : "Iten-Tambach Municipality demonstration website",
   keywords: [
     "Iten-Tambach Municipality",
     "Elgeyo Marakwet County",
@@ -51,24 +57,24 @@ export const metadata: Metadata = {
     locale: "en_KE",
     url: site.url,
     siteName: site.name,
-    title: "Iten-Tambach Municipality — Demonstration Website",
-    description: site.description,
+    title: publicationApproved ? site.name : "Iten-Tambach Municipality — Demonstration Website",
+    description: publicationDescription,
     images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Iten-Tambach Municipality, County Government of Elgeyo Marakwet" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iten-Tambach Municipality — Demonstration Website",
-    description: site.description,
+    title: publicationApproved ? site.name : "Iten-Tambach Municipality — Demonstration Website",
+    description: publicationDescription,
     images: ["/og-image.svg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: publicationApproved, follow: publicationApproved },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-KE" className={`${inter.variable} ${manrope.variable}`}>
       <body className="flex min-h-screen flex-col">
-        <ReviewBanner />
+        {!publicationApproved && <ReviewBanner />}
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}
