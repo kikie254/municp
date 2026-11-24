@@ -77,7 +77,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="shell flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between">
           <p className="text-[11.5px] text-white/45">
-            © {year} Iten-Tambach Municipality | County Government of Elgeyo Marakwet. All Rights Reserved.
+            © {year} Iten-Tambach Municipality demonstration website. Not an approved official municipal publication.
           </p>
           <ul className="flex flex-wrap items-center gap-x-5 gap-y-2">
             {legalLinks.map((l) => (
