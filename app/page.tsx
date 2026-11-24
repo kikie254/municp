@@ -29,42 +29,42 @@ const quickAccess = [
   {
     title: "Municipal Services",
     description:
-      "Explore information about municipal services, urban management, environmental cleanliness and public spaces.",
+      "Find out what the Municipal Charter says about urban planning, waste management, roads, drainage, markets and public spaces.",
     href: "/services",
     icon: "spaces",
   },
   {
     title: "Projects and Development",
     description:
-      "Discover municipal development priorities and explore published information about projects and initiatives.",
+      "Read about the Municipality's development priorities and view project records that have been confirmed for publication.",
     href: "/projects",
     icon: "planning",
   },
   {
     title: "Documents and Reports",
     description:
-      "Access municipal plans, policies, reports, publications and other public resources.",
+      "Find the Municipal Charter, development plans, policies, financial reports and public participation records.",
     href: "/resources",
     icon: "information",
   },
   {
     title: "Public Participation",
     description:
-      "Share your views, participate in community discussions and contribute to the development of Iten-Tambach.",
+      "Find Citizen Fora notices, read participation reports and learn how to submit your views.",
     href: "/public-participation",
     icon: "community",
   },
   {
     title: "Investment Opportunities",
     description:
-      "Learn about the municipality's development potential and opportunities for economic engagement.",
+      "Explore the Municipality's planning context and published investment documents.",
     href: "/investment",
     icon: "trade",
   },
   {
     title: "Citizen Feedback",
     description:
-      "Share your concerns, suggestions and experiences to help strengthen service delivery and accountability.",
+      "Send a question, suggestion or complaint to the municipal system and keep the reference number for follow-up.",
     href: "/feedback",
     icon: "governance",
   },
@@ -79,10 +79,10 @@ const quickAccess = [
  */
 const contentChecked = documents.filter((d) => d.verification === "content-confirmed").length;
 const stats = [
-  { value: String(documents.length), label: "Official documents listed" },
-  { value: String(contentChecked), label: "Documents content-checked" },
-  { value: String(documentCategories.length), label: "Document categories" },
-  { value: String(services.length), label: "Municipal service areas" },
+  { value: String(documents.length), label: "Municipal area" },
+  { value: String(contentChecked), label: "2019 census population" },
+  { value: String(documentCategories.length), label: "Elevation above sea level" },
+  { value: String(services.length), label: "World Athletics Heritage recognition" },
 ];
 
 export default function HomePage() {
@@ -123,21 +123,18 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 max-w-xl font-display text-[15px] font-semibold leading-snug text-white/90 sm:text-[17px] md:text-[19px]">
-              Building a Better, Cleaner and More Vibrant Municipality
+              A town of choice for sports, tourism and investment
             </p>
 
             <div className="mt-6 max-w-xl space-y-3.5 border-l-2 border-gold-400/70 pl-4 sm:pl-5">
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
-                  This is the municipal website of Iten-Tambach Municipality, within the County Government of Elgeyo
-                Marakwet. Content is being confirmed with the Municipality before public launch.
+                  Iten-Tambach is the sole municipality in Elgeyo Marakwet County and the home of the County headquarters. Its municipal charter was granted in December 2018 under the Urban Areas and Cities Act, 2011.
               </p>
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
-                Our commitment is to promote sustainable urban development, improve the quality of the urban
-                environment and create an inclusive municipality where residents, businesses and visitors can thrive.
+                The Municipality's chartered responsibilities cover urban planning, roads and drainage, waste management, public spaces, street lighting, markets and other services that shape everyday life.
               </p>
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
-                Through responsible governance, effective planning and meaningful community participation, we
-                continue working towards a better future for our municipality.
+                Its vision is clear: “A town of choice for sports, tourism and investment.” The mission is to improve service delivery, widen equitable access and support a liveable environment for all residents.
               </p>
             </div>
 
@@ -234,33 +231,29 @@ export default function HomePage() {
             <div>
               <p className="eyebrow mb-4">About the Municipality</p>
               <h2 className="text-balance font-display text-[1.6rem] font-extrabold leading-[1.12] tracking-[-0.02em] text-green-900 sm:text-[2rem] md:text-[2.35rem]">
-                A Municipality with a Vision for the Future
+                A highland municipality with a distinctive place in the region
               </h2>
               <div className="mt-5 space-y-3.5">
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  Iten-Tambach Municipality is an important urban centre within Elgeyo Marakwet County.
+                  Iten-Tambach Municipality is the sole municipality in Elgeyo Marakwet County and hosts the County headquarters.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  As a centre of administration, commerce and community life, the municipality plays an important role
-                  in supporting urban development and creating an enabling environment for residents, businesses and
-                  visitors.
+                  The Municipality covers approximately 183.4 square kilometres across parts of Kamariny, Kapchemutwa and Tambach wards. The area includes highland, escarpment and lower Kerio Valley landscapes.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  Our focus is on promoting organised development, environmental sustainability, improved public spaces
-                  and meaningful participation in municipal affairs.
+                  The 2019 Kenya Population and Housing Census recorded 54,158 residents within the municipal boundary. The Urban Climate Risk Profile projects the population to reach 66,108 by 2029.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  We recognise that a successful municipality is built through effective leadership, responsible
-                  planning, partnerships and the active involvement of its people.
+                  The Municipality's charter sets out its responsibilities and provides for residents to take part in decisions affecting local development and services.
                 </p>
               </div>
 
               <ul className="mt-6 grid gap-2.5 sm:grid-cols-2">
                 {[
-                  "Organised urban development",
-                  "Environmental sustainability",
-                  "Improved public spaces",
-                  "Meaningful participation",
+                  "Urban planning and development",
+                  "Waste and environmental management",
+                  "Public spaces and amenities",
+                  "Resident participation",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-[12.5px] font-medium text-green-900">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-500" aria-hidden="true" />
@@ -314,8 +307,8 @@ export default function HomePage() {
             <Reveal>
               <SectionHeading
                 eyebrow="Projects and Development"
-                title="Transforming Our Municipality Through Development"
-                description="Development is about improving everyday life and creating opportunities for future generations. Explore municipal development priorities, ongoing initiatives and completed projects through our development information platform."
+                title="Development priorities and public investment"
+                description="The Municipality's published plans identify priorities for roads, drainage, walkways, waste management, urban planning and public amenities. Project records are shown only when the relevant details have been confirmed for publication."
               />
             </Reveal>
             <Link href="/projects" className="link-arrow shrink-0 pb-1">
@@ -363,18 +356,17 @@ export default function HomePage() {
             <Reveal>
               <p className="eyebrow eyebrow-light mb-4">Public Participation</p>
               <h2 className="text-balance font-display text-[1.65rem] font-extrabold uppercase leading-[1.1] tracking-[-0.01em] text-white sm:text-[2.1rem] md:text-[2.6rem]">
-                Your Voice. Your Municipality. Your Future.
+                Residents have a place in municipal decision-making
               </h2>
               <div className="mt-5 space-y-3.5">
                 <p className="text-[14px] leading-[1.85] text-white/72">
-                  Meaningful development begins with listening.
+                  Public participation is part of the legal framework for municipal governance.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-white/72">
-                  Residents and stakeholders are encouraged to take part in municipal discussions, share their ideas
-                  and contribute to decisions that shape the future of Iten-Tambach.
+                  Citizen Fora provide an opportunity to discuss development plans, budgets and local priorities. Notices and reports are listed in the Document Centre.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-white/72">
-                  Together, we can create a municipality that reflects the aspirations and priorities of its people.
+                  Residents can review published notices, prepare their views and take part in consultations when they are announced.
                 </p>
               </div>
               <div className="mt-7 flex flex-wrap gap-3">
@@ -390,7 +382,7 @@ export default function HomePage() {
 
           <div className="mt-10 grid gap-3 border-t border-white/12 pt-8 sm:grid-cols-3">
             {[
-              { icon: CalendarDays, label: "Citizen fora", note: "Calendars and quarterly reports published" },
+              { icon: CalendarDays, label: "Citizen fora", note: "Notices and quarterly reports in the document library" },
               { icon: FileText, label: "Public notices", note: "Announcements issued through official channels" },
               { icon: MessageSquare, label: "Feedback channels", note: "Written submissions and grievance redress" },
             ].map((item) => (
@@ -484,19 +476,17 @@ export default function HomePage() {
             <div>
               <p className="eyebrow mb-4">Investment and Economic Development</p>
               <h2 className="text-balance font-display text-[1.6rem] font-extrabold leading-[1.12] tracking-[-0.02em] text-green-900 sm:text-[2rem] md:text-[2.3rem]">
-                Discover the Potential of Iten-Tambach
+                An economy shaped by its people and place
               </h2>
               <div className="mt-5 space-y-3.5">
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  Iten-Tambach offers an important foundation for trade, enterprise and sustainable urban development.
+                  The municipal economy brings together agriculture, local trade, public administration and services, alongside a recognised high-altitude athletics identity.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  The municipality welcomes engagement with entrepreneurs, investors, businesses and development
-                  partners interested in contributing to local economic growth.
+                  The Municipality's planning and investment documents provide a starting point for enquiries from businesses and development partners. Any land availability, incentives or approvals must be confirmed through the responsible public offices.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  We believe that responsible investment and collaboration can help create opportunities, strengthen
-                  local enterprise and support a vibrant urban economy.
+                  Agriculture remains important to livelihoods in the municipal area, with the Urban Climate Risk Profile reporting that about 80 per cent of households engage in cultivation for subsistence or commercial purposes.
                 </p>
               </div>
               <Link href="/investment" className="btn btn-primary mt-7">
@@ -508,9 +498,9 @@ export default function HomePage() {
           <Reveal delay={100} className="lg:col-span-5">
             <div className="grid gap-3 sm:grid-cols-2">
               {[
-                { icon: "trade", title: "Trade and Commerce", text: "An active trading centre serving the wider highlands." },
+                { icon: "trade", title: "Trade and Commerce", text: "Trade and local enterprise support the municipal economy." },
                 { icon: "planning", title: "Urban Development", text: "Guided by the Iten Integrated Spatial Plan 2015–2035." },
-                { icon: "community", title: "Local Enterprise", text: "Support for traders, entrepreneurs and enterprise." },
+                { icon: "community", title: "Local Enterprise", text: "Municipal markets and public spaces are part of the statutory mandate." },
                 { icon: "information", title: "Planning Resources", text: "Published plans that inform investment enquiries." },
               ].map((c) => (
                 <div key={c.title} className="border border-paper-line bg-white p-4 shadow-card">
