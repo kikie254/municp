@@ -189,8 +189,8 @@ Get-Content "lib\site.ts" | Select-String -Pattern "phone|email" -Context 2
 ### After Deploying
 - Monitor for any null reference errors
 - Check contact page displays correctly
-- Verify forms work with new placeholders
-- Test that users can still find postal address
+- Verify public forms remain disabled until institutional approval
+- Verify contact details remain withheld until written confirmation
 
 ---
 
@@ -203,7 +203,7 @@ If contact details need to be restored later with verified information:
    contact: {
      phone: "+254 XXX XXX XXX",
      phoneDisplay: "0XXX XXX XXX",
-     email: "verified.email@example.com",
+     email: "[set only to the verified institutional address after approval]",
      // ... other fields
    },
    contactVerification: "confirmed",
@@ -211,12 +211,12 @@ If contact details need to be restored later with verified information:
 
 2. Update environment files:
    ```
-   MUNICIPAL_NOTIFICATIONS_EMAIL=verified.email@example.com
+   MUNICIPAL_NOTIFICATIONS_EMAIL=[set only to the verified institutional address after approval]
    ```
 
 3. Update form placeholders if desired
 
-4. Remove "pending verification" notices (automatic when contactVerification = "confirmed")
+4. Revisit the release-gate implementation and obtain written approval before publishing contact details or enabling public intake.
 
 5. Test all contact display components
 
