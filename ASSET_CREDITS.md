@@ -74,7 +74,7 @@ projects or events.
 
 | Asset | File | Size | Source | Permission | Required action |
 |---|---|---|---|---|---|
-| County crest | `public/brand/elgeyo-marakwet-crest.png` | 264×264 PNG, transparent | Retrieved from the County Government of Elgeyo Marakwet website | **Not on file** — web availability is not permission | Obtain **written authorisation** from the County for use on this site, or replace with the Municipality's approved official artwork. Used in header, footer, favicon and JSON-LD `logo` |
+| County crest | `public/brand/elgeyo-marakwet-crest.png` | 264×264 PNG, transparent | Retrieved from the County Government of Elgeyo Marakwet website | **Removed from the active site pending written authorisation** — web availability is not permission | Obtain written County authorisation or supply approved municipal artwork before reinstating. |
 
 The crest has **not** been redrawn, recoloured, cropped, regenerated or replaced, and no substitute
 mark was created. Flag gradient bars in the header/footer are CSS, not image assets.
@@ -126,7 +126,7 @@ one at the County documents index page.
 **Launch blockers (must be resolved):**
 
 1. All 13 photographs in `public/images/` — rights unestablished.
-2. `public/brand/elgeyo-marakwet-crest.png` — no written County permission on file.
+2. County crest — removed from active presentation pending written County permission; the source asset is not included in the public build.
 3. `public_engagement.jpg` and `community-forum.jpg` — identifiable people, implied municipal event
    (subsumed by item 1, called out separately because consent is a distinct question).
 
