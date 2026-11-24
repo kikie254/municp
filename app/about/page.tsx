@@ -122,10 +122,10 @@ export default function AboutPage() {
                   <Eye className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h2 className="mt-4 font-display text-[17px] font-bold uppercase tracking-[0.04em] text-green-900">
-                  Our Vision
+                  Draft vision — pending confirmation
                 </h2>
                 <p className="mt-3 text-[14px] leading-[1.85] text-ink-soft">
-                  &ldquo;A town of choice for sports, tourism and investment.&rdquo;
+                  No adopted municipal vision statement has been confirmed for publication. The available County-hosted charter file is a model draft.
                 </p>
               </div>
             </Reveal>
@@ -136,10 +136,10 @@ export default function AboutPage() {
                   <Target className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h2 className="mt-4 font-display text-[17px] font-bold uppercase tracking-[0.04em] text-green-900">
-                  Our Mission
+                  Draft mission — pending confirmation
                 </h2>
                 <p className="mt-3 text-[14px] leading-[1.85] text-ink-soft">
-                  &ldquo;To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.&rdquo;
+                  No adopted municipal mission statement has been confirmed for publication. The available County-hosted charter file is a model draft.
                 </p>
               </div>
             </Reveal>
@@ -153,8 +153,8 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Our Principles"
-              title="Principles that guide our work"
-              description="These principles describe the standards that guide the Municipality's work and our service to residents."
+              title="Draft principles awaiting confirmation"
+              description="The principles below are draft website copy and require municipal confirmation before they can be presented as adopted institutional values."
             />
           </Reveal>
 
@@ -176,10 +176,10 @@ export default function AboutPage() {
             ))}
             <div className="bg-green-900 p-6">
               <p className="font-display text-[13px] font-bold uppercase tracking-[0.1em] text-gold-400">
-                Our Commitment
+                Draft commitment
               </p>
               <p className="mt-2.5 text-[12.5px] leading-relaxed text-white/65">
-                Service to residents, respect for the law and responsible stewardship of municipal resources.
+                Proposed wording only; requires formal municipal approval before publication as an institutional commitment.
               </p>
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function AboutPage() {
             {[
               { label: "Parent government", value: "County Government of Elgeyo Marakwet" },
               { label: "Republic", value: "Republic of Kenya" },
-              { label: "Office", value: "Iten Municipality Office, Iten" },
+              { label: "Office details", value: "Pending written municipal confirmation" },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-2.5">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-500" aria-hidden="true" />
