@@ -1,24 +1,19 @@
 # ASSET CREDITS AND RIGHTS REGISTER
 
 **Project:** Iten–Tambach Municipality website
-**Status of this register:** every entry below was checked against the files in `public/` and against
-the pages that use them. **No licence has been invented, assumed or inferred.** Where the source is
-unknown it is recorded as unknown, and the asset is treated as not cleared for publication.
+**Status of this register:** historical inventory of assets previously used by the demonstration site. The 13 photographs and County crest have been removed from the public asset directory pending rights evidence. **No licence has been invented, assumed or inferred.**
 
 > **Publication rule.** A file existing in `public/` is served publicly by Next.js regardless of
-> whether any page links to it. Until an asset's rights are documented it must be treated as
-> **uncleared**, and the site carries a pre-launch review notice to that effect.
+> whether any page links to it. The former photographs and County crest are not included in the active public assets. Static and CMS-uploaded photographs remain hidden unless the rights approval gate is explicitly enabled.
 
 > **Fields marked "Pending"** are the Municipality's to complete. This register does not substitute
 > for written permission.
 
 ---
 
-## 1. Photographs — `public/images/`
+## 1. Photographs — historical inventory (removed from `public/images/`)
 
-Each photograph exists as both `.jpg` (source for the `next/image` pipeline) and `.webp`.
-**Rights status for all 13: not established.** Creator, source and licence are unknown for every
-file; none carries embedded authorship metadata usable as evidence.
+The 13 former photographs existed as `.jpg` files with `.webp` derivatives. **Rights status for all 13: not established.** Creator, source and licence are unknown; none carries embedded authorship metadata usable as evidence. These records are retained only to prevent accidental restoration.
 
 | # | Filename | Native size | Used in (count) | Known source | Licence status | Rights risk | Required action |
 |---|---|---|---|---|---|---|---|
