@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays, Megaphone } from "lucide-react";
+import { publicImageAssetsApproved } from "@/lib/config/env";
 import type { NewsItem } from "@/lib/data/news";
 
 export function NewsCard({ item, featured = false }: { item: NewsItem; featured?: boolean }) {
+  const showImage = publicImageAssetsApproved();
   return (
     <article
       className={`group flex h-full flex-col overflow-hidden border border-paper-line bg-white shadow-card transition-all duration-300 ease-smooth hover:-translate-y-1 hover:shadow-lift ${
@@ -11,13 +13,19 @@ export function NewsCard({ item, featured = false }: { item: NewsItem; featured?
       }`}
     >
       <div className={`relative overflow-hidden bg-green-950 ${featured ? "aspect-[16/10] md:aspect-auto md:w-1/2" : "aspect-[16/10]"}`}>
-        <Image
-          src={item.image}
-          alt={item.imageAlt}
-          fill
-          sizes={featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
-          className="object-cover transition-transform duration-700 ease-smooth group-hover:scale-[1.04]"
-        />
+        {showImage ? (
+          <Image
+            src={item.image}
+            alt={item.imageAlt}
+            fill
+            sizes={featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
+            className="object-cover transition-transform duration-700 ease-smooth group-hover:scale-[1.04]"
+          />
+        ) : (
+          <div className="flex h-full min-h-[160px] items-center justify-center pattern-grid">
+            <Megaphone className="h-8 w-8 text-white/40" aria-hidden="true" />
+          </div>
+        )}
         <span className="absolute left-0 top-0 bg-gold-400 px-3 py-1.5 text-[9.5px] font-bold uppercase tracking-[0.14em] text-green-950">
           {item.category}
         </span>
