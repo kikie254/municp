@@ -20,7 +20,7 @@ export default function GovernancePage() {
     <>
       <PageHero
         title="Municipal Governance and Leadership"
-        intro="Effective municipal governance requires accountable leadership, clear institutional responsibilities and responsible administration. Iten-Tambach Municipality operates within the governance framework established by Kenyan law and its approved Municipal Charter."
+        intro="The Municipality is governed within the framework of the Urban Areas and Cities Act, 2011, and the Iten Tambach Municipal Charter. The Municipal Board provides governance and oversight, while the Municipal Manager is responsible for day-to-day administration. Both operate within the wider County Government framework."
         image="/images/community-forum.jpg"
         imageAlt="Community members and officials gathered for a governance meeting"
         eyebrow="Institutional Structure"
@@ -79,10 +79,7 @@ export default function GovernancePage() {
                   Municipal Board
                 </h2>
                 <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
-                  The Board of the Municipality is the governing body of the municipality. Under the Iten Tambach
-                  Municipal Charter, the Board is composed of nine members serving on a part-time basis for a term of
-                  five years. Five members are appointed through a competitive process by the County Executive
-                  Committee and approved by the County Assembly.
+                  The Municipal Board is the governing body provided for under the Municipal Charter. The charter document listed by the County describes a nine-member Board serving on a part-time basis for a five-year term, with five members appointed competitively by the County Executive Committee and approved by the County Assembly. The Municipality should confirm that the model charter on the County repository is the version adopted for Iten-Tambach.
                 </p>
                 <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
                   Further members are nominated by umbrella bodies representing professional associations, the private
@@ -107,10 +104,7 @@ export default function GovernancePage() {
                     Board Chairperson
                   </h2>
                   <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
-                    The Chairperson presides over the Board and carries the responsibilities assigned under the Charter
-                    and applicable law, including the convening and conduct of Board business. A Vice-Chairperson
-                    supports the Chairperson, and the Charter provides for the circumstances in which either may be
-                    removed.
+                    The Chairperson leads the Board's meetings and carries out the responsibilities assigned by the Charter and applicable law. The Vice-Chairperson supports the Chairperson in accordance with the same framework.
                   </p>
                 </article>
               </Reveal>
@@ -123,9 +117,7 @@ export default function GovernancePage() {
                     Municipal Manager
                   </h2>
                   <p className="mt-3 text-[13px] leading-[1.85] text-ink-soft">
-                    The Municipal Manager is the accounting officer of the municipality and is responsible for the
-                    day-to-day administration of municipal affairs, implementation of Board decisions and the
-                    management of municipal resources in accordance with the law.
+                    The Municipal Manager is responsible for the day-to-day administration of municipal affairs, implementation of Board decisions and management of municipal resources in accordance with the law.
                   </p>
                 </article>
               </Reveal>

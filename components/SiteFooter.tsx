@@ -32,7 +32,7 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="mt-5 max-w-sm text-[13.5px] leading-relaxed text-white/65">
-            Building a better, cleaner, inclusive and vibrant municipality.
+            A town of choice for sports, tourism and investment.
           </p>
           <p className="mt-4 flex items-start gap-2 border-l-2 border-gold-400/60 pl-3 text-[12px] leading-relaxed text-white/50">
             <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-400" aria-hidden="true" />

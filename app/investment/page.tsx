@@ -19,22 +19,22 @@ const pillars = [
   {
     icon: Store,
     title: "Trade and Commerce",
-    text: "Iten functions as a trading centre for the surrounding highlands, with a concentration of shops, fresh produce trade, hardware, agroveterinary services and hospitality serving both residents and visitors. A municipal focus on orderly trading areas, access and cleanliness supports that role.",
+    text: "Trade and local enterprise are part of the Municipality's economic life. The Municipal Charter provides for municipal markets and abattoirs and for the regulation of outdoor advertising.",
   },
   {
     icon: Truck,
     title: "Local Enterprise",
-    text: "Small and medium enterprises — including traders, transporters, agro-dealers, artisans and hospitality operators — form the base of the local economy. Enterprise support is approached through coordination, information and an enabling trading environment rather than direct subsidy.",
+    text: "The Urban Climate Risk Profile identifies small businesses and informal trade among local livelihood activities. The municipal role is framed by its statutory functions and by coordination with the County offices responsible for trade and licensing.",
   },
   {
     icon: Building2,
     title: "Urban Development",
-    text: "The Iten Integrated Spatial Plan (2015–2035) provides the published framework for spatial growth, land use and development coordination. Development proposals should be read against that plan and against applicable county and national approvals.",
+    text: "The Iten Integrated Spatial Plan (2015–2035) is listed in the County Government's document repository. It provides planning context for land use and urban development; proposals remain subject to the approvals required by law.",
   },
   {
     icon: HandshakeIcon,
     title: "Development Partnerships",
-    text: "The municipality's published plans reference engagement with development partners and national programmes. Partnership proposals are considered on their merits and subject to the approvals that apply to public institutions.",
+    text: "Municipal and County planning documents refer to engagement with development partners and national programmes. Any proposed partnership must follow the approvals and public-sector procedures that apply.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function InvestmentPage() {
     <>
       <PageHero
         title="Investment and Economic Development"
-        intro="Iten-Tambach's development potential provides an opportunity to encourage responsible investment, strengthen local enterprise and support economic growth. The municipality welcomes engagement with investors, entrepreneurs, businesses and development partners interested in contributing to sustainable urban development."
+        intro="Iten-Tambach's economy draws on agriculture, trade, public administration and its international reputation for high-altitude athletics. The Municipality's published planning and investment documents provide useful context for businesses and development partners considering the area."
         image="/images/highlands.jpg"
         imageAlt="Highland farmland and settlement in Elgeyo Marakwet County"
         eyebrow="Economic Development"
@@ -59,8 +59,8 @@ export default function InvestmentPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Investment Potential"
-              title="Four foundations of the local economy"
-              description="Iten-Tambach's advantages are practical rather than promotional: a highland location, an established trading role, a published spatial plan and an active community of enterprises."
+              title="The local economy and its development context"
+              description="The available planning profile identifies agriculture, trade, public administration and athletics-related activity as important parts of the municipal economy."
             />
           </Reveal>
           <div className="mt-9 grid gap-5 sm:grid-cols-2">

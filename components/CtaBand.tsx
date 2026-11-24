@@ -18,11 +18,10 @@ export function CtaBand() {
         <div className="max-w-2xl">
           <p className="eyebrow eyebrow-light mb-4">Get Involved</p>
           <h2 className="text-balance font-display text-[1.7rem] font-extrabold leading-[1.12] tracking-[-0.02em] text-white sm:text-[2.1rem] md:text-[2.5rem]">
-            Let&rsquo;s build a better Iten-Tambach together.
+            A better Iten-Tambach begins with informed participation.
           </h2>
           <p className="mt-4 max-w-xl text-[14.5px] leading-[1.8] text-white/70">
-            Your participation matters. Stay informed, engage with the municipality and contribute to building a
-            cleaner, more organised and inclusive urban environment.
+            Residents and stakeholders can follow municipal notices, take part in public consultations and raise matters through the available feedback channels. Your contribution helps keep local priorities in view.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/contact" className="btn btn-gold">

@@ -20,7 +20,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         title="Our Municipal Services"
-        intro="Our municipality works towards an organised, functional and sustainable urban environment. Through planning, coordination and collaboration with relevant county and national government agencies, we seek to support improved urban management and responsive public services."
+        intro="The Municipal Charter identifies the services and responsibilities assigned to Iten-Tambach Municipality. These include urban planning, roads and drainage, waste management, public spaces, street lighting, markets, parking and public transport facilities. Some services are delivered in coordination with County departments and other public agencies."
         image="/images/town-life.jpg"
         imageAlt="Street scene in a Kenyan highland town with shops and roadside activity"
         eyebrow="Service Information"
@@ -33,7 +33,7 @@ export default function ServicesPage() {
             <SectionHeading
               eyebrow="Service Areas"
               title="Eight areas of municipal attention"
-              description="Each area below explains the municipality's role in general terms and directs you to the right channel for an enquiry or a concern."
+              description="The pages below explain the Municipality's chartered functions and indicate where responsibility may rest with another public institution."
             />
           </Reveal>
 
