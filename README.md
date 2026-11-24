@@ -24,6 +24,7 @@ This is not a frontend-only project. It contains server actions, API routes, Fir
 - Do not set either approval switch until the Municipality has approved the publication, privacy notice, data controller, processors, retention policy, notification recipient and operational handling process.
 - `MUNICIPAL_NOTIFICATIONS_EMAIL` has no placeholder fallback. If it is absent or invalid, internal email notification is not sent.
 - County branding is not included in the active UI pending written permission.
+- Static and CMS-uploaded photographs are hidden by default. They may be rendered only when `MUNICIPAL_IMAGE_ASSETS_APPROVED=true` after written licence/usage approval.
 - No real administrator account or production credential is committed to this repository.
 
 ## Local development
