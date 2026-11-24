@@ -31,7 +31,7 @@ export default async function NewsPage() {
     <>
       <PageHero
         title="News, Updates and Announcements"
-        intro="Official municipal announcements, public notices and development updates. Every item on this page has been approved for publication through the municipal editorial process."
+        intro="Demonstration of how municipal announcements, public notices and development updates could be presented. Treat an item as an official notice only when it is issued by an authorised municipal or County Government office."
         image="/images/iten-town-aerial.jpg"
         imageAlt="Aerial view of Iten town and its surrounding highlands"
         eyebrow="Newsroom"
