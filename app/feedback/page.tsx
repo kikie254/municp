@@ -13,7 +13,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Citizen Feedback and Complaints",
   description:
-    "Feedback channels for Iten-Tambach Municipality: complaint categories, grievance redress information, frequently asked questions and a feedback form that records your message in the municipal case system.",
+    "Submit a question, suggestion or complaint to Iten-Tambach Municipality. The online form records submissions in the municipal system and provides a reference for follow-up.",
   alternates: { canonical: "/feedback" },
 };
 
@@ -53,7 +53,7 @@ export default function FeedbackPage() {
               <SectionHeading
                 eyebrow="Categories"
                 title="What is your matter about?"
-                description="Choosing the right category helps route a concern to the responsible officer."
+                description="Choose the category that best describes your concern. Include the location and relevant details so the matter can be directed to the appropriate office."
               />
             </Reveal>
             <ul className="mt-6 divide-y divide-paper-line border-y border-paper-line">
@@ -80,8 +80,7 @@ export default function FeedbackPage() {
             <div className="mt-5 flex gap-3 border border-paper-line bg-paper-warm p-4">
               <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-green-700" aria-hidden="true" />
               <p className="text-[11.5px] leading-relaxed text-ink-soft">
-                The municipality&rsquo;s published Grievance Redress Mechanism structure and its process flow chart are
-                available in the document centre.
+                The Municipality's published grievance redress documents, including its process flow chart, are listed in the Document Centre.
               </p>
             </div>
             <Link href="/resources?category=Grievance+Redress+Documents" className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-green-700 hover:text-gold-700">
@@ -93,7 +92,7 @@ export default function FeedbackPage() {
             <PublicSubmissionForm
               type="FEEDBACK"
               heading="Send feedback or a complaint"
-              intro="Tell us what is working or what needs attention. Complaints are logged with a reference number and can be followed up with that number."
+              intro="Tell us what is working or what needs attention. Your submission is sent to the municipal system. A reference number is displayed when it has been recorded successfully."
               subjects={[
                 "Complaint about a municipal service",
                 "Complaint about staff conduct",
