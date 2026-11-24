@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BackToTop } from "@/components/BackToTop";
+import { ReviewBanner } from "@/components/ReviewBanner";
 import { site } from "@/lib/site";
 
 const inter = localFont({
@@ -32,10 +33,10 @@ const manrope = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Iten-Tambach Municipality | County Government of Elgeyo Marakwet",
-    template: "%s | Iten-Tambach Municipality",
+    default: "Iten-Tambach Municipality — Demonstration Website",
+    template: "%s | Iten-Tambach Municipality (Demonstration)",
   },
-  description: site.description,
+  description: "Demonstration website prepared for institutional review. Not an approved official publication of Iten-Tambach Municipality or the County Government of Elgeyo Marakwet.",
   applicationName: site.name,
   keywords: [
     "Iten-Tambach Municipality",
@@ -45,13 +46,12 @@ export const metadata: Metadata = {
     "public participation Kenya",
     "municipal documents",
   ],
-  authors: [{ name: "Iten-Tambach Municipality" }],
   openGraph: {
     type: "website",
     locale: "en_KE",
     url: site.url,
     siteName: site.name,
-    title: "Iten-Tambach Municipality | County Government of Elgeyo Marakwet",
+    title: "Iten-Tambach Municipality — Demonstration Website",
     description: site.description,
     images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Iten-Tambach Municipality, County Government of Elgeyo Marakwet" }],
   },
@@ -61,14 +61,14 @@ export const metadata: Metadata = {
     description: site.description,
     images: ["/og-image.svg"],
   },
-  robots: { index: true, follow: true },
-  icons: { icon: "/brand/elgeyo-marakwet-crest.png", apple: "/brand/elgeyo-marakwet-crest.png" },
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-KE" className={`${inter.variable} ${manrope.variable}`}>
       <body className="flex min-h-screen flex-col">
+        <ReviewBanner />
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}
