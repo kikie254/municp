@@ -62,7 +62,7 @@ export const news: NewsItem[] = [
     body: [
       "This page demonstrates the format used for public notices. It is sample content and does not announce a real forum, date or venue.",
       "A genuine notice would state the purpose of the forum, the date, time and venue, the wards or areas invited, the language of proceedings, and any accessibility arrangements for persons with disabilities.",
-      "The Municipality publishes citizen fora calendars and quarterly citizen fora reports. These are listed in the municipal document centre and can be retrieved from the official source.",
+      "The County Government document repository lists citizen fora calendars and reports from previous periods. Residents should rely on current public notices for confirmed dates, venues and submission details.",
       "Residents who wish to raise a matter ahead of a forum can use the feedback channels described on the complaints and feedback page.",
     ],
     isSample: true,
