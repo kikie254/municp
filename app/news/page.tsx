@@ -45,7 +45,7 @@ export default async function NewsPage() {
               title="Municipal announcements and public notices"
               body="Visit this page for municipal announcements, public notices and community updates."
             >
-              <Link href="/contact" className="btn btn-outline mt-4 !py-2.5 !text-[11.5px]">Contact the municipal office</Link>
+              <Link href="/contact" className="btn btn-outline mt-4 !py-2.5 !text-[11.5px]">View contact-status information</Link>
             </EmptyState>
           ) : (
             <>
