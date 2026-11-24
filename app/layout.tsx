@@ -5,7 +5,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { BackToTop } from "@/components/BackToTop";
 import { site } from "@/lib/site";
-import { ReviewBanner } from "@/components/ReviewBanner";
 
 const inter = localFont({
   src: [
@@ -70,7 +69,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-KE" className={`${inter.variable} ${manrope.variable}`}>
       <body className="flex min-h-screen flex-col">
-        <ReviewBanner />
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}
