@@ -22,22 +22,7 @@ export const site = {
   tagline: "A town of choice for sports, tourism and investment.",
   url: resolveSiteUrl(),
   description:
-    "Information about Iten-Tambach Municipality, its statutory role, municipal services, public participation and development resources.",
-  /**
-   * CONTACT DETAILS — REMOVED PENDING WRITTEN CONFIRMATION.
-   * Contact information has been removed until the Municipality provides verified contact details
-   * in writing. The postal address is retained as it appears on County-published documents.
-   * All phone numbers and email addresses have been removed.
-   */
-  contactVerification: "pending" as "pending" | "confirmed",
-  contact: {
-    office: "Iten Municipality Office",
-    physical: "Opposite County Assembly, behind IEBC offices, Iten, Kenya",
-    phone: null,
-    phoneDisplay: null,
-    email: null,
-    postal: "P.O. Box 220-30700, Iten, Kenya",
-  },
+    "Demonstration website prepared for institutional review. Not an approved official publication of Iten-Tambach Municipality or the County Government of Elgeyo Marakwet.",
   countyWebsite: "https://elgeyomarakwet.go.ke/",
   documentSource: "https://elgeyomarakwet.go.ke/iten-municipality-documents/",
 } as const;
