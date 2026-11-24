@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Phone, Mail, MapPin, Mailbox, ShieldCheck, ArrowRight } from "lucide-react";
+import { ShieldCheck, ArrowRight, ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
@@ -8,12 +8,11 @@ import { CtaBand } from "@/components/CtaBand";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { PublicSubmissionForm } from "@/components/forms/PublicSubmissionForm";
 import { faqs } from "@/lib/data/services";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Citizen Feedback and Complaints",
   description:
-    "Submit a question, suggestion or complaint to Iten-Tambach Municipality. The online form records submissions in the municipal system and provides a reference for follow-up.",
+    "Demonstration information about feedback and complaints. This website is not an authorised official municipal submission channel.",
   alternates: { canonical: "/feedback" },
 };
 
@@ -39,7 +38,7 @@ export default function FeedbackPage() {
     <>
       <PageHero
         title="Citizen Feedback and Complaints"
-        intro="Your voice matters. We value feedback from residents and stakeholders because it helps identify concerns, improve communication and strengthen accountability. Use this section to explore the municipality's feedback channels and understand how to raise issues through the appropriate official processes."
+        intro="This page demonstrates how feedback and complaint information could be presented. The website has not been authorised as an official municipal channel; do not submit real personal or sensitive information."
         image="/images/town-life.jpg"
         imageAlt="Residents and traders on a street in a Kenyan highland town"
         eyebrow="Feedback Channels"
@@ -67,14 +66,14 @@ export default function FeedbackPage() {
               ))}
             </ul>
 
-            <div className="mt-8 border-t-[3px] border-green-800 bg-green-950 p-5 text-white">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-400">Direct contact</p>
-              <p className="mt-3 flex items-start gap-2.5 text-[12px] leading-relaxed text-white/90">
-                <Mailbox className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.contact.postal}
+            <div className="mt-8 border-t-[3px] border-gold-400 bg-green-950 p-5 text-white">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-400">Contact details pending confirmation</p>
+              <p className="mt-3 text-[12px] leading-relaxed text-white/80">
+                Municipal telephone, email, physical and postal contact details are not displayed until formally confirmed.
               </p>
-              <p className="mt-3 flex items-start gap-2.5 text-[12px] leading-relaxed text-white/70">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" /> {site.contact.physical}
-              </p>
+              <a href="https://elgeyomarakwet.go.ke/" target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-semibold text-gold-300 hover:text-gold-200">
+                County Government website <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              </a>
             </div>
 
             <div className="mt-5 flex gap-3 border border-paper-line bg-paper-warm p-4">
@@ -92,7 +91,7 @@ export default function FeedbackPage() {
             <PublicSubmissionForm
               type="FEEDBACK"
               heading="Send feedback or a complaint"
-              intro="Tell us what is working or what needs attention. Your submission is sent to the municipal system. A reference number is displayed when it has been recorded successfully."
+              intro="Demonstration only. Do not submit real personal or sensitive information while this website remains unauthorised for official municipal use."
               subjects={[
                 "Complaint about a municipal service",
                 "Complaint about staff conduct",
