@@ -81,7 +81,7 @@ export default function InvestmentPage() {
           <div className="max-w-2xl border-t-[3px] border-green-800 bg-white p-6 shadow-card">
             <h2 className="font-display text-lg font-bold text-green-900">Investment and development enquiries</h2>
             <p className="mt-2 text-[13px] leading-relaxed text-ink-soft">
-              For enquiries about municipal planning and economic development, contact the municipal office.
+              For planning and economic-development enquiries, first confirm the responsible public office through current County Government publications. This demonstration website does not publish a verified municipal contact route.
             </p>
             <Link href="/contact" className="btn btn-primary mt-5 !py-2.5 !text-[11.5px]">
               Contact the municipality <ArrowRight aria-hidden="true" />
