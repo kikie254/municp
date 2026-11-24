@@ -26,7 +26,7 @@ const howTo = [
   { title: "Read the notice", text: "Published notices set out the subject, venue and date of an engagement. Read the notice before attending so that you know what decision is being discussed." },
   { title: "Prepare your contribution", text: "Write down your point, the area it concerns and the outcome you are proposing. A short written note is easier to table at a forum." },
   { title: "Attend or write in", text: "Attend a forum only when it is announced by an authorised office and follow the instructions in that notice. This demonstration website does not accept official consultation submissions." },
-  { title: "Follow the outcome", text: "Participation reports record what was raised and how it was addressed. Ask the municipal office for the report on an engagement you took part in." },
+  { title: "Follow the outcome", text: "Participation reports record what was raised and how it was addressed. Check the County Government document repository or the specific public notice for reports; verified municipal contact details are not yet published here." },
 ];
 
 export default function PublicParticipationPage() {
