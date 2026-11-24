@@ -5,7 +5,7 @@ import { headers } from "next/headers";
 import { fieldErrors, submissionSchema, participationResponseSchema } from "@/lib/validation/schemas";
 import { hashIp, publicReference } from "@/lib/security/tokens";
 import { rateLimit } from "@/lib/auth/ratelimit";
-import { sendMail, municipalRecipient, mailerConfigured } from "@/lib/services/email.service";
+import { sendMail, municipalRecipient } from "@/lib/services/email.service";
 import { recordAudit } from "@/lib/auth/audit";
 import { sameOrigin } from "@/lib/security/csrf";
 import * as submissionService from "@/lib/services/submission.service";
@@ -86,7 +86,7 @@ export async function submitSubmissionAction(_prev: ActionState, formData: FormD
     logError("submission.persist", error);
     return {
       status: "error",
-      message: `Your submission could not be recorded. Please try again, or write to the office at ${site.contact.postal}.`,
+      message: "Your submission could not be recorded. Please try again later.",
     };
   }
 
@@ -136,9 +136,7 @@ export async function submitSubmissionAction(_prev: ActionState, formData: FormD
     status: "ok",
     reference: created.reference,
     emailStatus: acknowledgement.status,
-    message: mailerConfigured()
-      ? `Your ${label.toLowerCase()} has been recorded under reference ${created.reference}.`
-      : `Your ${label.toLowerCase()} has been recorded under reference ${created.reference}. An acknowledgement email could not be sent because no email provider is configured on this deployment — please keep the reference.`,
+    message: `Your ${label.toLowerCase()} has been recorded under reference ${created.reference}. ${internal.status === "SENT" ? "The municipal notification was sent." : "The municipal office notification was not sent because an approved recipient or email configuration is unavailable."} ${acknowledgement.status === "SENT" ? "An acknowledgement email was sent." : "An acknowledgement email could not be sent; please keep the reference."}`,
   };
 }
 
