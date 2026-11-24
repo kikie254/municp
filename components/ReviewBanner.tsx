@@ -15,11 +15,10 @@ export function ReviewBanner() {
       <div className="shell flex items-start gap-2.5 py-2">
         <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-700" aria-hidden="true" />
         <p className="text-[11px] leading-snug text-green-900">
-          <span className="font-semibold uppercase tracking-[0.08em]">Pre-launch review — </span>
-          this site is being prepared for Iten-Tambach Municipality. Institutional details, photography rights and
-          project and news records are pending municipal verification.{" "}
+          <span className="font-semibold uppercase tracking-[0.08em]">DEMONSTRATION WEBSITE — </span>
+          this website is not an approved official publication of Iten-Tambach Municipality or the County Government of Elgeyo Marakwet. Institutional information, content, branding and services require verification and authorisation.{" "}
           <Link href="/terms" className="font-semibold underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-700">
-            Status of this website
+            Demonstration status
           </Link>
         </p>
       </div>
