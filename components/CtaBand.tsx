@@ -24,14 +24,14 @@ export function CtaBand() {
             A better Iten-Tambach begins with informed participation.
           </h2>
           <p className="mt-4 max-w-xl text-[14.5px] leading-[1.8] text-white/70">
-            Residents and stakeholders can follow municipal notices, take part in public consultations and raise matters through the available feedback channels. Your contribution helps keep local priorities in view.
+            This demonstration website provides information about notices and participation. It is not an authorised municipal submission channel; use only instructions and contact routes in notices issued by the responsible institution.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/contact" className="btn btn-gold">
-              Contact the Municipality <ArrowRight aria-hidden="true" />
+              View contact information <ArrowRight aria-hidden="true" />
             </Link>
             <Link href="/feedback" className="btn btn-ghost">
-              <MessageSquare aria-hidden="true" /> Share Your Feedback
+              <MessageSquare aria-hidden="true" /> Feedback information
             </Link>
           </div>
         </div>
