@@ -40,6 +40,7 @@ export async function loginAction(_prev: ActionState, formData: FormData): Promi
 
   const { h, ipHash } = await requestContext();
   const limit = await rateLimit(`login:${ipHash ?? "unknown"}:${parsed.data.email}`, 5, 10 * 60 * 1000);
+  if (limit.unavailable) return { status: "error", message: "Sign-in is temporarily unavailable. Please try again shortly." };
   if (!limit.allowed) {
     await recordAudit({
       actorEmail: parsed.data.email, action: "LOGIN_RATE_LIMITED", entityType: "AdminUser",
@@ -141,6 +142,7 @@ export async function requestPasswordResetAction(_prev: ActionState, formData: F
   const email = String(formData.get("email") || "").trim().toLowerCase();
   const { ipHash } = await requestContext();
   const limit = await rateLimit(`reset:${ipHash ?? "unknown"}`, 3, 60 * 60 * 1000);
+  if (limit.unavailable) return { status: "error", message: "Password reset is temporarily unavailable. Please try again shortly." };
   if (!limit.allowed) {
     return { status: "error", message: "Too many reset requests. Please try again later." };
   }
