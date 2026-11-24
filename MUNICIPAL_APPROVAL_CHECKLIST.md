@@ -4,7 +4,7 @@
 **Purpose:** items that must be confirmed, supplied or approved before this website is published as
 an official municipal publication.
 **How to use:** tick each line, sign the section, and return the completed sheet. Anything left
-unticked keeps its on-site pending-verification notice. Nothing on this list has been assumed,
+unticked keeps the site in demonstration status and blocks formal publication approval. Nothing on this list has been assumed,
 invented or filled in on the Municipality's behalf.
 
 Responsible municipal contact for this review: to be formally designated by the Municipality.
@@ -32,8 +32,7 @@ Responsible municipal contact for this review: to be formally designated by the 
 - [ ] Approve or reject continued use of images that associate the Municipality with a specific
       location, market or road.
 
-> **Launch blocker.** No photograph may be published until its rights are documented. The site
-> currently carries a pre-launch review notice stating that photography is pending clearance.
+ > **Launch blocker.** The 13 photographs currently have unknown rights and remain in the demonstration build. Remove them or provide documented licences before official publication.
 
 ## 3. Institutional information
 
@@ -49,8 +48,7 @@ Responsible municipal contact for this review: to be formally designated by the 
 - [ ] Confirm whether the **Iten Tambach Municipal Charter** published on the County site is the
       **adopted** instrument for this Municipality (the file supplied is headed "Model Draft
       Municipal Charter", World Bank KUSP).
-- [ ] Approve or correct the Board composition described on `/governance` (nine members, five
-      appointed competitively, five-year terms, chairperson and municipal manager roles).
+- [ ] Supply current appointment instruments and verify the actual Board composition, appointment method, terms, Chairperson and Municipal Manager responsibilities against the adopted charter and applicable law.
 - [ ] Decide whether office holders will be named and photographed. If yes, supply names, correct
       titles and approved portraits with consent.
 - [ ] Approve the wording stating that no officials are currently named on the website.
@@ -67,8 +65,7 @@ Responsible municipal contact for this review: to be formally designated by the 
 ## 6. News and public notices
 
 - [ ] Supply verified news items and public notices, with publication dates and the issuing office.
-- [ ] Approve the current wording that all 8 articles are "template examples", not municipal
-      announcements.
+- [ ] Verify each visible news item and public notice, including authoring office, issue date, approval authority and whether it is an official publication.
 - [ ] Designate the officers authorised to draft, review, approve and publish notices, and formally approve the editorial workflow before it is described as an institutional process.
 - [ ] Confirm whether notices must also appear in a specific legal format or gazette.
 
@@ -97,23 +94,19 @@ Responsible municipal contact for this review: to be formally designated by the 
 
 ## 9. Privacy and legal approval
 
-- [ ] Review the draft privacy notice; confirm what personal data will be collected when the
-      feedback, contact, enquiry and participation forms become operational.
-- [ ] Approve the retention period, the responsible officer and the lawful basis for that processing.
-- [ ] Confirm the data-protection contact for privacy enquiries (currently the general e-mail).
+- [ ] Review the provisional demonstration data notice; the code contains data-collection workflows, but public forms are disabled unless both institutional publication and intake approval switches are enabled.
+- [ ] Designate the data controller and privacy contact; approve lawful purposes/bases, processors, data residency, retention/deletion periods and data-subject rights handling.
+- [ ] Supply and approve a monitored privacy contact address; no municipal email address is currently published.
 - [ ] Obtain legal review of the privacy notice and the terms of use.
-- [ ] Approve the statement that the site currently collects **no** personal data and sets **no**
-      analytics or advertising cookies.
+- [ ] Verify actual analytics, advertising and cookie behaviour at runtime; do not claim that no personal data or cookies are collected without evidence.
 - [ ] Approve the terms of use as a draft pending formal adoption.
 
 ## 10. Public participation and feedback procedures
 
-- [ ] Confirm the grievance/complaint channels and the reference-number process described on
-      `/feedback`.
+- [ ] Confirm the authorised grievance/complaint channels and whether the implemented reference-number workflow is approved for public use. Forms are disabled by default.
 - [ ] Confirm the categories of complaint listed, and any missing category.
-- [ ] Supply the public participation forum schedule (the three current listings are marked
-      "Sample listing" with no dates).
-- [ ] Confirm the quarterly citizen forum commitment, or correct the frequency.
+- [ ] Supply any approved public participation schedule, notices, agendas and reports with issuing office and dates.
+- [ ] If a recurring Citizen Fora frequency is formally adopted, supply the resolution or approved notice before publishing it. No quarterly commitment is currently claimed.
 - [ ] Confirm who receives feedback submitted through official channels, and the response standard.
 - [ ] Confirm whether online submission will be enabled, and if so, approve the technical and data
       protection arrangements before it goes live.
@@ -136,7 +129,4 @@ Responsible municipal contact for this review: to be formally designated by the 
 | Legal / compliance | | | |
 | Data protection contact | | | |
 
-**Note on scope:** items 2 (photography rights) and 1 (crest permission) are launch blockers. Items
-in §8 can be resolved quickly and remove the most visible pending notices. Items in §4–§7 define
-what may be published as municipal fact and should be completed before any content is promoted on
-the homepage.
+**Release gates:** the County crest has been removed pending written permission; photograph rights remain unresolved. Keep `MUNICIPAL_PUBLICATION_APPROVED` false until institutional identity, charter, leadership, documents, contact details, privacy/legal notices and publication authority are approved. Keep `PUBLIC_SUBMISSIONS_ENABLED` false until the public intake workflow, privacy controls, responsible officers and notification recipient are separately approved. Items in §§4–§10 define what may be published as municipal fact.
