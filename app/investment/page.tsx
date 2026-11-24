@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Store, Truck, Building2, HandshakeIcon, FileText, ArrowRight, Info } from "lucide-react";
+import { Store, Truck, Building2, HandshakeIcon, FileText, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
-import { EnquiryForm } from "@/components/forms/EnquiryForm";
 import { documents } from "@/lib/data/documents";
 
 export const metadata: Metadata = {
@@ -79,54 +78,19 @@ export default function InvestmentPage() {
             ))}
           </div>
 
-          <div className="mt-8 flex gap-3.5 border-l-[3px] border-flag-red bg-flag-red/[0.04] p-5">
-            <Info className="mt-0.5 h-5 w-5 shrink-0 text-flag-red" aria-hidden="true" />
-            <div>
-              <h2 className="font-display text-[12.5px] font-bold uppercase tracking-[0.08em] text-green-900">
-                What this website does not state
-              </h2>
-              <p className="mt-1.5 text-[12.5px] leading-[1.8] text-ink-soft">
-                For information about land availability, incentives, plot allocations and licensing, contact the
-                responsible County or national office and follow the applicable approval process.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
       <section className="border-y border-paper-line bg-paper-warm py-14">
-        <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-14">
-          <div className="lg:col-span-5">
-            <Reveal>
-              <SectionHeading
-                eyebrow="Municipal Planning Resources"
-                title="Read the plans before you invest"
-                description="Proposals are easier to progress when they align with published planning documents. The following records are listed in the municipal document centre and link to the County Government’s own repository."
-              />
-            </Reveal>
-            <ul className="mt-6 space-y-3">
-              {planningDocs.map((d) => (
-                <li key={d.id}>
-                  <Link
-                    href={`/resources?category=${encodeURIComponent(d.category)}`}
-                    className="group flex items-start gap-3 border border-paper-line bg-white p-3.5 transition-colors hover:border-green-300"
-                  >
-                    <FileText className="mt-0.5 h-4 w-4 shrink-0 text-flag-red" aria-hidden="true" />
-                    <span className="min-w-0">
-                      <span className="block text-[12.5px] font-semibold leading-snug text-green-900 group-hover:underline">{d.title}</span>
-                      <span className="mt-0.5 block text-[10.5px] uppercase tracking-[0.1em] text-ink-muted">{d.category} · {d.year}</span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <Link href="/resources" className="mt-5 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-green-700 hover:text-gold-700">
-              Open document centre <ArrowRight className="h-3 w-3" aria-hidden="true" />
+        <div className="shell">
+          <div className="max-w-2xl border-t-[3px] border-green-800 bg-white p-6 shadow-card">
+            <h2 className="font-display text-lg font-bold text-green-900">Investment and development enquiries</h2>
+            <p className="mt-2 text-[13px] leading-relaxed text-ink-soft">
+              For enquiries about municipal planning and economic development, contact the municipal office.
+            </p>
+            <Link href="/contact" className="btn btn-primary mt-5 !py-2.5 !text-[11.5px]">
+              Contact the municipality <ArrowRight aria-hidden="true" />
             </Link>
-          </div>
-
-          <div className="lg:col-span-7">
-            <EnquiryForm />
           </div>
         </div>
       </section>
