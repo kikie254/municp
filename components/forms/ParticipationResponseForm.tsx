@@ -5,7 +5,7 @@ import { Field } from "./Field";
 import { ActionForm, FieldError } from "./ActionForm";
 import { submitParticipationResponseAction } from "@/lib/actions/submissions";
 
-export function ParticipationResponseForm({ slug, title }: { slug: string; title: string }) {
+export function ParticipationResponseForm({ slug, title, enabled = false }: { slug: string; title: string; enabled?: boolean }) {
   return (
     <div className="border-t-[3px] border-green-800 bg-white p-5 shadow-card md:p-6">
       <h2 className="font-display text-[1.05rem] font-bold text-green-900">Submit your response</h2>
@@ -22,6 +22,7 @@ export function ParticipationResponseForm({ slug, title }: { slug: string; title
         </p>
       </div>
 
+      {enabled ? (
       <ActionForm action={submitParticipationResponseAction} submitLabel="Submit response" pendingLabel="Submitting…" className="mt-5">
         {(state, pending) => (
           <div className="space-y-4">
@@ -74,6 +75,11 @@ export function ParticipationResponseForm({ slug, title }: { slug: string; title
           </div>
         )}
       </ActionForm>
+      ) : (
+        <div role="status" className="mt-5 border border-paper-line bg-paper-warm p-4 text-[12px] leading-relaxed text-ink-muted">
+          Public consultation responses are disabled on this demonstration deployment. No form information is transmitted or stored.
+        </div>
+      )}
     </div>
   );
 }
