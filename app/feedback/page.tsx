@@ -8,6 +8,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { PublicSubmissionForm } from "@/components/forms/PublicSubmissionForm";
 import { faqs } from "@/lib/data/services";
+import { publicIntakeEnabled } from "@/lib/config/env";
 
 export const metadata: Metadata = {
   title: "Citizen Feedback and Complaints",
@@ -90,7 +91,7 @@ export default function FeedbackPage() {
           <div className="lg:col-span-7">
             <PublicSubmissionForm
               type="FEEDBACK"
-              enabled={process.env.PUBLIC_SUBMISSIONS_ENABLED === "true"}
+              enabled={publicIntakeEnabled()}
               heading="Demonstration feedback form"
               intro="Demonstration only. Do not submit real personal or sensitive information while this website remains unauthorised for official municipal use."
               subjects={[
