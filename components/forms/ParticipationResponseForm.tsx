@@ -1,5 +1,6 @@
 "use client";
 
+import { Info } from "lucide-react";
 import { Field } from "./Field";
 import { ActionForm, FieldError } from "./ActionForm";
 import { submitParticipationResponseAction } from "@/lib/actions/submissions";
@@ -9,9 +10,17 @@ export function ParticipationResponseForm({ slug, title }: { slug: string; title
     <div className="border-t-[3px] border-green-800 bg-white p-5 shadow-card md:p-6">
       <h2 className="font-display text-[1.05rem] font-bold text-green-900">Submit your response</h2>
       <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-muted">
-        Your response to <strong className="text-green-900">{title}</strong> is recorded against this consultation and
-        visible only to authorised municipal officers.
+        This is a demonstration form for <strong className="text-green-900">{title}</strong>. The website is not an authorised
+        municipal consultation channel. Do not submit real personal or sensitive information.
       </p>
+
+      <div role="note" className="mt-4 flex gap-3 border border-gold-400/70 bg-gold-50 px-4 py-3">
+        <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
+        <p className="text-[11.5px] leading-relaxed text-green-950">
+          Demonstration only. Test data may be stored in the configured application database; do not provide real
+          personal, financial or sensitive information.
+        </p>
+      </div>
 
       <ActionForm action={submitParticipationResponseAction} submitLabel="Submit response" pendingLabel="Submitting…" className="mt-5">
         {(state, pending) => (
