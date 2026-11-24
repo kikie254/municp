@@ -33,7 +33,7 @@ export default function ResourcesPage() {
 
       <section className="bg-white py-12 md:py-16">
         <div className="shell">
-          <div className="grid gap-px overflow-hidden border border-paper-line bg-paper-line sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-px overflow-hidden border border-paper-line bg-paper-line sm:grid-cols-2 lg:grid-cols-3">
             {[
               { label: "Documents indexed", value: String(documents.length) },
               { label: "Content-checked files", value: String(contentChecked) },
@@ -82,10 +82,9 @@ export default function ResourcesPage() {
           <div className="flex gap-3.5 border border-paper-line p-5">
             <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
             <p className="text-[12px] leading-[1.8] text-ink-soft">
-              If you encounter a problem with a document or need help finding something, or if a file fails to open, please write to
-            the municipal office at {site.contact.postal} or visit in person.
-              the municipal office or write to P.O. Box 220-30700, Iten. Documents published by other County departments and
-              national agencies are available on the{" "}
+              If you encounter a problem with a document or need help finding something, please contact the
+              municipal office at {site.contact.postal} or visit in person. Additional public information from County
+              departments and national agencies is available on the{" "}
               <a href={site.countyWebsite} target="_blank" rel="noopener noreferrer" className="font-semibold text-green-800 underline decoration-gold-400 decoration-2 underline-offset-2 hover:text-gold-700">
                 County Government of Elgeyo Marakwet website
               </a>
