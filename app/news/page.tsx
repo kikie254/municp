@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Suspense } from "react";
-import { Megaphone, CalendarDays } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
-import { NewsList } from "@/components/NewsList";
 import { EmptyState } from "@/components/EmptyState";
 import { PublishedNewsCard, formatDate } from "@/components/content/PublishedBlocks";
-import { news as demoNews, newsCategories } from "@/lib/data/news";
 import { getActiveNotices, getExpiredNotices, getPublishedNews } from "@/lib/queries";
 
 export const metadata: Metadata = {
@@ -45,8 +42,8 @@ export default async function NewsPage() {
         <div className="shell">
           {published.length === 0 ? (
             <EmptyState
-              title="No verified announcements have been published yet"
-              body="Nothing appears here until an authorised municipal officer has written an announcement, submitted it for review and published it. This page is not filled with stand-in stories."
+              title="Municipal announcements and public notices"
+              body="Visit this page for municipal announcements, public notices and community updates."
             >
               <Link href="/contact" className="btn btn-outline mt-4 !py-2.5 !text-[11.5px]">Contact the municipal office</Link>
             </EmptyState>
@@ -109,44 +106,6 @@ export default async function NewsPage() {
           </div>
         </section>
       )}
-
-      {/* The Phase 1 template preview is retained so the layout can be reviewed, and is labelled as
-          a template. It is excluded from the sitemap, from search and from the homepage. */}
-      <section className="bg-paper-warm py-12 md:py-16">
-        <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-14">
-          <div className="lg:col-span-8">
-            <div className="flex gap-3 border border-gold-400/50 bg-gold-50 p-4">
-              <Megaphone className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
-              <p className="text-[12px] leading-[1.8] text-green-900">
-                <strong className="font-semibold uppercase tracking-[0.07em]">Template preview — </strong>
-                the articles below are layout examples retained from the design phase. They are not municipal
-                announcements, they carry no official standing, and they are excluded from search and the sitemap.
-              </p>
-            </div>
-            <div className="mt-7">
-              <Suspense fallback={<p className="text-[12.5px] text-ink-muted">Loading the template preview…</p>}>
-                <NewsList />
-              </Suspense>
-            </div>
-          </div>
-
-          <aside className="lg:col-span-4">
-            <div className="border border-paper-line bg-white p-5">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-ink-muted">Categories</p>
-              <ul className="mt-3 space-y-2">
-                {newsCategories.map((c) => (
-                  <li key={c}>
-                    <Link href={`/news?filter=${encodeURIComponent(c)}`} className="flex items-center justify-between text-[12.5px] text-green-900 hover:text-green-600">
-                      <span>{c}</span>
-                      <span className="text-[10.5px] text-ink-muted">{demoNews.filter((n) => n.category === c).length}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </section>
 
       <CtaBand />
     </>
