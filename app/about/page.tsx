@@ -210,15 +210,6 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="mt-8 border-l-[3px] border-flag-red bg-white p-5">
-            <p className="text-[12.5px] leading-relaxed text-ink-soft">
-              <strong className="font-semibold text-green-900">Note on statutory responsibilities:</strong> this page
-              describes the framework within which the municipality operates in general terms. It does not restate,
-              extend or reinterpret the statutory responsibilities set out in law. Specific functions, approvals and
-              regulatory powers remain with the institutions to which they are assigned by the applicable legislation.
-            </p>
-          </div>
-
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/resources?category=Municipal+Charter" className="btn btn-outline !py-3 !text-[12px]">
               Municipal Charter <ArrowRight aria-hidden="true" />
