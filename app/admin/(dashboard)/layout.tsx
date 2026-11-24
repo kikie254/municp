@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
-import { LogOut } from "lucide-react";
+import { Landmark, LogOut } from "lucide-react";
 import { requireUser } from "@/lib/auth/session";
 import { permissionsFor } from "@/lib/auth/rbac";
 import { logoutAction } from "@/lib/actions/auth";
@@ -34,7 +33,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <header className="border-b border-green-950/40 bg-green-950 text-white">
         <div className="shell flex h-16 items-center justify-between gap-4">
           <Link href="/admin" className="flex items-center gap-3">
-            <Image src="/brand/elgeyo-marakwet-crest.png" alt="" width={34} height={34} className="h-[34px] w-[34px] object-contain" />
+            <Landmark className="h-8 w-8 text-gold-400" aria-hidden="true" />
             <span>
               <span className="block font-display text-[11.5px] font-extrabold uppercase tracking-[0.09em]">Municipal administration</span>
               <span className="block text-[9px] uppercase tracking-[0.14em] text-white/50">Iten-Tambach Municipality</span>
