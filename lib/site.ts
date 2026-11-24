@@ -60,6 +60,7 @@ export const navigation: NavItem[] = [
     href: "/governance",
     children: [
       { label: "Governance Overview", href: "/governance", description: "Institutional roles and public accountability" },
+      { label: "Integrated Development Plan", href: "/development-plan", description: "2025–2029 priorities, resource estimates and monitoring framework" },
       { label: "Documents and Resources", href: "/resources", description: "Charter, plans, policies and reports" },
     ],
   },
@@ -92,6 +93,7 @@ export const quickLinks = [
   { label: "Governance", href: "/governance" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
+  { label: "Integrated Development Plan", href: "/development-plan" },
   { label: "Public Participation", href: "/public-participation" },
   { label: "Investment", href: "/investment" },
   { label: "Contact", href: "/contact" },
