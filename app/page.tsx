@@ -13,7 +13,7 @@ import { DocumentCard } from "@/components/DocumentCard";
 import { CtaBand } from "@/components/CtaBand";
 import { GovernmentJsonLd } from "@/components/BreadcrumbJsonLd";
 import { priorities, services } from "@/lib/data/services";
-import { documentCategories, documents, featuredDocuments } from "@/lib/data/documents";
+import { documents, featuredDocuments } from "@/lib/data/documents";
 import { ProjectCard } from "@/components/ProjectCard";
 import { EmptyState } from "@/components/EmptyState";
 import {
