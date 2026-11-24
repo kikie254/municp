@@ -38,7 +38,8 @@ Create `.env.local` locally. Do not commit it. Use a dedicated Firebase developm
 | `MFA_ENFORCEMENT` | Institutional decision | `report`, `enforce` or `off`; enforcement requires enrolled privileged accounts |
 | `EMAIL_PROVIDER`, `EMAIL_API_KEY`, `EMAIL_FROM` | Optional | Outbound email integration |
 | `MUNICIPAL_NOTIFICATIONS_EMAIL` | Optional, but required for internal email alerts | Verified institutional recipient; there is no placeholder fallback |
-| `PUBLIC_SUBMISSIONS_ENABLED` | **Defaults to disabled** | Must be explicitly set to `true` only after written municipal approval of the public channel and its privacy/operational controls |
+| `MUNICIPAL_PUBLICATION_APPROVED` | **Defaults to false** | Explicit institutional approval gate. When false, the site displays the demonstration notice, is noindex and has no sitemap. |
+| `PUBLIC_SUBMISSIONS_ENABLED` | **Defaults to disabled** | Public intake is enabled only when both this and `MUNICIPAL_PUBLICATION_APPROVED` are `true` after written approval of the public channel and its privacy/operational controls |
 | `BACKUP_GCS_BUCKET` | Recommended | Separate protected bucket for scheduled Firestore exports |
 
 Run the environment check without exposing values:
@@ -52,7 +53,7 @@ The checker prints variable names and presence only. It must never print secret 
 
 ## Safe public-intake policy
 
-Public forms and `POST /api/submissions` are disabled unless `PUBLIC_SUBMISSIONS_ENABLED=true`. The UI hides the input fields when disabled; the server actions and API route independently reject direct requests. Keep the flag unset on the demonstration deployment.
+Public forms and `POST /api/submissions` are disabled unless both `MUNICIPAL_PUBLICATION_APPROVED=true` and `PUBLIC_SUBMISSIONS_ENABLED=true`. The UI hides the input fields when disabled; the server actions and API route independently reject direct requests. Keep the flag unset on the demonstration deployment.
 
 Before enabling it, the Municipality must approve the website as an official channel, publish an approved privacy notice, designate the data controller/contact, confirm processor arrangements and data residency, set retention/deletion periods, provision authorised staff, test escalation and response procedures, and supply a verified `MUNICIPAL_NOTIFICATIONS_EMAIL`.
 
