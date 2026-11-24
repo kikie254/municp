@@ -18,12 +18,11 @@ import { redisRateLimit, redisLimiterConfigured } from "./ratelimit-redis";
  *  2. Firestore otherwise — a transactionally incremented counter document per key per window
  *     bucket, which survives cold starts and works with zero extra infrastructure.
  *
- * Failure policy: a Redis error falls through to Firestore; a Firestore error fails OPEN and is
- * logged loudly, so a limiter outage never takes the citizen enquiry form offline. The fallback is
- * always a real limiter, never "no limiter".
+ * Failure policy: Redis errors fall through to Firestore. If both distributed backends fail,
+ * production requests fail closed with a temporary-unavailable result; development remains fail-open.
  */
 
-export type RateLimitResult = { allowed: boolean; remaining: number; retryAfterSeconds: number };
+export type RateLimitResult = { allowed: boolean; remaining: number; retryAfterSeconds: number; unavailable?: boolean };
 
 const WINDOW_MS_DEFAULT = 60 * 60 * 1000;
 
@@ -58,6 +57,9 @@ export async function rateLimit(key: string, limit: number, windowMs: number = W
     return result;
   } catch (error) {
     console.error("[ratelimit] firestore limiter unavailable:", error instanceof Error ? error.message : error);
+    if (process.env.NODE_ENV === "production") {
+      return { allowed: false, remaining: 0, retryAfterSeconds: 60, unavailable: true };
+    }
     return { allowed: true, remaining: limit, retryAfterSeconds: 0 };
   }
 }
