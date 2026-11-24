@@ -20,8 +20,8 @@ This is not a frontend-only project. It contains server actions, API routes, Fir
 
 - The public site displays a site-wide demonstration notice.
 - Search engines are asked not to index the site.
-- Public complaint, enquiry and consultation submissions are **disabled by default**. The server actions and API route reject intake unless `PUBLIC_SUBMISSIONS_ENABLED=true` is explicitly configured.
-- Do not enable public intake until the Municipality has approved the publication, privacy notice, data controller, processors, retention policy, notification recipient and operational handling process.
+- Public complaint, enquiry and consultation submissions are **disabled by default**. The server actions and API route reject intake unless both `MUNICIPAL_PUBLICATION_APPROVED=true` and `PUBLIC_SUBMISSIONS_ENABLED=true` are explicitly configured.
+- Do not set either approval switch until the Municipality has approved the publication, privacy notice, data controller, processors, retention policy, notification recipient and operational handling process.
 - `MUNICIPAL_NOTIFICATIONS_EMAIL` has no placeholder fallback. If it is absent or invalid, internal email notification is not sent.
 - County branding is not included in the active UI pending written permission.
 - No real administrator account or production credential is committed to this repository.
@@ -60,7 +60,7 @@ BASE=http://127.0.0.1:3000 SITE_ORIGIN=http://127.0.0.1:3000 npm run verify:rout
 BASE=http://127.0.0.1:3000 SITE_ORIGIN=http://127.0.0.1:3000 npm run verify:api
 ```
 
-The API verification script expects public intake to be disabled by default. If testing the enabled intake path, use a disposable Firebase emulator/test project and set `PUBLIC_SUBMISSIONS_ENABLED=true` for the server and test process. The valid-payload test can create a database record; never run it against production data.
+The API verification script expects public intake to be disabled by default. If testing the enabled intake path, use a disposable Firebase emulator/test project and set both `MUNICIPAL_PUBLICATION_APPROVED=true` and `PUBLIC_SUBMISSIONS_ENABLED=true` for the server and test process. The valid-payload test can create a database record; never run it against production data.
 
 ## Environment configuration
 
