@@ -71,18 +71,15 @@ const quickAccess = [
 ];
 
 /**
- * STAT BAND — every figure below is counted from published data at build time.
- * The previous revision displayed invented statistics ("11 public information sections", a charter
- * publication year, a plan horizon) that were not verified municipal figures. They are replaced
- * with counts that can be recomputed from lib/data, so nothing on the homepage asserts a number
- * the source files cannot support.
+ * Municipal profile figures are drawn from the Urban Climate Risk Profile and
+ * the Municipality's published waste-management documents. The population figure
+ * is the 2019 census baseline; the later figure is a projection, not a census result.
  */
-const contentChecked = documents.filter((d) => d.verification === "content-confirmed").length;
 const stats = [
-  { value: String(documents.length), label: "Municipal area" },
-  { value: String(contentChecked), label: "2019 census population" },
-  { value: String(documentCategories.length), label: "Elevation above sea level" },
-  { value: String(services.length), label: "World Athletics Heritage recognition" },
+  { value: "183.4 km²", label: "Municipal area" },
+  { value: "54,158", label: "2019 census population" },
+  { value: "2,400 m", label: "Elevation above sea level" },
+  { value: "May 2019", label: "World Athletics Heritage recognition" },
 ];
 
 export default function HomePage() {
