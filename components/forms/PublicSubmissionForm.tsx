@@ -18,12 +18,14 @@ export function PublicSubmissionForm({
   heading,
   intro,
   submitLabel = "Send submission",
+  enabled = false,
 }: {
   type: "ENQUIRY" | "FEEDBACK" | "COMPLAINT" | "SUGGESTION";
   subjects: string[];
   heading: string;
   intro: string;
   submitLabel?: string;
+  enabled?: boolean;
 }) {
   return (
     <div id="submission-form" className="border border-paper-line bg-white p-5 shadow-card md:p-7">
@@ -33,13 +35,14 @@ export function PublicSubmissionForm({
       <div role="note" className="mt-4 flex gap-3 border border-gold-400/70 bg-gold-50 px-4 py-3">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
         <p className="text-[11.5px] leading-relaxed text-green-950">
-          <strong className="font-semibold">Demonstration form — not an authorised municipal channel.</strong> The
-          application may store a test submission in its configured database and generate a reference. Do not enter
-          real personal, financial or sensitive information. No official municipal response or action is promised.
-          Read the <a href="/privacy" className="font-semibold underline decoration-gold-400 decoration-2 underline-offset-2">demonstration data notice</a>.
+          <strong className="font-semibold">Demonstration form — not an authorised municipal channel.</strong> Public
+          submissions are disabled by default. They can be enabled only on an expressly authorised deployment.
+          Do not enter real personal, financial or sensitive information. Read the{" "}
+          <a href="/privacy" className="font-semibold underline decoration-gold-400 decoration-2 underline-offset-2">demonstration data notice</a>.
         </p>
       </div>
 
+      {enabled ? (
       <ActionForm action={submitSubmissionAction} submitLabel={submitLabel} pendingLabel="Submitting…" resetLabel="Clear" className="mt-5">
         {(state, pending) => (
           <div className="space-y-4">
@@ -128,6 +131,11 @@ export function PublicSubmissionForm({
           </div>
         )}
       </ActionForm>
+      ) : (
+        <div role="status" className="mt-5 border border-paper-line bg-paper-warm p-4 text-[12px] leading-relaxed text-ink-muted">
+          Public submissions are disabled on this demonstration deployment. No form information is transmitted or stored.
+        </div>
+      )}
     </div>
   );
 }
