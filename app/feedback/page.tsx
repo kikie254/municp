@@ -29,8 +29,8 @@ const categories = [
 ];
 
 const grievanceSteps = [
-  { title: "Raise the matter", text: "Set out what happened, where, and when — by telephone, email or in writing at the municipal office. The published Grievance Redress Mechanism structure sets out how matters are logged and routed." },
-  { title: "Receive a reference", text: "A matter that is received through official channels is logged so that it can be followed up. This website does not issue references; ask the office for one when you call or write." },
+  { title: "Raise the matter", text: "Describe what happened, where it took place and when. You can submit the details through the online form on this page. The published Grievance Redress Mechanism documents explain the municipal process." },
+  { title: "Receive a reference", text: "When the online form records a submission successfully, it displays a reference number. Keep the number and quote it when following up." },
   { title: "Follow up", text: "Quote the reference when following up. If the matter concerns another county department or a national agency, the municipality can indicate the correct office." },
 ];
 
