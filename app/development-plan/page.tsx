@@ -180,25 +180,25 @@ export default function DevelopmentPlanPage() {
       <section className="bg-green-950 py-12 text-white md:py-16">
         <div className="shell">
           <div className="max-w-2xl">
-            <p className="eyebrow eyebrow-light">Implementation and monitoring</p>
-            <h2 className="mt-2 font-display text-2xl font-extrabold md:text-3xl">Plan delivery must be measurable</h2>
-            <p className="mt-3 text-sm leading-6 text-white/70">The IDeP describes institutional responsibilities, monitoring, reporting and public dissemination as part of implementation.</p>
+            <p className="eyebrow eyebrow-light">Monitoring and evaluation</p>
+            <h2 className="mt-2 font-display text-2xl font-extrabold md:text-3xl">Track delivery. Report progress. Improve services.</h2>
+            <p className="mt-3 text-sm leading-6 text-white/70">Chapter Six sets out the monitoring and evaluation arrangements for tracking IDeP implementation and annual investment plans.</p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <div className="border border-white/15 bg-white/[0.05] p-5">
               <Gauge className="h-5 w-5 text-gold-400" aria-hidden="true" />
-              <h3 className="mt-3 text-sm font-bold">Monitoring</h3>
-              <p className="mt-2 text-xs leading-5 text-white/65">Operational monitoring is described as monthly, quarterly and annual, supported by data collection and performance indicators.</p>
+              <h3 className="mt-3 text-sm font-bold">Monitoring responsibilities</h3>
+              <p className="mt-2 text-xs leading-5 text-white/65">The County Monitoring & Evaluation Committee (COMEC) tracks municipal mandates, programmes and projects. Sector M&E committees monitor service-delivery indicators; COMEC handles outcome-level indicators.</p>
             </div>
             <div className="border border-white/15 bg-white/[0.05] p-5">
               <FileText className="h-5 w-5 text-gold-400" aria-hidden="true" />
-              <h3 className="mt-3 text-sm font-bold">Reporting</h3>
-              <p className="mt-2 text-xs leading-5 text-white/65">The plan provides for quarterly municipal and project M&E reports, plus annual and end-term IDeP performance reporting.</p>
+              <h3 className="mt-3 text-sm font-bold">Reporting schedule</h3>
+              <p className="mt-2 text-xs leading-5 text-white/65">The plan specifies quarterly municipal performance and project M&E reports, plus annual and end-term IDeP performance reports. Quarterly reports are due on the 14th of the first month after the quarter.</p>
             </div>
             <div className="border border-white/15 bg-white/[0.05] p-5">
               <Users className="h-5 w-5 text-gold-400" aria-hidden="true" />
-              <h3 className="mt-3 text-sm font-bold">Public accountability</h3>
-              <p className="mt-2 text-xs leading-5 text-white/65">The plan identifies citizens and public dissemination, including through the County website and publications, as part of the reporting framework.</p>
+              <h3 className="mt-3 text-sm font-bold">Board oversight</h3>
+              <p className="mt-2 text-xs leading-5 text-white/65">The Municipal Board is assigned customer satisfaction surveys and project field visits. Reports are shared with county structures and disseminated to stakeholders and the public.</p>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-white/15 pt-6">
