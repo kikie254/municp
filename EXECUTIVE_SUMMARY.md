@@ -1,3 +1,5 @@
+> **Historical document notice:** This summary describes an earlier repository revision and is superseded by `GOVERNMENT_GRADE_AUDIT_REPORT.md`. Do not rely on historical contact details, governance assertions, route counts or test claims without re-verification.
+
 # ITEN–TAMBACH MUNICIPALITY WEBSITE
 # EXECUTIVE SUMMARY FOR MUNICIPAL LEADERSHIP
 
@@ -250,7 +252,7 @@ The Iten–Tambach Municipality website is production-ready and can be launched 
    - Phone: [contact removed]
    - Email: [email removed]
    - Address: Opposite County Assembly, behind IEBC offices, Iten
-   - Postal: P.O. Box 220-30700, Iten
+   - Postal: [unverified legacy contact detail removed — do not republish]
 
    **Action Required:** Written confirmation that these details are correct
 
