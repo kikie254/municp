@@ -64,8 +64,7 @@ export default async function ParticipationDetailPage({ params }: { params: Prom
                 <div className="mt-4 border border-paper-line bg-white p-6">
                   <p className="text-[13.5px] font-semibold text-ink">This consultation has closed.</p>
                   <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-muted">
-                    Responses are no longer accepted for this consultation. A summary of the responses received is
-                    prepared for the municipal board in line with the published participation procedure.
+                    Responses are no longer accepted for this consultation. Any official summary or outcome must be issued by the authorised institution through its approved publication process.
                   </p>
                 </div>
               ) : notYetOpen ? (
