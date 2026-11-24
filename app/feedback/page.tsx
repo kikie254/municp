@@ -90,7 +90,8 @@ export default function FeedbackPage() {
           <div className="lg:col-span-7">
             <PublicSubmissionForm
               type="FEEDBACK"
-              heading="Send feedback or a complaint"
+              enabled={process.env.PUBLIC_SUBMISSIONS_ENABLED === "true"}
+              heading="Demonstration feedback form"
               intro="Demonstration only. Do not submit real personal or sensitive information while this website remains unauthorised for official municipal use."
               subjects={[
                 "Complaint about a municipal service",
