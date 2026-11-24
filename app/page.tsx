@@ -29,7 +29,7 @@ const quickAccess = [
   {
     title: "Municipal Services",
     description:
-      "Find out what the Municipal Charter says about urban planning, waste management, roads, drainage, markets and public spaces.",
+      "Find municipal governance documents and information about the statutory framework for urban services.",
     href: "/services",
     icon: "spaces",
   },
@@ -128,7 +128,7 @@ export default function HomePage() {
                   Iten-Tambach is a municipality within Elgeyo Marakwet County. The County-hosted charter document currently available for reference is labelled a model draft; the adopted charter and its grant details require confirmation by the Municipality.
               </p>
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
-                The Municipality's chartered responsibilities cover urban planning, roads and drainage, waste management, public spaces, street lighting, markets and other services that shape everyday life.
+                The Urban Areas and Cities Act sets out the national municipal framework. Local delegated responsibilities and service arrangements must be confirmed against the operative charter and current County instruments.
               </p>
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
                 The Municipality’s vision is “A town of choice for sports, tourism and investment.” Its mission is “To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.”
@@ -241,7 +241,7 @@ export default function HomePage() {
                   The 2019 Kenya Population and Housing Census recorded 54,158 residents within the municipal boundary. The Urban Climate Risk Profile projects the population to reach 66,108 by 2029.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  The Municipality's charter sets out its responsibilities and provides for residents to take part in decisions affecting local development and services.
+                  The national statutory framework provides for municipal governance and resident participation. The operative local charter and current participation arrangements require institutional confirmation.
                 </p>
               </div>
 
