@@ -48,8 +48,10 @@ export default function DevelopmentPlanPage() {
       <PageHero
         eyebrow="Planning and accountability"
         title="Integrated Development Plan"
-        description="The Municipality’s 2025–2029 development framework: priorities, proposed programmes, resource requirements and the monitoring approach described in the published plan."
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Integrated Development Plan" }]}
+        intro="The Municipality’s 2025–2029 development framework: priorities, proposed programmes, resource requirements and the monitoring approach described in the published plan."
+        image="/images/iten-town-aerial.jpg"
+        imageAlt="Aerial view of Iten town and surrounding highlands"
+        crumbs={[{ label: "Integrated Development Plan" }]}
       />
 
       <section className="bg-white py-12 md:py-16">
