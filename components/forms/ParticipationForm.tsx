@@ -120,7 +120,7 @@ export function ParticipationForm() {
               </p>
               <p className="mt-1 text-[11.5px] leading-relaxed text-ink-soft">
                 This is a demonstration of the form. Nothing was transmitted to, stored by or registered with the
-                municipality. To submit formally, call the municipal office or email P.O. Box 220-30700, Iten.
+                municipality. To submit formally, call the municipal office or email Contact details are awaiting written municipal confirmation..
               </p>
               <dl className="mt-4 grid gap-x-6 gap-y-2 text-[12px] sm:grid-cols-2">
                 {[
