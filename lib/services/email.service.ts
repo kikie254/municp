@@ -99,7 +99,7 @@ export async function sendMail(input: MailInput): Promise<MailResult> {
 /** Internal notification recipient. Missing or invalid configuration fails closed. */
 export function municipalRecipient(): string | null {
   const address = process.env.MUNICIPAL_NOTIFICATIONS_EMAIL?.trim();
-  if (!address || !/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(address)) return null;
+  if (!address || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(address)) return null;
   return address;
 }
 
