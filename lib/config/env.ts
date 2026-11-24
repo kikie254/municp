@@ -84,6 +84,12 @@ export function validateEnv(): { ok: boolean; production: boolean; findings: Env
       note: "Once every privileged account has enrolled a second factor, switch from report to enforce.",
     },
     {
+      name: "MUNICIPAL_NOTIFICATIONS_EMAIL",
+      severity: "recommended",
+      present: Boolean(process.env.MUNICIPAL_NOTIFICATIONS_EMAIL?.trim() && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(process.env.MUNICIPAL_NOTIFICATIONS_EMAIL.trim())),
+      note: "Approved institutional recipient for internal submission notifications; no placeholder fallback is used.",
+    },
+    {
       name: "EMAIL_PROVIDER + EMAIL_API_KEY",
       severity: "recommended",
       present: has("EMAIL_PROVIDER") && has("EMAIL_API_KEY"),
