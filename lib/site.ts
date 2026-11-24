@@ -19,7 +19,7 @@ export const site = {
   shortName: "Iten-Tambach",
   county: "County Government of Elgeyo Marakwet",
   republic: "Republic of Kenya",
-  tagline: "A town of choice for sports, tourism and investment.",
+  tagline: "Municipal information and public resources for residents and stakeholders.",
   url: resolveSiteUrl(),
   description:
     "Demonstration website prepared for institutional review. Not an approved official publication of Iten-Tambach Municipality or the County Government of Elgeyo Marakwet.",
@@ -37,7 +37,7 @@ export const navigation: NavItem[] = [
     label: "About Us",
     href: "/about",
     children: [
-      { label: "About the Municipality", href: "/about", description: "History, statutory objects, vision and mission" },
+      { label: "About the Municipality", href: "/about", description: "Municipal profile and statutory framework; adopted charter status pending confirmation" },
       { label: "Municipal Governance", href: "/governance", description: "The Municipal Board and administration" },
     ],
   },
@@ -46,15 +46,15 @@ export const navigation: NavItem[] = [
     href: "/governance",
     children: [
       { label: "Governance Overview", href: "/governance", description: "Institutional roles and public accountability" },
-      { label: "Documents and Resources", href: "/resources", description: "Charter, plans, policies and reports" },
+      { label: "Documents and Resources", href: "/resources", description: "County-hosted documents; adoption status requires verification" },
     ],
   },
   {
     label: "Services",
     href: "/services",
     children: [
-      { label: "All Municipal Services", href: "/services", description: "Service areas and municipal responsibilities" },
-      { label: "Complaints and Feedback", href: "/feedback", description: "Submit a concern or suggestion" },
+      { label: "All Municipal Services", href: "/services", description: "Service topics and responsible-authority information" },
+      { label: "Complaints and Feedback", href: "/feedback", description: "Read feedback and complaint information; online submissions are disabled by default" },
     ],
   },
   { label: "Projects", href: "/projects" },
@@ -62,8 +62,8 @@ export const navigation: NavItem[] = [
     label: "Public Participation",
     href: "/public-participation",
     children: [
-      { label: "Participation Overview", href: "/public-participation", description: "Citizen fora, notices and reports" },
-      { label: "Citizen Feedback", href: "/feedback", description: "Submit concerns and suggestions" },
+      { label: "Participation Overview", href: "/public-participation", description: "Participation notices and reports issued by authorised offices" },
+      { label: "Citizen Feedback", href: "/feedback", description: "Read feedback and complaint information; online submissions are disabled by default" },
     ],
   },
   { label: "Investment", href: "/investment" },
@@ -84,7 +84,7 @@ export const quickLinks = [
 ];
 
 export const resourceLinks = [
-  { label: "Municipal Charter", href: "/resources?category=Municipal+Charter" },
+  { label: "Municipal charter documents (status to verify)", href: "/resources?category=Municipal+Charter" },
   { label: "Development Plans", href: "/resources?category=Integrated+Development+Plans" },
   { label: "Investment Plans", href: "/resources?category=Investment+Plans" },
   { label: "Public Notices", href: "/news?filter=Public+Notices" },
@@ -93,27 +93,19 @@ export const resourceLinks = [
 ];
 
 /**
- * ADMINISTRATION PREVIEW — DISABLED BY DEFAULT (Phase 1)
- * -----------------------------------------------------
- * The screen is a static, unauthenticated layout demonstration. It holds no data and accepts no
- * input, but it is not an administration portal and must not be reachable as if it were one.
+ * ADMINISTRATION PREVIEW — SEPARATE FROM THE AUTHENTICATED ADMIN PORTAL
+ * ---------------------------------------------------------------------
+ * /admin-preview is a static, unauthenticated layout demonstration and is disabled by default.
+ * The real /admin routes use Firebase Authentication, server-verified sessions and role-based
+ * permissions. Do not expose /admin-preview as if it were the operational dashboard.
  *
- * Phase 1 removed the previous `?key=<value>` query-parameter gate: a secret in a URL is written
- * to browser history, proxy logs and Referer headers, and it implies an authentication system
- * that does not exist. In its place the entry point is withdrawn by default and can only be
- * re-enabled deliberately for a review build:
- *
- *   NEXT_PUBLIC_ADMIN_PREVIEW=enabled
- *
- * When the flag is absent (the default) the route 404s, the footer/sitemap/navigation entries are
- * not rendered, and nothing invites a visitor to look for an administration area. Genuine
- * administrative access requires server-side authentication, role-based authorisation and audit
- * logging, which is out of scope for this phase — see PHASE1_AUDIT_REPORT.md §Security.
+ * NEXT_PUBLIC_ADMIN_PREVIEW=enabled only controls the static preview route; it does not grant
+ * access to the authenticated admin portal.
  */
 export const adminPreviewEnabled = process.env.NEXT_PUBLIC_ADMIN_PREVIEW === "enabled";
 
 export const legalLinks = [
-  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Demonstration Data Notice", href: "/privacy" },
   { label: "Accessibility", href: "/accessibility" },
   { label: "Terms of Use", href: "/terms" },
   { label: "Sitemap", href: "/sitemap-page" },
