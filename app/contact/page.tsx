@@ -1,141 +1,76 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MapPin, Mailbox, ExternalLink, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
-import { SectionHeading } from "@/components/SectionHeading";
-import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 import { PublicSubmissionForm } from "@/components/forms/PublicSubmissionForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Iten-Tambach Municipality",
-  description:
-    "Contact information for Iten-Tambach Municipality, including the municipal office and postal address. Telephone and email details are published only when confirmed.",
+  description: "Contact information and enquiry options for the Iten-Tambach Municipality demonstration website.",
   alternates: { canonical: "/contact" },
 };
-
-
-const cards = [
-  {
-    icon: MapPin,
-    label: "Office",
-    value: site.contact.office,
-    detail: site.contact.physical,
-  },
-  {
-    icon: Mailbox,
-    label: "Postal address",
-    value: site.contact.postal,
-    detail: "Correspondence and deliveries",
-  },
-];
 
 export default function ContactPage() {
   return (
     <>
       <PageHero
         title="Contact Iten-Tambach Municipality"
-        intro="Residents, businesses and other stakeholders may use this page to send an enquiry to the Municipality. Please provide enough detail for the relevant office to understand your question."
+        intro="This page is part of a demonstration website prepared for institutional review. Municipal contact details have not yet been confirmed for publication."
         image="/images/town-centre.jpg"
-        imageAlt="Iten town centre in Elgeyo Marakwet County"
-        eyebrow="Get in Touch"
+        imageAlt="Town centre in a Kenyan highland setting"
+        eyebrow="Contact Information"
         crumbs={[{ label: "Contact" }]}
       />
 
       <section className="bg-white py-14 md:py-18">
-        <div className="shell">
-          <div className="grid gap-px overflow-hidden border border-paper-line bg-paper-line sm:grid-cols-2 lg:grid-cols-4">
-            {cards.map((c) => (
-              <div key={c.label} className="flex h-full flex-col bg-white p-5">
-                <span className="flex h-10 w-10 items-center justify-center bg-green-50 text-green-700">
-                  <c.icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <p className="mt-4 text-[9.5px] font-semibold uppercase tracking-[0.15em] text-ink-muted">{c.label}</p>
-                <p className="mt-1 break-words font-display text-[13.5px] font-bold leading-snug text-green-900">{c.value}</p>
-                <p className="mt-1.5 text-[11.5px] leading-relaxed text-ink-muted">{c.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:gap-14">
-            <div className="lg:col-span-5">
-              <Reveal>
-                <SectionHeading
-                  eyebrow="Location"
-                  title="Finding the municipal office"
-                  description="The municipal office is located in Iten, Elgeyo Marakwet County."
-                />
-              </Reveal>
-
-              <div className="mt-6 border border-paper-line bg-paper-warm p-5">
-                <div className="relative flex h-44 items-center justify-center overflow-hidden bg-green-900/[0.04]">
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 opacity-[0.16]"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(to right, #083A26 1px, transparent 1px), linear-gradient(to bottom, #083A26 1px, transparent 1px)",
-                      backgroundSize: "34px 34px",
-                    }}
-                  />
-                  <div className="relative text-center">
-                    <MapPin className="mx-auto h-7 w-7 text-flag-red" aria-hidden="true" />
-                    <p className="mt-2 font-display text-[12.5px] font-bold uppercase tracking-[0.08em] text-green-900">
-                      Iten Municipality Office
-                    </p>
-                    <p className="mt-1 text-[11.5px] text-ink-muted">Iten, Elgeyo Marakwet County, Kenya</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-[12px] leading-[1.8] text-ink-soft">
-                  For directions, write to{" "}
-                  <span className="font-semibold text-green-800">
-                    {site.contact.postal}
-                  </span>{" "}
-                  or use the county&rsquo;s official location information.
-                </p>
-                <a
-                  href={site.countyWebsite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-green-700 hover:text-gold-700"
-                >
-                  County Government website <ExternalLink className="h-3 w-3" aria-hidden="true" />
-                </a>
-              </div>
-
-              <div className="mt-5 border-l-[3px] border-gold-400 bg-white p-4 shadow-card">
-                <h3 className="font-display text-[12px] font-bold uppercase tracking-[0.08em] text-green-900">
-                  Office operating hours
-                </h3>
-                <p className="mt-1.5 text-[12px] leading-relaxed text-ink-muted">
-                  For current operating hours, please contact the municipal office before visiting.
-                </p>
-              </div>
+        <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-14">
+          <aside className="lg:col-span-5">
+            <div className="border-l-[3px] border-gold-400 bg-paper-warm p-5">
+              <h2 className="font-display text-[14px] font-bold uppercase tracking-[0.06em] text-green-900">
+                Municipal contact details
+              </h2>
+              <p className="mt-3 text-[12.5px] leading-relaxed text-ink-soft">
+                The physical office address, postal address, telephone number, email address and operating hours are
+                withheld here until the Municipality confirms them in writing. No contact detail has been invented.
+              </p>
+              <p className="mt-3 text-[12.5px] leading-relaxed text-ink-soft">
+                For general County Government information, use the County Government's published website. This is not
+                represented as a municipal complaint or enquiry address.
+              </p>
+              <a
+                href={site.countyWebsite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-green-700 hover:text-gold-700"
+              >
+                County Government website <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              </a>
             </div>
+          </aside>
 
-            <div className="lg:col-span-7">
-              <PublicSubmissionForm
-                type="ENQUIRY"
-                heading="Send an enquiry"
-                intro="Use this form for a general question about municipal services, documents or procedures. A successful submission is recorded in the municipal system and receives a reference number."
-                subjects={[
-                  "General enquiry",
-                  "Municipal services",
-                  "Business licence",
-                  "Documents and records",
-                  "Office location and hours",
-                  "Other",
-                ]}
-              />
-              <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/feedback" className="btn btn-outline !py-3 !text-[12px]">
-                  Complaints and feedback <ArrowRight aria-hidden="true" />
-                </Link>
-                <Link href="/public-participation" className="btn btn-outline !py-3 !text-[12px]">
-                  Public participation
-                </Link>
-              </div>
+          <div className="lg:col-span-7">
+            <PublicSubmissionForm
+              type="ENQUIRY"
+              heading="Demonstration enquiry form"
+              intro="This form demonstrates the submission workflow. Do not submit real personal, financial or sensitive information while this website remains unauthorised for official municipal use."
+              subjects={[
+                "General enquiry",
+                "Municipal services",
+                "Business licence",
+                "Documents and records",
+                "Office location and hours",
+                "Other",
+              ]}
+            />
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link href="/feedback" className="btn btn-outline !py-3 !text-[12px]">
+                Complaints and feedback <ArrowRight aria-hidden="true" />
+              </Link>
+              <Link href="/public-participation" className="btn btn-outline !py-3 !text-[12px]">
+                Public participation
+              </Link>
             </div>
           </div>
         </div>
@@ -145,4 +80,3 @@ export default function ContactPage() {
     </>
   );
 }
-
