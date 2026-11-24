@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy Policy (Draft)",
   description:
-    "Draft privacy notice for the Iten-Tambach Municipality website: what the site currently collects, what operational forms would collect, and how enquiries are handled.",
+    "Draft privacy notice for the Iten-Tambach Municipality website, including information submitted through operational forms and the matters still requiring approval.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
  *
  * The supplied build presented policy text as settled. It was not: no legal or institutional review
  * is on record for it. This version is structured as a professional draft, separates what the site
- * collects TODAY from what a form would collect ONCE OPERATIONAL, and marks the clauses that need
+ * receives through operational forms and from demonstration forms, and marks the clauses that need
  * formal approval. It makes no compliance claim and cites no approval that does not exist.
  */
 const sections = [
@@ -28,21 +28,21 @@ const sections = [
     ],
   },
   {
-    title: "Information that is NOT collected today",
+    title: "Information submitted through this website",
     approved: true,
     body: [
-      "The forms on this website — citizen feedback, public participation, investment enquiry and contact enquiry — validate entries in your browser and display a preview for you to check. They do not transmit anything to a server. No submission is stored, forwarded, logged or registered by the Municipality, and no reference number is issued.",
-      "File attachments are never uploaded. A file you select remains on your device and is not read by this website.",
-      "There are no user accounts, no login, and no municipal record is created by using the site.",
+      "The citizen feedback and general enquiry forms submit information to the municipal system. Depending on the form, this may include your name, email address, telephone number, subject, message, location or ward, and your consent to the information being used to handle the submission. A successfully recorded submission receives a reference number. The system also records technical information needed to protect and audit submissions, including a hashed network address and browser user-agent information.",
+      "The investment enquiry form is currently a browser-based demonstration: it validates the information and displays a preview, but does not transmit the enquiry. Do not use that form to send confidential or time-sensitive information.",
+      "The website does not require a public user account. The operational forms create a municipal submission record when a message is successfully accepted.",
     ],
   },
   {
-    title: "Information that WILL be collected once forms are operational",
+    title: "How submitted information is used",
     approved: false,
     body: [
-      "When submission is enabled, the forms are intended to collect: your name, email address, telephone number where you choose to give it, the area or ward a matter concerns, the category and subject of your entry, and the description you write. The feedback form may also accept an attachment.",
-      "That information would be used to respond to your enquiry and to route a concern to the responsible officer. It is not intended for marketing, profiling or sale.",
-      "Before any form is switched on, the Municipality must publish: the legal basis for processing, how long entries are retained, who can access them, how they are stored, and how a person can ask for their entry to be corrected or deleted. Those details are not yet approved and are therefore not stated here.",
+      "Information submitted through an operational form is used to record the matter, route it to the appropriate municipal office and, where configured, send an acknowledgement. The reference number should be retained for follow-up.",
+      "The information is collected for the purpose of handling the enquiry, feedback or complaint. It is not requested for marketing or profiling.",
+      "The Municipality must approve and publish the applicable legal basis, retention period, authorised access arrangements, hosting and storage details, and the procedure for access, correction or deletion requests. Those particulars have not been confirmed in the materials available for this draft.",
     ],
   },
   {
@@ -58,7 +58,7 @@ const sections = [
     title: "Your choices and how to raise a privacy concern",
     approved: false,
     body: [
-      "Because this website does not retain submissions, there is no stored personal data held here for you to access, correct or delete. Where a matter has been raised with the municipal office directly — by telephone, email or in person — that record is handled by the office, not by this website.",
+      "Submissions made through operational forms are recorded in the municipal system. The approved process and contact person for requests to access, correct or delete a submission must be confirmed by the Municipality before this notice is adopted.",
       "A privacy enquiry, or a request to access or correct a record held by the office, should be directed to the municipal office using the contact details on the contact page. Those details are themselves pending confirmation (see the contact page).",
       "The Municipality should confirm, before launch, which officer receives privacy enquiries and what internal procedure applies. That designation has not been confirmed.",
     ],
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
     <>
       <PageHero
         title="Privacy Policy"
-        intro="A draft notice describing what this website collects today, what an operational form would collect, and what still requires formal approval."
+        intro="A draft notice explaining how information submitted through the website is handled and identifying the privacy details that still require formal approval."
         image="/images/kerio-escarpment.jpg"
         imageAlt="The Elgeyo escarpment seen across the Kerio Valley"
         eyebrow="Legal"
