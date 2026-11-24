@@ -125,7 +125,7 @@ export default function AboutPage() {
                   &ldquo;A town of choice for sports, tourism and investment.&rdquo;
                 </p>
                 <p className="mt-4 border-l-2 border-gold-400 pl-3 text-[11.5px] leading-relaxed text-ink-muted">
-                  As stated in the Municipality's FY 2023/2024 Annual Report.
+                  As stated in the Municipality's FY 2023/2024 Annual Report and also referenced in the Board Chairperson's Foreword.
                 </p>
               </div>
             </Reveal>
