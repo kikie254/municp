@@ -19,11 +19,11 @@ export const services: Service[] = [
     slug: "urban-planning",
     title: "Urban Planning and Development",
     description:
-      "Information and guidance on planning within the municipality, development coordination and the frameworks that shape urban growth.",
+      "Information on land use, development planning and the frameworks that guide growth within Iten-Tambach Municipality.",
     detail: [
-      "The municipality contributes to the planning and coordination of urban development within its area, in line with the approved municipal framework and the Iten Integrated Spatial Plan (2015–2035).",
-      "Residents, developers and businesses with a planning enquiry should contact the municipal office so that the enquiry can be directed to the correct office. Development approvals are issued by the responsible institutions under the applicable law.",
-      "This page provides information only. It does not constitute planning permission, approval or professional planning advice.",
+      "The Municipal Charter assigns the Municipality a role in preparing and implementing municipal plans and managing development within its boundaries. The Iten Integrated Spatial Plan (2015–2035) is listed in the County Government's document repository.",
+      "Planning decisions must follow the applicable laws, approved plans and the responsibilities assigned to the relevant county and national offices. A general enquiry to the Municipality should not be treated as an application or approval.",
+      "For a specific proposal, residents, landowners and developers should seek guidance from the responsible planning office before starting work. This website does not grant planning permission or replace professional planning advice.",
     ],
     icon: "planning",
   },
@@ -31,10 +31,11 @@ export const services: Service[] = [
     slug: "solid-waste-management",
     title: "Solid Waste Management",
     description:
-      "Information on waste collection arrangements, responsible waste handling and the municipal framework for cleaner public spaces.",
+      "The municipal policy and planning framework for waste collection, handling, transport and cleaner public spaces.",
     detail: [
-      "Waste management is one of the most visible municipal responsibilities. The Municipality has published a Solid Waste Management Plan 2025 and a Municipal Policy on Waste Management, both available in the document centre.",
-      "Residents and businesses are encouraged to follow the collection arrangements communicated by the municipality and to raise a concern through the feedback channels where a collection is missed or waste is dumped illegally.",
+      "The Municipality has published a Solid Waste Management Policy and a Solid Waste Management Plan dated March 2025. These documents set out the policy direction for managing waste across the municipal area.",
+      "The plan considers the full waste-management process, from reducing waste and improving handling at source to collection, transport, recovery and final disposal. It also provides a framework for cooperation between public institutions, businesses and residents.",
+      "Collection days, service charges and arrangements for individual neighbourhoods should be confirmed through current municipal notices. They are not stated here because an approved, up-to-date schedule has not been supplied for publication.",
     ],
     icon: "waste",
   },
@@ -42,10 +43,11 @@ export const services: Service[] = [
     slug: "environmental-management",
     title: "Environmental Management",
     description:
-      "Support for environmental protection, catchment care and resilience measures within the urban area.",
+      "Planning for environmental protection and climate resilience across the Municipality's highland, escarpment and valley landscapes.",
     detail: [
-      "The Municipality's Urban Climate Risk Profile sets out climate-related risks affecting the urban area and informs the measures intended to strengthen resilience.",
-      "Environmental management involves coordination with county and national agencies, community groups and development partners. Specific regulatory functions remain with the institutions legally mandated to perform them.",
+      "The Urban Climate Risk Profile describes the different physical environments within Iten-Tambach and the climate-related risks that need to be considered in local planning.",
+      "Environmental management is closely linked to drainage, waste handling, protection of green spaces and responsible land use. The Municipality works within the wider framework of county and national environmental institutions.",
+      "For regulatory approvals or enforcement matters, residents should contact the institution legally responsible for the specific issue.",
     ],
     icon: "environment",
   },
@@ -53,10 +55,11 @@ export const services: Service[] = [
     slug: "public-spaces",
     title: "Public Spaces",
     description:
-      "Upkeep, management and improvement of public spaces, green areas and places used by residents and visitors.",
+      "The planning, upkeep and improvement of parks, green spaces and other shared areas within the municipal boundary.",
     detail: [
-      "Well-managed public spaces support health, trade and community life. The municipality works towards organised, accessible and clean public spaces within the urban area.",
-      "Reports about the condition of a public space — damage, dumping, obstruction or safety concerns — can be raised through the complaints and feedback page.",
+      "Parks and other public spaces provide places for recreation, community activity and everyday use. Their planning and maintenance form part of the functions set out in the Municipal Charter.",
+      "Residents can help protect shared spaces by reporting damage, obstruction, illegal dumping or other concerns through the municipal feedback channel.",
+      "Any opening hours, facility rules or maintenance schedules will be published when confirmed by the responsible office.",
     ],
     icon: "spaces",
   },
@@ -64,10 +67,11 @@ export const services: Service[] = [
     slug: "urban-infrastructure",
     title: "Urban Infrastructure Coordination",
     description:
-      "Coordination with county and national agencies on roads, drainage, lighting and other urban infrastructure.",
+      "Municipal responsibilities and coordination on urban roads, drainage, walkways, street lighting and public transport facilities.",
     detail: [
-      "Infrastructure within the municipality is delivered by several institutions. The municipality's role includes coordination, planning input and communication with residents.",
-      "Where an infrastructure concern falls outside the municipality's mandate, the enquiry will be directed to the responsible institution. The municipality does not publish service standards that have not been confirmed by the responsible agency.",
+      "The Municipal Charter assigns the Municipality functions relating to urban roads, storm-water drainage, walkways, street lighting, traffic controls, parking facilities and bus and taxi stands within its boundaries.",
+      "Infrastructure delivery also involves the County Government and, where relevant, national road agencies and other service providers. Responsibility depends on the location and the legal classification of the infrastructure.",
+      "When reporting a fault or requesting information, include the street or area and a clear description of the issue. The responsible office can then be identified.",
     ],
     icon: "infrastructure",
   },
@@ -75,10 +79,11 @@ export const services: Service[] = [
     slug: "trade-and-business",
     title: "Trade and Business Environment",
     description:
-      "Information for traders, entrepreneurs and businesses operating within the municipality.",
+      "Information for traders, entrepreneurs and businesses operating in Iten-Tambach and its surrounding neighbourhoods.",
     detail: [
-      "Trading activity is central to the municipal economy. The municipality supports an organised business environment through planning, public space management and coordination with county trade functions.",
-      "Business licensing and revenue functions are governed by county and national law. Enquiries about licences, fees or permits should be directed to the responsible office.",
+      "Trade and small businesses are an important part of life in the Municipality. The Municipal Charter provides for the construction, maintenance and regulation of municipal markets and abattoirs, as well as the regulation of outdoor advertising.",
+      "Business licensing, county fees and related approvals are governed by the applicable County laws and procedures. The responsible County office should be consulted for current requirements and charges.",
+      "This website does not advertise plots, market stalls, licences or investment incentives as available. Such information should only be relied on when issued through an authorised public notice or official process.",
     ],
     icon: "trade",
   },
@@ -86,10 +91,11 @@ export const services: Service[] = [
     slug: "community-engagement",
     title: "Community Engagement",
     description:
-      "Forums, notices and channels through which residents and stakeholders take part in municipal decisions.",
+      "Citizen fora, public notices and other formal opportunities for residents and stakeholders to contribute to municipal decisions.",
     detail: [
-      "The municipality publishes citizen fora calendars and quarterly citizen fora reports, and welcomes written submissions through the public participation page.",
-      "Engagement is intended to be inclusive, with attention to the participation of youth, women, persons with disabilities and marginalised groups, consistent with the published gender frameworks.",
+      "Public participation is part of municipal governance. Section 22 of the Urban Areas and Cities Act provides for Citizen Fora, and the County's document repository lists municipal calendars and quarterly participation reports.",
+      "Consultations may cover development planning, budgets, local priorities and service delivery. The subject, date, venue and submission period for each engagement should be taken from its published notice.",
+      "The Municipality's published gender and inclusion frameworks provide further context for participation by women, young people, persons with disabilities and other groups.",
     ],
     icon: "community",
   },
@@ -97,10 +103,11 @@ export const services: Service[] = [
     slug: "development-information",
     title: "Development Information",
     description:
-      "Access to municipal plans, project information, budgets and published reports.",
+      "A central place to find municipal plans, policies, financial reports and public participation records.",
     detail: [
-      "The document centre brings together the municipal charter, development plans, investment plans, financial statements, environmental documents, policies and participation reports.",
-      "Where a document is hosted by the County Government, the listing links to the official source so that residents retrieve the authoritative version.",
+      "The document centre brings together records listed by the County Government, including the Municipal Charter, development and spatial plans, investment documents, financial statements, environmental publications and Citizen Fora reports.",
+      "Each entry links to the County Government's own document repository. A file's availability or a successful download does not, by itself, establish that it is the adopted or current version of a municipal instrument.",
+      "Where a document needs confirmation, the listing says so. Residents should rely on the issuing institution for the authoritative version.",
     ],
     icon: "information",
   },
@@ -108,66 +115,66 @@ export const services: Service[] = [
 
 export const coreValues = [
   {
-    name: "Integrity",
+    name: "Accountable administration",
     description:
-      "Acting honestly and consistently, and holding the public interest above personal or sectional advantage in every municipal decision.",
+      "The Charter calls for the efficient and accountable management of municipal affairs, with public responsibilities exercised in accordance with the law.",
   },
   {
-    name: "Accountability",
+    name: "Resident participation",
     description:
-      "Accepting responsibility for decisions, actions and resources, and being willing to explain them openly to residents.",
+      "Residents should have a meaningful opportunity to help determine local priorities and the services and regulatory arrangements that affect them.",
   },
   {
-    name: "Transparency",
+    name: "Responsible use of public resources",
     description:
-      "Making municipal information, plans and reports accessible so that residents can see how decisions are made and resources applied.",
+      "The governance framework gives residents a role in scrutinising how public resources and authority are used.",
   },
   {
-    name: "Inclusivity",
+    name: "Coordinated development",
     description:
-      "Ensuring that youth, women, persons with disabilities, minorities and marginalised groups can take part in municipal life and decisions.",
+      "The Municipality is expected to pursue development opportunities, maintain public order and provide civic amenities that improve everyday life.",
   },
   {
-    name: "Professionalism",
+    name: "Accessible public services",
     description:
-      "Applying competence, courtesy and consistency in service to the public, and respecting the law in all municipal business.",
+      "The Charter provides for social services that meet residents' needs and are delivered to a high standard and at reasonable cost.",
   },
   {
-    name: "Sustainability",
+    name: "Social cohesion",
     description:
-      "Managing the urban environment so that present needs are met without compromising the resources and opportunities available to future generations.",
+      "The Municipality's statutory objects include strengthening civic responsibility and collective action across the community.",
   },
   {
-    name: "Innovation",
+    name: "Community well-being",
     description:
-      "Seeking better ways to plan, deliver and communicate municipal services, including through appropriate use of technology.",
+      "The Charter places the economic, social and environmental well-being of the municipal community at the centre of its purpose.",
   },
 ];
 
 export const priorities = [
   {
-    title: "Sustainable Urban Development",
+    title: "Urban Infrastructure",
     description:
-      "Promoting organised urban growth through planning, responsible land use and coordinated development initiatives.",
+      "Planning and improving urban roads, drainage, walkways, public transport facilities and other infrastructure within the municipal mandate.",
     icon: "planning",
   },
   {
-    title: "Environmental Sustainability",
+    title: "Land Use and Urban Planning",
     description:
-      "Encouraging cleaner public spaces, responsible waste management and environmental protection.",
+      "Supporting coordinated development through municipal planning frameworks and responsible management of land use.",
+    icon: "planning",
+  },
+  {
+    title: "Waste and Environmental Management",
+    description:
+      "Putting the published waste-management framework into practice and taking account of the Municipality's climate risks.",
     icon: "environment",
   },
   {
-    title: "Inclusive Community Development",
+    title: "Accountable Urban Governance",
     description:
-      "Promoting opportunities for residents, youth, women, persons with disabilities and other community groups.",
+      "Making municipal information accessible and providing opportunities for residents to take part in local decisions.",
     icon: "community",
-  },
-  {
-    title: "Transparent Governance",
-    description:
-      "Strengthening accountability, openness, public participation and responsible management of municipal affairs.",
-    icon: "governance",
   },
 ];
 
@@ -179,69 +186,69 @@ export type Forum = {
 };
 
 /**
- * No verified upcoming forum dates have been supplied for publication.
- * Listings below are therefore presented as sample formats, not confirmed events.
+ * No current forum dates have been supplied for this website.
+ * These entries remain visibly labelled as examples and must not be treated as event notices.
  */
 export const forums: Forum[] = [
   {
     title: "Citizen Forum — Town Centre and Central Ward",
     area: "Iten town centre",
     status: "Sample listing",
-    note: "Format illustration only. Dates and venues are published through official public notices.",
+    note: "Illustrative entry only. Check the published Citizen Fora Calendar for confirmed dates, venues and subjects.",
   },
   {
     title: "Citizen Forum — Trading and Business Community",
     area: "Market and trading areas",
     status: "Sample listing",
-    note: "Format illustration only. Confirm dates through the municipal office or the published citizen fora calendar.",
+    note: "Illustrative entry only. This is not an announcement of a scheduled meeting.",
   },
   {
-    title: "Citizen Forum — Youth, Women and Persons with Disabilities",
+    title: "Citizen Forum — Community Inclusion",
     area: "Municipality-wide",
     status: "Sample listing",
-    note: "Format illustration only, aligned with the published gender engagement framework.",
+    note: "Illustrative entry only. Participation arrangements should be taken from the relevant official notice.",
   },
 ];
 
 export const faqs = [
   {
-    question: "How do I raise a complaint about waste collection or cleanliness?",
+    question: "How do I raise a concern about waste collection or cleanliness?",
     answer:
-      "Use the feedback form on the complaints and feedback page to prepare and check the details of your concern, then raise it with the office directly by telephone or email, because a form submission is not transmitted to the Municipality. Contact details are shown on the contact page and are pending written confirmation.",
+      "Use the feedback form on this website to submit the details of your concern. A successful submission is recorded in the municipal system and receives a reference number. Keep that reference for any follow-up. If the form is unavailable, contact the municipal office using the details on the Contact page.",
   },
   {
-    question: "Is a submission through this website officially registered?",
+    question: "Will a submission through this website reach the Municipality?",
     answer:
-      "No. The forms on this site validate your entry in the browser and show a preview so that you can check it, but nothing is transmitted to, stored by or registered with the Municipality, and no reference number is issued. To raise a matter officially, contact the municipal office directly by telephone, email or in person.",
+      "The feedback and enquiry forms submit information to the municipal system. When a submission is recorded successfully, the form displays a reference number. An acknowledgement email may not be sent if an email provider has not been configured for the website, so keep the reference shown on screen.",
   },
   {
-    question: "Where can I find the municipal charter and development plans?",
+    question: "Where can I find the Municipal Charter and development plans?",
     answer:
-      "The document centre lists the municipal charter, the integrated development plan, the Iten Integrated Spatial Plan (2015–2035), investment plans, financial statements, environmental documents, policies and participation reports. Each record links to the County Government's own repository and is labelled according to how far the file behind it was checked. Where no per-file link could be confirmed, the record opens the official documents page instead.",
+      "Open the Document Centre and search by title or category. The listings include the Municipal Charter, integrated development and spatial planning documents, investment plans, financial reports, environmental publications and Citizen Fora records. Each entry links to the County Government's document repository and includes a note where the file or its status needs confirmation.",
   },
   {
-    question: "Who sits on the Municipal Board?",
+    question: "Who are the current members of the Municipal Board?",
     answer:
-      "The composition of the Board is described from the charter document published by the County — nine members, a five-year term, five members appointed competitively — and from the Urban Areas and Cities Act, 2011, as amended. The document served by the County is headed 'Model Municipal Charter', so the Municipality should confirm it is the version adopted for Iten-Tambach. This website does not name or picture any official, because verified names and photographs have not been supplied for publication.",
+      "The website does not list individual Board members because current names and approved biographies have not been confirmed for publication. The governance page explains the Board's role and the available charter information. For the current membership list, refer to an official County Gazette notice or contact the municipal office.",
   },
   {
     question: "How can I take part in public participation?",
     answer:
-      "Attend a citizen forum, respond to a published public notice, or write to the municipal office. The public participation page explains the channels and the reports that are published afterwards. The published citizen fora calendars and quarterly reports are available in the document centre.",
+      "Look out for public notices and the Citizen Fora Calendar in the Document Centre. Each notice should state the subject, date, venue and how to submit your views. You can also use the public participation page to find published reports and current consultation opportunities.",
   },
   {
-    question: "Can the municipality confirm land availability or investment incentives?",
+    question: "Can the Municipality confirm land availability or investment incentives?",
     answer:
-      "No confirmation is published on this website. Information about land, incentives or approvals can only be given through official processes by the responsible institutions. The investment page explains the published planning documents that inform enquiries but does not advertise available land, tax exemptions or guaranteed returns.",
+      "No land availability, tax exemption or investment incentive is confirmed on this website. These matters must be checked through the responsible County or national institution and any applicable approval process. The Investment page points to planning documents that may help frame an enquiry.",
   },
   {
     question: "Are the news items and projects on this website official?",
     answer:
-      "No. News articles, project records and forum listings on this website are sample content, clearly labelled as such. They demonstrate how verified information will be presented once the Municipality supplies it, and they are excluded from the homepage promotional sections, site search and the XML sitemap.",
+      "Only records published through the Municipality's authorised publishing process should be treated as official. Items in the clearly labelled template sections are examples used to show how information may be presented; they are not announcements, project records or commitments.",
   },
   {
     question: "How do I report an accessibility problem with this website?",
     answer:
-      "Please report the problem using the contact channels on the contact page, describing the page and what happened. The accessibility page records what is implemented, what was corrected in this revision, and what still requires independent testing.",
+      "Use the contact details on the Contact page and describe the page, the device or assistive technology you were using, and the difficulty you encountered. The website has not yet undergone an independent accessibility audit, so reports from users are useful in identifying barriers that need attention.",
   },
 ];
