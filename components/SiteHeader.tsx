@@ -96,7 +96,7 @@ export function SiteHeader() {
               <Search className="h-[18px] w-[18px]" aria-hidden="true" />
             </button>
             <Link href="/feedback" className="btn btn-gold hidden !py-3 !text-[12px] sm:inline-flex">
-              <MessageSquare aria-hidden="true" /> Citizen Feedback
+              <MessageSquare aria-hidden="true" /> Feedback Information
             </Link>
             <button
               type="button"
