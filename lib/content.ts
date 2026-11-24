@@ -39,15 +39,15 @@ export const emptyStateCopy = {
     body: "Verified municipal information will be published here once it has been confirmed by the Municipality. Please check back, or contact the municipal office for current information.",
   },
   projects: {
-    title: "No verified project records are published yet",
-    body: "Project records are being confirmed with the Municipality before publication. The project template remains in place and will list verified records — including scope, status and any officially published figures — once they are supplied.",
+    title: "Municipal projects and development",
+    body: "Explore the Municipality's development priorities and project information.",
   },
   news: {
-    title: "No verified announcements are published yet",
-    body: "Municipal announcements, public notices and updates will appear here once they have been issued and confirmed through official channels. For a matter requiring action, contact the municipal office directly.",
+    title: "Municipal announcements and public notices",
+    body: "Visit this page for municipal announcements, public notices and community updates.",
   },
   documents: {
-    title: "No publications are listed yet",
-    body: "Verified municipal publications will be listed here as they are confirmed and linked to their official source.",
+    title: "Municipal publications",
+    body: "Browse municipal plans, policies, financial reports and public participation records.",
   },
 } as const;
