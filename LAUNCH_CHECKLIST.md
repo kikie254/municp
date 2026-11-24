@@ -1,3 +1,5 @@
+> **Historical document notice:** This report describes an earlier repository revision and is superseded by `GOVERNMENT_GRADE_AUDIT_REPORT.md`. Do not rely on historical contact details, governance assertions, route counts or test claims without re-verification.
+
 # ITEN–TAMBACH MUNICIPALITY WEBSITE
 # PRODUCTION LAUNCH CHECKLIST
 
@@ -532,10 +534,10 @@
 #### Contact Information
 
 - [ ] **Contact Details Display**
-  - [ ] Phone: 0726 780 634
-  - [ ] Email: iten.municipality@gmail.com
+  - [ ] Phone: [unverified legacy contact detail removed — do not republish]
+  - [ ] Email: [unverified legacy contact detail removed — do not republish]
   - [ ] Address: Opposite County Assembly, behind IEBC offices, Iten
-  - [ ] Postal: P.O. Box 220-30700, Iten, Kenya
+  - [ ] Postal: [unverified legacy contact detail removed — do not republish]
 
 - [ ] **Pending Verification Notice**
   - [ ] Notice displays where contact info shown
@@ -674,7 +676,7 @@
 EMAIL_PROVIDER=resend
 EMAIL_API_KEY=re_...
 EMAIL_FROM=notifications@iten-tambach-municipality.go.ke
-MUNICIPAL_NOTIFICATIONS_EMAIL=iten.municipality@gmail.com
+MUNICIPAL_NOTIFICATIONS_EMAIL=[unverified legacy contact detail removed — do not republish]
 ```
 
 **Blocker:** No (only if activating forms)
