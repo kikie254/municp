@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
-import { projects } from "@/lib/data/projects";
-import { news } from "@/lib/data/news";
 import { services } from "@/lib/data/services";
 import { adminPreviewEnabled } from "@/lib/site";
 
@@ -92,38 +90,7 @@ export default function SitemapPage() {
               ))}
             </ul>
           </div>
-          <div>
-            <h2 className="border-b border-paper-line pb-2 font-display text-[12px] font-bold uppercase tracking-[0.1em] text-green-900">
-              Project templates ({projects.length})
-            </h2>
-            <p className="mt-2 text-[11px] leading-relaxed text-ink-muted">
-              Sample records retained for review only. They are excluded from the XML sitemap and from site search,
-              and are marked noindex.
-            </p>
-            <ul className="mt-3 space-y-2">
-              {projects.map((p) => (
-                <li key={p.slug}>
-                  <Link href={`/projects/${p.slug}`} className="text-[12px] text-ink-soft hover:text-green-700 hover:underline">
-                    {p.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="border-b border-paper-line pb-2 font-display text-[12px] font-bold uppercase tracking-[0.1em] text-green-900">
-              Articles ({news.length})
-            </h2>
-            <ul className="mt-3 space-y-2">
-              {news.map((n) => (
-                <li key={n.slug}>
-                  <Link href={`/news/${n.slug}`} className="text-[12px] text-ink-soft hover:text-green-700 hover:underline">
-                    {n.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+
         </div>
       </section>
     </>
