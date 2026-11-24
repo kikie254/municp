@@ -305,7 +305,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Projects and Development"
                 title="Development priorities and public investment"
-                description="The Municipality's published plans identify priorities for roads, drainage, walkways, waste management, urban planning and public amenities. Project records are shown only when the relevant details have been confirmed for publication."
+                description="Explore municipal development priorities for roads, drainage, walkways, waste management, urban planning and public amenities."
               />
             </Reveal>
             <Link href="/projects" className="link-arrow shrink-0 pb-1">
@@ -325,15 +325,6 @@ export default function HomePage() {
             <EmptyState className="mt-9" title={emptyStateCopy.projects.title} body={emptyStateCopy.projects.body} />
           )}
 
-          <p className="mt-6 flex items-start gap-2 border border-gold-400/40 bg-gold-50 px-4 py-3 text-[11.5px] leading-relaxed text-green-900">
-            <FileText className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gold-700" aria-hidden="true" />
-            <span>
-              <strong className="font-semibold">Publication status:</strong> no verified project records have been
-              supplied yet, so none are shown. Sample records remain available as clearly labelled templates under
-              Projects for review purposes only; they are excluded from this page, from site search and from the
-              sitemap.
-            </span>
-          </p>
         </div>
       </section>
 
@@ -419,14 +410,8 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col items-start justify-between gap-4 border-l-[3px] border-green-800 bg-white p-5 sm:flex-row sm:items-center">
-            <p className="text-[12.5px] leading-relaxed text-ink-soft">
-              <strong className="font-semibold text-green-900">{documents.length} municipal publications</strong> are
-              listed, including the charter, integrated development plan, spatial plan, investment plans, financial
-              statements and participation reports. Each entry links to the County Government&rsquo;s own repository and
-              states how far the file behind it was checked.
-            </p>
-            <Link href="/resources" className="btn btn-primary shrink-0 !py-3 !text-[12px]">
+          <div className="mt-8 flex justify-start">
+            <Link href="/resources" className="btn btn-primary !py-3 !text-[12px]">
               Browse Document Centre <ArrowUpRight aria-hidden="true" />
             </Link>
           </div>
