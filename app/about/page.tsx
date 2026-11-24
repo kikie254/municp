@@ -155,8 +155,8 @@ export default function AboutPage() {
         <div className="shell">
           <Reveal>
             <SectionHeading
-              eyebrow="Core Values"
-              title="The principles that guide municipal service"
+              eyebrow="Charter Principles"
+              title="The Municipality’s statutory objects"
               description="The available source documents do not provide a separate approved list of corporate core values. The principles below are drawn from the seven statutory objects in the Municipal Charter; they should not be mistaken for a formally adopted values statement."
             />
           </Reveal>
