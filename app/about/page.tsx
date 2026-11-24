@@ -6,6 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
+import { publicImageAssetsApproved } from "@/lib/config/env";
 import { coreValues } from "@/lib/data/services";
 
 export const metadata: Metadata = {
@@ -88,13 +89,15 @@ export default function AboutPage() {
           <Reveal delay={100} className="lg:col-span-5">
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden bg-green-950">
-                <Image
-                  src="/images/highlands.jpg"
-                  alt="Green highland valley in Elgeyo Marakwet County with farmland and distant hills"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover"
-                />
+                {publicImageAssetsApproved() && (
+                  <Image
+                    src="/images/highlands.jpg"
+                    alt="Green highland valley in Elgeyo Marakwet County with farmland and distant hills"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover"
+                  />
+                )}
               </div>
               <div className="border-t-[3px] border-gold-400 bg-green-900 p-5 text-white">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-400">
