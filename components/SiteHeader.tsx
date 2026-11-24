@@ -324,7 +324,7 @@ export function SiteHeader() {
             <Link href="/feedback" className="btn btn-gold w-full !py-3 !text-[12.5px]">
               <MessageSquare aria-hidden="true" /> Share Your Feedback
             </Link>
-            <a
+            <Link
               href="/contact"
               className="flex items-center justify-center gap-2 text-[12px] font-semibold text-green-800"
             >
