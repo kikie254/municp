@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Store, Truck, Building2, HandshakeIcon, FileText, ArrowRight } from "lucide-react";
+import { Store, Truck, Building2, HandshakeIcon, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
-import { documents } from "@/lib/data/documents";
 
 export const metadata: Metadata = {
   title: "Investment and Economic Development",
@@ -36,10 +35,6 @@ const pillars = [
     text: "Municipal and County planning documents refer to engagement with development partners and national programmes. Any proposed partnership must follow the approvals and public-sector procedures that apply.",
   },
 ];
-
-const planningDocs = documents.filter((d) =>
-  ["Integrated Development Plans", "Spatial Plans", "Investment Plans", "Other Official Publications"].includes(d.category)
-).slice(0, 5);
 
 export default function InvestmentPage() {
   return (
