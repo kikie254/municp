@@ -149,9 +149,9 @@ export default function AboutPage() {
         <div className="shell">
           <Reveal>
             <SectionHeading
-              eyebrow="Charter Principles"
-              title="The Municipality’s statutory objects"
-              description="The principles below are drawn from the seven statutory objects in the Municipal Charter and describe the standards that guide the Municipality's work."
+              eyebrow="Our Principles"
+              title="Principles that guide our work"
+              description="These principles describe the standards that guide the Municipality's work and our service to residents."
             />
           </Reveal>
 
