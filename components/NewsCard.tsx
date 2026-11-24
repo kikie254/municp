@@ -30,7 +30,6 @@ export function NewsCard({ item, featured = false }: { item: NewsItem; featured?
           {item.category}
         </span>
         <span className="absolute right-0 top-0 bg-green-950/85 px-2.5 py-1.5 text-[9px] font-bold uppercase tracking-[0.14em] text-white/80">
-          Sample content
         </span>
       </div>
 
