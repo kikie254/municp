@@ -7,7 +7,7 @@ an official municipal publication.
 unticked keeps its on-site pending-verification notice. Nothing on this list has been assumed,
 invented or filled in on the Municipality's behalf.
 
-Contact for this review: the web project lead at the Municipality.
+Responsible municipal contact for this review: to be formally designated by the Municipality.
 
 ---
 
@@ -16,8 +16,8 @@ Contact for this review: the web project lead at the Municipality.
 - [ ] Confirm the official name to be used site-wide: **"Iten–Tambach Municipality"** (current
       usage) or an alternative spelling.
 - [ ] Confirm the official name of the parent authority: **"County Government of Elgeyo Marakwet"**.
-- [ ] Approve use of the County crest (`public/brand/elgeyo-marakwet-crest.png`) on this website.
-- [ ] Provide **written permission** for crest use, or supply the approved official artwork file.
+- [ ] Confirm whether the County crest may be used on this website.
+- [ ] Provide **written permission** for any crest use, or supply approved municipal artwork. The County crest has been removed from the demonstration branch pending written authorisation.
 - [ ] Confirm the colour palette and typography are acceptable for institutional use.
 - [ ] Confirm whether a different official logo exists for the Municipality itself.
 
@@ -69,7 +69,7 @@ Contact for this review: the web project lead at the Municipality.
 - [ ] Supply verified news items and public notices, with publication dates and the issuing office.
 - [ ] Approve the current wording that all 8 articles are "template examples", not municipal
       announcements.
-- [ ] Confirm who is authorised to publish notices, and the approval step before publication.
+- [ ] Designate the officers authorised to draft, review, approve and publish notices, and formally approve the editorial workflow before it is described as an institutional process.
 - [ ] Confirm whether notices must also appear in a specific legal format or gazette.
 
 ## 7. Documents
@@ -85,18 +85,15 @@ Contact for this review: the web project lead at the Municipality.
 - [ ] Confirm the category and year shown against each document.
 - [ ] Confirm whether the Municipality wishes to host copies itself rather than link to the County.
 
-## 8. Contact information  *(currently shown with a pending-verification notice)*
+## 8. Contact information  *(not published pending written verification)*
 
-- [ ] Confirm the telephone number: **0726 780 634 / +254 726 780 634**.
-- [ ] Confirm the e-mail address: **iten.municipality@gmail.com**, or supply an official
-      institutional domain address (recommended).
-- [ ] Confirm the physical address: **opposite County Assembly, behind IEBC offices, Iten**.
-- [ ] Confirm the postal address: **PO Box 220, 30700**.
-- [ ] Supply **official office hours** (currently not published; the previous "call during working
-      hours" instruction was removed).
-- [ ] Supply any additional official channels (P.O. box alternatives, social accounts, ward offices).
-- [ ] When all of the above are confirmed, the site's single verification flag can be switched to
-      "confirmed" and every notice is removed at once.
+- [ ] Supply the current municipal office telephone number and identify the responsible office.
+- [ ] Supply an approved institutional email address and confirm who monitors it.
+- [ ] Confirm the physical office address and provide an authorised map/location reference if applicable.
+- [ ] Confirm the postal address and any official correspondence requirements.
+- [ ] Supply official office hours and public access arrangements.
+- [ ] Supply any additional authorised channels (social accounts, ward offices, emergency routes).
+- [ ] Approve publication of each detail in writing. No legacy value is to be republished solely because it appeared on an earlier website.
 
 ## 9. Privacy and legal approval
 
