@@ -30,6 +30,7 @@ const TYPE_LABEL: Record<string, string> = {
  * including when the notification email could not be sent because no provider is configured.
  */
 export async function submitSubmissionAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  if (process.env.PUBLIC_SUBMISSIONS_ENABLED !== "true") return { status: "error", message: "Public submissions are disabled on this demonstration website." };
   if (!(await sameOrigin())) return { status: "error", message: "Request rejected: invalid origin." };
 
   const raw = {
@@ -142,6 +143,7 @@ export async function submitSubmissionAction(_prev: ActionState, formData: FormD
 
 /** Public participation response against a published opportunity. Rejects after closing time. */
 export async function submitParticipationResponseAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  if (process.env.PUBLIC_SUBMISSIONS_ENABLED !== "true") return { status: "error", message: "Public consultation responses are disabled on this demonstration website." };
   if (!(await sameOrigin())) return { status: "error", message: "Request rejected: invalid origin." };
   const raw = {
     opportunitySlug: String(formData.get("opportunitySlug") || ""),
