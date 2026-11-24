@@ -2,7 +2,7 @@
   "name": "iten-tambach-municipality",
   "version": "2.0.0",
   "private": true,
-  "description": "Official website of Iten-Tambach Municipality, County Government of Elgeyo Marakwet, Republic of Kenya.",
+  "description": "Demonstration website prepared for institutional review; not an approved official municipal publication.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
