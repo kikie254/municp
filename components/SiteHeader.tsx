@@ -59,9 +59,9 @@ export function SiteHeader() {
             <span>{site.republic}</span>
           </p>
           <div className="hidden items-center gap-5 text-[11px] font-medium text-white/70 md:flex">
-            <a href={`mailto:example@example.com`} className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300">
+            <Link href="/contact" className="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300">
               <Phone className="h-3 w-3" aria-hidden="true" /> {site.contact.postal}
-            </a>
+            </Link>
             <Link href="/news" className="transition-colors hover:text-gold-300">
               Public Notices
             </Link>
@@ -324,12 +324,12 @@ export function SiteHeader() {
             <Link href="/feedback" className="btn btn-gold w-full !py-3 !text-[12.5px]">
               <MessageSquare aria-hidden="true" /> Share Your Feedback
             </Link>
-            <a
-              href={`mailto:example@example.com`}
+            <Link
+              href="/contact"
               className="flex items-center justify-center gap-2 text-[12px] font-semibold text-green-800"
             >
               <Phone className="h-3.5 w-3.5" aria-hidden="true" /> {site.contact.postal}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
