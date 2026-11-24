@@ -1,3 +1,5 @@
+> **Historical document notice:** This report describes an earlier repository revision and is superseded by `GOVERNMENT_GRADE_AUDIT_REPORT.md`. Do not rely on historical contact details, governance assertions, route counts or test claims without re-verification.
+
 # PHASE 1 — AUDIT REPORT
 
 **Subject:** Iten–Tambach Municipality website (`iten-tambach-municipality`)
@@ -172,8 +174,8 @@ chips and Google-Docs preview links remain in place and were re-tested after the
 |---|---|---|---|
 | "Iten–Tambach Municipality", "Elgeyo Marakwet County", "Republic of Kenya" | Consistent across all pages; no conflicting spellings found | Header, footer, metadata, JSON-LD | Names retained |
 | Crest image | Used site-wide, stated as the County crest | Header, footer, favicon, JSON-LD `logo` | Written permission required before launch |
-| Telephone `+254 726 780 634` / `0726 780 634` | Unconfirmed | ~24 locations incl. `lib/site.ts`, forms, JSON-LD, 404 page | Now shown with pending-verification notice |
-| E-mail `iten.municipality@gmail.com` | Unconfirmed; a free webmail domain for an official body | ~23 locations | Same treatment; institutional-domain address recommended |
+| Telephone `[unverified legacy contact detail removed — do not republish]` / `[unverified legacy contact detail removed — do not republish]` | Unconfirmed | ~24 locations incl. `lib/site.ts`, forms, JSON-LD, 404 page | Now shown with pending-verification notice |
+| E-mail `[unverified legacy contact detail removed — do not republish]` | Unconfirmed; a free webmail domain for an official body | ~23 locations | Same treatment; institutional-domain address recommended |
 | Physical address ("opposite County Assembly, behind IEBC offices, Iten") | Unconfirmed | Contact page, footer, JSON-LD | Retained with notice |
 | Postal address "PO Box 220, 30700" | Unconfirmed | Footer, JSON-LD | Retained with notice |
 | Office hours | **Not published anywhere** | — | "During working hours" instruction removed from service pages |
