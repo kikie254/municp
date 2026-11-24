@@ -24,15 +24,15 @@ Responsible municipal contact for this review: to be formally designated by the 
 ## 2. Photography and image licensing
 
 - [ ] Review the asset register in `ASSET_CREDITS.md` (13 photographs, all with unknown rights).
-- [ ] For each photograph, choose one: **supply licensed original** · **supply replacement owned by
-      the Municipality** · **approve removal and use of the neutral placeholder**.
+- [ ] For each proposed photograph, choose one: **supply licensed original** · **supply replacement owned by
+      the Municipality** · **retain the neutral image placeholder**.
 - [ ] Provide, for each retained image: photographer/creator, source, licence type, date obtained.
 - [ ] Confirm in writing whether any current photograph shows a real municipal project, officer or
       event, and whether its use is authorised.
 - [ ] Approve or reject continued use of images that associate the Municipality with a specific
       location, market or road.
 
-> **Launch blocker.** The 13 photographs currently have unknown rights and remain in the demonstration build. Remove them or provide documented licences before official publication.
+> **Launch blocker.** The 13 previously used photographs had unknown rights and have been removed from the public assets. The site hides static and CMS-uploaded photographs unless `MUNICIPAL_IMAGE_ASSETS_APPROVED=true`. Supply licensed replacements and document web-use rights before enabling that flag.
 
 ## 3. Institutional information
 
