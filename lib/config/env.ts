@@ -8,6 +8,11 @@
 
 export type EnvSeverity = "required" | "recommended";
 
+/** Public intake requires both a formal publication approval flag and an explicit intake switch. */
+export function publicIntakeEnabled(): boolean {
+  return process.env.MUNICIPAL_PUBLICATION_APPROVED === "true" && process.env.PUBLIC_SUBMISSIONS_ENABLED === "true";
+}
+
 export type EnvFinding = {
   /** The variable name only. Values are never read into the report. */
   name: string;
