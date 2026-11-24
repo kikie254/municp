@@ -379,7 +379,7 @@ export default function HomePage() {
             {[
               { icon: CalendarDays, label: "Citizen fora", note: "Published notices and participation reports" },
               { icon: FileText, label: "Public notices", note: "Announcements issued through official channels" },
-              { icon: MessageSquare, label: "Feedback channels", note: "Written submissions and grievance redress" },
+              { icon: MessageSquare, label: "Feedback channels", note: "Complaint and feedback information; no online intake" },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-3">
                 <item.icon className="mt-0.5 h-4 w-4 shrink-0 text-gold-400" aria-hidden="true" />
