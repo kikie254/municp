@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarDays, Megaphone, Users, FileText, ArrowRight, CheckCircle2 } from "lucide-react";
+import { CalendarDays, Megaphone, Users, FileText, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 import { ParticipationOpportunities } from "@/components/content/ParticipationOpportunities";
-import { forums } from "@/lib/data/services";
 import { documents } from "@/lib/data/documents";
 
 export const metadata: Metadata = {
@@ -52,30 +51,12 @@ export default function PublicParticipationPage() {
                 description="Citizen forums are the municipality's principal channel for face-to-face engagement on plans, budgets and service priorities. Confirmed dates are issued through official public notices."
               />
             </Reveal>
-            <div className="mt-7 divide-y divide-paper-line border-y border-paper-line">
-              {forums.map((f) => (
-                <div key={f.title} className="flex flex-col gap-2 py-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="inline-flex items-center gap-1.5 bg-gold-50 px-2 py-0.5 text-[9.5px] font-bold uppercase tracking-[0.1em] text-gold-800">
-                        {f.status}
-                      </span>
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-ink-muted">{f.area}</span>
-                    </div>
-                    <h3 className="mt-1.5 font-display text-[14px] font-bold text-green-900">{f.title}</h3>
-                    <p className="mt-1 text-[12px] leading-relaxed text-ink-muted">{f.note}</p>
-                  </div>
-                  <Link href="/resources?category=Public+Participation+Reports" className="shrink-0 text-[11px] font-bold uppercase tracking-[0.1em] text-green-700 hover:text-gold-700">
-                    Reports
-                  </Link>
-                </div>
-              ))}
+            <div className="mt-7 border-y border-paper-line py-6">
+              <h3 className="font-display text-[14px] font-bold text-green-900">Forum dates and engagement sessions</h3>
+              <p className="mt-2 text-[12.5px] leading-relaxed text-ink-muted">
+                Check public notices for upcoming forums, venues and participation details.
+              </p>
             </div>
-            <p className="mt-4 text-[11.5px] leading-relaxed text-ink-muted">
-              No confirmed forum dates have been supplied for publication on this website. Dates, venues and agendas are
-              announced through official public notices and the citizen fora calendar published by the County
-              Government.
-            </p>
 
             <div className="mt-10">
               <Reveal>
@@ -168,12 +149,7 @@ export default function PublicParticipationPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-5 flex items-start gap-2 border-l-2 border-green-600 pl-3">
-              <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-green-600" aria-hidden="true" />
-              <p className="text-[11.5px] leading-relaxed text-ink-muted">
-                Reports are linked to the County Government&rsquo;s official download endpoint and open in a new tab.
-              </p>
-            </div>
+
           </div>
 
           <div className="lg:col-span-7">
