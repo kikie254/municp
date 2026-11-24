@@ -10,8 +10,8 @@ function resolveSiteUrl(): string {
   // Open Graph or sitemap output.
   const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
   const raw = explicit || (vercel ? `https://${vercel}` : "http://localhost:3000");
-  const withProtocol = /^https?:\\/\\//i.test(raw) ? raw : `https://${raw}`;
-  return withProtocol.replace(/\\/+$/, "");
+  const withProtocol = /^https?:\/\//i.test(raw) ? raw : "https://" + raw;
+  return withProtocol.replace(/\/+$/, "");
 }
 
 export const site = {
