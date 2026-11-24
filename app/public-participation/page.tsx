@@ -109,8 +109,8 @@ export default function PublicParticipationPage() {
                   <CalendarDays className="h-4 w-4 text-green-600" aria-hidden="true" /> Participation calendar
                 </h3>
                 <p className="mt-2 text-[12px] leading-relaxed text-ink-muted">
-                  Quarterly citizen fora are published in advance as a calendar. The calendar and the quarterly reports
-                  that follow each round are held in the document centre.
+                  The County Government repository includes calendars and reports from previous periods. Current dates,
+                  venues and participation arrangements must be confirmed through a notice issued by an authorised office.
                 </p>
                 <Link href="/resources" className="mt-3 inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-green-700 hover:text-gold-700">
                   Document centre <ArrowRight className="h-3 w-3" aria-hidden="true" />
