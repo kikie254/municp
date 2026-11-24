@@ -34,8 +34,7 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.status}
           </span>
           <span className="bg-white/92 px-3 py-1.5 text-[9.5px] font-semibold uppercase tracking-[0.1em] text-green-900">
-            Sample
-          </span>
+            </span>
         </div>
       </div>
 
