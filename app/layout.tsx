@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     template: "%s | Iten-Tambach Municipality (Demonstration)",
   },
   description: "Demonstration website prepared for institutional review. Not an approved official publication of Iten-Tambach Municipality or the County Government of Elgeyo Marakwet.",
-  applicationName: site.name,
+  applicationName: "Iten-Tambach Municipality demonstration website",
   keywords: [
     "Iten-Tambach Municipality",
     "Elgeyo Marakwet County",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Iten-Tambach Municipality",
+    title: "Iten-Tambach Municipality — Demonstration Website",
     description: site.description,
     images: ["/og-image.svg"],
   },
