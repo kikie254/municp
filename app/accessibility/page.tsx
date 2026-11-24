@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Accessibility",
@@ -56,7 +55,7 @@ const items = [
   },
   {
     title: "Documents",
-    text: "Municipal documents are published by the County Government as PDF files and some are scanned images without a text layer, which makes them harder to use with a screen reader. If a published file is not accessible to you, contact the municipal office and ask for the information in another form.",
+    text: "Documents linked from County Government repositories may be PDFs, including scanned files without a text layer. Accessible alternative formats should be requested from the office responsible for the source document.",
   },
 ];
 
@@ -98,13 +97,12 @@ export default function AccessibilityPage() {
             <ul className="mt-2.5 space-y-1.5 text-[12px] leading-relaxed text-ink-soft">
               <li>An independent accessibility audit against a defined standard, and publication of the result.</li>
               <li>Manual testing with a screen reader (NVDA, JAWS or VoiceOver) and with keyboard only.</li>
-              <li>A confirmed accessibility contact route, once office contact details are confirmed.</li>
+              <li>A verified accessibility contact route and responsible officer must be supplied before public launch.</li>
             </ul>
           </div>
 
           <p className="mt-6 text-[12px] leading-relaxed text-ink-muted">
-            If you encounter a barrier on this website, please report it by writing to the municipal office at{" "}
-            {site.contact.postal}, or visit the office in person at {site.contact.physical}.
+            If you encounter a barrier on this demonstration website, use the website contact page to review the current contact-status notice. A verified municipal accessibility contact has not yet been supplied.
           </p>
         </div>
       </section>
