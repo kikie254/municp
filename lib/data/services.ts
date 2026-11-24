@@ -93,7 +93,7 @@ export const services: Service[] = [
     description:
       "Citizen fora, public notices and other formal opportunities for residents and stakeholders to contribute to municipal decisions.",
     detail: [
-      "Public participation is part of municipal governance. Section 22 of the Urban Areas and Cities Act provides for Citizen Fora, and the County's document repository lists municipal calendars and quarterly participation reports.",
+      "Public participation is part of municipal governance. Section 22 of the Urban Areas and Cities Act provides for Citizen Fora, and the County Government's document repository lists citizen fora calendars and participation reports from previous periods.",
       "Consultations may cover development planning, budgets, local priorities and service delivery. The subject, date, venue and submission period for each engagement should be taken from its published notice.",
       "The Municipality's published gender and inclusion frameworks provide further context for participation by women, young people, persons with disabilities and other groups.",
     ],
