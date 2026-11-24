@@ -1,34 +1,8 @@
-import { FileText, ExternalLink, Download, CalendarDays, Weight, ShieldCheck, ShieldAlert } from "lucide-react";
+import { FileText, ExternalLink, Download, CalendarDays, Weight } from "lucide-react";
 import type { MunicipalDocument } from "@/lib/data/documents";
 
-/**
- * Verification badges.
- *
- * "verifiedFile: true" in the supplied build meant only that a URL returned a PDF. That is not the
- * same as an authenticated document, so the badge now states exactly what was checked and nothing
- * more. Colour is never the only signal: every state carries a text label.
- */
-const verificationMeta = {
-  "content-confirmed": {
-    label: "Content checked",
-    icon: ShieldCheck,
-    className: "border-green-200 bg-green-50 text-green-700",
-  },
-  "file-only": {
-    label: "File only",
-    icon: ShieldAlert,
-    className: "border-gold-300 bg-gold-50 text-gold-800",
-  },
-  "source-page-only": {
-    label: "Source page only",
-    icon: ShieldAlert,
-    className: "border-flag-red/40 bg-flag-red/[0.06] text-flag-red",
-  },
-} as const;
 
 export function DocumentCard({ doc, compact = false }: { doc: MunicipalDocument; compact?: boolean }) {
-  const meta = verificationMeta[doc.verification];
-  const StatusIcon = meta.icon;
   return (
     <article className="group flex h-full flex-col justify-between border border-paper-line bg-white p-5 shadow-card transition-all duration-300 ease-smooth hover:-translate-y-0.5 hover:border-green-300 hover:shadow-lift">
       <div>
@@ -47,13 +21,6 @@ export function DocumentCard({ doc, compact = false }: { doc: MunicipalDocument;
 
         {!compact && <p className="mt-2.5 text-[12.5px] leading-relaxed text-ink-muted">{doc.summary}</p>}
 
-        <p className={`mt-3 inline-flex items-center gap-1.5 border px-2 py-1 text-[9.5px] font-semibold uppercase tracking-[0.1em] ${meta.className}`}>
-          <StatusIcon className="h-3 w-3" aria-hidden="true" />
-          {meta.label}
-        </p>
-        {!compact && doc.note && (
-          <p className="mt-2 text-[11.5px] leading-relaxed text-ink-muted">{doc.note}</p>
-        )}
 
         <dl className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[10.5px] uppercase tracking-[0.08em] text-ink-muted">
           <div className="flex items-center gap-1.5">
@@ -76,8 +43,8 @@ export function DocumentCard({ doc, compact = false }: { doc: MunicipalDocument;
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 bg-green-800 px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-white transition-colors hover:bg-green-700"
         >
-          {doc.verification === "source-page-only" ? <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" /> : <Download className="h-3.5 w-3.5" aria-hidden="true" />}
-          {doc.verification === "source-page-only" ? "Official source" : "Open PDF"}
+          <Download className="h-3.5 w-3.5" aria-hidden="true" />
+          Open document
         </a>
         <a
           href={`https://docs.google.com/viewer?url=${encodeURIComponent(doc.fileUrl)}&embedded=true`}
