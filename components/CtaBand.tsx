@@ -1,18 +1,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, MessageSquare } from "lucide-react";
+import { publicImageAssetsApproved } from "@/lib/config/env";
 
 export function CtaBand() {
   return (
     <section className="relative isolate overflow-hidden bg-green-900">
-      <Image
-        src="/images/iten-town-aerial.jpg"
-        alt=""
-        fill
-        sizes="100vw"
-        className="object-cover object-center opacity-25"
-        aria-hidden="true"
-      />
+      {publicImageAssetsApproved() && (
+        <Image
+          src="/images/iten-town-aerial.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center opacity-25"
+          aria-hidden="true"
+        />
+      )}
       <div className="absolute inset-0 bg-gradient-to-r from-green-950 via-green-900/92 to-green-900/70" aria-hidden="true" />
       <div className="shell relative py-14 md:py-16">
         <div className="max-w-2xl">
