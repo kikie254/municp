@@ -25,7 +25,7 @@ const participationDocs = documents.filter(
 const howTo = [
   { title: "Read the notice", text: "Published notices set out the subject, venue and date of an engagement. Read the notice before attending so that you know what decision is being discussed." },
   { title: "Prepare your contribution", text: "Write down your point, the area it concerns and the outcome you are proposing. A short written note is easier to table at a forum." },
-  { title: "Attend or write in", text: "Attend a forum when one is announced, or use the submission instructions in the relevant public notice. Where an online consultation is open, its response form will appear on this page." },
+  { title: "Attend or write in", text: "Attend a forum only when it is announced by an authorised office and follow the instructions in that notice. This demonstration website does not accept official consultation submissions." },
   { title: "Follow the outcome", text: "Participation reports record what was raised and how it was addressed. Ask the municipal office for the report on an engagement you took part in." },
 ];
 
@@ -34,7 +34,7 @@ export default function PublicParticipationPage() {
     <>
       <PageHero
         title="Public Participation and Community Engagement"
-        intro="Section 22 of the Urban Areas and Cities Act provides for Citizen Fora as part of municipal governance. These forums give residents and stakeholders an opportunity to discuss development plans, budgets and local priorities. Notices and participation reports are listed in the Document Centre."
+        intro="Section 22 of the Urban Areas and Cities Act provides for Citizen Fora as part of municipal governance. The County Government repository includes calendars and reports from previous periods. Current meetings and participation arrangements must be confirmed through a specific notice issued by an authorised office."
         image="/images/public-engagement.jpg"
         imageAlt="Community members gathered for a public baraza discussion in Kenya"
         eyebrow="Citizen Engagement"
