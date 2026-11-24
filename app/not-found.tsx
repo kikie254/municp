@@ -13,7 +13,7 @@ export default function NotFound() {
     { label: "Home", href: "/", text: "The municipal homepage and latest updates." },
     { label: "Municipal Services", href: "/services", text: "Urban management and service information." },
     { label: "Document Centre", href: "/resources", text: "Charter, plans, policies and reports." },
-    { label: "Contact", href: "/contact", text: "Office location, telephone and email." },
+    { label: "Contact", href: "/contact", text: "Municipal contact details and their confirmation status." },
   ];
 
   return (
@@ -56,8 +56,7 @@ export default function NotFound() {
         <p className="mx-auto mt-8 flex max-w-2xl items-start justify-center gap-2 text-center text-[11.5px] leading-relaxed text-ink-muted">
           <FileQuestion className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
           <span>
-            If you followed a link from another site, please let the municipal office know on the municipal office or at
-            P.O. Box 220-30700, Iten so that the link can be corrected. The complete list of{" "}
+            If you followed a link from another site, use the contact page to review the current institutional contact-status notice. No unverified address or telephone number is provided here. The complete list of{" "}
             {sitePages.length} public pages is on the sitemap.
           </span>
         </p>
