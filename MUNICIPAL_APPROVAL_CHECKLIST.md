@@ -32,7 +32,7 @@ Responsible municipal contact for this review: to be formally designated by the 
 - [ ] Approve or reject continued use of images that associate the Municipality with a specific
       location, market or road.
 
- > **Launch blocker.** The 13 photographs currently have unknown rights and remain in the demonstration build. Remove them or provide documented licences before official publication.
+> **Launch blocker.** The 13 photographs currently have unknown rights and remain in the demonstration build. Remove them or provide documented licences before official publication.
 
 ## 3. Institutional information
 
