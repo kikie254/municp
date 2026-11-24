@@ -36,9 +36,8 @@ Responsible municipal contact for this review: to be formally designated by the 
 
 ## 3. Institutional information
 
-- [ ] Confirm the municipal mandate wording (currently framed around the Urban Areas and Cities Act,
-      2011 and the Iten Tambach Municipal Charter).
-- [ ] Confirm the official vision and mission statements, or approve the current framing.
+- [ ] Confirm the municipal mandate wording and ensure the Urban Areas and Cities Act is distinguished from the model-draft charter currently available on the County website.
+- [ ] Supply adopted vision and mission statements or approve the continued public wording that their status is pending confirmation.
 - [ ] Confirm the relationship description with the County Government.
 - [ ] Confirm the list of services the Municipality delivers directly, and those delivered by the
       County or national agencies.
