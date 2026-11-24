@@ -44,14 +44,14 @@ const quickAccess = [
   {
     title: "Documents and Reports",
     description:
-      "Find the Municipal Charter, development plans, policies, financial reports and public participation records.",
+      "Browse County-hosted documents and verify adoption status and current applicability with the responsible institution.",
     href: "/resources",
     icon: "information",
   },
   {
     title: "Public Participation",
     description:
-      "Find Citizen Fora notices, read participation reports and learn how to submit your views.",
+      "Review published notices and reports; follow the instructions in each authorised public notice.",
     href: "/public-participation",
     icon: "community",
   },
@@ -65,7 +65,7 @@ const quickAccess = [
   {
     title: "Citizen Feedback",
     description:
-      "Send a question, suggestion or complaint to the municipal system and keep the reference number for follow-up.",
+      "Review complaint and feedback information. Online submissions are disabled on this demonstration website.",
     href: "/feedback",
     icon: "governance",
   },
@@ -77,10 +77,10 @@ const quickAccess = [
  * is the 2019 census baseline; the later figure is a projection, not a census result.
  */
 const stats = [
-  { value: "183.4 km²", label: "Municipal area" },
-  { value: "54,158", label: "2019 census population" },
-  { value: "2,400 m", label: "Elevation above sea level" },
-  { value: "May 2019", label: "World Athletics Heritage recognition" },
+  { value: "Iten-Tambach", label: "Municipality" },
+  { value: "Elgeyo Marakwet", label: "County" },
+  { value: "Kenya", label: "National context" },
+  { value: "Pending", label: "Adopted charter verification" },
 ];
 
 export default function HomePage() {
@@ -123,7 +123,7 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 max-w-xl font-display text-[15px] font-semibold leading-snug text-white/90 sm:text-[17px] md:text-[19px]">
-              A town of choice for sports, tourism and investment
+              Municipal information and public resources for residents and stakeholders
             </p>
 
             <div className="mt-6 max-w-xl space-y-3.5 border-l-2 border-gold-400/70 pl-4 sm:pl-5">
@@ -134,7 +134,7 @@ export default function HomePage() {
                 The Urban Areas and Cities Act sets out the national municipal framework. Local delegated responsibilities and service arrangements must be confirmed against the operative charter and current County instruments.
               </p>
               <p className="text-[13.5px] leading-[1.8] text-white/72 sm:text-[14px]">
-                The Municipality’s vision is “A town of choice for sports, tourism and investment.” Its mission is “To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.”
+                The County-hosted model charter includes draft vision and mission language. The Municipality must confirm its adopted statements before this website presents them as official.
               </p>
             </div>
 
@@ -146,7 +146,7 @@ export default function HomePage() {
                 Discover Our Projects
               </Link>
               <Link href="/feedback" className="btn btn-ghost">
-                <MessageSquare aria-hidden="true" /> Citizen Feedback
+                <MessageSquare aria-hidden="true" /> Feedback Information
               </Link>
             </div>
           </div>
@@ -209,13 +209,15 @@ export default function HomePage() {
           <Reveal>
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden bg-green-950">
-                <Image
-                  src="/images/iten-town-aerial.jpg"
-                  alt="Elevated view of Iten town showing roads, buildings, trees and the surrounding highlands"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
+                {publicImageAssetsApproved() && (
+                  <Image
+                    src="/images/iten-town-aerial.jpg"
+                    alt="Elevated view of Iten town showing roads, buildings, trees and the surrounding highlands"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                )}
               </div>
               <div className="absolute -bottom-6 -right-4 hidden w-52 border-t-[3px] border-gold-400 bg-green-900 p-5 text-white shadow-lift sm:block lg:-right-6">
                 <Quote className="h-5 w-5 text-gold-400" aria-hidden="true" />
@@ -235,13 +237,13 @@ export default function HomePage() {
               </h2>
               <div className="mt-5 space-y-3.5">
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  Iten-Tambach Municipality is the sole municipality in Elgeyo Marakwet County and hosts the County headquarters.
+                  County Government publications identify Iten-Tambach as a municipality within Elgeyo Marakwet County.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  The Municipality covers approximately 183.4 square kilometres across parts of Kamariny, Kapchemutwa and Tambach wards. The area includes highland, escarpment and lower Kerio Valley landscapes.
+                  The official municipal boundary, ward coverage and area figures require confirmation against current County and national records.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  The 2019 Kenya Population and Housing Census recorded 54,158 residents within the municipal boundary. The Urban Climate Risk Profile projects the population to reach 66,108 by 2029.
+                  Municipal population and projection figures are not displayed until the geographic boundary and source tables are confirmed.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
                   The national statutory framework provides for municipal governance and resident participation. The operative local charter and current participation arrangements require institutional confirmation.
@@ -279,7 +281,7 @@ export default function HomePage() {
               light
               eyebrow="Development Priorities"
               title="Our Priorities. Our Commitment. Our Future."
-              description="Four areas of focus guide the municipality's work and its engagement with residents, partners and the County Government."
+              description="The County-hosted planning materials describe development themes; the Municipality must confirm which priorities are formally adopted."
               align="center"
             />
           </Reveal>
@@ -308,7 +310,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Projects and Development"
                 title="Development priorities and public investment"
-                description="Explore municipal development priorities for roads, drainage, walkways, waste management, urban planning and public amenities."
+                description="Project records will be displayed when verified project information and publication approval have been supplied."
               />
             </Reveal>
             <Link href="/projects" className="link-arrow shrink-0 pb-1">
@@ -333,14 +335,16 @@ export default function HomePage() {
 
       {/* ── PUBLIC PARTICIPATION ───────────────────────────── */}
       <section className="relative isolate overflow-hidden bg-green-950">
-        <Image
-          src="/images/public-engagement.jpg"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover object-center opacity-30"
-          aria-hidden="true"
-        />
+        {publicImageAssetsApproved() && (
+          <Image
+            src="/images/public-engagement.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-center opacity-30"
+            aria-hidden="true"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-green-950 via-green-950/94 to-green-900/60" aria-hidden="true" />
         <div className="shell relative py-16 md:py-20">
           <div className="max-w-2xl">
@@ -354,7 +358,7 @@ export default function HomePage() {
                   Public participation is part of the legal framework for municipal governance.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-white/72">
-                  Citizen Fora provide an opportunity to discuss development plans, budgets and local priorities. Notices and reports are listed in the Document Centre.
+                  The Urban Areas and Cities Act provides for Citizen Fora. Current notices, calendars and reports must be confirmed through documents issued by an authorised office.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-white/72">
                   Residents can review published notices, prepare their views and take part in consultations when they are announced.
@@ -397,7 +401,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Document Centre"
                 title="Municipal Documents and Public Resources"
-                description="Access important municipal publications, development plans, reports, policies and other public information."
+                description="Browse County-hosted records. Confirm adoption status and current applicability before relying on a document."
               />
             </Reveal>
             <Link href="/resources" className="link-arrow shrink-0 pb-1">
@@ -429,7 +433,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Newsroom"
                 title="Latest News and Updates"
-                description="Stay connected with municipal activities, development initiatives, public notices and community engagements."
+                description="This demonstration page shows how authorised municipal announcements and public notices could be presented."
               />
             </Reveal>
             <Link href="/news" className="link-arrow shrink-0 pb-1">
@@ -465,17 +469,17 @@ export default function HomePage() {
               </h2>
               <div className="mt-5 space-y-3.5">
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  The municipal economy brings together agriculture, local trade, public administration and services, alongside a recognised high-altitude athletics identity.
+                  County planning materials identify agriculture, local trade and public administration among the local economic context. Municipal-level economic figures and delegated functions require confirmation.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
                   The Municipality's planning and investment documents provide a starting point for enquiries from businesses and development partners. Any land availability, incentives or approvals must be confirmed through the responsible public offices.
                 </p>
                 <p className="text-[14px] leading-[1.85] text-ink-soft">
-                  Agriculture remains important to livelihoods in the municipal area, with the Urban Climate Risk Profile reporting that about 80 per cent of households engage in cultivation for subsistence or commercial purposes.
+                  Household-level economic statistics are withheld until the source tables, geographic scope and publication authority are confirmed.
                 </p>
               </div>
               <Link href="/investment" className="btn btn-primary mt-7">
-                <TrendingUp aria-hidden="true" /> Explore Investment Opportunities
+                <TrendingUp aria-hidden="true" /> Review Investment Information
               </Link>
             </div>
           </Reveal>
@@ -485,7 +489,7 @@ export default function HomePage() {
               {[
                 { icon: "trade", title: "Trade and Commerce", text: "Trade and local enterprise support the municipal economy." },
                 { icon: "planning", title: "Urban Development", text: "Guided by the Iten Integrated Spatial Plan 2015–2035." },
-                { icon: "community", title: "Local Enterprise", text: "Municipal markets and public spaces are part of the statutory mandate." },
+                { icon: "community", title: "Local Enterprise", text: "Local responsibility for markets and public spaces requires confirmation from the adopted charter and County instruments." },
                 { icon: "information", title: "Planning Resources", text: "Published plans that inform investment enquiries." },
               ].map((c) => (
                 <div key={c.title} className="border border-paper-line bg-white p-4 shadow-card">
