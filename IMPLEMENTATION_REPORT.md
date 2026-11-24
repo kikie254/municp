@@ -1,3 +1,5 @@
+> **Historical document notice:** This report describes an earlier repository revision and is superseded by `GOVERNMENT_GRADE_AUDIT_REPORT.md`. Do not rely on historical contact details, governance assertions, route counts or test claims without re-verification.
+
 # ITEN–TAMBACH MUNICIPALITY WEBSITE
 # PROFESSIONAL IMPLEMENTATION REPORT
 
@@ -261,7 +263,7 @@ Appears on every form:
   This contact form is a demonstration. Your enquiry is validated 
   and previewed on your device and is not transmitted to, stored by 
   or registered with the municipality. To reach the office, call 
-  0726 780 634 or email iten.municipality@gmail.com.
+  [unverified legacy contact detail removed — do not republish] or email [unverified legacy contact detail removed — do not republish].
 </DemoNotice>
 ```
 
@@ -337,7 +339,7 @@ Appears on every form:
 EMAIL_PROVIDER=resend
 EMAIL_API_KEY=re_xxxxxxxxx
 EMAIL_FROM=notifications@iten-tambach-municipality.go.ke
-MUNICIPAL_NOTIFICATIONS_EMAIL=iten.municipality@gmail.com
+MUNICIPAL_NOTIFICATIONS_EMAIL=[unverified legacy contact detail removed — do not republish]
 ```
 
 **When activated:**
@@ -1151,7 +1153,7 @@ MFA_ENFORCEMENT=report
 EMAIL_PROVIDER=resend
 EMAIL_API_KEY=re_...
 EMAIL_FROM=notifications@iten-tambach-municipality.go.ke
-MUNICIPAL_NOTIFICATIONS_EMAIL=iten.municipality@gmail.com
+MUNICIPAL_NOTIFICATIONS_EMAIL=[unverified legacy contact detail removed — do not republish]
 
 # Upload limits
 MAX_UPLOAD_BYTES=10485760
@@ -1190,10 +1192,10 @@ vercel --prod
 **BEFORE PUBLIC LAUNCH:**
 
 1. **Contact Information (Priority: HIGH)**
-   - [ ] Phone number confirmed: 0726 780 634
-   - [ ] Email confirmed: iten.municipality@gmail.com
+   - [ ] Phone number confirmed: [unverified legacy contact detail removed — do not republish]
+   - [ ] Email confirmed: [unverified legacy contact detail removed — do not republish]
    - [ ] Physical address confirmed: "Opposite County Assembly, behind IEBC offices, Iten, Kenya"
-   - [ ] Postal address confirmed: "P.O. Box 220-30700, Iten, Kenya"
+   - [ ] Postal address confirmed: "[unverified legacy contact detail removed — do not republish]"
 
 2. **Privacy Policy (Priority: HIGH)**
    - [ ] Legal review by County legal officer
