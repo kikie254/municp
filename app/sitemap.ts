@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
 import { services } from "@/lib/data/services";
 import { publishedNews, publishedProjects } from "@/lib/content";
+import { municipalPublicationApproved } from "@/lib/config/env";
 
 /**
  * Only published (verified) records are submitted. Demonstration project and news records are
@@ -11,7 +12,7 @@ import { publishedNews, publishedProjects } from "@/lib/content";
  */
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  if (process.env.MUNICIPAL_PUBLICATION_APPROVED !== "true") return [];
+  if (!municipalPublicationApproved()) return [];
   const base = site.url;
   const now = new Date();
 
