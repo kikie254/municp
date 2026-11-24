@@ -1,6 +1,6 @@
 "use client";
 
-import { Info, ShieldCheck } from "lucide-react";
+import { Info } from "lucide-react";
 import { Field } from "./Field";
 import { ActionForm, FieldError } from "./ActionForm";
 import { submitSubmissionAction } from "@/lib/actions/submissions";
@@ -30,13 +30,13 @@ export function PublicSubmissionForm({
       <h2 className="font-display text-[1.1rem] font-bold text-green-900">{heading}</h2>
       <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-muted">{intro}</p>
 
-      <div className="mt-4 flex gap-3 border border-green-700/25 bg-green-50/70 px-4 py-3">
-        <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-green-700" aria-hidden="true" />
-        <p className="text-[11.5px] leading-relaxed text-green-900">
-          <strong className="font-semibold">This form is operational.</strong> Your submission is stored on the
-          Municipality&rsquo;s system and given a reference number. Only authorised municipal officers can read it. It is
-          never published. See the{" "}
-          <a href="/privacy" className="font-semibold underline decoration-gold-400 decoration-2 underline-offset-2">privacy notice</a>.
+      <div role="note" className="mt-4 flex gap-3 border border-gold-400/70 bg-gold-50 px-4 py-3">
+        <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold-700" aria-hidden="true" />
+        <p className="text-[11.5px] leading-relaxed text-green-950">
+          <strong className="font-semibold">Demonstration form — not an authorised municipal channel.</strong> The
+          application may store a test submission in its configured database and generate a reference. Do not enter
+          real personal, financial or sensitive information. No official municipal response or action is promised.
+          Read the <a href="/privacy" className="font-semibold underline decoration-gold-400 decoration-2 underline-offset-2">demonstration data notice</a>.
         </p>
       </div>
 
