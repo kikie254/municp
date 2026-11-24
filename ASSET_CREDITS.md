@@ -43,7 +43,7 @@ file; none carries embedded authorship metadata usable as evidence.
 Numbers 1, 3, 4, 9 and 12 sit on pages that also carry the County crest and the Municipality's name.
 In that context an unlicensed stock photograph can read as commissioned municipal photography. This
 is an **editorial and reputational risk**, not only a licensing one, and it is why the site now
-states that photography is pending verification.
+is labelled as a demonstration; image licensing remains unresolved and is a publication blocker.
 
 ### 1.2 Replacement procedure (when cleared files arrive)
 
