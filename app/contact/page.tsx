@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { CtaBand } from "@/components/CtaBand";
 import { PublicSubmissionForm } from "@/components/forms/PublicSubmissionForm";
 import { site } from "@/lib/site";
+import { publicIntakeEnabled } from "@/lib/config/env";
 
 export const metadata: Metadata = {
   title: "Contact Iten-Tambach Municipality",
@@ -53,7 +54,7 @@ export default function ContactPage() {
           <div className="lg:col-span-7">
             <PublicSubmissionForm
               type="ENQUIRY"
-              enabled={process.env.PUBLIC_SUBMISSIONS_ENABLED === "true"}
+              enabled={publicIntakeEnabled()}
               heading="Demonstration enquiry form"
               intro="This form demonstrates the submission workflow. Do not submit real personal, financial or sensitive information while this website remains unauthorised for official municipal use."
               subjects={[
