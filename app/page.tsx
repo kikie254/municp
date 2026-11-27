@@ -20,6 +20,7 @@ import {
   emptyStateCopy, hasPublishedNews, hasPublishedProjects, publishedNews, publishedProjects,
 } from "@/lib/content";
 import { HeroSlideshow } from "@/components/HeroSlideshow";
+import { PlacesToVisit } from "@/components/PlacesToVisit";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -188,6 +189,8 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <PlacesToVisit />
 
       {/* ── PRIORITIES ─────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden bg-green-900 py-16 md:py-20">
