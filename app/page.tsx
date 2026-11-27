@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight, ArrowUpRight, MessageSquare, FileText, Users,
-  TrendingUp, Landmark, CheckCircle2, CalendarDays, Quote,
+  TrendingUp, CheckCircle2, CalendarDays, Quote,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -12,8 +12,8 @@ import { NewsCard } from "@/components/NewsCard";
 import { DocumentCard } from "@/components/DocumentCard";
 import { CtaBand } from "@/components/CtaBand";
 import { GovernmentJsonLd } from "@/components/BreadcrumbJsonLd";
-import { priorities, services } from "@/lib/data/services";
-import { documents, featuredDocuments } from "@/lib/data/documents";
+import { priorities } from "@/lib/data/services";
+import { featuredDocuments } from "@/lib/data/documents";
 import { ProjectCard } from "@/components/ProjectCard";
 import { EmptyState } from "@/components/EmptyState";
 import {
