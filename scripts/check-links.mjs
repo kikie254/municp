@@ -2,6 +2,8 @@
 /**
  * Crawl the public site and verify internal routes plus external hyperlinks.
  * Usage: SITE_URL=https://example.org npm run check:links
+ * For a protected Vercel preview, also set VERCEL_AUTOMATION_BYPASS_SECRET
+ * to the project's configured protection-bypass secret.
  * No third-party dependencies are required (Node 20+).
  */
 const baseInput = process.env.SITE_URL || process.argv[2];
@@ -16,7 +18,15 @@ if (!/^https?:$/.test(base.protocol)) {
   process.exit(2);
 }
 
-const headers = { "user-agent": "Iten-Tambach-Municipality-Link-Audit/1.0" };
+const headers = {
+  "user-agent": "Iten-Tambach-Municipality-Link-Audit/1.0",
+  ...(process.env.VERCEL_AUTOMATION_BYPASS_SECRET
+    ? {
+        "x-vercel-protection-bypass": process.env.VERCEL_AUTOMATION_BYPASS_SECRET,
+        "x-vercel-set-bypass-cookie": "true",
+      }
+    : {}),
+};
 const timeout = 15000;
 const maxPages = Number(process.env.MAX_PAGES || 250);
 const internalSeen = new Set();
