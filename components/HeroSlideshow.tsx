@@ -7,28 +7,63 @@ import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 const slides = [
   {
     src: "/images/1733467649360.jpg",
-    alt: "A herd of elephants walking along a sandy track through woodland at Rimoi Game Reserve",
+    alt: "Elephants moving through woodland at Rimoi Game Reserve",
     label: "Rimoi Game Reserve",
   },
   {
-    src: "/images/iten-town-aerial.jpg",
-    alt: "Elevated view of Iten town and the surrounding highlands",
+    src: "/images/iten-town-aerial.webp",
+    alt: "Aerial view of Iten town and the surrounding highlands",
     label: "Iten Town",
   },
   {
-    src: "/images/highlands.jpg",
-    alt: "Highland landscape surrounding Iten and the Kerio Valley region",
+    src: "/images/highlands.webp",
+    alt: "Highland scenery in the Iten-Tambach area",
     label: "The Highlands",
   },
   {
-    src: "/images/public-engagement.jpg",
-    alt: "Community engagement in the Iten-Tambach municipal area",
-    label: "Community Participation",
+    src: "/images/iten-hero.webp",
+    alt: "The welcome entrance to Iten town",
+    label: "Welcome to Iten",
   },
   {
-    src: "/images/iten-hero.jpg",
-    alt: "The welcome arch marking the entrance to Iten town",
-    label: "Welcome to Iten",
+    src: "/images/kerio-escarpment.webp",
+    alt: "The dramatic Kerio Valley escarpment and surrounding landscape",
+    label: "Kerio Valley Escarpment",
+  },
+  {
+    src: "/images/kerio-forest-road.webp",
+    alt: "A road passing through the green highland forest",
+    label: "Highland Forests",
+  },
+  {
+    src: "/images/conservation.webp",
+    alt: "A natural conservation landscape in the municipality region",
+    label: "Conservation and Nature",
+  },
+  {
+    src: "/images/farmland.webp",
+    alt: "Farmland and cultivated countryside in the highlands",
+    label: "Agriculture and Rural Enterprise",
+  },
+  {
+    src: "/images/town-centre.webp",
+    alt: "Buildings and streets in the Iten town centre",
+    label: "Iten Town Centre",
+  },
+  {
+    src: "/images/town-life.webp",
+    alt: "Everyday activity and local life in the town",
+    label: "Life in Iten",
+  },
+  {
+    src: "/images/trading.webp",
+    alt: "Local trading activity and small businesses",
+    label: "Local Trade",
+  },
+  {
+    src: "/images/market-development.webp",
+    alt: "Market facilities and local economic development",
+    label: "Market Development",
   },
 ];
 
