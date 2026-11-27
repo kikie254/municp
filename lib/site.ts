@@ -16,7 +16,7 @@ export const site = {
   shortName: "Iten-Tambach",
   county: "County Government of Elgeyo Marakwet",
   republic: "Republic of Kenya",
-  tagline: "A town of choice for sports, tourism and investment.",
+  tagline: "A global athletics and sporting municipality of choice.",
   url: resolveSiteUrl(),
   description:
     "Information about Iten-Tambach Municipality, its statutory role, municipal services, public participation and development resources.",
