@@ -39,7 +39,19 @@ file; none carries embedded authorship metadata usable as evidence.
 **Total photographs: 13 files (26 with `.webp` derivatives). Documented licences: 0.**
 
 
-**Homepage slideshow addition:** `components/HeroSlideshow.tsx` rotates through the existing `iten-hero.jpg`, `iten-town-aerial.jpg` and `highlands.jpg` files. No photographs were added or generated for this change. Their rights remain **uncleared** under the publication rule above; the slideshow must not be treated as permission to publish them. Replace them with Municipality-owned or explicitly licensed photographs and complete this register before launch.
+**Homepage slideshow addition:** `components/HeroSlideshow.tsx` uses three Iten-specific Wikimedia Commons photographs, with photographer and licence links displayed on each active slide. Their reuse conditions are recorded in `public/images/SLIDESHOW-IMAGE-CREDITS.md`. The older local files listed above remain uncleared and are not the slideshow sources.
+
+### 1.4 Destination gallery photographs
+
+The Places to Visit section uses only these traceable, openly licensed photographs:
+
+| Destination | Photographer | Source | Licence |
+|---|---|---|---|
+| Iten View Point | Shadychiri | https://commons.wikimedia.org/wiki/File:Iten_view_point.jpg | CC BY-SA 4.0 |
+| St Patrick's High School, Iten | edskoch | https://commons.wikimedia.org/wiki/File:Entrance_to_St._Patrick's_High_School_(4260378669).jpg | CC BY 2.0 |
+| Cheploch (Chebloch) Gorge | Ronguno Bernard | https://commons.wikimedia.org/wiki/File:A_section_of_cheploch_gorge.jpg | CC BY-SA 4.0 |
+
+Attribution and licence links are displayed immediately below each photograph. The images are delivered through Wikimedia Commons' `Special:FilePath` endpoint and are not represented as commissioned municipal photography. No photograph is currently shown for Rimoi Game Reserve or Kessup Falls: a location-matched image with documented reuse rights has not yet been verified. Do not replace those neutral placeholders with unrelated scenery or an unlicensed image.
 
 ### 1.1 Photographs that could imply an official relationship
 
