@@ -231,3 +231,17 @@ If contact details need to be restored later with verified information:
 ---
 
 END OF CONTACT DETAILS REMOVAL LOG
+
+
+## Addendum — 27 November 2026
+
+The 20 January 2026 removal status above is superseded for the public website. The County Government's current **Office of the Municipal Manager** page now publishes the following Iten Municipality Office details:
+
+- Telephone: **+254 726 780 634**
+- Email: **iten.municipality@gmail.com**
+- Physical location: **Opposite County Assembly, behind IEBC offices, Iten**
+- Postal address: **P.O. Box 220-30700, Iten**
+
+Source: https://elgeyomarakwet.go.ke/office-of-the-municipal-manager/
+
+These source-backed details have been restored in `lib/site.ts` and the Contact page. This is a public County Government source, not a separate signed confirmation supplied during this website task. Office hours remain unpublished because the source does not state them. Do not use the old generic placeholder number (0712 345 678) as a municipal contact.
