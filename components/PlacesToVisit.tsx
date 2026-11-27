@@ -1,8 +1,22 @@
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MapPin, Mountain, School, Trees, Waves, Camera } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const destinations = [
+type Destination = {
+  number: string;
+  name: string;
+  category: string;
+  description: string;
+  icon: LucideIcon;
+  image?: string;
+  imageAlt?: string;
+  credit?: string;
+  source?: string;
+  license?: string;
+};
+
+const destinations: Destination[] = [
   {
     number: "01",
     name: "Iten Viewpoint",
@@ -80,7 +94,7 @@ export function PlacesToVisit() {
                     <div
                       role="img"
                       aria-label={place.imageAlt}
-                      className="relative aspect-[16/10] overflow-hidden bg-green-950 bg-cover bg-center transition-transform duration-500 group-hover:bg-[length:105%_105%]"
+                      className="relative aspect-[16/10] overflow-hidden bg-green-950 bg-cover bg-center"
                       style={{ backgroundImage: `url("${place.image}")` }}
                     >
                       <span className="absolute right-4 top-4 font-display text-[11px] font-bold tracking-[0.12em] text-white drop-shadow-md">
