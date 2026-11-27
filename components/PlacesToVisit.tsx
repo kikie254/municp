@@ -56,11 +56,11 @@ const destinations = [
     name: "Kessup Falls",
     category: "Nature and outdoor exploration",
     description:
-      "Kessup Falls is a natural waterfall in the Kessup area above the Kerio Valley. The approach includes uneven escarpment terrain; arrange local guidance, check conditions and do not attempt steep descents or enter the water without site-specific safety advice.",
+      "Kessup Falls is a natural waterfall in the Kessup area. The approved Iten-Tambach Integrated Development Plan (2025–2029) identifies hiking routes around Kessup Falls as part of the Municipality's tourism potential. The approach involves uneven escarpment terrain; arrange local guidance and check conditions before visiting.",
     icon: Waves,
     image: undefined,
-    moreInfo: "https://discoverkenya.co.ke/listing/kessup-falls",
-    moreInfoLabel: "Visitor information",
+    moreInfo: "https://elgeyomarakwet.go.ke/?mdocs-file=6649",
+    moreInfoLabel: "Approved IDeP reference",
   },
   {
     number: "05",
