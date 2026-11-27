@@ -13,6 +13,7 @@
     "test": "vitest run",
     "test:rules": "npx firebase-tools emulators:exec --only firestore,storage --project demo-itm \"vitest run --config vitest.rules.config.ts\"",
     "verify:routes": "node scripts/verify-routes.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "verify:api": "node scripts/verify-api.mjs",
     "admin:provision": "tsx scripts/provision-admin.ts",
     "migrate:to-firestore": "tsx scripts/migrate-to-firestore.ts",
