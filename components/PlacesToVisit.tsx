@@ -47,6 +47,7 @@ const destinations = [
     description:
       "Rimoi protects a section of the Kerio Valley landscape, with semi-arid habitats, rich birdlife and elephant sightings among its attractions. Confirm entry arrangements, road conditions and conservation guidance with the responsible authorities before travelling.",
     icon: Trees,
+    image: undefined,
     moreInfo: "https://www.elgeyomarakwet.go.ke/docs/HTML/rimoi_national_reserve.html",
     moreInfoLabel: "County tourism profile",
   },
@@ -57,6 +58,7 @@ const destinations = [
     description:
       "Kessup Falls is a natural waterfall in the Kessup area above the Kerio Valley. The approach includes uneven escarpment terrain; arrange local guidance, check conditions and do not attempt steep descents or enter the water without site-specific safety advice.",
     icon: Waves,
+    image: undefined,
     moreInfo: "https://discoverkenya.co.ke/listing/kessup-falls",
     moreInfoLabel: "Visitor information",
   },
