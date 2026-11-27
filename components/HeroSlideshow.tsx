@@ -26,11 +26,6 @@ const slides = [
     label: "Welcome to Iten",
   },
   {
-    src: "/images/kerio-escarpment.webp",
-    alt: "The dramatic Kerio Valley escarpment and surrounding landscape",
-    label: "Kerio Valley Escarpment",
-  },
-  {
     src: "/images/kerio-forest-road.webp",
     alt: "A road passing through the green highland forest",
     label: "Highland Forests",
@@ -100,16 +95,6 @@ const slides = [
     alt: "Semi-arid landscape and wildlife habitat at Rimoi Game Reserve",
     label: "Rimoi Conservation",
   },
-  {
-    src: "/images/community-forum.webp",
-    alt: "Community forum and public participation in Iten-Tambach",
-    label: "Community Participation",
-  },
-  {
-    src: "/images/public-engagement.webp",
-    alt: "Residents taking part in public engagement in Iten-Tambach",
-    label: "Public Engagement",
-  },
 ];
 
 const stats = [
@@ -162,7 +147,7 @@ export function HeroSlideshow() {
   };
 
   return (
-    <section aria-label="Explore Iten-Tambach Municipality" className="bg-green-950">
+    <section aria-label="Municipal image slideshow" className="bg-green-950">
       <div
         className="relative isolate h-[clamp(300px,52vw,650px)] min-h-[300px] overflow-hidden bg-green-950 sm:min-h-[380px] lg:min-h-[500px]"
         onTouchStart={handleTouchStart}
@@ -188,9 +173,6 @@ export function HeroSlideshow() {
         <div className="absolute inset-x-0 bottom-0">
           <div className="shell flex flex-col gap-5 pb-5 sm:flex-row sm:items-end sm:justify-between sm:pb-7">
             <div className="max-w-xl">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-300 sm:text-xs">
-                Iten-Tambach Municipality
-              </p>
               <h1 className="mt-2 font-display text-2xl font-extrabold leading-tight text-white drop-shadow sm:text-4xl md:text-5xl">
                 {slides[activeSlide].label}
               </h1>
