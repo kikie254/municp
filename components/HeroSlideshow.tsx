@@ -92,6 +92,8 @@ export function HeroSlideshow() {
   }, [isPaused, activeSlide]);
 
   const active = slides[activeSlide];
+  const previousSlideIndex = (activeSlide - 1 + slides.length) % slides.length;
+  const nextSlideIndex = (activeSlide + 1) % slides.length;
 
   return (
     <section
@@ -125,7 +127,10 @@ export function HeroSlideshow() {
         tabIndex={0}
         aria-label="Photograph slideshow. Use arrow keys or swipe to change slides."
       >
-        {slides.map((slide, index) => (
+        {slides
+          .map((slide, index) => ({ slide, index }))
+          .filter(({ index }) => index === activeSlide || index === previousSlideIndex || index === nextSlideIndex)
+          .map(({ slide, index }) => (
           <div
             key={slide.src}
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out motion-reduce:transition-none ${index === activeSlide ? "opacity-100" : "pointer-events-none opacity-0"}`}
@@ -135,7 +140,8 @@ export function HeroSlideshow() {
               src={slide.src}
               alt={index === activeSlide ? slide.alt : ""}
               fill
-              priority={index === 0}
+              priority={index === activeSlide}
+              loading={index === activeSlide ? undefined : index === nextSlideIndex ? "eager" : "lazy"}
               sizes="100vw"
               style={{ objectPosition: slide.position ?? "center" }}
               className="object-cover"
@@ -158,7 +164,7 @@ export function HeroSlideshow() {
             <button
               type="button"
               onClick={() => setIsPaused((paused) => !paused)}
-              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/35 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/75 bg-black/45 text-white shadow-sm backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400 sm:h-12 sm:w-12"
               aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
               aria-pressed={isPaused}
             >
@@ -167,7 +173,7 @@ export function HeroSlideshow() {
             <button
               type="button"
               onClick={showNext}
-              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/35 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/75 bg-black/45 text-white shadow-sm backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400 sm:h-12 sm:w-12"
               aria-label="Next slide"
             >
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
