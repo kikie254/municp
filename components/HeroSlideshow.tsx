@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 
 const slides = [
   {
-    src: "/images/1733467649360.jpg",
+    src: "/images/rimoi-game-reserve-elephants.jpg",
     alt: "Elephants moving through woodland at Rimoi Game Reserve",
     label: "Rimoi Game Reserve",
   },
@@ -64,6 +64,51 @@ const slides = [
     src: "/images/market-development.webp",
     alt: "Market facilities and local economic development",
     label: "Market Development",
+  },
+  {
+    src: "/images/kamariny-athletics-stadium-iten.jpg",
+    alt: "Kamariny Stadium, an important athletics and sporting venue in Iten",
+    label: "Kamariny Stadium",
+  },
+  {
+    src: "/images/iten-municipal-market.jpg",
+    alt: "Iten municipal market and local trading activity",
+    label: "Iten Municipal Market",
+  },
+  {
+    src: "/images/iten-viewpoint-kerio-valley.jpg",
+    alt: "Scenic viewpoint overlooking the Kerio Valley near Iten",
+    label: "Iten Viewpoint",
+  },
+  {
+    src: "/images/iten-scenic-viewpoint.jpg",
+    alt: "Highland viewpoint and surrounding landscape in Iten",
+    label: "Iten Scenic Viewpoint",
+  },
+  {
+    src: "/images/rimoi-game-reserve-elephants-woodland.jpg",
+    alt: "Elephants moving through woodland at Rimoi Game Reserve",
+    label: "Rimoi Game Reserve",
+  },
+  {
+    src: "/images/rimoi-game-reserve-wildlife-02.jpg",
+    alt: "Wildlife and natural habitat at Rimoi Game Reserve",
+    label: "Rimoi Wildlife",
+  },
+  {
+    src: "/images/rimoi-game-reserve-wildlife-03.jpg",
+    alt: "Semi-arid landscape and wildlife habitat at Rimoi Game Reserve",
+    label: "Rimoi Conservation",
+  },
+  {
+    src: "/images/community-forum.webp",
+    alt: "Community forum and public participation in Iten-Tambach",
+    label: "Community Participation",
+  },
+  {
+    src: "/images/public-engagement.webp",
+    alt: "Residents taking part in public engagement in Iten-Tambach",
+    label: "Public Engagement",
   },
 ];
 

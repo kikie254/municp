@@ -96,8 +96,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] overflow-hidden bg-green-950">
                 <Image
-                  src="/images/iten-town-aerial.jpg"
-                  alt="Elevated view of Iten town showing roads, buildings, trees and the surrounding highlands"
+                  src="/images/iten-town-municipal-profile.webp"
+                  alt="Iten town and its highland setting, municipal profile photograph"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"

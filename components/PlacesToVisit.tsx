@@ -29,7 +29,7 @@ const destinations = [
     description:
       "Discover the wildlife and semi-arid landscapes of the Kerio Valley at Rimoi. The reserve is known for its elephants and offers an opportunity to learn about the region's natural heritage and conservation.",
     icon: Trees,
-    image: { src: "/images/1733467649360.jpg", alt: "A herd of elephants walking along a sandy track through woodland at Rimoi Game Reserve" },
+    image: { src: "/images/rimoi-game-reserve-elephants.jpg", alt: "A herd of elephants walking along a sandy track through woodland at Rimoi Game Reserve" },
   },
   {
     number: "04",
