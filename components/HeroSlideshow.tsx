@@ -56,16 +56,6 @@ const slides = [
     position: "center 55%",
   },
   {
-    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iten,_Kenya_(4202110162).jpg?width=1800",
-    alt: "Athletes training on the red-dirt running track in Iten",
-    label: "Training on Iten's Red Dirt",
-    credit: "edskoch",
-    source: "https://commons.wikimedia.org/wiki/File:Iten,_Kenya_(4202110162).jpg",
-    license: "CC BY 2.0",
-    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
-    position: "center 48%",
-  },
-  {
     src: "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_St._Patrick%27s_High_School_%284260378669%29.jpg?width=1800",
     alt: "Entrance to St Patrick's High School in Iten",
     label: "St Patrick's Athletics Heritage",
