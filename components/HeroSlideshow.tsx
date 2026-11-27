@@ -100,7 +100,7 @@ export function HeroSlideshow() {
       className="bg-white"
     >
       <div
-        className="group relative h-[46svh] min-h-[320px] max-h-[560px] w-full overflow-hidden bg-stone-200 sm:h-[54svh] sm:min-h-[420px] sm:max-h-[640px] lg:h-[68svh] lg:min-h-[520px] lg:max-h-[760px]"
+        className="group relative h-[46svh] min-h-[320px] max-h-[560px] w-full touch-pan-y overflow-hidden bg-stone-200 outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-gold-400 sm:h-[54svh] sm:min-h-[420px] sm:max-h-[640px] lg:h-[68svh] lg:min-h-[520px] lg:max-h-[760px]"
         onTouchStart={(event) => {
           (event.currentTarget as HTMLDivElement).dataset.touchStartX = String(event.touches[0]?.clientX ?? 0);
         }}
@@ -113,8 +113,14 @@ export function HeroSlideshow() {
           }
         }}
         onKeyDown={(event) => {
-          if (event.key === "ArrowRight") showNext();
-          if (event.key === "ArrowLeft") showPrevious();
+          if (event.key === "ArrowRight") {
+            event.preventDefault();
+            showNext();
+          }
+          if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            showPrevious();
+          }
         }}
         tabIndex={0}
         aria-label="Photograph slideshow. Use arrow keys or swipe to change slides."
@@ -131,8 +137,6 @@ export function HeroSlideshow() {
               fill
               priority={index === 0}
               sizes="100vw"
-              loading={index === 0 ? "eager" : "lazy"}
-              unoptimized
               style={{ objectPosition: slide.position ?? "center" }}
               className="object-cover"
             />
@@ -236,7 +240,7 @@ export function HeroSlideshow() {
       </div>
 
       <div className="border-y border-white/10 bg-green-950">
-        <div className="shell grid grid-cols-2 divide-x divide-white/10 md:grid-cols-4">
+        <div className="shell grid grid-cols-2 divide-x divide-y divide-white/10 md:grid-cols-4 md:divide-y-0">
           {stats.map((stat) => (
             <div key={stat.label} className="px-3 py-5 first:pl-0 sm:px-5">
               <p className="font-display text-xl font-extrabold leading-none text-gold-400 sm:text-2xl">
