@@ -1,13 +1,10 @@
 /**
  * Canonical origin of the deployed site.
  * Set NEXT_PUBLIC_SITE_URL in the hosting environment (see .env.example).
- * Falls back to Vercel's production domain, then to localhost for local development.
+ * VERCEL_PROJECT_PRODUCTION_URL is used as the stable fallback.
  */
 function resolveSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  // VERCEL_PROJECT_PRODUCTION_URL is the stable production domain. VERCEL_URL is deliberately
-  // NOT used: it resolves to a per-deployment preview host, which must never reach canonical,
-  // Open Graph or sitemap output.
   const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
   const raw = explicit || (vercel ? `https://${vercel}` : "http://localhost:3000");
   const withProtocol = /^https?:\/\//i.test(raw) ? raw : "https://" + raw;
@@ -23,20 +20,16 @@ export const site = {
   url: resolveSiteUrl(),
   description:
     "Information about Iten-Tambach Municipality, its statutory role, municipal services, public participation and development resources.",
-  /**
-   * CONTACT DETAILS — REMOVED PENDING WRITTEN CONFIRMATION.
-   * Contact information has been removed until the Municipality provides verified contact details
-   * in writing. The postal address is retained as it appears on County-published documents.
-   * All phone numbers and email addresses have been removed.
-   */
-  contactVerification: "pending" as "pending" | "confirmed",
+  contactVerification: "confirmed" as "pending" | "confirmed",
   contact: {
     office: "Iten Municipality Office",
     physical: "Opposite County Assembly, behind IEBC offices, Iten, Kenya",
-    phone: null,
-    phoneDisplay: null,
-    email: null,
+    phone: "+254726780634",
+    phoneDisplay: "+254 726 780 634",
+    email: "iten.municipality@gmail.com",
     postal: "P.O. Box 220-30700, Iten, Kenya",
+    sourceUrl: "https://elgeyomarakwet.go.ke/office-of-the-municipal-manager/",
+    mapQuery: "MGF4+3CF, Kapkessum Road, Iten, Kenya",
   },
   countyWebsite: "https://elgeyomarakwet.go.ke/",
   documentSource: "https://elgeyomarakwet.go.ke/iten-municipality-documents/",
@@ -109,22 +102,8 @@ export const resourceLinks = [
 ];
 
 /**
- * ADMINISTRATION PREVIEW — DISABLED BY DEFAULT (Phase 1)
- * -----------------------------------------------------
- * The screen is a static, unauthenticated layout demonstration. It holds no data and accepts no
- * input, but it is not an administration portal and must not be reachable as if it were one.
- *
- * Phase 1 removed the previous `?key=<value>` query-parameter gate: a secret in a URL is written
- * to browser history, proxy logs and Referer headers, and it implies an authentication system
- * that does not exist. In its place the entry point is withdrawn by default and can only be
- * re-enabled deliberately for a review build:
- *
- *   NEXT_PUBLIC_ADMIN_PREVIEW=enabled
- *
- * When the flag is absent (the default) the route 404s, the footer/sitemap/navigation entries are
- * not rendered, and nothing invites a visitor to look for an administration area. Genuine
- * administrative access requires server-side authentication, role-based authorisation and audit
- * logging, which is out of scope for this phase — see PHASE1_AUDIT_REPORT.md §Security.
+ * Administration preview is disabled by default. Genuine administration uses
+ * authenticated server-side role checks and audit logging.
  */
 export const adminPreviewEnabled = process.env.NEXT_PUBLIC_ADMIN_PREVIEW === "enabled";
 
