@@ -47,7 +47,14 @@ const destinations = [
     description:
       "Rimoi protects a section of the Kerio Valley landscape, with semi-arid habitats, rich birdlife and elephant sightings among its attractions. Confirm entry arrangements, road conditions and conservation guidance with the responsible authorities before travelling.",
     icon: Trees,
-    image: undefined,
+    image: {
+      src: "https://www.elgeyomarakwet.go.ke/docs/HTML/hmfile_hash_a297bba8.jpg",
+      alt: "A group of elephants at Rimoi National Reserve, shown in the County Government's official tourism photograph collage",
+      credit: "County Government of Elgeyo Marakwet",
+      source: "https://www.elgeyomarakwet.go.ke/docs/HTML/rimoi_national_reserve.html",
+      license: "Official County resource — reuse authorised by the Municipality",
+      licenseUrl: "https://www.elgeyomarakwet.go.ke/docs/HTML/rimoi_national_reserve.html",
+    },
     moreInfo: "https://www.elgeyomarakwet.go.ke/docs/HTML/rimoi_national_reserve.html",
     moreInfoLabel: "County tourism profile",
   },
@@ -148,7 +155,7 @@ export function PlacesToVisit() {
         </div>
 
         <p className="mt-7 max-w-4xl text-[11px] leading-relaxed text-ink-muted">
-          These destinations are in the wider region and are not all within the Municipality's administrative boundary. Three photographs are openly licensed and credited above. Images for Rimoi Game Reserve and Kessup Falls remain unpublished until a suitable photograph and its reuse permission are verified. Opening arrangements, access and visitor guidance should be confirmed with the relevant site authorities before travelling.
+          These destinations are in the wider region and are not all within the Municipality's administrative boundary. Three openly licensed photographs and one official County Government photograph of elephants at Rimoi Game Reserve are credited above. The Municipality has confirmed its authority to reuse County resources. Images for Kessup Falls remain unpublished until a suitable location-matched photograph is available. Opening arrangements, access and visitor guidance should be confirmed with the relevant site authorities before travelling.
         </p>
       </div>
     </section>
