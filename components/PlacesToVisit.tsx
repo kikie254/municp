@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MapPin, Mountain, School, Trees, Waves, Camera } from "lucide-react";
@@ -26,6 +27,7 @@ const destinations = [
     description:
       "Discover the wildlife and semi-arid landscapes of the Kerio Valley at Rimoi. The reserve is known for its elephants and offers an opportunity to learn about the region's natural heritage and conservation.",
     icon: Trees,
+    image: { src: "/images/1733467649360.jpg", alt: "A herd of elephants walking along a sandy track through woodland at Rimoi Game Reserve" },
   },
   {
     number: "04",
@@ -63,7 +65,11 @@ export function PlacesToVisit() {
             return (
               <Reveal key={place.number} delay={index * 60}>
                 <article className="group flex h-full flex-col overflow-hidden border border-paper-line bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-                  {/* Replace this designed image placeholder with the matching licensed municipal photograph when supplied. */}
+                  {place.image ? (
+                  <div className="relative aspect-[16/10] overflow-hidden bg-green-950">
+                    <Image src={place.image.src} alt={place.image.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.025]" />
+                  </div>
+                  ) : (
                   <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-green-950">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(197,160,75,0.22),transparent_55%),linear-gradient(135deg,#123b2c,#071d18)]" />
                     <div className="absolute -right-8 -top-10 h-44 w-44 rounded-full border border-white/10" />
@@ -73,6 +79,7 @@ export function PlacesToVisit() {
                     </div>
                     <span className="absolute right-4 top-4 font-display text-[11px] font-bold tracking-[0.12em] text-white/60">{place.number}</span>
                   </div>
+                  )}
                   <div className="flex flex-1 flex-col p-5 sm:p-6">
                     <p className="text-[9.5px] font-bold uppercase tracking-[0.15em] text-gold-700">{place.category}</p>
                     <h3 className="mt-2 font-display text-[17px] font-bold leading-snug text-green-950">{place.name}</h3>
