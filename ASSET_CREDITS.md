@@ -39,7 +39,7 @@ file; none carries embedded authorship metadata usable as evidence.
 **Total photographs: 13 files (26 with `.webp` derivatives). Documented licences: 0.**
 
 
-**Homepage slideshow addition:** `components/HeroSlideshow.tsx` uses three Iten-specific Wikimedia Commons photographs, with photographer and licence links displayed on each active slide. Their reuse conditions are recorded in `public/images/SLIDESHOW-IMAGE-CREDITS.md`. The older local files listed above remain uncleared and are not the slideshow sources.
+**Homepage slideshow addition:** `components/HeroSlideshow.tsx` now uses six Iten/Kerio-specific Wikimedia Commons photographs, with photographer and licence links displayed on each active slide. The new additions are credited to Elias Yator (CC BY-SA 4.0), Mekami (CC BY-SA 4.0) and edskoch (CC BY 2.0). Full source-file links and licence terms are recorded in `public/images/SLIDESHOW-IMAGE-CREDITS.md`. The older local files listed above remain uncleared and are not the slideshow sources. Next.js image optimisation is enabled for these Commons files; responsive `sizes` allow device-appropriate image variants.
 
 ### 1.4 Destination gallery photographs
 
