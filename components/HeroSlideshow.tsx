@@ -12,26 +12,33 @@ import {
 } from "lucide-react";
 import { site } from "@/lib/site";
 
+// Keep this sequence intentionally varied: wildlife, town, landscape,
+// civic life and the municipal welcome image. All sources are local assets.
 const slides = [
   {
-    src: "/images/iten-hero.jpg",
-    alt: "The welcome arch marking the entrance to Iten town",
-    label: "Welcome to Iten-Tambach",
+    src: "/images/1733467649360.jpg",
+    alt: "A herd of elephants walking along a sandy track through woodland at Rimoi Game Reserve",
+    label: "Discover Rimoi Game Reserve",
   },
   {
     src: "/images/iten-town-aerial.jpg",
-    alt: "Elevated view of Iten town and its surrounding built environment",
+    alt: "Elevated view of Iten town showing roads, buildings, trees and the surrounding highlands",
     label: "Our Municipality",
   },
   {
     src: "/images/highlands.jpg",
-    alt: "Highland landscape",
-    label: "Our Highland Setting",
+    alt: "Highland landscape surrounding Iten and the Kerio Valley region",
+    label: "The Beauty of Our Highlands",
   },
   {
-    src: "/images/1733467649360.jpg",
-    alt: "A herd of elephants walking along a sandy track through woodland at Rimoi Game Reserve",
-    label: "Rimoi Game Reserve",
+    src: "/images/public-engagement.jpg",
+    alt: "Community engagement in the Iten-Tambach municipal area",
+    label: "A Municipality Shaped by Its People",
+  },
+  {
+    src: "/images/iten-hero.jpg",
+    alt: "The welcome arch marking the entrance to Iten town",
+    label: "Welcome to Iten-Tambach",
   },
 ];
 
