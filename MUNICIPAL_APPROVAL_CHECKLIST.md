@@ -23,17 +23,23 @@ Contact for this review: the web project lead at the Municipality.
 
 ## 2. Photography and image licensing
 
-- [ ] Review the asset register in `ASSET_CREDITS.md` (13 photographs, all with unknown rights).
-- [ ] For each photograph, choose one: **supply licensed original** · **supply replacement owned by
-      the Municipality** · **approve removal and use of the neutral placeholder**.
-- [ ] Provide, for each retained image: photographer/creator, source, licence type, date obtained.
-- [ ] Confirm in writing whether any current photograph shows a real municipal project, officer or
-      event, and whether its use is authorised.
+- [ ] Review the asset register in `ASSET_CREDITS.md`. The 13 original local photographs still have
+      unknown creator/source/licence details and remain uncleared.
+- [ ] Review the three destination photographs from Wikimedia Commons (Iten View Point, St Patrick's
+      High School entrance and Cheploch Gorge). Their creator, source and Creative Commons licence
+      are documented in the asset register and credited beside each image.
+- [ ] Confirm whether the Municipality is content to use the openly licensed third-party images, or
+      supply municipality-owned photographs with written web-use permission.
+- [ ] For each remaining photograph, choose one: **supply licensed original** · **supply replacement
+      owned by the Municipality** · **approve removal and use of the neutral placeholder**.
+- [ ] Confirm in writing whether any photograph shows a real municipal project, officer or event,
+      and whether its use is authorised.
 - [ ] Approve or reject continued use of images that associate the Municipality with a specific
       location, market or road.
 
-> **Launch blocker.** No photograph may be published until its rights are documented. The site
-> currently carries a pre-launch review notice stating that photography is pending clearance.
+> The three Commons photographs have documented reuse licences and visible attribution. All other
+> local photographs remain uncleared; Rimoi Game Reserve and Kessup Falls remain neutral placeholders
+> until location-matched photographs and reuse rights are verified.
 
 ## 3. Institutional information
 
@@ -85,18 +91,23 @@ Contact for this review: the web project lead at the Municipality.
 - [ ] Confirm the category and year shown against each document.
 - [ ] Confirm whether the Municipality wishes to host copies itself rather than link to the County.
 
-## 8. Contact information  *(currently shown with a pending-verification notice)*
+## 8. Contact information
 
-- [ ] Confirm the telephone number: **0726 780 634 / +254 726 780 634**.
-- [ ] Confirm the e-mail address: **iten.municipality@gmail.com**, or supply an official
-      institutional domain address (recommended).
-- [ ] Confirm the physical address: **opposite County Assembly, behind IEBC offices, Iten**.
-- [ ] Confirm the postal address: **PO Box 220, 30700**.
-- [ ] Supply **official office hours** (currently not published; the previous "call during working
-      hours" instruction was removed).
-- [ ] Supply any additional official channels (P.O. box alternatives, social accounts, ward offices).
-- [ ] When all of the above are confirmed, the site's single verification flag can be switched to
-      "confirmed" and every notice is removed at once.
+The telephone, email, physical and postal details below are currently displayed on the website
+because they are published on the County Government's official Office of the Municipal Manager page:
+https://elgeyomarakwet.go.ke/office-of-the-municipal-manager/
+
+- Telephone: **+254 726 780 634**.
+- Email: **iten.municipality@gmail.com**.
+- Physical address: **opposite County Assembly, behind IEBC offices, Iten**.
+- Postal address: **P.O. Box 220-30700, Iten**.
+- [ ] Municipal office to reconfirm that the telephone and email remain active and monitored.
+- [ ] Supply **official office hours** (not stated on the County source and therefore not published).
+- [ ] Supply any additional official channels (social accounts, ward offices or alternative postal details).
+
+The website's contact verification flag is set to confirmed on the basis of this official County
+publication. If the office identifies a discrepancy or an updated contact, revise `lib/site.ts`
+and the Contact page together.
 
 ## 9. Privacy and legal approval
 
