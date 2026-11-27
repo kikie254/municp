@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 
-// Wikimedia Commons photographs. Photographer attribution and licence are
-// displayed below the image and update with the active slide.
+// Openly licensed Iten photographs. Credit and licence are shown for each slide.
 const slides = [
   {
     src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iten_view_point.jpg?width=1800",
@@ -63,15 +62,16 @@ export function HeroSlideshow() {
   const active = slides[activeSlide];
 
   return (
-    <section aria-label="Iten-Tambach Municipality introduction" className="bg-white">
-      {/* Image-first slideshow: no headline, paragraph or overlay obscures the photograph. */}
-      <div className="relative h-[48vh] min-h-[300px] max-h-[680px] w-full overflow-hidden bg-stone-200 sm:h-[58vh] sm:min-h-[400px] lg:h-[68vh]">
+    <section
+      aria-label="Iten-Tambach Municipality introduction"
+      aria-roledescription="carousel"
+      className="bg-white"
+    >
+      <div className="relative h-[44vh] min-h-[280px] max-h-[680px] w-full overflow-hidden bg-stone-200 sm:h-[58vh] sm:min-h-[400px] lg:h-[68vh]">
         {slides.map((slide, index) => (
           <div
             key={slide.src}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out motion-reduce:transition-none ${
-              index === activeSlide ? "opacity-100" : "pointer-events-none opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out motion-reduce:transition-none ${index === activeSlide ? "opacity-100" : "pointer-events-none opacity-0"}`}
             aria-hidden={index !== activeSlide}
           >
             <Image
@@ -85,15 +85,15 @@ export function HeroSlideshow() {
             />
           </div>
         ))}
-        <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-gradient-to-t from-black/65 to-transparent px-4 pb-4 pt-12 sm:px-8 sm:pb-6 lg:px-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white drop-shadow sm:text-sm">
+        <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-between gap-3 bg-gradient-to-t from-black/70 to-transparent px-4 pb-4 pt-12 sm:px-8 sm:pb-6 lg:px-12">
+          <p className="min-w-0 flex-1 text-xs font-semibold uppercase tracking-[0.16em] text-white drop-shadow sm:text-sm">
             {active.label}
           </p>
           <div className="flex shrink-0 items-center gap-2">
             <button
               type="button"
               onClick={showPrevious}
-              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/25 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950"
+              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/35 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
               aria-label="Previous slide"
             >
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
@@ -101,15 +101,16 @@ export function HeroSlideshow() {
             <button
               type="button"
               onClick={() => setIsPaused((paused) => !paused)}
-              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/25 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950"
+              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/35 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
               aria-label={isPaused ? "Play slideshow" : "Pause slideshow"}
+              aria-pressed={isPaused}
             >
               {isPaused ? <Play className="h-4 w-4" aria-hidden="true" /> : <Pause className="h-4 w-4" aria-hidden="true" />}
             </button>
             <button
               type="button"
               onClick={showNext}
-              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/25 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950"
+              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/35 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
               aria-label="Next slide"
             >
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -118,16 +119,15 @@ export function HeroSlideshow() {
         </div>
       </div>
 
-      {/* Attribution and slide indicators sit directly beneath the image. */}
       <div className="border-b border-stone-200 bg-stone-50">
         <div className="shell flex flex-wrap items-center justify-between gap-3 py-3">
           <p className="text-[11px] text-stone-600">
             Photograph:{" "}
-            <a href={active.source} target="_blank" rel="noreferrer" className="font-semibold underline underline-offset-2 hover:text-green-900">
+            <a href={active.source} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 hover:text-green-900">
               {active.credit}
             </a>
             {" · "}
-            <a href={active.licenseUrl} target="_blank" rel="noreferrer" className="underline underline-offset-2 hover:text-green-900">
+            <a href={active.licenseUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-green-900">
               {active.license}
             </a>
           </p>
@@ -139,20 +139,17 @@ export function HeroSlideshow() {
                 onClick={() => setActiveSlide(index)}
                 aria-label={`Show slide ${index + 1}: ${slide.label}`}
                 aria-current={index === activeSlide ? "true" : undefined}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === activeSlide ? "w-8 bg-green-900" : "w-2 bg-stone-400 hover:bg-green-700"
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 ${index === activeSlide ? "w-8 bg-green-900" : "w-2 bg-stone-400 hover:bg-green-700"}`}
               />
             ))}
           </div>
         </div>
       </div>
 
-      {/* All introductory copy and calls to action now follow the slideshow. */}
       <div className="shell py-10 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-green-800 sm:text-xs">
-            { "Elgeyo Marakwet County · Kenya" }
+            Elgeyo Marakwet County · Kenya
           </p>
           <h1 className="mt-3 font-display text-3xl font-extrabold leading-tight tracking-tight text-stone-950 sm:text-4xl lg:text-5xl">
             Iten-Tambach Municipality
@@ -160,7 +157,6 @@ export function HeroSlideshow() {
           <p className="mx-auto mt-4 max-w-3xl font-display text-lg font-semibold leading-relaxed text-green-900 sm:text-xl">
             A town of choice for sports, tourism and investment
           </p>
-
           <div className="mx-auto mt-6 max-w-3xl space-y-4 text-left text-sm leading-7 text-stone-700 sm:text-base sm:leading-8">
             <p>
               Iten-Tambach is the sole municipality in Elgeyo Marakwet County and the home of the County headquarters. Its municipal charter was granted in December 2018 under the Urban Areas and Cities Act, 2011.
@@ -172,7 +168,6 @@ export function HeroSlideshow() {
               The Municipality’s vision is “A town of choice for sports, tourism and investment.” Its mission is “To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.”
             </p>
           </div>
-
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link href="/about" className="btn btn-gold">
               Explore Our Municipality <ArrowRight aria-hidden="true" />
