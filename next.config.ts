@@ -24,6 +24,18 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "commons.wikimedia.org",
+        pathname: "/wiki/Special:FilePath/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.elgeyomarakwet.go.ke",
+        pathname: "/docs/HTML/hmfile_hash_a297bba8.jpg",
+      },
+    ],
     deviceSizes: [360, 390, 640, 768, 1024, 1280, 1440, 1920],
   },
   experimental: {
