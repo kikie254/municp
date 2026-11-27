@@ -1,5 +1,3 @@
-"use client";
-
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MapPin, Mountain, School, Trees, Waves, Camera } from "lucide-react";
@@ -12,7 +10,6 @@ const destinations = [
     description:
       "Take in wide views across the Kerio Valley and the dramatic escarpment. Iten Viewpoint is a memorable stop for visitors who want to appreciate the region's highland scenery and capture the landscape.",
     icon: Mountain,
-    imagePath: "/images/places/iten-viewpoint.jpg",
   },
   {
     number: "02",
@@ -21,7 +18,6 @@ const destinations = [
     description:
       "A respected name in Kenyan athletics, St Patrick's High School has helped nurture generations of distance-running talent. Its story forms an important part of Iten's reputation as the Home of Champions.",
     icon: School,
-    imagePath: "/images/places/st-patricks-iten.jpg",
   },
   {
     number: "03",
@@ -30,7 +26,6 @@ const destinations = [
     description:
       "Discover the wildlife and semi-arid landscapes of the Kerio Valley at Rimoi. The reserve is known for its elephants and offers an opportunity to learn about the region's natural heritage and conservation.",
     icon: Trees,
-    imagePath: "/images/places/rimoi-game-reserve.jpg",
   },
   {
     number: "04",
@@ -39,7 +34,6 @@ const destinations = [
     description:
       "Explore the natural setting around Kessup Falls, where flowing water and the surrounding terrain create a distinctive landscape. It is a place to appreciate the area's natural features and enjoy the outdoors responsibly.",
     icon: Waves,
-    imagePath: "/images/places/kessup-falls.jpg",
   },
   {
     number: "05",
@@ -48,13 +42,12 @@ const destinations = [
     description:
       "See the striking gorge carved by the Kerio River through the rock of the valley. Cheploch's dramatic terrain makes it one of the region's distinctive natural landmarks. Visitors should keep to safe areas and follow local guidance.",
     icon: Camera,
-    imagePath: "/images/places/cheploch-gorge.jpg",
   },
 ];
 
 export function PlacesToVisit() {
   return (
-    <section className="bg-paper-warm py-16 md:py-20" aria-labelledby="places-to-visit-heading">
+    <section className="bg-paper-warm py-16 md:py-20" aria-label="Places to Visit">
       <div className="shell">
         <Reveal>
           <SectionHeading
@@ -78,7 +71,6 @@ export function PlacesToVisit() {
                     <div className="relative flex h-16 w-16 items-center justify-center border border-gold-400/50 bg-white/5 text-gold-300 backdrop-blur-sm">
                       <Icon className="h-7 w-7" aria-hidden="true" />
                     </div>
-                    <span className="absolute bottom-4 left-5 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/65">Destination photograph to be added</span>
                     <span className="absolute right-4 top-4 font-display text-[11px] font-bold tracking-[0.12em] text-white/60">{place.number}</span>
                   </div>
                   <div className="flex flex-1 flex-col p-5 sm:p-6">
