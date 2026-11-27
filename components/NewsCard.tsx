@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CalendarDays } from "lucide-react";
+import { ArrowRight, CalendarDays, ImageOff } from "lucide-react";
 import type { NewsItem } from "@/lib/data/news";
 
 export function NewsCard({ item, featured = false }: { item: NewsItem; featured?: boolean }) {
