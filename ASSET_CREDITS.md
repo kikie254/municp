@@ -39,7 +39,7 @@ file; none carries embedded authorship metadata usable as evidence.
 **Total photographs: 13 files (26 with `.webp` derivatives). Documented licences: 0.**
 
 
-**Homepage slideshow addition:** `components/HeroSlideshow.tsx` now uses seven Iten/Kerio-region Wikimedia Commons photographs, with photographer and licence links displayed on each active slide. The additions are credited to Elias Yator (CC BY-SA 4.0), Mekami (CC BY-SA 4.0), edskoch (CC BY 2.0) and Ronguno Bernard (CC BY-SA 4.0). Full source-file links and licence terms are recorded in `public/images/SLIDESHOW-IMAGE-CREDITS.md`. The older local files listed above remain uncleared and are not the slideshow sources. Next.js image optimisation is enabled for these Commons files; responsive `sizes` allow device-appropriate image variants.
+**Homepage slideshow addition:** `components/HeroSlideshow.tsx` now uses seven Wikimedia Commons photographs and one official County Government of Elgeyo Marakwet photograph of elephants at Rimoi Game Reserve, with photographer and licence links displayed on each active slide. The additions are credited to Elias Yator (CC BY-SA 4.0), Mekami (CC BY-SA 4.0), edskoch (CC BY 2.0) and Ronguno Bernard (CC BY-SA 4.0). Full source-file links and licence terms are recorded in `public/images/SLIDESHOW-IMAGE-CREDITS.md`. The Rimoi photograph is hosted on the County Government website and is reused with the Municipality's confirmation that it may reuse County resources. The older local files listed above remain uncleared and are not the slideshow sources. Next.js image optimisation is enabled for these Commons files; responsive `sizes` allow device-appropriate image variants.
 
 ### 1.4 Destination gallery photographs
 
@@ -49,9 +49,9 @@ The Places to Visit section uses only these traceable, openly licensed photograp
 |---|---|---|---|
 | Iten View Point | Shadychiri | https://commons.wikimedia.org/wiki/File:Iten_view_point.jpg | CC BY-SA 4.0 |
 | St Patrick's High School, Iten | edskoch | https://commons.wikimedia.org/wiki/File:Entrance_to_St._Patrick's_High_School_(4260378669).jpg | CC BY 2.0 |
-| Cheploch (Chebloch) Gorge | Ronguno Bernard | https://commons.wikimedia.org/wiki/File:A_section_of_cheploch_gorge.jpg | CC BY-SA 4.0 |
+| Cheploch (Chebloch) Gorge | Ronguno Bernard | https://commons.wikimedia.org/wiki/File:A_section_of_cheploch_gorge.jpg | CC BY-SA 4.0 |\n| Rimoi Game Reserve | County Government of Elgeyo Marakwet | https://www.elgeyomarakwet.go.ke/docs/HTML/rimoi_national_reserve.html | Official County resource; reuse authorised by the Municipality |
 
-Attribution and licence links are displayed immediately below each photograph. The images are delivered through Wikimedia Commons' `Special:FilePath` endpoint and are not represented as commissioned municipal photography. No photograph is currently shown for Rimoi Game Reserve or Kessup Falls: a location-matched image with documented reuse rights has not yet been verified. Do not replace those neutral placeholders with unrelated scenery or an unlicensed image.
+Attribution and source links are displayed immediately below each photograph. The Iten View Point, St Patrick's and Cheploch images are delivered through Wikimedia Commons. The Rimoi elephant image is hosted by the County Government of Elgeyo Marakwet and is reused with the Municipality's confirmation of its authority to reuse County resources. No photograph is currently shown for Kessup Falls; do not replace its placeholder with unrelated scenery.
 
 ### 1.1 Photographs that could imply an official relationship
 
