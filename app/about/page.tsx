@@ -122,7 +122,7 @@ export default function AboutPage() {
                   Our Vision
                 </h2>
                 <p className="mt-3 text-[14px] leading-[1.85] text-ink-soft">
-                  &ldquo;A town of choice for sports, tourism and investment.&rdquo;
+                  &ldquo;A global athletics and sporting municipality of choice.&rdquo;
                 </p>
               </div>
             </Reveal>
@@ -136,7 +136,7 @@ export default function AboutPage() {
                   Our Mission
                 </h2>
                 <p className="mt-3 text-[14px] leading-[1.85] text-ink-soft">
-                  &ldquo;To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.&rdquo;
+                  &ldquo;To foster development and excellence at all levels by harnessing the socio-economic contributions, transforming the delivery of services, ensuring inclusivity and equitable access that creates a livable environment for all residents.&rdquo;
                 </p>
               </div>
             </Reveal>
