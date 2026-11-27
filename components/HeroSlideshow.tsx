@@ -65,6 +65,26 @@ const slides = [
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
     position: "center 48%",
   },
+  {
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Entrance_to_St._Patrick%27s_High_School_%284260378669%29.jpg?width=1800",
+    alt: "Entrance to St Patrick's High School in Iten",
+    label: "St Patrick's Athletics Heritage",
+    credit: "edskoch",
+    source: "https://commons.wikimedia.org/wiki/File:Entrance_to_St._Patrick's_High_School_(4260378669).jpg",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    position: "center 52%",
+  },
+  {
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/A_section_of_cheploch_gorge.jpg?width=1800",
+    alt: "A section of the Kerio River flowing through Cheploch Gorge",
+    label: "Cheploch Gorge",
+    credit: "Ronguno Bernard",
+    source: "https://commons.wikimedia.org/wiki/File:A_section_of_cheploch_gorge.jpg",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    position: "center 50%",
+  },
 ];
 
 const stats = [
