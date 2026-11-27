@@ -45,7 +45,7 @@ Contact for this review: the web project lead at the Municipality.
 
 - [ ] Confirm the municipal mandate wording (currently framed around the Urban Areas and Cities Act,
       2011 and the Iten Tambach Municipal Charter).
-- [ ] Confirm the official vision and mission statements, or approve the current framing.
+- [ ] Review the vision and mission now transcribed from the approved Iten-Tambach Municipality IDeP 2025–2029 (vision: “A global athletics and sporting municipality of choice”; mission: “To foster development and excellence at all levels by harnessing the socio-economic contributions, transforming the delivery of services, ensuring inclusivity and equitable access that creates a livable environment for all residents”).
 - [ ] Confirm the relationship description with the County Government.
 - [ ] Confirm the list of services the Municipality delivers directly, and those delivered by the
       County or national agencies.
