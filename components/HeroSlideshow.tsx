@@ -12,21 +12,36 @@ import {
 } from "lucide-react";
 import { site } from "@/lib/site";
 
+// Images are sourced from Wikimedia Commons. Each file page records the
+// photographer and the applicable Creative Commons licence. Keep the
+// attribution visible whenever its slide is displayed.
 const slides = [
   {
-    src: "/images/iten-hero.jpg",
-    alt: "The welcome arch marking the entrance to Iten town",
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iten_view_point.jpg?width=1600",
+    alt: "View across the Kerio Valley from Iten View Point",
     label: "Welcome to Iten-Tambach",
+    credit: "Shadychiri",
+    source: "https://commons.wikimedia.org/wiki/File:Iten_view_point.jpg",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
   },
   {
-    src: "/images/iten-town-aerial.jpg",
-    alt: "Elevated view of Iten town and its surrounding built environment",
-    label: "Our Municipality",
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iten_kerio_view.jpg?width=1600",
+    alt: "Looking down the Rift Valley from Kerio View in Iten",
+    label: "The Kerio Valley Escarpment",
+    credit: "Appleslerp",
+    source: "https://commons.wikimedia.org/wiki/File:Iten_kerio_view.jpg",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
   },
   {
-    src: "/images/highlands.jpg",
-    alt: "Highland landscape",
-    label: "Our Highland Setting",
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iten,_Kenya_(4202106764).jpg?width=1600",
+    alt: "Athletes training for the steeplechase in Iten",
+    label: "A Home of Champions",
+    credit: "edskoch",
+    source: "https://commons.wikimedia.org/wiki/File:Iten,_Kenya_(4202106764).jpg",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
   },
 ];
 
@@ -81,6 +96,7 @@ export function HeroSlideshow() {
               fill
               priority={index === 0}
               sizes="100vw"
+              unoptimized
               className="object-cover object-center"
             />
           </div>
@@ -136,19 +152,41 @@ export function HeroSlideshow() {
         </div>
 
         <div className="mt-9 flex flex-wrap items-center justify-between gap-4 border-t border-white/20 pt-5">
-          <div className="flex items-center gap-2" aria-label={`Slide ${activeSlide + 1} of ${slides.length}`}>
-            {slides.map((slide, index) => (
-              <button
-                key={slide.src}
-                type="button"
-                onClick={() => setActiveSlide(index)}
-                aria-label={`Show slide ${index + 1}: ${slide.label}`}
-                aria-current={index === activeSlide ? "true" : undefined}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  index === activeSlide ? "w-9 bg-gold-400" : "w-4 bg-white/45 hover:bg-white/80"
-                }`}
-              />
-            ))}
+          <div className="flex min-w-0 flex-wrap items-center gap-x-4 gap-y-3">
+            <div className="flex items-center gap-2" aria-label={`Slide ${activeSlide + 1} of ${slides.length}`}>
+              {slides.map((slide, index) => (
+                <button
+                  key={slide.src}
+                  type="button"
+                  onClick={() => setActiveSlide(index)}
+                  aria-label={`Show slide ${index + 1}: ${slide.label}`}
+                  aria-current={index === activeSlide ? "true" : undefined}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    index === activeSlide ? "w-9 bg-gold-400" : "w-4 bg-white/45 hover:bg-white/80"
+                  }`}
+                />
+              ))}
+            </div>
+            <p className="text-[10px] leading-relaxed text-white/65">
+              Photo:{" "}
+              <a
+                href={slides[activeSlide].source}
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-white/40 underline-offset-2 hover:text-white"
+              >
+                {slides[activeSlide].credit}
+              </a>
+              {" · "}
+              <a
+                href={slides[activeSlide].licenseUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-white/40 underline-offset-2 hover:text-white"
+              >
+                {slides[activeSlide].license}
+              </a>
+            </p>
           </div>
 
           <div className="flex items-center gap-2">
