@@ -6,64 +6,9 @@ import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
 
 const slides = [
   {
-    src: "/images/rimoi-game-reserve-elephants.jpg",
-    alt: "Elephants moving through woodland at Rimoi Game Reserve",
-    label: "Rimoi Game Reserve",
-  },
-  {
-    src: "/images/iten-town-aerial.webp",
-    alt: "Aerial view of Iten town and the surrounding highlands",
-    label: "Iten Town",
-  },
-  {
-    src: "/images/highlands.webp",
-    alt: "Highland scenery in the Iten-Tambach area",
-    label: "The Highlands",
-  },
-  {
-    src: "/images/iten-hero.webp",
-    alt: "The welcome entrance to Iten town",
-    label: "Welcome to Iten",
-  },
-  {
-    src: "/images/kerio-forest-road.webp",
-    alt: "A road passing through the green highland forest",
-    label: "Highland Forests",
-  },
-  {
-    src: "/images/conservation.webp",
-    alt: "A natural conservation landscape in the municipality region",
-    label: "Conservation and Nature",
-  },
-  {
     src: "/images/farmland.webp",
     alt: "Farmland and cultivated countryside in the highlands",
     label: "Agriculture and Rural Enterprise",
-  },
-  {
-    src: "/images/town-centre.webp",
-    alt: "Buildings and streets in the Iten town centre",
-    label: "Iten Town Centre",
-  },
-  {
-    src: "/images/town-life.webp",
-    alt: "Everyday activity and local life in the town",
-    label: "Life in Iten",
-  },
-  {
-    src: "/images/trading.webp",
-    alt: "Local trading activity and small businesses",
-    label: "Local Trade",
-  },
-  {
-    src: "/images/market-development.webp",
-    alt: "Market facilities and local economic development",
-    label: "Market Development",
-  },
-  {
-    src: "/images/kamariny-athletics-stadium-iten.jpg",
-    alt: "Kamariny Stadium, an important athletics and sporting venue in Iten",
-    label: "Kamariny Stadium",
   },
   {
     src: "/images/iten-municipal-market.jpg",
@@ -71,14 +16,9 @@ const slides = [
     label: "Iten Municipal Market",
   },
   {
-    src: "/images/iten-viewpoint-kerio-valley.jpg",
-    alt: "Scenic viewpoint overlooking the Kerio Valley near Iten",
-    label: "Iten Viewpoint",
-  },
-  {
-    src: "/images/iten-scenic-viewpoint.jpg",
-    alt: "Highland viewpoint and surrounding landscape in Iten",
-    label: "Iten Scenic Viewpoint",
+    src: "/images/highlands.webp",
+    alt: "Highland scenery in the Iten-Tambach area",
+    label: "The Highlands",
   },
   {
     src: "/images/rimoi-game-reserve-elephants-woodland.jpg",
@@ -86,14 +26,74 @@ const slides = [
     label: "Rimoi Game Reserve",
   },
   {
-    src: "/images/rimoi-game-reserve-wildlife-02.jpg",
-    alt: "Wildlife and natural habitat at Rimoi Game Reserve",
-    label: "Rimoi Wildlife",
+    src: "/images/trading.webp",
+    alt: "Local trading activity and small businesses",
+    label: "Local Trade",
+  },
+  {
+    src: "/images/iten-hero.webp",
+    alt: "The welcome entrance to Iten town",
+    label: "Welcome to Iten",
+  },
+  {
+    src: "/images/iten-viewpoint-kerio-valley.jpg",
+    alt: "Scenic viewpoint overlooking the Kerio Valley near Iten",
+    label: "Iten Viewpoint",
+  },
+  {
+    src: "/images/conservation.webp",
+    alt: "A natural conservation landscape in the municipality region",
+    label: "Conservation and Nature",
+  },
+  {
+    src: "/images/market-development.webp",
+    alt: "Market facilities and local economic development",
+    label: "Market Development",
+  },
+  {
+    src: "/images/rimoi-game-reserve-elephants.jpg",
+    alt: "Elephants moving through woodland at Rimoi Game Reserve",
+    label: "Rimoi Game Reserve",
+  },
+  {
+    src: "/images/iten-scenic-viewpoint.jpg",
+    alt: "Highland viewpoint and surrounding landscape in Iten",
+    label: "Iten Scenic Viewpoint",
+  },
+  {
+    src: "/images/town-centre.webp",
+    alt: "Buildings and streets in the Iten town centre",
+    label: "Iten Town Centre",
   },
   {
     src: "/images/rimoi-game-reserve-wildlife-03.jpg",
     alt: "Semi-arid landscape and wildlife habitat at Rimoi Game Reserve",
     label: "Rimoi Conservation",
+  },
+  {
+    src: "/images/kerio-forest-road.webp",
+    alt: "A road passing through the green highland forest",
+    label: "Highland Forests",
+  },
+  {
+    src: "/images/kamariny-athletics-stadium-iten.jpg",
+    alt: "Kamariny Stadium, an important athletics and sporting venue in Iten",
+    label: "Kamariny Stadium",
+  },
+  {
+    src: "/images/iten-town-aerial.webp",
+    alt: "Aerial view of Iten town and the surrounding highlands",
+    label: "Iten Town",
+  },
+  {
+    src: "/images/town-life.webp",
+    alt: "Everyday activity and local life in the town",
+    label: "Life in Iten",
+  },
+  {
+    src: "/images/rimoi-game-reserve-wildlife-02.jpg",
+    alt: "Wildlife and natural habitat at Rimoi Game Reserve",
+    label: "Rimoi Wildlife",
   },
 ];
 
