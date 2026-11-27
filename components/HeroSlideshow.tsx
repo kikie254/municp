@@ -28,6 +28,11 @@ const slides = [
     alt: "Highland landscape",
     label: "Our Highland Setting",
   },
+  {
+    src: "/images/1733467649360.jpg",
+    alt: "A herd of elephants walking along a sandy track through woodland at Rimoi Game Reserve",
+    label: "Rimoi Game Reserve",
+  },
 ];
 
 const stats = [
