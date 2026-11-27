@@ -33,6 +33,37 @@ const slides = [
     source: "https://commons.wikimedia.org/wiki/File:Iten,_Kenya_(4202106764).jpg",
     license: "CC BY 2.0",
     licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    position: "center 48%",
+  },
+  {
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/KERIO_VIEW_POINT_ON_THE_KIEYO_ESCARPMENT_-_ITEN_KENYA.jpg?width=1800",
+    alt: "Wide view over the Kerio Valley from the Iten escarpment",
+    label: "The Kerio Escarpment",
+    credit: "Elias Yator",
+    source: "https://commons.wikimedia.org/wiki/File:KERIO_VIEW_POINT_ON_THE_KIEYO_ESCARPMENT_-_ITEN_KENYA.jpg",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    position: "center 48%",
+  },
+  {
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Kerio_valley.jpg?width=1800",
+    alt: "Kerio Valley seen from a ridge beneath a wide sky",
+    label: "The Kerio Valley Landscape",
+    credit: "Mekami",
+    source: "https://commons.wikimedia.org/wiki/File:Kerio_valley.jpg",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/",
+    position: "center 55%",
+  },
+  {
+    src: "https://commons.wikimedia.org/wiki/Special:FilePath/Iten,_Kenya_(4202110162).jpg?width=1800",
+    alt: "Athletes training on the red-dirt running track in Iten",
+    label: "Training on Iten's Red Dirt",
+    credit: "edskoch",
+    source: "https://commons.wikimedia.org/wiki/File:Iten,_Kenya_(4202110162).jpg",
+    license: "CC BY 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/2.0/",
+    position: "center 48%",
   },
 ];
 
@@ -52,12 +83,13 @@ export function HeroSlideshow() {
     setActiveSlide((current) => (current - 1 + slides.length) % slides.length);
 
   useEffect(() => {
-    if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (isPaused || reducedMotion.matches) return;
     const interval = window.setInterval(() => {
       setActiveSlide((current) => (current + 1) % slides.length);
-    }, 6500);
+    }, 7000);
     return () => window.clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, activeSlide]);
 
   const active = slides[activeSlide];
 
@@ -67,7 +99,26 @@ export function HeroSlideshow() {
       aria-roledescription="carousel"
       className="bg-white"
     >
-      <div className="relative h-[44vh] min-h-[280px] max-h-[680px] w-full overflow-hidden bg-stone-200 sm:h-[58vh] sm:min-h-[400px] lg:h-[68vh]">
+      <div
+        className="group relative h-[46svh] min-h-[320px] max-h-[560px] w-full overflow-hidden bg-stone-200 sm:h-[54svh] sm:min-h-[420px] sm:max-h-[640px] lg:h-[68svh] lg:min-h-[520px] lg:max-h-[760px]"
+        onTouchStart={(event) => {
+          (event.currentTarget as HTMLDivElement).dataset.touchStartX = String(event.touches[0]?.clientX ?? 0);
+        }}
+        onTouchEnd={(event) => {
+          const startX = Number((event.currentTarget as HTMLDivElement).dataset.touchStartX || 0);
+          const delta = (event.changedTouches[0]?.clientX ?? startX) - startX;
+          if (Math.abs(delta) > 48) {
+            if (delta < 0) showNext();
+            else showPrevious();
+          }
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowRight") showNext();
+          if (event.key === "ArrowLeft") showPrevious();
+        }}
+        tabIndex={0}
+        aria-label="Photograph slideshow. Use arrow keys or swipe to change slides."
+      >
         {slides.map((slide, index) => (
           <div
             key={slide.src}
@@ -80,8 +131,10 @@ export function HeroSlideshow() {
               fill
               priority={index === 0}
               sizes="100vw"
+              loading={index === 0 ? "eager" : "lazy"}
               unoptimized
-              className="object-cover object-center"
+              style={{ objectPosition: slide.position ?? "center" }}
+              className="object-cover"
             />
           </div>
         ))}
@@ -93,7 +146,7 @@ export function HeroSlideshow() {
             <button
               type="button"
               onClick={showPrevious}
-              className="flex h-10 w-10 items-center justify-center border border-white/75 bg-black/35 text-white backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/75 bg-black/45 text-white shadow-sm backdrop-blur-sm transition hover:bg-white hover:text-green-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400 sm:h-12 sm:w-12"
               aria-label="Previous slide"
             >
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
@@ -120,7 +173,7 @@ export function HeroSlideshow() {
       </div>
 
       <div className="border-b border-stone-200 bg-stone-50">
-        <div className="shell flex flex-wrap items-center justify-between gap-3 py-3">
+        <div className="shell flex flex-col items-start justify-between gap-3 py-3 sm:flex-row sm:items-center">
           <p className="text-[11px] text-stone-600">
             Photograph:{" "}
             <a href={active.source} target="_blank" rel="noopener noreferrer" className="font-semibold underline underline-offset-2 hover:text-green-900">
@@ -146,12 +199,12 @@ export function HeroSlideshow() {
         </div>
       </div>
 
-      <div className="shell py-10 sm:py-14 lg:py-16">
+      <div className="shell py-8 sm:py-12 lg:py-16">
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-green-800 sm:text-xs">
             Elgeyo Marakwet County · Kenya
           </p>
-          <h1 className="mt-3 font-display text-3xl font-extrabold leading-tight tracking-tight text-stone-950 sm:text-4xl lg:text-5xl">
+          <h1 className="mt-3 font-display text-3xl font-extrabold leading-tight tracking-tight text-stone-950 sm:text-4xl lg:text-5xl xl:text-6xl">
             Iten-Tambach Municipality
           </h1>
           <p className="mx-auto mt-4 max-w-3xl font-display text-lg font-semibold leading-relaxed text-green-900 sm:text-xl">
