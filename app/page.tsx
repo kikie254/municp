@@ -89,40 +89,6 @@ export default function HomePage() {
 
       <HeroSlideshow />
 
-      {/* ── QUICK ACCESS ───────────────────────────────────── */}
-      <section className="bg-paper-warm py-16 md:py-20" aria-labelledby="quick-access-heading">
-        <div className="shell">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Quick Access"
-              title="How Can We Help You?"
-              description="Find municipal information, access public resources and connect with the services and information that matter to you."
-            />
-          </Reveal>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {quickAccess.map((card, i) => (
-              <Reveal key={card.title} delay={i * 60}>
-                <Link
-                  href={card.href}
-                  className="group flex h-full flex-col border border-paper-line bg-white p-5 shadow-card transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-green-300 hover:shadow-lift sm:p-6"
-                >
-                  <span className="flex h-11 w-11 items-center justify-center bg-green-50 text-green-700 transition-colors duration-300 group-hover:bg-green-800 group-hover:text-gold-400">
-                    <ServiceIcon name={card.icon} className="h-[21px] w-[21px]" />
-                  </span>
-                  <h3 className="mt-4 font-display text-[15px] font-bold leading-snug text-green-900">{card.title}</h3>
-                  <p className="mt-2 text-[12.5px] leading-relaxed text-ink-muted">{card.description}</p>
-                  <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-[10.5px] font-bold uppercase tracking-[0.13em] text-green-700 transition-colors group-hover:text-gold-700">
-                    Learn More
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── ABOUT ──────────────────────────────────────────── */}
       <section className="bg-white py-16 md:py-24">
         <div className="shell grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -190,7 +156,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      <PlacesToVisit />
+
+      {/* ── QUICK ACCESS ───────────────────────────────────── */}
+      <section className="bg-paper-warm py-16 md:py-20" aria-labelledby="quick-access-heading">
+        <div className="shell">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Quick Access"
+              title="How Can We Help You?"
+              description="Find municipal information, access public resources and connect with the services and information that matter to you."
+            />
+          </Reveal>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {quickAccess.map((card, i) => (
+              <Reveal key={card.title} delay={i * 60}>
+                <Link
+                  href={card.href}
+                  className="group flex h-full flex-col border border-paper-line bg-white p-5 shadow-card transition-all duration-300 ease-smooth hover:-translate-y-1 hover:border-green-300 hover:shadow-lift sm:p-6"
+                >
+                  <span className="flex h-11 w-11 items-center justify-center bg-green-50 text-green-700 transition-colors duration-300 group-hover:bg-green-800 group-hover:text-gold-400">
+                    <ServiceIcon name={card.icon} className="h-[21px] w-[21px]" />
+                  </span>
+                  <h3 className="mt-4 font-display text-[15px] font-bold leading-snug text-green-900">{card.title}</h3>
+                  <p className="mt-2 text-[12.5px] leading-relaxed text-ink-muted">{card.description}</p>
+                  <span className="mt-auto inline-flex items-center gap-1.5 pt-5 text-[10.5px] font-bold uppercase tracking-[0.13em] text-green-700 transition-colors group-hover:text-gold-700">
+                    Learn More
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       {/* ── PRIORITIES ─────────────────────────────────────── */}
       <section className="relative isolate overflow-hidden bg-green-900 py-16 md:py-20">
@@ -431,6 +432,9 @@ export default function HomePage() {
       </section>
 
       <CtaBand />
+
+      {/* Destination information is intentionally the final homepage section. */}
+      <PlacesToVisit />
     </>
   );
 }
