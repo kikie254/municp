@@ -155,7 +155,7 @@ export function HeroSlideshow() {
             Iten-Tambach Municipality
           </h1>
           <p className="mx-auto mt-4 max-w-3xl font-display text-lg font-semibold leading-relaxed text-green-900 sm:text-xl">
-            A town of choice for sports, tourism and investment
+            A global athletics and sporting municipality of choice
           </p>
           <div className="mx-auto mt-6 max-w-3xl space-y-4 text-left text-sm leading-7 text-stone-700 sm:text-base sm:leading-8">
             <p>
@@ -165,7 +165,7 @@ export function HeroSlideshow() {
               The Municipality's chartered responsibilities cover urban planning, roads and drainage, waste management, public spaces, street lighting, markets and other services that shape everyday life.
             </p>
             <p>
-              The Municipality’s vision is “A town of choice for sports, tourism and investment.” Its mission is “To transform the delivery of services by ensuring equitable access, development and excellence at all levels and harness the socio-economic contributions that can create a liveable environment for all residents.”
+              The approved Integrated Development Plan (2025–2029) sets the Municipality’s vision as “A global athletics and sporting municipality of choice.” Its mission is “To foster development and excellence at all levels by harnessing the socio-economic contributions, transforming the delivery of services, ensuring inclusivity and equitable access that creates a livable environment for all residents.”
             </p>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
