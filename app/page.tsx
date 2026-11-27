@@ -156,7 +156,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <PlacesToVisit />
 
       {/* ── QUICK ACCESS ───────────────────────────────────── */}
       <section className="bg-paper-warm py-16 md:py-20" aria-labelledby="quick-access-heading">
@@ -433,6 +432,9 @@ export default function HomePage() {
       </section>
 
       <CtaBand />
+
+      {/* Destination information is intentionally the final homepage section. */}
+      <PlacesToVisit />
     </>
   );
 }
