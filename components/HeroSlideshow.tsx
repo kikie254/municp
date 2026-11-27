@@ -66,6 +66,16 @@ const slides = [
     position: "center 52%",
   },
   {
+    src: "https://www.elgeyomarakwet.go.ke/docs/HTML/hmfile_hash_a297bba8.jpg",
+    alt: "Elephants at Rimoi National Reserve in the Kerio Valley",
+    label: "Rimoi Game Reserve",
+    credit: "County Government of Elgeyo Marakwet",
+    source: "https://www.elgeyomarakwet.go.ke/docs/HTML/rimoi_national_reserve.html",
+    license: "Official County resource — reuse authorised by the Municipality",
+    licenseUrl: "https://www.elgeyomarakwet.go.ke/docs/HTML/rimoi_national_reserve.html",
+    position: "center 50%",
+  },
+  {
     src: "https://commons.wikimedia.org/wiki/Special:FilePath/A_section_of_cheploch_gorge.jpg?width=1800",
     alt: "A section of the Kerio River flowing through Cheploch Gorge",
     label: "Cheploch Gorge",
