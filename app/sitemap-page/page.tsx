@@ -50,8 +50,6 @@ export default function SitemapPage() {
       <PageHero
         title="Sitemap"
         intro="Every page published on this website, grouped by purpose."
-        image="/images/kerio-escarpment.jpg"
-        imageAlt="The Elgeyo escarpment rising above the Kerio Valley"
         eyebrow="Site Index"
         crumbs={[{ label: "Sitemap" }]}
       />

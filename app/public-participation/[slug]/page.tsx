@@ -36,8 +36,6 @@ export default async function ParticipationDetailPage({ params }: { params: Prom
         title={item.title}
         intro={item.description.split("\n")[0].slice(0, 180)}
         crumbs={[{ label: "Home", href: "/" }, { label: "Public participation", href: "/public-participation" }, { label: item.title }]}
-        image="/images/public-engagement.jpg"
-        imageAlt="Residents taking part in a municipal public participation meeting"
       />
 
       <section className="section">

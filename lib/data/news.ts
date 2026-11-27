@@ -12,8 +12,8 @@ export type NewsItem = {
   date: string;
   dateLabel: string;
   featured?: boolean;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   summary: string;
   body: string[];
   /** True for every record in this file: these are template articles, not municipal communications. */
@@ -36,8 +36,6 @@ export const news: NewsItem[] = [
     date: "2026-11-04",
     dateLabel: "4 November 2026",
     featured: true,
-    image: "/images/market-development.jpg",
-    imageAlt: "Aerial view of a busy town street beside a construction site in a Kenyan highland town",
     summary:
       "A demonstration article showing how municipal cleanliness activity can be reported to residents, with emphasis on schedules, responsibilities and public cooperation.",
     body: [
@@ -55,8 +53,6 @@ export const news: NewsItem[] = [
     date: "2026-10-27",
     dateLabel: "27 October 2026",
     featured: true,
-    image: "/images/public-engagement.jpg",
-    imageAlt: "Residents and officials in discussion during a community engagement meeting",
     summary:
       "A demonstration public notice illustrating how the municipality would publish a citizen forum calendar and invitation to residents.",
     body: [
@@ -73,8 +69,6 @@ export const news: NewsItem[] = [
     category: "Development Updates",
     date: "2026-10-15",
     dateLabel: "15 October 2026",
-    image: "/images/iten-hero.jpg",
-    imageAlt: "Welcome arch at the entrance to Iten town above a tarmac road",
     summary:
       "A demonstration update explaining how residents would be told about construction sequencing, access arrangements and channels for reporting concerns.",
     body: [
@@ -91,8 +85,6 @@ export const news: NewsItem[] = [
     category: "Community Activities",
     date: "2026-09-30",
     dateLabel: "30 September 2026",
-    image: "/images/conservation.jpg",
-    imageAlt: "Indigenous trees and forested hills under a bright sky in Elgeyo Marakwet",
     summary:
       "A demonstration community article on how partnerships for greening public spaces could be reported.",
     body: [
@@ -108,8 +100,6 @@ export const news: NewsItem[] = [
     category: "Municipal News",
     date: "2026-09-18",
     dateLabel: "18 September 2026",
-    image: "/images/town-life.jpg",
-    imageAlt: "Roadside trading and street activity in a Kenyan highland town",
     summary:
       "A demonstration article showing how the municipality would explain where investment information can be obtained and what enquiries can and cannot be answered.",
     body: [
@@ -125,8 +115,6 @@ export const news: NewsItem[] = [
     category: "Events",
     date: "2026-09-05",
     dateLabel: "5 September 2026",
-    image: "/images/community-forum.jpg",
-    imageAlt: "Community members attending an indoor awareness session",
     summary:
       "A demonstration event listing showing the details residents would expect before attending.",
     body: [
@@ -142,8 +130,6 @@ export const news: NewsItem[] = [
     category: "Public Notices",
     date: "2026-08-22",
     dateLabel: "22 August 2026",
-    image: "/images/town-centre.jpg",
-    imageAlt: "Town centre street with shops and pedestrians in Iten",
     summary:
       "A demonstration notice showing how newly published municipal documents would be announced.",
     body: [
@@ -159,8 +145,6 @@ export const news: NewsItem[] = [
     category: "Development Updates",
     date: "2026-08-08",
     dateLabel: "8 August 2026",
-    image: "/images/iten-town-aerial.jpg",
-    imageAlt: "Elevated view of Iten town with trees, roads and surrounding hills",
     summary:
       "A demonstration explainer on how a spatial plan shapes land use decisions and what residents can expect from it.",
     body: [

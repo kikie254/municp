@@ -30,8 +30,6 @@ export default async function ProjectsPage() {
       <PageHero
         title="Projects and Municipal Development"
         intro="Explore municipal development priorities across infrastructure, environment and public spaces."
-        image="/images/market-development.jpg"
-        imageAlt="Aerial view of construction and trading activity in a Kenyan highland town"
         eyebrow="Development Portfolio"
         crumbs={[{ label: "Projects" }]}
       />

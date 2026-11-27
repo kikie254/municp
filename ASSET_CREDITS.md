@@ -1,9 +1,7 @@
 # ASSET CREDITS AND RIGHTS REGISTER
 
 **Project:** Iten–Tambach Municipality website
-**Status of this register:** every entry below was checked against the files in `public/` and against
-the pages that use them. **No licence has been invented, assumed or inferred.** Where the source is
-unknown it is recorded as unknown, and the asset is treated as not cleared for publication.
+**Status of this register:** the inventory below is a legacy baseline and must not be treated as a current file-by-file inventory after the November 2026 image renaming and additions. Rights remain unverified unless explicitly documented. No licence has been invented, assumed or inferred.
 
 > **Publication rule.** A file existing in `public/` is served publicly by Next.js regardless of
 > whether any page links to it. Until an asset's rights are documented it must be treated as
@@ -149,3 +147,15 @@ one at the County documents index page.
 
 *Last updated: Phase 1 corrections. This register is a record of what is known — it is not a
 licence, and it does not grant any right to publish an asset.*
+
+
+## 7. Current image-relevance remediation — 28 November 2026
+
+- Removed `public/images/public-engagement.jpg` from the repository and all active page/data references. The image showed identifiable people, but no verified event provenance or usage release was available.
+- Removed the Public Engagement background photograph from the homepage and the Public Participation page banners. Those sections now use the municipality's existing green visual system without an unverified event photograph.
+- Removed generic meeting photographs from the Governance banner and removed unrelated images from project, resource-library, service-detail and legal/utility banners.
+- All sample news and project records now use neutral labelled placeholders instead of photographs that could be mistaken for evidence of a real municipal event or project. A real image is shown only when a non-sample news record has an image and alt text, or a project record has both an image and descriptive alt text.
+- Published news and project cards require both an uploaded image and non-empty alt text before displaying a photograph. Dynamic detail pages show an uploaded record image once in the article body rather than duplicating it in the page banner.
+- The remaining photographs' rights and precise subject/location claims still require confirmation. Filename, alt text and visual appearance alone do not establish ownership, licence or that a depicted activity is an official municipal project.
+
+The asset inventory above is retained as a historical rights review; it must be regenerated from the current `public/images/` directory before launch approval.

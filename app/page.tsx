@@ -265,14 +265,6 @@ export default function HomePage() {
 
       {/* ── PUBLIC PARTICIPATION ───────────────────────────── */}
       <section className="relative isolate overflow-hidden bg-green-950">
-        <Image
-          src="/images/public-engagement.jpg"
-          alt=""
-          fill
-          sizes="100vw"
-          className="object-cover object-center opacity-30"
-          aria-hidden="true"
-        />
         <div className="absolute inset-0 bg-gradient-to-r from-green-950 via-green-950/94 to-green-900/60" aria-hidden="true" />
         <div className="shell relative py-16 md:py-20">
           <div className="max-w-2xl">

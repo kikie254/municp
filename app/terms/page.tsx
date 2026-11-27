@@ -69,8 +69,6 @@ export default function TermsPage() {
       <PageHero
         title="Terms of Use"
         intro="Draft terms governing use of this website, the status of the information on it, and the standing of sample content."
-        image="/images/kerio-forest-road.jpg"
-        imageAlt="Forest road in the Elgeyo Marakwet highlands"
         eyebrow="Legal"
         crumbs={[{ label: "Terms of Use" }]}
       />

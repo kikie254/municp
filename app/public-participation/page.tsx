@@ -35,8 +35,6 @@ export default function PublicParticipationPage() {
       <PageHero
         title="Public Participation and Community Engagement"
         intro="Section 22 of the Urban Areas and Cities Act provides for Citizen Fora as part of municipal governance. These forums give residents and stakeholders an opportunity to discuss development plans, budgets and local priorities. Notices and participation reports are listed in the Document Centre."
-        image="/images/public-engagement.jpg"
-        imageAlt="Community members gathered for a public baraza discussion in Kenya"
         eyebrow="Citizen Engagement"
         crumbs={[{ label: "Public Participation" }]}
       />

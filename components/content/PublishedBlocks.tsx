@@ -26,11 +26,12 @@ export function PublishedNewsCard({ item, featured = false }: { item: NewsRecord
   return (
     <article className={`group card overflow-hidden ${featured ? "grid md:grid-cols-2" : ""}`}>
       <div className={`relative bg-green-950 ${featured ? "min-h-[220px] md:min-h-full" : "aspect-[16/10]"}`}>
-        {item.imagePath ? (
+        {item.imagePath && item.imageAlt?.trim() ? (
           <Image src={item.imagePath} alt={item.imageAlt ?? ""} fill sizes={featured ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 640px) 100vw, 33vw"} className="object-cover" />
         ) : (
-          <div className="flex h-full min-h-[160px] items-center justify-center pattern-grid">
+          <div className="flex h-full min-h-[160px] flex-col items-center justify-center gap-2 pattern-grid px-5 text-center">
             <Megaphone className="h-8 w-8 text-white/40" aria-hidden="true" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/65">No verified article photograph</span>
           </div>
         )}
       </div>
@@ -59,11 +60,12 @@ export function PublishedProjectCard({ project }: { project: ProjectRecordView }
   return (
     <article className="card flex flex-col overflow-hidden">
       <div className="relative aspect-[16/10] bg-green-950">
-        {project.imagePath ? (
+        {project.imagePath && project.imageAlt?.trim() ? (
           <Image src={project.imagePath} alt={project.imageAlt ?? ""} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
         ) : (
-          <div className="flex h-full items-center justify-center pattern-grid">
+          <div className="flex h-full flex-col items-center justify-center gap-2 pattern-grid px-5 text-center">
             <MapPin className="h-7 w-7 text-white/40" aria-hidden="true" />
+            <span className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/65">No verified project photograph</span>
           </div>
         )}
         <span className="absolute left-3 top-3 bg-green-900 px-2 py-1 text-[9.5px] font-bold uppercase tracking-[0.12em] text-white">

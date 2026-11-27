@@ -36,8 +36,6 @@ export default function PrivacyPage() {
       <PageHero
         title="Privacy Information"
         intro="Information about details submitted through the website and how those submissions are handled."
-        image="/images/kerio-escarpment.jpg"
-        imageAlt="The Elgeyo escarpment seen across the Kerio Valley"
         eyebrow="Information"
         crumbs={[{ label: "Privacy Information" }]}
       />

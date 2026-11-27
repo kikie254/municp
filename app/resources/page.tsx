@@ -19,8 +19,6 @@ export default function ResourcesPage() {
       <PageHero
         title="Municipal Document Centre"
         intro="Access official municipal publications, plans, policies, reports and public information through our document centre. We are committed to making relevant public information accessible to residents and stakeholders."
-        image="/images/kerio-forest-road.jpg"
-        imageAlt="Road through forested highland landscape in Elgeyo Marakwet County"
         eyebrow="Public Information"
         crumbs={[{ label: "Resources" }]}
       />

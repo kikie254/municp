@@ -46,8 +46,6 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
       <>
         <PageHero
           title={record.title}
-          image={record.imagePath ?? "/images/iten-town-aerial.jpg"}
-          imageAlt={record.imageAlt ?? ""}
           eyebrow={record.category}
           crumbs={[{ label: "News", href: "/news" }, { label: record.title }]}
         />

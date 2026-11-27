@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
 import type { Project } from "@/lib/data/projects";

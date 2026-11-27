@@ -18,8 +18,8 @@ export type Project = {
   completionDate: string;
   budget: string;
   implementingAgency: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   relatedDocuments: { label: string; href: string }[];
 };
 
@@ -55,8 +55,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — ongoing",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Iten-Tambach Municipality (sample record)",
-    image: "/images/market-development.jpg",
-    imageAlt: "Aerial view of building activity and trading streets in a Kenyan highland town",
     relatedDocuments: [
       { label: "Solid Waste Management Plan 2025", href: "/resources?q=Solid+Waste+Management+Plan" },
       { label: "Municipal Policy on Waste Management", href: "/resources?q=Waste+Management" },
@@ -84,8 +82,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — ongoing",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Coordinated with the County Government of Elgeyo Marakwet (sample record)",
-    image: "/images/iten-hero.jpg",
-    imageAlt: "Welcome arch at the entrance to Iten town on a tarmac road",
     relatedDocuments: [
       { label: "Iten Integrated Spatial Plan (2015–2035)", href: "/resources?q=Integrated+Spatial+Plan" },
     ],
@@ -112,8 +108,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — ongoing",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Iten-Tambach Municipality (sample record)",
-    image: "/images/market-development.jpg",
-    imageAlt: "Aerial view of a market construction site beside a busy town street",
     relatedDocuments: [
       { label: "Iten Municipality Investment Plan 2025/2026", href: "/resources?q=Investment+Plan" },
     ],
@@ -138,8 +132,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — not a verified completion date",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Sample record — to be replaced with verified information",
-    image: "/images/town-life.jpg",
-    imageAlt: "Street scene in a Kenyan highland town with trees and roadside activity",
     relatedDocuments: [
       { label: "Iten Integrated Spatial Plan (2015–2035) Report", href: "/resources?q=Spatial+Plan+Report" },
     ],
@@ -164,8 +156,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — not scheduled",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Sample record — subject to confirmation",
-    image: "/images/town-centre.jpg",
-    imageAlt: "Town centre street in Iten with shops and roadside activity",
     relatedDocuments: [
       { label: "Iten Municipality Investment Plan 2025/2026", href: "/resources?q=Investment+Plan" },
     ],
@@ -190,8 +180,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — not scheduled",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Sample record — subject to confirmation",
-    image: "/images/kerio-forest-road.jpg",
-    imageAlt: "Aerial view of a winding road through forested escarpment near Iten",
     relatedDocuments: [
       { label: "Urban Climate Risk Profile", href: "/resources?q=Climate+Risk+Profile" },
     ],
@@ -217,8 +205,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — ongoing",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Iten-Tambach Municipality (sample record)",
-    image: "/images/public-engagement.jpg",
-    imageAlt: "Public engagement meeting between officials and residents in an office",
     relatedDocuments: [
       { label: "Gender Engagement Framework 2026", href: "/resources?q=Gender+Engagement+Framework" },
       { label: "Gender Inclusion Framework", href: "/resources?q=Gender+Inclusion+Framework" },
@@ -244,8 +230,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — not scheduled",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Sample record — subject to confirmation",
-    image: "/images/highlands.jpg",
-    imageAlt: "Green highland valley with farmland and distant hills in Elgeyo Marakwet",
     relatedDocuments: [
       { label: "Iten Integrated Spatial Plan (2015–2035)", href: "/resources?q=Integrated+Spatial+Plan" },
     ],
@@ -270,8 +254,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — ongoing",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Iten-Tambach Municipality (sample record)",
-    image: "/images/conservation.jpg",
-    imageAlt: "Forested hillside with indigenous trees under a blue sky in Elgeyo Marakwet",
     relatedDocuments: [
       { label: "Urban Climate Risk Profile", href: "/resources?q=Climate+Risk+Profile" },
     ],
@@ -296,8 +278,6 @@ export const projects: Project[] = [
     completionDate: "Sample record — not scheduled",
     budget: "Not published in this demonstration dataset",
     implementingAgency: "Sample record — subject to confirmation",
-    image: "/images/community-forum.jpg",
-    imageAlt: "Community forum with residents seated and listening to a presentation",
     relatedDocuments: [
       { label: "Grievance Redress Mechanism Structure", href: "/resources?q=Grievance+Redress" },
     ],

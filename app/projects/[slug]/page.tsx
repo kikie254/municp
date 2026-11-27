@@ -48,8 +48,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <PageHero
         title={record.title}
         intro={record.summary}
-        image={record.imagePath ?? "/images/market-development.jpg"}
-        imageAlt={record.imageAlt ?? ""}
         eyebrow={record.category}
         crumbs={[{ label: "Projects", href: "/projects" }, { label: record.title }]}
       />

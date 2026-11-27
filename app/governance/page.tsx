@@ -21,8 +21,6 @@ export default function GovernancePage() {
       <PageHero
         title="Municipal Governance and Leadership"
         intro="The Municipality is governed within the framework of the Urban Areas and Cities Act, 2011, and the Iten Tambach Municipal Charter. The Municipal Board provides governance and oversight, while the Municipal Manager is responsible for day-to-day administration. Both operate within the wider County Government framework."
-        image="/images/community-forum.jpg"
-        imageAlt="Community members and officials gathered for a governance meeting"
         eyebrow="Institutional Structure"
         crumbs={[{ label: "Governance" }]}
       />

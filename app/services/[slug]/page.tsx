@@ -36,8 +36,6 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <PageHero
         title={service.title}
         intro={service.description}
-        image="/images/town-centre.jpg"
-        imageAlt="Town centre street scene in Iten, Elgeyo Marakwet County"
         eyebrow="Municipal Service"
         crumbs={[{ label: "Services", href: "/services" }, { label: service.title }]}
       />

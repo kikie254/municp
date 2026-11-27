@@ -66,8 +66,6 @@ export default function AccessibilityPage() {
       <PageHero
         title="Accessibility"
         intro="This website is built to be usable by every resident, including people using assistive technology, keyboards and small screens. This page records what is implemented and what still needs testing."
-        image="/images/highlands.jpg"
-        imageAlt="Highland landscape with scattered settlement in Elgeyo Marakwet County"
         eyebrow="Inclusion"
         crumbs={[{ label: "Accessibility" }]}
       />
