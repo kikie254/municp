@@ -28,7 +28,7 @@ file; none carries embedded authorship metadata usable as evidence.
 | 4 | `public-engagement.jpg` | 1600×1066 | 4 — public participation, homepage participation block | Unknown | **Unknown** | **High** — shows identifiable people; implies a municipal consultation | Needs model/location release or replacement. Do not present as a municipal forum |
 | 5 | `town-centre.jpg` | 595×372 | 4 — contact hero, service detail hero, metadata | Unknown | **Unknown** | Medium — **also displayed above native resolution** (soft on large screens) | Replace with a higher-resolution licensed original, which fixes rights and quality together |
 | 6 | `town-life.jpg` | 780×520 | 4 — projects, public spaces | Unknown | **Unknown** | Medium | Same as above |
-| 7 | `highlands.jpg` | 1400×607 | 4 — about identity block, sections | Unknown | **Unknown** | Medium — landscape, weak place claim | Confirm location if described in captions |
+| 7 | `highlands.jpg` | 1400×607 | 5 — about identity block, sections, homepage slideshow | Unknown | **Unknown** | Medium — landscape, weak place claim | Confirm location if described in captions |
 | 8 | `kerio-forest-road.jpg` | 1024×560 | 3 — climate/environment content, project images | Unknown | **Unknown** | Medium — names a specific place ("Kerio") in its use context | Confirm the location is accurate before captioning |
 | 9 | `community-forum.jpg` | 640×559 | 3 — participation, community engagement | Unknown | **Unknown** | **High** — people in a meeting setting; implies an official forum | Release form or replacement |
 | 10 | `kerio-escarpment.jpg` | 1184×864 | 2 — environmental content | Unknown | **Unknown** | Medium | As above |
@@ -37,6 +37,9 @@ file; none carries embedded authorship metadata usable as evidence.
 | 13 | `farmland.jpg` | 552×240 | 0 — unreferenced (retained) | Unknown | **Unknown** | Low — not linked from any page, but still publicly reachable in `public/` | Delete from `public/` or move to an `unpublished/` folder outside the web root |
 
 **Total photographs: 13 files (26 with `.webp` derivatives). Documented licences: 0.**
+
+
+**Homepage slideshow addition:** `components/HeroSlideshow.tsx` rotates through the existing `iten-hero.jpg`, `iten-town-aerial.jpg` and `highlands.jpg` files. No photographs were added or generated for this change. Their rights remain **uncleared** under the publication rule above; the slideshow must not be treated as permission to publish them. Replace them with Municipality-owned or explicitly licensed photographs and complete this register before launch.
 
 ### 1.1 Photographs that could imply an official relationship
 
