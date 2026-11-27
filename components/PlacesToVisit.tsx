@@ -11,6 +11,7 @@ const destinations = [
     description:
       "Take in wide views across the Kerio Valley and the dramatic escarpment. Iten Viewpoint is a memorable stop for visitors who want to appreciate the region's highland scenery and capture the landscape.",
     icon: Mountain,
+    image: undefined,
   },
   {
     number: "02",
@@ -19,6 +20,7 @@ const destinations = [
     description:
       "A respected name in Kenyan athletics, St Patrick's High School has helped nurture generations of distance-running talent. Its story forms an important part of Iten's reputation as the Home of Champions.",
     icon: School,
+    image: undefined,
   },
   {
     number: "03",
@@ -36,6 +38,7 @@ const destinations = [
     description:
       "Explore the natural setting around Kessup Falls, where flowing water and the surrounding terrain create a distinctive landscape. It is a place to appreciate the area's natural features and enjoy the outdoors responsibly.",
     icon: Waves,
+    image: undefined,
   },
   {
     number: "05",
@@ -44,6 +47,7 @@ const destinations = [
     description:
       "See the striking gorge carved by the Kerio River through the rock of the valley. Cheploch's dramatic terrain makes it one of the region's distinctive natural landmarks. Visitors should keep to safe areas and follow local guidance.",
     icon: Camera,
+    image: undefined,
   },
 ];
 
