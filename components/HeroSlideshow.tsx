@@ -54,7 +54,9 @@ export function HeroSlideshow() {
 
   useEffect(() => {
     if (isPaused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const interval = window.setInterval(showNext, 6500);
+    const interval = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % slides.length);
+    }, 6500);
     return () => window.clearInterval(interval);
   }, [isPaused]);
 
