@@ -55,7 +55,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <article className="bg-white py-12 md:py-16">
         <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-14">
           <div className="lg:col-span-8">
-            {record.imagePath && (
+            {record.imagePath && record.imageAlt?.trim() && (
               <div className="relative mb-7 aspect-[16/9] overflow-hidden bg-green-950">
                 <Image src={record.imagePath} alt={record.imageAlt ?? ""} fill priority sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover" />
               </div>

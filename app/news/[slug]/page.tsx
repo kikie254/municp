@@ -57,7 +57,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
                 <span className="inline-flex items-center gap-1.5"><Tag className="h-3.5 w-3.5" aria-hidden="true" /> {record.category}</span>
                 <span className="bg-green-50 px-2 py-0.5 font-bold text-green-800">Published</span>
               </div>
-              {record.imagePath && (
+              {record.imagePath && record.imageAlt?.trim() && (
                 <div className="relative mt-6 aspect-[16/9] overflow-hidden bg-green-950">
                   <Image src={record.imagePath} alt={record.imageAlt ?? ""} fill priority sizes="(max-width: 1024px) 100vw, 66vw" className="object-cover" />
                 </div>
